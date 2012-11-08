@@ -8,15 +8,49 @@
 
 #import "AppDelegate.h"
 
+#import <Parse/Parse.h>
+
+#import "ZUUIRevealController.h"
+#import "MenuViewController.h"
+#import "BlocosByPlaceViewController.h"
+
+@interface AppDelegate()
+
+- (void)configureParse;
+- (void)configureRootViewController;
+
+@end
+
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    [self configureParse];
+    [self configureRootViewController];
     return YES;
+}
+
+- (void)configureParse
+{
+    [Parse setApplicationId:@"Zz8V3uYUdxJGgUsDlVhpt8egBxKwI80Vyh6trNXR"
+                  clientKey:@"HVVNEil3EDwDrU2kLTlbk24urzszqr7djx7Qlh6q"];
+}
+
+- (void)configureRootViewController
+{
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        
+    MenuViewController *menuViewController = [[MenuViewController alloc] init];
+    BlocosByPlaceViewController *blocosByPlaceViewController = [[BlocosByPlaceViewController alloc] init];
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:blocosByPlaceViewController];
+    
+    ZUUIRevealController *revealController = [[ZUUIRevealController alloc] initWithFrontViewController:navigationController rearViewController:menuViewController];
+    self.viewController = revealController;
+    
+    self.window.rootViewController = self.viewController;
+    [self.window makeKeyAndVisible];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
