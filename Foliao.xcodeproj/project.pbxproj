@@ -57,6 +57,8 @@
 		01E0CFEE164BDD7C00940C77 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFED164BDD7C00940C77 /* Social.framework */; };
 		01E0CFF0164BDD8100940C77 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFEF164BDD8100940C77 /* StoreKit.framework */; };
 		01E0CFF2164BDD8600940C77 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFF1164BDD8600940C77 /* SystemConfiguration.framework */; };
+		01E0CFF6164BE2A300940C77 /* BlocosByNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E0CFF4164BE2A300940C77 /* BlocosByNameViewController.m */; };
+		01E0CFF7164BE2A300940C77 /* BlocosByNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01E0CFF5164BE2A300940C77 /* BlocosByNameViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,10 +74,10 @@
 /* Begin PBXFileReference section */
 		013341B5164B4C0700C2984B /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = Controllers/MenuViewController.h; sourceTree = "<group>"; };
 		013341B6164B4C0700C2984B /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = Controllers/MenuViewController.m; sourceTree = "<group>"; };
-		013341B7164B4C0700C2984B /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MenuViewController.xib; path = Controllers/MenuViewController.xib; sourceTree = "<group>"; };
+		013341B7164B4C0700C2984B /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MenuViewController.xib; path = ../Controllers/MenuViewController.xib; sourceTree = "<group>"; };
 		013341BA164B58C100C2984B /* BlocosByPlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlocosByPlaceViewController.h; path = Controllers/BlocosByPlaceViewController.h; sourceTree = "<group>"; };
 		013341BB164B58C100C2984B /* BlocosByPlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlocosByPlaceViewController.m; path = Controllers/BlocosByPlaceViewController.m; sourceTree = "<group>"; };
-		013341BC164B58C100C2984B /* BlocosByPlaceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BlocosByPlaceViewController.xib; path = Controllers/BlocosByPlaceViewController.xib; sourceTree = "<group>"; };
+		013341BC164B58C100C2984B /* BlocosByPlaceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BlocosByPlaceViewController.xib; path = ../Controllers/BlocosByPlaceViewController.xib; sourceTree = "<group>"; };
 		013341C2164B5B1300C2984B /* ZUUIRevealController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZUUIRevealController.h; sourceTree = "<group>"; };
 		013341C3164B5B1300C2984B /* ZUUIRevealController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZUUIRevealController.m; sourceTree = "<group>"; };
 		013341C6164B5DD900C2984B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -128,6 +130,9 @@
 		01E0CFED164BDD7C00940C77 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		01E0CFEF164BDD8100940C77 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		01E0CFF1164BDD8600940C77 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		01E0CFF3164BE2A300940C77 /* BlocosByNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlocosByNameViewController.h; path = Controllers/BlocosByNameViewController.h; sourceTree = "<group>"; };
+		01E0CFF4164BE2A300940C77 /* BlocosByNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlocosByNameViewController.m; path = Controllers/BlocosByNameViewController.m; sourceTree = "<group>"; };
+		01E0CFF5164BE2A300940C77 /* BlocosByNameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BlocosByNameViewController.xib; path = ../Controllers/BlocosByNameViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +181,8 @@
 				013341B6164B4C0700C2984B /* MenuViewController.m */,
 				013341BA164B58C100C2984B /* BlocosByPlaceViewController.h */,
 				013341BB164B58C100C2984B /* BlocosByPlaceViewController.m */,
+				01E0CFF3164BE2A300940C77 /* BlocosByNameViewController.h */,
+				01E0CFF4164BE2A300940C77 /* BlocosByNameViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -200,6 +207,9 @@
 		013341C4164B5B1300C2984B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				01E0CFF5164BE2A300940C77 /* BlocosByNameViewController.xib */,
+				013341B7164B4C0700C2984B /* MenuViewController.xib */,
+				013341BC164B58C100C2984B /* BlocosByPlaceViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -259,8 +269,6 @@
 				01BE622E164B3B000000679C /* Supporting Files */,
 				01BE6236164B3B000000679C /* AppDelegate.h */,
 				01BE6237164B3B000000679C /* AppDelegate.m */,
-				013341B7164B4C0700C2984B /* MenuViewController.xib */,
-				013341BC164B58C100C2984B /* BlocosByPlaceViewController.xib */,
 			);
 			path = Foliao;
 			sourceTree = "<group>";
@@ -446,6 +454,7 @@
 				01BE6284164B3D450000679C /* seta-quem-vai.png in Resources */,
 				013341B9164B4C0700C2984B /* MenuViewController.xib in Resources */,
 				013341BE164B58C100C2984B /* BlocosByPlaceViewController.xib in Resources */,
+				01E0CFF7164BE2A300940C77 /* BlocosByNameViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +494,7 @@
 				013341B8164B4C0700C2984B /* MenuViewController.m in Sources */,
 				013341BD164B58C100C2984B /* BlocosByPlaceViewController.m in Sources */,
 				013341C5164B5B1300C2984B /* ZUUIRevealController.m in Sources */,
+				01E0CFF6164BE2A300940C77 /* BlocosByNameViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

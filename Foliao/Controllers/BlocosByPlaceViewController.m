@@ -8,26 +8,12 @@
 
 #import "BlocosByPlaceViewController.h"
 
-#import <Parse/Parse.h>
-
 
 @implementation BlocosByPlaceViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    PFQuery *query = [PFQuery queryWithClassName:@"Bloco"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            // The find succeeded.
-            NSLog(@"Successfully retrieved %d blocos.", objects.count);
-        } else {
-            // Log details of the failure
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-    }];
-    
     
     self.title = @"Folião";
 	
