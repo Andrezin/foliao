@@ -45,7 +45,7 @@
 		01BE6284164B3D450000679C /* seta-quem-vai.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6276164B3D450000679C /* seta-quem-vai.png */; };
 		01E0CFD7164BDCE700940C77 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFD6164BDCE700940C77 /* Parse.framework */; };
 		01E0CFDA164BDD2600940C77 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFD9164BDD2600940C77 /* AudioToolbox.framework */; };
-		01E0CFDC164BDD2D00940C77 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFDB164BDD2D00940C77 /* Accounts.framework */; };
+		01E0CFDC164BDD2D00940C77 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFDB164BDD2D00940C77 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		01E0CFDE164BDD3A00940C77 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFDD164BDD3A00940C77 /* AdSupport.framework */; };
 		01E0CFE0164BDD4000940C77 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFDF164BDD4000940C77 /* CFNetwork.framework */; };
 		01E0CFE2164BDD5100940C77 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFE1164BDD5100940C77 /* CoreLocation.framework */; };
@@ -54,7 +54,7 @@
 		01E0CFE8164BDD6A00940C77 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFE7164BDD6A00940C77 /* MobileCoreServices.framework */; };
 		01E0CFEA164BDD7000940C77 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFE9164BDD7000940C77 /* QuartzCore.framework */; };
 		01E0CFEC164BDD7500940C77 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFEB164BDD7500940C77 /* Security.framework */; };
-		01E0CFEE164BDD7C00940C77 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFED164BDD7C00940C77 /* Social.framework */; };
+		01E0CFEE164BDD7C00940C77 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFED164BDD7C00940C77 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		01E0CFF0164BDD8100940C77 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFEF164BDD8100940C77 /* StoreKit.framework */; };
 		01E0CFF2164BDD8600940C77 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFF1164BDD8600940C77 /* SystemConfiguration.framework */; };
 		01E0CFF6164BE2A300940C77 /* BlocosByNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E0CFF4164BE2A300940C77 /* BlocosByNameViewController.m */; };
@@ -589,6 +589,7 @@
 		01BE6257164B3B010000679C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -596,7 +597,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Foliao/Foliao-Prefix.pch";
 				INFOPLIST_FILE = "Foliao/Foliao-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -611,6 +614,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Foliao/Foliao-Prefix.pch";
 				INFOPLIST_FILE = "Foliao/Foliao-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

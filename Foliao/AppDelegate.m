@@ -40,7 +40,7 @@
 - (void)configureRootViewController
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-        
+    
     MenuViewController *menuViewController = [[MenuViewController alloc] init];
     BlocosByPlaceViewController *blocosByPlaceViewController = [[BlocosByPlaceViewController alloc] init];
     
@@ -48,6 +48,11 @@
     
     ZUUIRevealController *revealController = [[ZUUIRevealController alloc] initWithFrontViewController:navigationController rearViewController:menuViewController];
     self.viewController = revealController;
+    
+    // https://github.com/pkluz/ZUUIRevealController/issues/40
+    CGRect appFrame = [[UIScreen mainScreen] applicationFrame];
+    CGRect statusBarFrame = [[UIApplication sharedApplication] statusBarFrame];
+    revealController.rearViewController.view.frame = CGRectMake(0.0, 0.0, appFrame.size.width, appFrame.size.height + statusBarFrame.size.height);
     
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
