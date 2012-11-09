@@ -14,6 +14,7 @@
 
 @end
 
+
 @implementation BlocoViewController
 
 - (void)viewDidLoad
@@ -46,6 +47,5 @@
     
     [self.scrollView setContentSize:(CGSizeMake(self.scrollView.frame.size.width, scrollViewHeight+10))];
 }
-
 
 @end

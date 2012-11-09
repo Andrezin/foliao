@@ -12,7 +12,6 @@
 @interface BlocoViewController : UIViewController
 
 @property (strong, nonatomic) PFObject *bloco;
-
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end

@@ -10,9 +10,7 @@
 
 #import "NavigationRootLevelViewController.h"
 
-@interface BlocosByNameViewController : NavigationRootLevelViewController <UITableViewDataSource, UITableViewDelegate> {
-    NSArray *blocos;
-}
+@interface BlocosByNameViewController : NavigationRootLevelViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 

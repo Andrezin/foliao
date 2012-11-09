@@ -12,6 +12,13 @@
 #import "BlocoViewController.h"
 
 
+@interface BlocosByNameViewController()
+
+@property (strong, nonatomic) NSArray *blocos;
+
+@end
+
+
 @implementation BlocosByNameViewController
 
 - (void)viewDidLoad
@@ -24,7 +31,7 @@
         if (!error) {
             // The find succeeded.
             NSLog(@"Successfully retrieved %d blocos.", objects.count);
-            blocos = objects;
+            self.blocos = objects;
             [self.tableView reloadData];
         } else {
             // Log details of the failure
@@ -42,7 +49,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return blocos.count;
+    return self.blocos.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -53,7 +60,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    cell.textLabel.text = blocos[indexPath.row][@"name"];
+    cell.textLabel.text = self.blocos[indexPath.row][@"name"];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
@@ -64,7 +71,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     BlocoViewController *blocoViewController = [[BlocoViewController alloc] init];
-    blocoViewController.bloco = blocos[indexPath.row];
+    blocoViewController.bloco = self.blocos[indexPath.row];
     [self.navigationController pushViewController:blocoViewController animated:YES];
 }
 
