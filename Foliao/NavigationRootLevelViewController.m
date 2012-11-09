@@ -9,13 +9,11 @@
 #import <Parse/Parse.h>
 
 #import "NavigationRootLevelViewController.h"
-#import "AppDelegate.h"
 
 
 @interface NavigationRootLevelViewController()
 
 - (void)addMenuButton;
-- (void)addLogoutButton;
 
 @end
 
@@ -33,7 +31,6 @@
 		[self.navigationController.navigationBar addGestureRecognizer:navigationBarPanGestureRecognizer];
 		
         [self addMenuButton];
-        [self addLogoutButton];
 	}
 }
 
@@ -45,22 +42,6 @@
     [menuButton addTarget:self.navigationController.parentViewController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:menuButton];
-}
-
-- (void)addLogoutButton
-{
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
-                                              initWithTitle:@"Logout"
-                                              style:UIBarButtonItemStyleBordered
-                                              target:self
-                                              action:@selector(logoutButtonWasPressed:)];
-}
-
--(void)logoutButtonWasPressed:(id)sender
-{
-    [[PFFacebookUtils session] closeAndClearTokenInformation];
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    [appDelegate sessionStateChanged:nil];
 }
 
 @end

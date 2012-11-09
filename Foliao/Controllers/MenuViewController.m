@@ -6,8 +6,11 @@
 //  Copyright (c) 2012 7pixels. All rights reserved.
 //
 
+#import <Parse/Parse.h>
+
 #import "MenuViewController.h"
 
+#import "AppDelegate.h"
 #import "ZUUIRevealController.h"
 #import "BlocosByPlaceViewController.h"
 #import "BlocosByNameViewController.h"
@@ -45,7 +48,13 @@
                 @"Mulher",
                 @"Homem"
             ]
-        }*/
+        }*/,
+        @{
+            @"section_title": @"Configurações",
+            @"row_title": @[
+                @"Logout"
+            ]
+        }
     ];
 }
 
@@ -86,7 +95,7 @@
 {
     ZUUIRevealController *revealController = [self.parentViewController isKindOfClass:[ZUUIRevealController class]] ? (ZUUIRevealController *)self.parentViewController : nil;
     
-    if (indexPath.row == 0) {
+    if (indexPath.section == 0 && indexPath.row == 0) {
 		// Now let's see if we're not attempting to swap the current frontViewController for a new instance of ITSELF, which'd be highly redundant.
 		if ([revealController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)revealController.frontViewController).topViewController isKindOfClass:[BlocosByPlaceViewController class]]) {
 			BlocosByPlaceViewController *blocosByPlaceViewController = [[BlocosByPlaceViewController alloc] init];
@@ -96,7 +105,7 @@
 		} else {
             [revealController revealToggle:self];
         }
-	} else if (indexPath.row == 1) {
+	} else if (indexPath.section == 0 && indexPath.row == 1) {
         // Now let's see if we're not attempting to swap the current frontViewController for a new instance of ITSELF, which'd be highly redundant.
 		if ([revealController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)revealController.frontViewController).topViewController isKindOfClass:[BlocosByNameViewController class]]) {
 			BlocosByNameViewController *blocosByNameViewController = [[BlocosByNameViewController alloc] init];
@@ -106,6 +115,10 @@
 		} else {
             [revealController revealToggle:self];
         }
+    } else if (indexPath.section == 1) {
+        [[PFFacebookUtils session] closeAndClearTokenInformation];
+        AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+        [appDelegate sessionStateChanged:nil];
     }
 }
 
