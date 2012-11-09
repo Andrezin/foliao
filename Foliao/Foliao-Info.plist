@@ -10,6 +10,7 @@
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFiles</key>
 	<array>
+		<string>57x57.png</string>
 		<string>512x512.png</string>
 		<string>114x114.png</string>
 	</array>
@@ -48,6 +49,8 @@
 	</array>
 	<key>UIStatusBarHidden</key>
 	<false/>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleBlackTranslucent</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

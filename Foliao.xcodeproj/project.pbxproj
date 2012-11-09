@@ -13,6 +13,9 @@
 		013341BE164B58C100C2984B /* BlocosByPlaceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 013341BC164B58C100C2984B /* BlocosByPlaceViewController.xib */; };
 		013341C5164B5B1300C2984B /* ZUUIRevealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013341C3164B5B1300C2984B /* ZUUIRevealController.m */; };
 		013341C7164B5DD900C2984B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 013341C6164B5DD900C2984B /* MapKit.framework */; };
+		014EECC0164DC80000C4F626 /* navigation-bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 014EECBF164DC80000C4F626 /* navigation-bar.png */; };
+		014EECC2164DC80E00C4F626 /* navigation-bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 014EECC1164DC80D00C4F626 /* navigation-bar@2x.png */; };
+		014EECC4164DC82400C4F626 /* 57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 014EECC3164DC82400C4F626 /* 57x57.png */; };
 		018B5E63164D8B8600042B4E /* NavigationRootLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B5E62164D8B8600042B4E /* NavigationRootLevelViewController.m */; };
 		018B5E67164D8E0500042B4E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B5E65164D8E0500042B4E /* LoginViewController.m */; };
 		018B5E68164D8E0500042B4E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 018B5E66164D8E0500042B4E /* LoginViewController.xib */; };
@@ -38,14 +41,14 @@
 		01BE6263164B3CEA0000679C /* 114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6261164B3CEA0000679C /* 114x114.png */; };
 		01BE6264164B3CEA0000679C /* 512x512.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6262164B3CEA0000679C /* 512x512.png */; };
 		01BE6277164B3D450000679C /* bt-checkin.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6268164B3D450000679C /* bt-checkin.png */; };
-		01BE6278164B3D450000679C /* bt-editar.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6269164B3D450000679C /* bt-editar.png */; };
+		01BE6278164B3D450000679C /* bt-base.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6269164B3D450000679C /* bt-base.png */; };
 		01BE6279164B3D450000679C /* bt-menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE626A164B3D450000679C /* bt-menu.png */; };
 		01BE627A164B3D450000679C /* bt-ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE626B164B3D450000679C /* bt-ok.png */; };
 		01BE627B164B3D450000679C /* bt-voltar.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE626C164B3D450000679C /* bt-voltar.png */; };
 		01BE627C164B3D450000679C /* marca.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE626D164B3D450000679C /* marca.png */; };
 		01BE627D164B3D450000679C /* seta-quem-vai.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE626E164B3D450000679C /* seta-quem-vai.png */; };
 		01BE627E164B3D450000679C /* bt-checkin.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6270164B3D450000679C /* bt-checkin.png */; };
-		01BE627F164B3D450000679C /* bt-editar.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6271164B3D450000679C /* bt-editar.png */; };
+		01BE627F164B3D450000679C /* bt-base.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6271164B3D450000679C /* bt-base.png */; };
 		01BE6280164B3D450000679C /* bt-menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6272164B3D450000679C /* bt-menu.png */; };
 		01BE6281164B3D450000679C /* bt-ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6273164B3D450000679C /* bt-ok.png */; };
 		01BE6282164B3D450000679C /* bt-voltar.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6274164B3D450000679C /* bt-voltar.png */; };
@@ -88,6 +91,9 @@
 		013341C2164B5B1300C2984B /* ZUUIRevealController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZUUIRevealController.h; sourceTree = "<group>"; };
 		013341C3164B5B1300C2984B /* ZUUIRevealController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZUUIRevealController.m; sourceTree = "<group>"; };
 		013341C6164B5DD900C2984B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		014EECBF164DC80000C4F626 /* navigation-bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation-bar.png"; sourceTree = "<group>"; };
+		014EECC1164DC80D00C4F626 /* navigation-bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation-bar@2x.png"; sourceTree = "<group>"; };
+		014EECC3164DC82400C4F626 /* 57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 57x57.png; sourceTree = "<group>"; };
 		018B5E60164D869000042B4E /* AppConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
 		018B5E61164D8B8600042B4E /* NavigationRootLevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationRootLevelViewController.h; sourceTree = "<group>"; };
 		018B5E62164D8B8600042B4E /* NavigationRootLevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationRootLevelViewController.m; sourceTree = "<group>"; };
@@ -122,14 +128,14 @@
 		01BE6261164B3CEA0000679C /* 114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 114x114.png; sourceTree = "<group>"; };
 		01BE6262164B3CEA0000679C /* 512x512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 512x512.png; sourceTree = "<group>"; };
 		01BE6268164B3D450000679C /* bt-checkin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-checkin.png"; sourceTree = "<group>"; };
-		01BE6269164B3D450000679C /* bt-editar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-editar.png"; sourceTree = "<group>"; };
+		01BE6269164B3D450000679C /* bt-base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-base.png"; sourceTree = "<group>"; };
 		01BE626A164B3D450000679C /* bt-menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-menu.png"; sourceTree = "<group>"; };
 		01BE626B164B3D450000679C /* bt-ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-ok.png"; sourceTree = "<group>"; };
 		01BE626C164B3D450000679C /* bt-voltar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-voltar.png"; sourceTree = "<group>"; };
 		01BE626D164B3D450000679C /* marca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marca.png; sourceTree = "<group>"; };
 		01BE626E164B3D450000679C /* seta-quem-vai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seta-quem-vai.png"; sourceTree = "<group>"; };
 		01BE6270164B3D450000679C /* bt-checkin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-checkin.png"; sourceTree = "<group>"; };
-		01BE6271164B3D450000679C /* bt-editar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-editar.png"; sourceTree = "<group>"; };
+		01BE6271164B3D450000679C /* bt-base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-base.png"; sourceTree = "<group>"; };
 		01BE6272164B3D450000679C /* bt-menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-menu.png"; sourceTree = "<group>"; };
 		01BE6273164B3D450000679C /* bt-ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-ok.png"; sourceTree = "<group>"; };
 		01BE6274164B3D450000679C /* bt-voltar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-voltar.png"; sourceTree = "<group>"; };
@@ -337,6 +343,7 @@
 		01BE6260164B3CB80000679C /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				014EECC3164DC82400C4F626 /* 57x57.png */,
 				01BE6261164B3CEA0000679C /* 114x114.png */,
 				01BE6262164B3CEA0000679C /* 512x512.png */,
 				01BE6239164B3B000000679C /* Default.png */,
@@ -366,8 +373,9 @@
 		01BE6267164B3D450000679C /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				014EECBF164DC80000C4F626 /* navigation-bar.png */,
 				01BE6268164B3D450000679C /* bt-checkin.png */,
-				01BE6269164B3D450000679C /* bt-editar.png */,
+				01BE6269164B3D450000679C /* bt-base.png */,
 				01BE626A164B3D450000679C /* bt-menu.png */,
 				01BE626B164B3D450000679C /* bt-ok.png */,
 				01BE626C164B3D450000679C /* bt-voltar.png */,
@@ -380,8 +388,9 @@
 		01BE626F164B3D450000679C /* Retina */ = {
 			isa = PBXGroup;
 			children = (
+				014EECC1164DC80D00C4F626 /* navigation-bar@2x.png */,
 				01BE6270164B3D450000679C /* bt-checkin.png */,
-				01BE6271164B3D450000679C /* bt-editar.png */,
+				01BE6271164B3D450000679C /* bt-base.png */,
 				01BE6272164B3D450000679C /* bt-menu.png */,
 				01BE6273164B3D450000679C /* bt-ok.png */,
 				01BE6274164B3D450000679C /* bt-voltar.png */,
@@ -469,14 +478,14 @@
 				01BE6263164B3CEA0000679C /* 114x114.png in Resources */,
 				01BE6264164B3CEA0000679C /* 512x512.png in Resources */,
 				01BE6277164B3D450000679C /* bt-checkin.png in Resources */,
-				01BE6278164B3D450000679C /* bt-editar.png in Resources */,
+				01BE6278164B3D450000679C /* bt-base.png in Resources */,
 				01BE6279164B3D450000679C /* bt-menu.png in Resources */,
 				01BE627A164B3D450000679C /* bt-ok.png in Resources */,
 				01BE627B164B3D450000679C /* bt-voltar.png in Resources */,
 				01BE627C164B3D450000679C /* marca.png in Resources */,
 				01BE627D164B3D450000679C /* seta-quem-vai.png in Resources */,
 				01BE627E164B3D450000679C /* bt-checkin.png in Resources */,
-				01BE627F164B3D450000679C /* bt-editar.png in Resources */,
+				01BE627F164B3D450000679C /* bt-base.png in Resources */,
 				01BE6280164B3D450000679C /* bt-menu.png in Resources */,
 				01BE6281164B3D450000679C /* bt-ok.png in Resources */,
 				01BE6282164B3D450000679C /* bt-voltar.png in Resources */,
@@ -488,6 +497,9 @@
 				018B5E68164D8E0500042B4E /* LoginViewController.xib in Resources */,
 				018B5E72164DA0F000042B4E /* FacebookSDKResources.bundle in Resources */,
 				018B5E77164DB19B00042B4E /* BlocoViewController.xib in Resources */,
+				014EECC0164DC80000C4F626 /* navigation-bar.png in Resources */,
+				014EECC2164DC80E00C4F626 /* navigation-bar@2x.png in Resources */,
+				014EECC4164DC82400C4F626 /* 57x57.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
