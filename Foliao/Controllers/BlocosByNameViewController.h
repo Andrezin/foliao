@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BlocosByNameViewController : UITableViewController {
+#import "NavigationRootLevelViewController.h"
+
+@interface BlocosByNameViewController : NavigationRootLevelViewController <UITableViewDataSource, UITableViewDelegate> {
     NSArray *blocos;
 }
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end

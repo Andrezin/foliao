@@ -13,6 +13,7 @@
 #import "ZUUIRevealController.h"
 #import "MenuViewController.h"
 #import "BlocosByPlaceViewController.h"
+#import "AppConstants.h"
 
 @interface AppDelegate()
 
@@ -35,6 +36,8 @@
 {
     [Parse setApplicationId:@"Zz8V3uYUdxJGgUsDlVhpt8egBxKwI80Vyh6trNXR"
                   clientKey:@"HVVNEil3EDwDrU2kLTlbk24urzszqr7djx7Qlh6q"];
+    
+    [PFFacebookUtils initializeWithApplicationId:kFACEBOOK_APP_ID];
 }
 
 - (void)configureRootViewController
@@ -56,6 +59,15 @@
     
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return [PFFacebookUtils handleOpenURL:url];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [PFFacebookUtils handleOpenURL:url];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

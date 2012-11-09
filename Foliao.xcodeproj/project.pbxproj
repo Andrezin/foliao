@@ -13,6 +13,7 @@
 		013341BE164B58C100C2984B /* BlocosByPlaceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 013341BC164B58C100C2984B /* BlocosByPlaceViewController.xib */; };
 		013341C5164B5B1300C2984B /* ZUUIRevealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013341C3164B5B1300C2984B /* ZUUIRevealController.m */; };
 		013341C7164B5DD900C2984B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 013341C6164B5DD900C2984B /* MapKit.framework */; };
+		018B5E63164D8B8600042B4E /* NavigationRootLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B5E62164D8B8600042B4E /* NavigationRootLevelViewController.m */; };
 		01BE6228164B3B000000679C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BE6227164B3B000000679C /* UIKit.framework */; };
 		01BE622A164B3B000000679C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BE6229164B3B000000679C /* Foundation.framework */; };
 		01BE622C164B3B000000679C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BE622B164B3B000000679C /* CoreGraphics.framework */; };
@@ -81,6 +82,9 @@
 		013341C2164B5B1300C2984B /* ZUUIRevealController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZUUIRevealController.h; sourceTree = "<group>"; };
 		013341C3164B5B1300C2984B /* ZUUIRevealController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZUUIRevealController.m; sourceTree = "<group>"; };
 		013341C6164B5DD900C2984B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		018B5E60164D869000042B4E /* AppConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
+		018B5E61164D8B8600042B4E /* NavigationRootLevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationRootLevelViewController.h; sourceTree = "<group>"; };
+		018B5E62164D8B8600042B4E /* NavigationRootLevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationRootLevelViewController.m; sourceTree = "<group>"; };
 		01BE6223164B3B000000679C /* Foliao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foliao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01BE6227164B3B000000679C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		01BE6229164B3B000000679C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -183,6 +187,8 @@
 				013341BB164B58C100C2984B /* BlocosByPlaceViewController.m */,
 				01E0CFF3164BE2A300940C77 /* BlocosByNameViewController.h */,
 				01E0CFF4164BE2A300940C77 /* BlocosByNameViewController.m */,
+				018B5E61164D8B8600042B4E /* NavigationRootLevelViewController.h */,
+				018B5E62164D8B8600042B4E /* NavigationRootLevelViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -281,6 +287,7 @@
 				01BE6233164B3B000000679C /* main.m */,
 				01BE6235164B3B000000679C /* Foliao-Prefix.pch */,
 				01BE6260164B3CB80000679C /* Assets */,
+				018B5E60164D869000042B4E /* AppConstants.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -495,6 +502,7 @@
 				013341BD164B58C100C2984B /* BlocosByPlaceViewController.m in Sources */,
 				013341C5164B5B1300C2984B /* ZUUIRevealController.m in Sources */,
 				01E0CFF6164BE2A300940C77 /* BlocosByNameViewController.m in Sources */,
+				018B5E63164D8B8600042B4E /* NavigationRootLevelViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,16 +16,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.title = @"Folião";
-	
-	if ([self.navigationController.parentViewController respondsToSelector:@selector(revealGesture:)] && [self.navigationController.parentViewController respondsToSelector:@selector(revealToggle:)])
-	{
-		UIPanGestureRecognizer *navigationBarPanGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self.navigationController.parentViewController action:@selector(revealGesture:)];
-		[self.navigationController.navigationBar addGestureRecognizer:navigationBarPanGestureRecognizer];
-		
-		self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Menu" style:UIBarButtonItemStylePlain target:self.navigationController.parentViewController action:@selector(revealToggle:)];
-	}
 
     PFQuery *query = [PFQuery queryWithClassName:@"Bloco"];
     [query orderByAscending:@"name"];

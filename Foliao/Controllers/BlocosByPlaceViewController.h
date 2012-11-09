@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface BlocosByPlaceViewController : UIViewController <MKMapViewDelegate> {
+#import "NavigationRootLevelViewController.h"
+
+@interface BlocosByPlaceViewController : NavigationRootLevelViewController <MKMapViewDelegate> {
     IBOutlet MKMapView *mapView;
 }
 
