@@ -6,9 +6,10 @@
 //  Copyright (c) 2012 7pixels. All rights reserved.
 //
 
-#import "BlocosByNameViewController.h"
-
 #import <Parse/Parse.h>
+
+#import "BlocosByNameViewController.h"
+#import "BlocoViewController.h"
 
 
 @implementation BlocosByNameViewController
@@ -53,6 +54,7 @@
     }
     
     cell.textLabel.text = blocos[indexPath.row][@"name"];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
@@ -61,13 +63,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    BlocoViewController *blocoViewController = [[BlocoViewController alloc] init];
+    blocoViewController.bloco = blocos[indexPath.row];
+    [self.navigationController pushViewController:blocoViewController animated:YES];
 }
 
 @end
