@@ -16,5 +16,6 @@
 @property (strong, nonatomic) ZUUIRevealController *mainViewController;
 
 - (void)openSession;
+- (void)sessionStateChanged:(NSError *)error;
 
 @end
