@@ -13,6 +13,8 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) ZUUIRevealController *viewController;
+@property (strong, nonatomic) ZUUIRevealController *mainViewController;
+
+- (void)openSession;
 
 @end

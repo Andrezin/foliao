@@ -14,6 +14,10 @@
 		013341C5164B5B1300C2984B /* ZUUIRevealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013341C3164B5B1300C2984B /* ZUUIRevealController.m */; };
 		013341C7164B5DD900C2984B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 013341C6164B5DD900C2984B /* MapKit.framework */; };
 		018B5E63164D8B8600042B4E /* NavigationRootLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B5E62164D8B8600042B4E /* NavigationRootLevelViewController.m */; };
+		018B5E67164D8E0500042B4E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B5E65164D8E0500042B4E /* LoginViewController.m */; };
+		018B5E68164D8E0500042B4E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 018B5E66164D8E0500042B4E /* LoginViewController.xib */; };
+		018B5E6A164D8FE100042B4E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018B5E69164D8FE100042B4E /* FacebookSDK.framework */; };
+		018B5E6C164D8FEC00042B4E /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 018B5E6B164D8FEC00042B4E /* FacebookSDKResources.bundle */; };
 		01BE6228164B3B000000679C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BE6227164B3B000000679C /* UIKit.framework */; };
 		01BE622A164B3B000000679C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BE6229164B3B000000679C /* Foundation.framework */; };
 		01BE622C164B3B000000679C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BE622B164B3B000000679C /* CoreGraphics.framework */; };
@@ -47,7 +51,7 @@
 		01E0CFD7164BDCE700940C77 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFD6164BDCE700940C77 /* Parse.framework */; };
 		01E0CFDA164BDD2600940C77 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFD9164BDD2600940C77 /* AudioToolbox.framework */; };
 		01E0CFDC164BDD2D00940C77 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFDB164BDD2D00940C77 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		01E0CFDE164BDD3A00940C77 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFDD164BDD3A00940C77 /* AdSupport.framework */; };
+		01E0CFDE164BDD3A00940C77 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFDD164BDD3A00940C77 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		01E0CFE0164BDD4000940C77 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFDF164BDD4000940C77 /* CFNetwork.framework */; };
 		01E0CFE2164BDD5100940C77 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFE1164BDD5100940C77 /* CoreLocation.framework */; };
 		01E0CFE4164BDD5B00940C77 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFE3164BDD5B00940C77 /* libsqlite3.dylib */; };
@@ -85,6 +89,11 @@
 		018B5E60164D869000042B4E /* AppConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
 		018B5E61164D8B8600042B4E /* NavigationRootLevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationRootLevelViewController.h; sourceTree = "<group>"; };
 		018B5E62164D8B8600042B4E /* NavigationRootLevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationRootLevelViewController.m; sourceTree = "<group>"; };
+		018B5E64164D8E0500042B4E /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		018B5E65164D8E0500042B4E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		018B5E66164D8E0500042B4E /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		018B5E69164D8FE100042B4E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		018B5E6B164D8FEC00042B4E /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKResources.bundle; sourceTree = "<group>"; };
 		01BE6223164B3B000000679C /* Foliao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foliao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01BE6227164B3B000000679C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		01BE6229164B3B000000679C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -162,6 +171,7 @@
 				01BE6228164B3B000000679C /* UIKit.framework in Frameworks */,
 				01BE622A164B3B000000679C /* Foundation.framework in Frameworks */,
 				01E0CFD7164BDCE700940C77 /* Parse.framework in Frameworks */,
+				018B5E6A164D8FE100042B4E /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +199,9 @@
 				01E0CFF4164BE2A300940C77 /* BlocosByNameViewController.m */,
 				018B5E61164D8B8600042B4E /* NavigationRootLevelViewController.h */,
 				018B5E62164D8B8600042B4E /* NavigationRootLevelViewController.m */,
+				018B5E64164D8E0500042B4E /* LoginViewController.h */,
+				018B5E65164D8E0500042B4E /* LoginViewController.m */,
+				018B5E66164D8E0500042B4E /* LoginViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -242,6 +255,8 @@
 		01BE6226164B3B000000679C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				018B5E6B164D8FEC00042B4E /* FacebookSDKResources.bundle */,
+				018B5E69164D8FE100042B4E /* FacebookSDK.framework */,
 				01E0CFF1164BDD8600940C77 /* SystemConfiguration.framework */,
 				01E0CFEF164BDD8100940C77 /* StoreKit.framework */,
 				01E0CFED164BDD7C00940C77 /* Social.framework */,
@@ -462,6 +477,8 @@
 				013341B9164B4C0700C2984B /* MenuViewController.xib in Resources */,
 				013341BE164B58C100C2984B /* BlocosByPlaceViewController.xib in Resources */,
 				01E0CFF7164BE2A300940C77 /* BlocosByNameViewController.xib in Resources */,
+				018B5E68164D8E0500042B4E /* LoginViewController.xib in Resources */,
+				018B5E6C164D8FEC00042B4E /* FacebookSDKResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +520,7 @@
 				013341C5164B5B1300C2984B /* ZUUIRevealController.m in Sources */,
 				01E0CFF6164BE2A300940C77 /* BlocosByNameViewController.m in Sources */,
 				018B5E63164D8B8600042B4E /* NavigationRootLevelViewController.m in Sources */,
+				018B5E67164D8E0500042B4E /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
