@@ -10,7 +10,9 @@
 
 @interface BlocoViewController ()
 
+- (void)customizeBackButton;
 - (void)sizeScrollViewToFit;
+- (void)popViewController;
 
 @end
 
@@ -20,12 +22,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self customizeBackButton];
     [self sizeScrollViewToFit];
 }
 
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+- (void)customizeBackButton
 {
-    [self sizeScrollViewToFit];
+    UIImage *backButtonImage = [UIImage imageNamed:@"bt-voltar"];
+    UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 43, 30)];
+    [backButton setBackgroundImage:backButtonImage forState:UIControlStateNormal];
+    [backButton addTarget:self action:@selector(popViewController) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+    self.navigationItem.leftBarButtonItem = backButtonItem;
+}
+
+- (void)popViewController
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)sizeScrollViewToFit
@@ -46,6 +59,11 @@
     self.scrollView.showsVerticalScrollIndicator = YES;
     
     [self.scrollView setContentSize:(CGSizeMake(self.scrollView.frame.size.width, scrollViewHeight+10))];
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    [self sizeScrollViewToFit];
 }
 
 @end

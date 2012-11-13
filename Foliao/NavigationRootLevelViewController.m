@@ -24,7 +24,7 @@
 {
     [super viewDidLoad];
     
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigation-bar.png"] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigation-bar"] forBarMetrics:UIBarMetricsDefault];
 	
 	if ([self.navigationController.parentViewController respondsToSelector:@selector(revealGesture:)] && [self.navigationController.parentViewController respondsToSelector:@selector(revealToggle:)]) {
 		UIPanGestureRecognizer *navigationBarPanGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self.navigationController.parentViewController action:@selector(revealGesture:)];
@@ -36,7 +36,7 @@
 
 - (void)addMenuButton
 {
-    UIImage *menuButtonBackground = [UIImage imageNamed:@"bt-menu.png"];
+    UIImage *menuButtonBackground = [UIImage imageNamed:@"bt-menu"];
     UIButton *menuButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 43, 30)];
     [menuButton setBackgroundImage:menuButtonBackground forState:UIControlStateNormal];
     [menuButton addTarget:self.navigationController.parentViewController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
