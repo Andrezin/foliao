@@ -37,7 +37,7 @@
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
 				<array class="NSMutableArray" key="NSSubviews">
-					<object class="IBUIImageView" id="117604192">
+					<object class="IBUIImageView" id="1034725762">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{0, -20}, {320, 480}}</string>
@@ -69,11 +69,11 @@
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<string key="IBUINormalTitle">facebook</string>
-						<object class="NSColor" key="IBUIHighlightedTitleColor" id="98316125">
+						<object class="NSColor" key="IBUIHighlightedTitleColor" id="911518209">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
 						</object>
-						<reference key="IBUINormalTitleColor" ref="98316125"/>
+						<reference key="IBUINormalTitleColor" ref="911518209"/>
 						<object class="NSColor" key="IBUINormalTitleShadowColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC41AA</bytes>
@@ -94,7 +94,6 @@
 						<string key="NSFrame">{{150, 340}, {20, 20}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -104,7 +103,7 @@
 				<string key="NSFrameSize">{320, 568}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView" ref="117604192"/>
+				<reference key="NSNextKeyView" ref="1034725762"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MQA</bytes>
@@ -174,7 +173,7 @@
 						<array class="NSMutableArray" key="children">
 							<reference ref="332639158"/>
 							<reference ref="101819596"/>
-							<reference ref="117604192"/>
+							<reference ref="1034725762"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -202,7 +201,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">12</int>
-						<reference key="object" ref="117604192"/>
+						<reference key="object" ref="1034725762"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</array>

@@ -208,6 +208,7 @@
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="705181042"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
+								<int key="IBUIContentMode">1</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
@@ -219,6 +220,7 @@
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="288421441"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
+								<int key="IBUIContentMode">1</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
@@ -230,6 +232,7 @@
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="798473800"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
+								<int key="IBUIContentMode">1</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
@@ -241,6 +244,7 @@
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="703291534"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
+								<int key="IBUIContentMode">1</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
@@ -330,6 +334,38 @@
 						<reference key="destination" ref="533751030"/>
 					</object>
 					<int key="connectionID">27</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">pictureFoliao0</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="655641510"/>
+					</object>
+					<int key="connectionID">33</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">pictureFoliao1</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="705181042"/>
+					</object>
+					<int key="connectionID">34</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">pictureFoliao2</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="288421441"/>
+					</object>
+					<int key="connectionID">35</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">pictureFoliao3</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="798473800"/>
+					</object>
+					<int key="connectionID">36</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -478,7 +514,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">28</int>
+			<int key="maxID">36</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -498,12 +534,32 @@
 					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="checkInButton">UIButton</string>
+						<string key="pictureFoliao0">UIImageView</string>
+						<string key="pictureFoliao1">UIImageView</string>
+						<string key="pictureFoliao2">UIImageView</string>
+						<string key="pictureFoliao3">UIImageView</string>
 						<string key="scrollView">UIScrollView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="checkInButton">
 							<string key="name">checkInButton</string>
 							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="pictureFoliao0">
+							<string key="name">pictureFoliao0</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="pictureFoliao1">
+							<string key="name">pictureFoliao1</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="pictureFoliao2">
+							<string key="name">pictureFoliao2</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="pictureFoliao3">
+							<string key="name">pictureFoliao3</string>
+							<string key="candidateClassName">UIImageView</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="scrollView">
 							<string key="name">scrollView</string>

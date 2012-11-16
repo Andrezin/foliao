@@ -147,10 +147,26 @@
             [self showLoginView];
         } else if (user.isNew) {
             NSLog(@"User signed up and logged in through Facebook!");
+            [self takeMyFacebookId];
         } else {
             NSLog(@"User logged in through Facebook!");
         }
         [self sessionStateChanged:error];
+    }];
+}
+
+- (void)takeMyFacebookId
+{
+    PF_FBRequest *request = [PF_FBRequest requestForMe];
+    [request startWithCompletionHandler:^(PF_FBRequestConnection *connection,
+                                          id result,
+                                          NSError *error) {
+        if (!error) {
+            // Store the current user's Facebook ID on the user
+            [[PFUser currentUser] setObject:[result objectForKey:@"id"]
+                                     forKey:@"facebookId"];
+            [[PFUser currentUser] saveInBackground];
+        }
     }];
 }
 

@@ -13,13 +13,21 @@
 @interface BlocoViewController ()
 
 @property (strong, nonatomic) NSArray *parades;
+@property (strong, nonatomic) NSArray *folioes;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UIButton *checkInButton;
+
+@property (strong, nonatomic) IBOutlet UIImageView *pictureFoliao0;
+@property (strong, nonatomic) IBOutlet UIImageView *pictureFoliao1;
+@property (strong, nonatomic) IBOutlet UIImageView *pictureFoliao2;
+@property (strong, nonatomic) IBOutlet UIImageView *pictureFoliao3;
 
 - (void)customizeBackButton;
 - (void)sizeScrollViewToFit;
 - (void)popViewController;
 - (void)fillBlocoInfoInBackground;
+- (void)showWhoIsGoing;
+- (void)showFolioesPictures;
 - (void)confirmPresenceInParade:(PFObject *)parade;
 
 - (IBAction)checkInButtonTapped:(UIButton *)sender;
@@ -83,9 +91,47 @@
             self.parades = objects;
             if (self.parades.count) {
                 self.checkInButton.enabled = YES;
+                [self showWhoIsGoing];
             }
         }
     }];
+}
+
+- (void)showWhoIsGoing
+{
+    PFQuery *query = [PFQuery queryWithClassName:@"Presence"];
+    [query whereKey:@"parade" containedIn:self.parades];
+    [query includeKey:@"user"];
+    [query includeKey:@"user.authData"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *presences, NSError *error) {
+        if (!error) {
+            NSLog(@"Found %d presences", presences.count);
+            
+            NSMutableArray *whoIsGoing = [[NSMutableArray alloc] initWithCapacity:presences.count];
+            for (PFObject *presence in presences) {
+                PFUser *user = presence[@"user"];
+                [whoIsGoing addObject:user];
+            }
+            self.folioes = [NSArray arrayWithArray:whoIsGoing];
+            [self showFolioesPictures];
+        }
+    }];
+}
+
+- (void)showFolioesPictures
+{
+    NSArray *pictureTemplates = [NSArray arrayWithObjects:self.pictureFoliao0,
+                                                          self.pictureFoliao1,
+                                                          self.pictureFoliao2,
+                                                          self.pictureFoliao3, nil];
+    
+    for (int i=0; i < 3; i++) {
+        if (i == self.folioes.count) break;
+        
+        NSString *picURL = [NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=normal", self.folioes[i][@"facebookId"]];
+        NSData *picture = [NSData dataWithContentsOfURL:[NSURL URLWithString:picURL]];
+        [pictureTemplates[i] setImage:[UIImage imageWithData:picture]];
+    }
 }
 
 - (IBAction)checkInButtonTapped:(UIButton *)sender
