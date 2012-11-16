@@ -24,14 +24,14 @@
 		018B5E72164DA0F000042B4E /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 018B5E71164DA0F000042B4E /* FacebookSDKResources.bundle */; };
 		018B5E76164DB19B00042B4E /* BlocoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B5E74164DB19B00042B4E /* BlocoViewController.m */; };
 		018B5E77164DB19B00042B4E /* BlocoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 018B5E75164DB19B00042B4E /* BlocoViewController.xib */; };
+		019E6B3A1655DB790025786D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 019E6B381655DB790025786D /* Default.png */; };
+		019E6B3B1655DB790025786D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 019E6B391655DB790025786D /* Default@2x.png */; };
 		01BE6228164B3B000000679C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BE6227164B3B000000679C /* UIKit.framework */; };
 		01BE622A164B3B000000679C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BE6229164B3B000000679C /* Foundation.framework */; };
 		01BE622C164B3B000000679C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BE622B164B3B000000679C /* CoreGraphics.framework */; };
 		01BE6232164B3B000000679C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6230164B3B000000679C /* InfoPlist.strings */; };
 		01BE6234164B3B000000679C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6233164B3B000000679C /* main.m */; };
 		01BE6238164B3B000000679C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6237164B3B000000679C /* AppDelegate.m */; };
-		01BE623A164B3B000000679C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6239164B3B000000679C /* Default.png */; };
-		01BE623C164B3B000000679C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE623B164B3B000000679C /* Default@2x.png */; };
 		01BE623E164B3B000000679C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE623D164B3B000000679C /* Default-568h@2x.png */; };
 		01BE6246164B3B010000679C /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BE6245164B3B010000679C /* SenTestingKit.framework */; };
 		01BE6247164B3B010000679C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BE6227164B3B000000679C /* UIKit.framework */; };
@@ -106,6 +106,8 @@
 		018B5E73164DB19B00042B4E /* BlocoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlocoViewController.h; sourceTree = "<group>"; };
 		018B5E74164DB19B00042B4E /* BlocoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlocoViewController.m; sourceTree = "<group>"; };
 		018B5E75164DB19B00042B4E /* BlocoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BlocoViewController.xib; path = ../BlocoViewController.xib; sourceTree = "<group>"; };
+		019E6B381655DB790025786D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		019E6B391655DB790025786D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		01BE6223164B3B000000679C /* Foliao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foliao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01BE6227164B3B000000679C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		01BE6229164B3B000000679C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -116,8 +118,6 @@
 		01BE6235164B3B000000679C /* Foliao-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Foliao-Prefix.pch"; sourceTree = "<group>"; };
 		01BE6236164B3B000000679C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		01BE6237164B3B000000679C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		01BE6239164B3B000000679C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		01BE623B164B3B000000679C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		01BE623D164B3B000000679C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		01BE6244164B3B010000679C /* FoliaoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoliaoTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01BE6245164B3B010000679C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -346,8 +346,8 @@
 				014EECC3164DC82400C4F626 /* 57x57.png */,
 				01BE6261164B3CEA0000679C /* 114x114.png */,
 				01BE6262164B3CEA0000679C /* 512x512.png */,
-				01BE6239164B3B000000679C /* Default.png */,
-				01BE623B164B3B000000679C /* Default@2x.png */,
+				019E6B381655DB790025786D /* Default.png */,
+				019E6B391655DB790025786D /* Default@2x.png */,
 				01BE623D164B3B000000679C /* Default-568h@2x.png */,
 			);
 			name = Assets;
@@ -472,8 +472,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				01BE6232164B3B000000679C /* InfoPlist.strings in Resources */,
-				01BE623A164B3B000000679C /* Default.png in Resources */,
-				01BE623C164B3B000000679C /* Default@2x.png in Resources */,
 				01BE623E164B3B000000679C /* Default-568h@2x.png in Resources */,
 				01BE6263164B3CEA0000679C /* 114x114.png in Resources */,
 				01BE6264164B3CEA0000679C /* 512x512.png in Resources */,
@@ -500,6 +498,8 @@
 				014EECC0164DC80000C4F626 /* navigation-bar.png in Resources */,
 				014EECC2164DC80E00C4F626 /* navigation-bar@2x.png in Resources */,
 				014EECC4164DC82400C4F626 /* 57x57.png in Resources */,
+				019E6B3A1655DB790025786D /* Default.png in Resources */,
+				019E6B3B1655DB790025786D /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
