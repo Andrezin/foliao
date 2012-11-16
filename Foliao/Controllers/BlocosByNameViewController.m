@@ -24,6 +24,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+//    PFObject *desfileSargento = [[PFObject alloc] initWithClassName:@"Parade"];
+//    [desfileSargento setObject:[PFObject objectWithoutDataWithClassName:@"Bloco" objectId:@"3Lu1AYt7Xo"] forKey:@"bloco"];
+//    [desfileSargento setObject:[NSDate date] forKey:@"date"];
+//    
+//    PFGeoPoint *geopoint = [[PFGeoPoint alloc] init];
+//    geopoint.latitude = -22.983819;
+//    geopoint.longitude = -43.204528;
+//    [desfileSargento setObject:geopoint forKey:@"location"];
+//    [desfileSargento saveInBackground];
 
     PFQuery *query = [PFQuery queryWithClassName:@"Bloco"];
     [query orderByAscending:@"name"];

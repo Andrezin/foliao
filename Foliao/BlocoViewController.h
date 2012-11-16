@@ -9,9 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface BlocoViewController : UIViewController
+@interface BlocoViewController : UIViewController <UIActionSheetDelegate>
 
 @property (strong, nonatomic) PFObject *bloco;
-@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end

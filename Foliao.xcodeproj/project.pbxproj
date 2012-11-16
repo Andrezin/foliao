@@ -26,6 +26,8 @@
 		018B5E77164DB19B00042B4E /* BlocoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 018B5E75164DB19B00042B4E /* BlocoViewController.xib */; };
 		019E6B3A1655DB790025786D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 019E6B381655DB790025786D /* Default.png */; };
 		019E6B3B1655DB790025786D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 019E6B391655DB790025786D /* Default@2x.png */; };
+		019E6B4416565C890025786D /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 019E6B4316565C890025786D /* SVProgressHUD.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		019E6B4616565D660025786D /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 019E6B4516565D660025786D /* SVProgressHUD.bundle */; };
 		01BE6228164B3B000000679C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BE6227164B3B000000679C /* UIKit.framework */; };
 		01BE622A164B3B000000679C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BE6229164B3B000000679C /* Foundation.framework */; };
 		01BE622C164B3B000000679C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BE622B164B3B000000679C /* CoreGraphics.framework */; };
@@ -108,6 +110,9 @@
 		018B5E75164DB19B00042B4E /* BlocoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BlocoViewController.xib; path = ../BlocoViewController.xib; sourceTree = "<group>"; };
 		019E6B381655DB790025786D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		019E6B391655DB790025786D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		019E6B4216565C890025786D /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		019E6B4316565C890025786D /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		019E6B4516565D660025786D /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		01BE6223164B3B000000679C /* Foliao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foliao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01BE6227164B3B000000679C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		01BE6229164B3B000000679C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -221,6 +226,7 @@
 		013341C0164B5B1300C2984B /* Submodules */ = {
 			isa = PBXGroup;
 			children = (
+				019E6B4116565C890025786D /* SVProgressHUD */,
 				013341C1164B5B1300C2984B /* ZUUIRevealController */,
 			);
 			path = Submodules;
@@ -245,6 +251,16 @@
 				018B5E75164DB19B00042B4E /* BlocoViewController.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		019E6B4116565C890025786D /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				019E6B4516565D660025786D /* SVProgressHUD.bundle */,
+				019E6B4216565C890025786D /* SVProgressHUD.h */,
+				019E6B4316565C890025786D /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 		01BE6218164B3B000000679C = {
@@ -500,6 +516,7 @@
 				014EECC4164DC82400C4F626 /* 57x57.png in Resources */,
 				019E6B3A1655DB790025786D /* Default.png in Resources */,
 				019E6B3B1655DB790025786D /* Default@2x.png in Resources */,
+				019E6B4616565D660025786D /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +560,7 @@
 				018B5E63164D8B8600042B4E /* NavigationRootLevelViewController.m in Sources */,
 				018B5E67164D8E0500042B4E /* LoginViewController.m in Sources */,
 				018B5E76164DB19B00042B4E /* BlocoViewController.m in Sources */,
+				019E6B4416565C890025786D /* SVProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
