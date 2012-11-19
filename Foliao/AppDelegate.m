@@ -14,7 +14,7 @@
 #import "LoginViewController.h"
 #import "ZUUIRevealController.h"
 #import "MenuViewController.h"
-#import "BlocosByPlaceViewController.h"
+#import "BlocosByLocationViewController.h"
 #import "AppConstants.h"
 
 @interface AppDelegate()
@@ -57,7 +57,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     MenuViewController *menuViewController = [[MenuViewController alloc] init];
-    BlocosByPlaceViewController *blocosByPlaceViewController = [[BlocosByPlaceViewController alloc] init];
+    BlocosByLocationViewController *blocosByPlaceViewController = [[BlocosByLocationViewController alloc] init];
     
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:blocosByPlaceViewController];
     

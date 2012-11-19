@@ -9,17 +9,18 @@
 /* Begin PBXBuildFile section */
 		013341B8164B4C0700C2984B /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013341B6164B4C0700C2984B /* MenuViewController.m */; };
 		013341B9164B4C0700C2984B /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 013341B7164B4C0700C2984B /* MenuViewController.xib */; };
-		013341BD164B58C100C2984B /* BlocosByPlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013341BB164B58C100C2984B /* BlocosByPlaceViewController.m */; };
-		013341BE164B58C100C2984B /* BlocosByPlaceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 013341BC164B58C100C2984B /* BlocosByPlaceViewController.xib */; };
+		013341BD164B58C100C2984B /* BlocosByLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013341BB164B58C100C2984B /* BlocosByLocationViewController.m */; };
+		013341BE164B58C100C2984B /* BlocosByLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 013341BC164B58C100C2984B /* BlocosByLocationViewController.xib */; };
 		013341C5164B5B1300C2984B /* ZUUIRevealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013341C3164B5B1300C2984B /* ZUUIRevealController.m */; };
 		013341C7164B5DD900C2984B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 013341C6164B5DD900C2984B /* MapKit.framework */; };
+		0140011F165AB0BC008F0429 /* KalBlocosDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0140011E165AB0BC008F0429 /* KalBlocosDataSource.m */; };
+		01400122165AB490008F0429 /* ParadeAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 01400121165AB490008F0429 /* ParadeAnnotation.m */; };
 		014EECC0164DC80000C4F626 /* navigation-bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 014EECBF164DC80000C4F626 /* navigation-bar.png */; };
 		014EECC2164DC80E00C4F626 /* navigation-bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 014EECC1164DC80D00C4F626 /* navigation-bar@2x.png */; };
 		014EECC4164DC82400C4F626 /* 57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 014EECC3164DC82400C4F626 /* 57x57.png */; };
 		0168CB7F16595767003DD8AF /* libKal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0168CB7C1659560B003DD8AF /* libKal.a */; };
 		0168CB8116595795003DD8AF /* Kal.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0168CB8016595795003DD8AF /* Kal.bundle */; };
 		0168CB841659586B003DD8AF /* BlocosByDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0168CB831659586B003DD8AF /* BlocosByDateViewController.m */; };
-		0168CB8D165A54D3003DD8AF /* KalBlocosDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0168CB8C165A54D3003DD8AF /* KalBlocosDataSource.m */; };
 		018B5E63164D8B8600042B4E /* NavigationRootLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B5E62164D8B8600042B4E /* NavigationRootLevelViewController.m */; };
 		018B5E67164D8E0500042B4E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B5E65164D8E0500042B4E /* LoginViewController.m */; };
 		018B5E68164D8E0500042B4E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 018B5E66164D8E0500042B4E /* LoginViewController.xib */; };
@@ -105,12 +106,16 @@
 		013341B5164B4C0700C2984B /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = Controllers/MenuViewController.h; sourceTree = "<group>"; };
 		013341B6164B4C0700C2984B /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = Controllers/MenuViewController.m; sourceTree = "<group>"; };
 		013341B7164B4C0700C2984B /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MenuViewController.xib; path = ../Controllers/MenuViewController.xib; sourceTree = "<group>"; };
-		013341BA164B58C100C2984B /* BlocosByPlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlocosByPlaceViewController.h; path = Controllers/BlocosByPlaceViewController.h; sourceTree = "<group>"; };
-		013341BB164B58C100C2984B /* BlocosByPlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlocosByPlaceViewController.m; path = Controllers/BlocosByPlaceViewController.m; sourceTree = "<group>"; };
-		013341BC164B58C100C2984B /* BlocosByPlaceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BlocosByPlaceViewController.xib; path = ../Controllers/BlocosByPlaceViewController.xib; sourceTree = "<group>"; };
+		013341BA164B58C100C2984B /* BlocosByLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlocosByLocationViewController.h; path = Controllers/BlocosByLocationViewController.h; sourceTree = "<group>"; };
+		013341BB164B58C100C2984B /* BlocosByLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlocosByLocationViewController.m; path = Controllers/BlocosByLocationViewController.m; sourceTree = "<group>"; };
+		013341BC164B58C100C2984B /* BlocosByLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BlocosByLocationViewController.xib; path = ../Controllers/BlocosByLocationViewController.xib; sourceTree = "<group>"; };
 		013341C2164B5B1300C2984B /* ZUUIRevealController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZUUIRevealController.h; sourceTree = "<group>"; };
 		013341C3164B5B1300C2984B /* ZUUIRevealController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZUUIRevealController.m; sourceTree = "<group>"; };
 		013341C6164B5DD900C2984B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		0140011D165AB0BC008F0429 /* KalBlocosDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalBlocosDataSource.h; sourceTree = "<group>"; };
+		0140011E165AB0BC008F0429 /* KalBlocosDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalBlocosDataSource.m; sourceTree = "<group>"; };
+		01400120165AB490008F0429 /* ParadeAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParadeAnnotation.h; sourceTree = "<group>"; };
+		01400121165AB490008F0429 /* ParadeAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParadeAnnotation.m; sourceTree = "<group>"; };
 		014EECBF164DC80000C4F626 /* navigation-bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation-bar.png"; sourceTree = "<group>"; };
 		014EECC1164DC80D00C4F626 /* navigation-bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation-bar@2x.png"; sourceTree = "<group>"; };
 		014EECC3164DC82400C4F626 /* 57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 57x57.png; sourceTree = "<group>"; };
@@ -118,8 +123,6 @@
 		0168CB8016595795003DD8AF /* Kal.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Kal.bundle; path = ../../../../ios/Kal/src/Kal.bundle; sourceTree = "<group>"; };
 		0168CB821659586B003DD8AF /* BlocosByDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlocosByDateViewController.h; path = Controllers/BlocosByDateViewController.h; sourceTree = "<group>"; };
 		0168CB831659586B003DD8AF /* BlocosByDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlocosByDateViewController.m; path = Controllers/BlocosByDateViewController.m; sourceTree = "<group>"; };
-		0168CB8B165A54D3003DD8AF /* KalBlocosDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KalBlocosDataSource.h; path = Utils/KalBlocosDataSource.h; sourceTree = "<group>"; };
-		0168CB8C165A54D3003DD8AF /* KalBlocosDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KalBlocosDataSource.m; path = Utils/KalBlocosDataSource.m; sourceTree = "<group>"; };
 		018B5E60164D869000042B4E /* AppConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
 		018B5E61164D8B8600042B4E /* NavigationRootLevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationRootLevelViewController.h; sourceTree = "<group>"; };
 		018B5E62164D8B8600042B4E /* NavigationRootLevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationRootLevelViewController.m; sourceTree = "<group>"; };
@@ -234,8 +237,8 @@
 			children = (
 				013341B5164B4C0700C2984B /* MenuViewController.h */,
 				013341B6164B4C0700C2984B /* MenuViewController.m */,
-				013341BA164B58C100C2984B /* BlocosByPlaceViewController.h */,
-				013341BB164B58C100C2984B /* BlocosByPlaceViewController.m */,
+				013341BA164B58C100C2984B /* BlocosByLocationViewController.h */,
+				013341BB164B58C100C2984B /* BlocosByLocationViewController.m */,
 				01E0CFF3164BE2A300940C77 /* BlocosByNameViewController.h */,
 				01E0CFF4164BE2A300940C77 /* BlocosByNameViewController.m */,
 				0168CB821659586B003DD8AF /* BlocosByDateViewController.h */,
@@ -274,11 +277,22 @@
 			children = (
 				018B5E66164D8E0500042B4E /* LoginViewController.xib */,
 				013341B7164B4C0700C2984B /* MenuViewController.xib */,
-				013341BC164B58C100C2984B /* BlocosByPlaceViewController.xib */,
+				013341BC164B58C100C2984B /* BlocosByLocationViewController.xib */,
 				01E0CFF5164BE2A300940C77 /* BlocosByNameViewController.xib */,
 				018B5E75164DB19B00042B4E /* BlocoViewController.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		0140011C165AB0BC008F0429 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0140011D165AB0BC008F0429 /* KalBlocosDataSource.h */,
+				0140011E165AB0BC008F0429 /* KalBlocosDataSource.m */,
+				01400120165AB490008F0429 /* ParadeAnnotation.h */,
+				01400121165AB490008F0429 /* ParadeAnnotation.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		0168CB72165955FB003DD8AF /* Kal */ = {
@@ -372,14 +386,13 @@
 		01BE622E164B3B000000679C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0140011C165AB0BC008F0429 /* Utils */,
 				01BE622F164B3B000000679C /* Foliao-Info.plist */,
 				01BE6230164B3B000000679C /* InfoPlist.strings */,
 				01BE6233164B3B000000679C /* main.m */,
 				01BE6235164B3B000000679C /* Foliao-Prefix.pch */,
 				01BE6260164B3CB80000679C /* Assets */,
 				018B5E60164D869000042B4E /* AppConstants.h */,
-				0168CB8B165A54D3003DD8AF /* KalBlocosDataSource.h */,
-				0168CB8C165A54D3003DD8AF /* KalBlocosDataSource.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -570,7 +583,7 @@
 				01BE6283164B3D450000679C /* marca@2x.png in Resources */,
 				01BE6284164B3D450000679C /* seta-quem-vai@2x.png in Resources */,
 				013341B9164B4C0700C2984B /* MenuViewController.xib in Resources */,
-				013341BE164B58C100C2984B /* BlocosByPlaceViewController.xib in Resources */,
+				013341BE164B58C100C2984B /* BlocosByLocationViewController.xib in Resources */,
 				01E0CFF7164BE2A300940C77 /* BlocosByNameViewController.xib in Resources */,
 				018B5E68164D8E0500042B4E /* LoginViewController.xib in Resources */,
 				018B5E72164DA0F000042B4E /* FacebookSDKResources.bundle in Resources */,
@@ -619,7 +632,7 @@
 				01BE6234164B3B000000679C /* main.m in Sources */,
 				01BE6238164B3B000000679C /* AppDelegate.m in Sources */,
 				013341B8164B4C0700C2984B /* MenuViewController.m in Sources */,
-				013341BD164B58C100C2984B /* BlocosByPlaceViewController.m in Sources */,
+				013341BD164B58C100C2984B /* BlocosByLocationViewController.m in Sources */,
 				013341C5164B5B1300C2984B /* ZUUIRevealController.m in Sources */,
 				01E0CFF6164BE2A300940C77 /* BlocosByNameViewController.m in Sources */,
 				018B5E63164D8B8600042B4E /* NavigationRootLevelViewController.m in Sources */,
@@ -627,7 +640,8 @@
 				018B5E76164DB19B00042B4E /* BlocoViewController.m in Sources */,
 				019E6B4416565C890025786D /* SVProgressHUD.m in Sources */,
 				0168CB841659586B003DD8AF /* BlocosByDateViewController.m in Sources */,
-				0168CB8D165A54D3003DD8AF /* KalBlocosDataSource.m in Sources */,
+				0140011F165AB0BC008F0429 /* KalBlocosDataSource.m in Sources */,
+				01400122165AB490008F0429 /* ParadeAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

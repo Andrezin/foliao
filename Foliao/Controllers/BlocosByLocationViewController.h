@@ -11,7 +11,7 @@
 
 #import "NavigationRootLevelViewController.h"
 
-@interface BlocosByPlaceViewController : NavigationRootLevelViewController <MKMapViewDelegate>
+@interface BlocosByLocationViewController : NavigationRootLevelViewController <MKMapViewDelegate>
 
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 

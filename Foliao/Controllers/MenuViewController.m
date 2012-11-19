@@ -12,7 +12,7 @@
 
 #import "AppDelegate.h"
 #import "ZUUIRevealController.h"
-#import "BlocosByPlaceViewController.h"
+#import "BlocosByLocationViewController.h"
 #import "BlocosByNameViewController.h"
 #import "BlocosByDateViewController.h"
 
@@ -98,8 +98,8 @@
     
     if (indexPath.section == 0 && indexPath.row == 0) {
 
-		if ([revealController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)revealController.frontViewController).topViewController isKindOfClass:[BlocosByPlaceViewController class]]) {
-			BlocosByPlaceViewController *blocosByPlaceViewController = [[BlocosByPlaceViewController alloc] init];
+		if ([revealController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)revealController.frontViewController).topViewController isKindOfClass:[BlocosByLocationViewController class]]) {
+			BlocosByLocationViewController *blocosByPlaceViewController = [[BlocosByLocationViewController alloc] init];
 			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:blocosByPlaceViewController];
 			[revealController setFrontViewController:navigationController animated:NO];
 			
