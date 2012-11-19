@@ -53,13 +53,13 @@
 		01BE627B164B3D450000679C /* bt-voltar.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE626C164B3D450000679C /* bt-voltar.png */; };
 		01BE627C164B3D450000679C /* marca.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE626D164B3D450000679C /* marca.png */; };
 		01BE627D164B3D450000679C /* seta-quem-vai.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE626E164B3D450000679C /* seta-quem-vai.png */; };
-		01BE627E164B3D450000679C /* bt-checkin.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6270164B3D450000679C /* bt-checkin.png */; };
-		01BE627F164B3D450000679C /* bt-base.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6271164B3D450000679C /* bt-base.png */; };
-		01BE6280164B3D450000679C /* bt-menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6272164B3D450000679C /* bt-menu.png */; };
-		01BE6281164B3D450000679C /* bt-ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6273164B3D450000679C /* bt-ok.png */; };
-		01BE6282164B3D450000679C /* bt-voltar.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6274164B3D450000679C /* bt-voltar.png */; };
-		01BE6283164B3D450000679C /* marca.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6275164B3D450000679C /* marca.png */; };
-		01BE6284164B3D450000679C /* seta-quem-vai.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6276164B3D450000679C /* seta-quem-vai.png */; };
+		01BE627E164B3D450000679C /* bt-checkin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6270164B3D450000679C /* bt-checkin@2x.png */; };
+		01BE627F164B3D450000679C /* bt-base@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6271164B3D450000679C /* bt-base@2x.png */; };
+		01BE6280164B3D450000679C /* bt-menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6272164B3D450000679C /* bt-menu@2x.png */; };
+		01BE6281164B3D450000679C /* bt-ok@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6273164B3D450000679C /* bt-ok@2x.png */; };
+		01BE6282164B3D450000679C /* bt-voltar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6274164B3D450000679C /* bt-voltar@2x.png */; };
+		01BE6283164B3D450000679C /* marca@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6275164B3D450000679C /* marca@2x.png */; };
+		01BE6284164B3D450000679C /* seta-quem-vai@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6276164B3D450000679C /* seta-quem-vai@2x.png */; };
 		01E0CFDA164BDD2600940C77 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFD9164BDD2600940C77 /* AudioToolbox.framework */; };
 		01E0CFDC164BDD2D00940C77 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFDB164BDD2D00940C77 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		01E0CFDE164BDD3A00940C77 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFDD164BDD3A00940C77 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -163,13 +163,13 @@
 		01BE626C164B3D450000679C /* bt-voltar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-voltar.png"; sourceTree = "<group>"; };
 		01BE626D164B3D450000679C /* marca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marca.png; sourceTree = "<group>"; };
 		01BE626E164B3D450000679C /* seta-quem-vai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seta-quem-vai.png"; sourceTree = "<group>"; };
-		01BE6270164B3D450000679C /* bt-checkin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-checkin.png"; sourceTree = "<group>"; };
-		01BE6271164B3D450000679C /* bt-base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-base.png"; sourceTree = "<group>"; };
-		01BE6272164B3D450000679C /* bt-menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-menu.png"; sourceTree = "<group>"; };
-		01BE6273164B3D450000679C /* bt-ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-ok.png"; sourceTree = "<group>"; };
-		01BE6274164B3D450000679C /* bt-voltar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-voltar.png"; sourceTree = "<group>"; };
-		01BE6275164B3D450000679C /* marca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marca.png; sourceTree = "<group>"; };
-		01BE6276164B3D450000679C /* seta-quem-vai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seta-quem-vai.png"; sourceTree = "<group>"; };
+		01BE6270164B3D450000679C /* bt-checkin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-checkin@2x.png"; sourceTree = "<group>"; };
+		01BE6271164B3D450000679C /* bt-base@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-base@2x.png"; sourceTree = "<group>"; };
+		01BE6272164B3D450000679C /* bt-menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-menu@2x.png"; sourceTree = "<group>"; };
+		01BE6273164B3D450000679C /* bt-ok@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-ok@2x.png"; sourceTree = "<group>"; };
+		01BE6274164B3D450000679C /* bt-voltar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-voltar@2x.png"; sourceTree = "<group>"; };
+		01BE6275164B3D450000679C /* marca@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "marca@2x.png"; sourceTree = "<group>"; };
+		01BE6276164B3D450000679C /* seta-quem-vai@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seta-quem-vai@2x.png"; sourceTree = "<group>"; };
 		01E0CFD9164BDD2600940C77 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		01E0CFDB164BDD2D00940C77 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		01E0CFDD164BDD3A00940C77 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -452,13 +452,13 @@
 			isa = PBXGroup;
 			children = (
 				014EECC1164DC80D00C4F626 /* navigation-bar@2x.png */,
-				01BE6270164B3D450000679C /* bt-checkin.png */,
-				01BE6271164B3D450000679C /* bt-base.png */,
-				01BE6272164B3D450000679C /* bt-menu.png */,
-				01BE6273164B3D450000679C /* bt-ok.png */,
-				01BE6274164B3D450000679C /* bt-voltar.png */,
-				01BE6275164B3D450000679C /* marca.png */,
-				01BE6276164B3D450000679C /* seta-quem-vai.png */,
+				01BE6270164B3D450000679C /* bt-checkin@2x.png */,
+				01BE6271164B3D450000679C /* bt-base@2x.png */,
+				01BE6272164B3D450000679C /* bt-menu@2x.png */,
+				01BE6273164B3D450000679C /* bt-ok@2x.png */,
+				01BE6274164B3D450000679C /* bt-voltar@2x.png */,
+				01BE6275164B3D450000679C /* marca@2x.png */,
+				01BE6276164B3D450000679C /* seta-quem-vai@2x.png */,
 			);
 			path = Retina;
 			sourceTree = "<group>";
@@ -562,13 +562,13 @@
 				01BE627B164B3D450000679C /* bt-voltar.png in Resources */,
 				01BE627C164B3D450000679C /* marca.png in Resources */,
 				01BE627D164B3D450000679C /* seta-quem-vai.png in Resources */,
-				01BE627E164B3D450000679C /* bt-checkin.png in Resources */,
-				01BE627F164B3D450000679C /* bt-base.png in Resources */,
-				01BE6280164B3D450000679C /* bt-menu.png in Resources */,
-				01BE6281164B3D450000679C /* bt-ok.png in Resources */,
-				01BE6282164B3D450000679C /* bt-voltar.png in Resources */,
-				01BE6283164B3D450000679C /* marca.png in Resources */,
-				01BE6284164B3D450000679C /* seta-quem-vai.png in Resources */,
+				01BE627E164B3D450000679C /* bt-checkin@2x.png in Resources */,
+				01BE627F164B3D450000679C /* bt-base@2x.png in Resources */,
+				01BE6280164B3D450000679C /* bt-menu@2x.png in Resources */,
+				01BE6281164B3D450000679C /* bt-ok@2x.png in Resources */,
+				01BE6282164B3D450000679C /* bt-voltar@2x.png in Resources */,
+				01BE6283164B3D450000679C /* marca@2x.png in Resources */,
+				01BE6284164B3D450000679C /* seta-quem-vai@2x.png in Resources */,
 				013341B9164B4C0700C2984B /* MenuViewController.xib in Resources */,
 				013341BE164B58C100C2984B /* BlocosByPlaceViewController.xib in Resources */,
 				01E0CFF7164BE2A300940C77 /* BlocosByNameViewController.xib in Resources */,
