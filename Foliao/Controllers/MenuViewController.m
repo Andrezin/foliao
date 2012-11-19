@@ -14,6 +14,7 @@
 #import "ZUUIRevealController.h"
 #import "BlocosByPlaceViewController.h"
 #import "BlocosByNameViewController.h"
+#import "BlocosByDateViewController.h"
 
 @interface MenuViewController ()
 @property (strong, nonatomic) NSArray *menuItems;
@@ -30,8 +31,8 @@
             @"section_title": @"Blocos",
             @"row_title": @[
                 @"Por localização",
-                @"Por nome"/*,
-                @"Por data"*/
+                @"Por nome",
+                @"Por data"
             ]
         }/*,
         @{
@@ -96,7 +97,7 @@
     ZUUIRevealController *revealController = [self.parentViewController isKindOfClass:[ZUUIRevealController class]] ? (ZUUIRevealController *)self.parentViewController : nil;
     
     if (indexPath.section == 0 && indexPath.row == 0) {
-		// Now let's see if we're not attempting to swap the current frontViewController for a new instance of ITSELF, which'd be highly redundant.
+
 		if ([revealController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)revealController.frontViewController).topViewController isKindOfClass:[BlocosByPlaceViewController class]]) {
 			BlocosByPlaceViewController *blocosByPlaceViewController = [[BlocosByPlaceViewController alloc] init];
 			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:blocosByPlaceViewController];
@@ -105,8 +106,9 @@
 		} else {
             [revealController revealToggle:self];
         }
+        
 	} else if (indexPath.section == 0 && indexPath.row == 1) {
-        // Now let's see if we're not attempting to swap the current frontViewController for a new instance of ITSELF, which'd be highly redundant.
+
 		if ([revealController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)revealController.frontViewController).topViewController isKindOfClass:[BlocosByNameViewController class]]) {
 			BlocosByNameViewController *blocosByNameViewController = [[BlocosByNameViewController alloc] init];
 			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:blocosByNameViewController];
@@ -115,6 +117,18 @@
 		} else {
             [revealController revealToggle:self];
         }
+        
+    } else if (indexPath.section == 0 && indexPath.row == 2) {
+        
+        if ([revealController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)revealController.frontViewController).topViewController isKindOfClass:[BlocosByDateViewController class]]) {
+			BlocosByDateViewController *blocosByDateViewController = [[BlocosByDateViewController alloc] init];
+			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:blocosByDateViewController];
+			[revealController setFrontViewController:navigationController animated:NO];
+			
+		} else {
+            [revealController revealToggle:self];
+        }
+    
     } else if (indexPath.section == 1) {
         [[PFFacebookUtils session] closeAndClearTokenInformation];
         AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;

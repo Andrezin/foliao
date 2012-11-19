@@ -16,6 +16,10 @@
 		014EECC0164DC80000C4F626 /* navigation-bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 014EECBF164DC80000C4F626 /* navigation-bar.png */; };
 		014EECC2164DC80E00C4F626 /* navigation-bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 014EECC1164DC80D00C4F626 /* navigation-bar@2x.png */; };
 		014EECC4164DC82400C4F626 /* 57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 014EECC3164DC82400C4F626 /* 57x57.png */; };
+		0168CB7F16595767003DD8AF /* libKal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0168CB7C1659560B003DD8AF /* libKal.a */; };
+		0168CB8116595795003DD8AF /* Kal.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0168CB8016595795003DD8AF /* Kal.bundle */; };
+		0168CB841659586B003DD8AF /* BlocosByDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0168CB831659586B003DD8AF /* BlocosByDateViewController.m */; };
+		0168CB8D165A54D3003DD8AF /* KalBlocosDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0168CB8C165A54D3003DD8AF /* KalBlocosDataSource.m */; };
 		018B5E63164D8B8600042B4E /* NavigationRootLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B5E62164D8B8600042B4E /* NavigationRootLevelViewController.m */; };
 		018B5E67164D8E0500042B4E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B5E65164D8E0500042B4E /* LoginViewController.m */; };
 		018B5E68164D8E0500042B4E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 018B5E66164D8E0500042B4E /* LoginViewController.xib */; };
@@ -74,6 +78,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0168CB7B1659560B003DD8AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0168CB741659560B003DD8AF /* Kal.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = Kal;
+		};
+		0168CB7D1659575D003DD8AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0168CB741659560B003DD8AF /* Kal.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = Kal;
+		};
 		01BE6249164B3B010000679C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 01BE621A164B3B000000679C /* Project object */;
@@ -96,6 +114,12 @@
 		014EECBF164DC80000C4F626 /* navigation-bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation-bar.png"; sourceTree = "<group>"; };
 		014EECC1164DC80D00C4F626 /* navigation-bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation-bar@2x.png"; sourceTree = "<group>"; };
 		014EECC3164DC82400C4F626 /* 57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 57x57.png; sourceTree = "<group>"; };
+		0168CB741659560B003DD8AF /* Kal.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kal.xcodeproj; path = ../../../../ios/Kal/src/Kal.xcodeproj; sourceTree = "<group>"; };
+		0168CB8016595795003DD8AF /* Kal.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Kal.bundle; path = ../../../../ios/Kal/src/Kal.bundle; sourceTree = "<group>"; };
+		0168CB821659586B003DD8AF /* BlocosByDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlocosByDateViewController.h; path = Controllers/BlocosByDateViewController.h; sourceTree = "<group>"; };
+		0168CB831659586B003DD8AF /* BlocosByDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlocosByDateViewController.m; path = Controllers/BlocosByDateViewController.m; sourceTree = "<group>"; };
+		0168CB8B165A54D3003DD8AF /* KalBlocosDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KalBlocosDataSource.h; path = Utils/KalBlocosDataSource.h; sourceTree = "<group>"; };
+		0168CB8C165A54D3003DD8AF /* KalBlocosDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KalBlocosDataSource.m; path = Utils/KalBlocosDataSource.m; sourceTree = "<group>"; };
 		018B5E60164D869000042B4E /* AppConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
 		018B5E61164D8B8600042B4E /* NavigationRootLevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationRootLevelViewController.h; sourceTree = "<group>"; };
 		018B5E62164D8B8600042B4E /* NavigationRootLevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationRootLevelViewController.m; sourceTree = "<group>"; };
@@ -169,6 +193,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0168CB7F16595767003DD8AF /* libKal.a in Frameworks */,
 				01E0CFF2164BDD8600940C77 /* SystemConfiguration.framework in Frameworks */,
 				01E0CFF0164BDD8100940C77 /* StoreKit.framework in Frameworks */,
 				01E0CFEE164BDD7C00940C77 /* Social.framework in Frameworks */,
@@ -219,6 +244,8 @@
 				018B5E65164D8E0500042B4E /* LoginViewController.m */,
 				018B5E73164DB19B00042B4E /* BlocoViewController.h */,
 				018B5E74164DB19B00042B4E /* BlocoViewController.m */,
+				0168CB821659586B003DD8AF /* BlocosByDateViewController.h */,
+				0168CB831659586B003DD8AF /* BlocosByDateViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -226,6 +253,7 @@
 		013341C0164B5B1300C2984B /* Submodules */ = {
 			isa = PBXGroup;
 			children = (
+				0168CB72165955FB003DD8AF /* Kal */,
 				019E6B4116565C890025786D /* SVProgressHUD */,
 				013341C1164B5B1300C2984B /* ZUUIRevealController */,
 			);
@@ -251,6 +279,23 @@
 				018B5E75164DB19B00042B4E /* BlocoViewController.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		0168CB72165955FB003DD8AF /* Kal */ = {
+			isa = PBXGroup;
+			children = (
+				0168CB8016595795003DD8AF /* Kal.bundle */,
+				0168CB741659560B003DD8AF /* Kal.xcodeproj */,
+			);
+			name = Kal;
+			sourceTree = "<group>";
+		};
+		0168CB751659560B003DD8AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0168CB7C1659560B003DD8AF /* libKal.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		019E6B4116565C890025786D /* SVProgressHUD */ = {
@@ -333,6 +378,8 @@
 				01BE6235164B3B000000679C /* Foliao-Prefix.pch */,
 				01BE6260164B3CB80000679C /* Assets */,
 				018B5E60164D869000042B4E /* AppConstants.h */,
+				0168CB8B165A54D3003DD8AF /* KalBlocosDataSource.h */,
+				0168CB8C165A54D3003DD8AF /* KalBlocosDataSource.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -430,6 +477,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				0168CB7E1659575D003DD8AF /* PBXTargetDependency */,
 			);
 			name = Foliao;
 			productName = Foliao;
@@ -474,6 +522,12 @@
 			mainGroup = 01BE6218164B3B000000679C;
 			productRefGroup = 01BE6224164B3B000000679C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0168CB751659560B003DD8AF /* Products */;
+					ProjectRef = 0168CB741659560B003DD8AF /* Kal.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				01BE6222164B3B000000679C /* Foliao */,
@@ -481,6 +535,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		0168CB7C1659560B003DD8AF /* libKal.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libKal.a;
+			remoteRef = 0168CB7B1659560B003DD8AF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		01BE6221164B3B000000679C /* Resources */ = {
@@ -517,6 +581,7 @@
 				019E6B3A1655DB790025786D /* Default.png in Resources */,
 				019E6B3B1655DB790025786D /* Default@2x.png in Resources */,
 				019E6B4616565D660025786D /* SVProgressHUD.bundle in Resources */,
+				0168CB8116595795003DD8AF /* Kal.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,6 +626,8 @@
 				018B5E67164D8E0500042B4E /* LoginViewController.m in Sources */,
 				018B5E76164DB19B00042B4E /* BlocoViewController.m in Sources */,
 				019E6B4416565C890025786D /* SVProgressHUD.m in Sources */,
+				0168CB841659586B003DD8AF /* BlocosByDateViewController.m in Sources */,
+				0168CB8D165A54D3003DD8AF /* KalBlocosDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +642,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0168CB7E1659575D003DD8AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Kal;
+			targetProxy = 0168CB7D1659575D003DD8AF /* PBXContainerItemProxy */;
+		};
 		01BE624A164B3B010000679C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 01BE6222164B3B000000679C /* Foliao */;
@@ -664,8 +736,14 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Foliao/Foliao-Prefix.pch";
+				HEADER_SEARCH_PATHS = "../../ios/Kal/src/**";
 				INFOPLIST_FILE = "Foliao/Foliao-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /Users/barbosa/Projects/ios/Kal/src;
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
@@ -683,8 +761,14 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Foliao/Foliao-Prefix.pch";
+				HEADER_SEARCH_PATHS = "../../ios/Kal/src/**";
 				INFOPLIST_FILE = "Foliao/Foliao-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = /Users/barbosa/Projects/ios/Kal/src;
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
