@@ -121,7 +121,8 @@
     } else if (indexPath.section == 0 && indexPath.row == 2) {
         
         if ([revealController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)revealController.frontViewController).topViewController isKindOfClass:[BlocosByDateViewController class]]) {
-			BlocosByDateViewController *blocosByDateViewController = [[BlocosByDateViewController alloc] init];
+            NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:@"pt-BR"];
+			BlocosByDateViewController *blocosByDateViewController = [[BlocosByDateViewController alloc] initWithLocale:locale];
 			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:blocosByDateViewController];
 			[revealController setFrontViewController:navigationController animated:NO];
 			

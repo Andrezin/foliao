@@ -238,14 +238,14 @@
 				013341BB164B58C100C2984B /* BlocosByPlaceViewController.m */,
 				01E0CFF3164BE2A300940C77 /* BlocosByNameViewController.h */,
 				01E0CFF4164BE2A300940C77 /* BlocosByNameViewController.m */,
+				0168CB821659586B003DD8AF /* BlocosByDateViewController.h */,
+				0168CB831659586B003DD8AF /* BlocosByDateViewController.m */,
 				018B5E61164D8B8600042B4E /* NavigationRootLevelViewController.h */,
 				018B5E62164D8B8600042B4E /* NavigationRootLevelViewController.m */,
 				018B5E64164D8E0500042B4E /* LoginViewController.h */,
 				018B5E65164D8E0500042B4E /* LoginViewController.m */,
 				018B5E73164DB19B00042B4E /* BlocoViewController.h */,
 				018B5E74164DB19B00042B4E /* BlocoViewController.m */,
-				0168CB821659586B003DD8AF /* BlocosByDateViewController.h */,
-				0168CB831659586B003DD8AF /* BlocosByDateViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";

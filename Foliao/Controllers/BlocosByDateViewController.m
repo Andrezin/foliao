@@ -9,29 +9,12 @@
 
 #import "BlocosByDateViewController.h"
 
+#import "BlocoViewController.h"
 #import "KalLogic.h"
 #import "KalDataSource.h"
 #import "KalDate.h"
 #import "KalPrivate.h"
 
-#define PROFILER 0
-#if PROFILER
-#include <mach/mach_time.h>
-#include <time.h>
-#include <math.h>
-void mach_absolute_difference(uint64_t end, uint64_t start, struct timespec *tp)
-{
-    uint64_t difference = end - start;
-    static mach_timebase_info_data_t info = {0,0};
-    
-    if (info.denom == 0)
-        mach_timebase_info(&info);
-    
-    uint64_t elapsednano = difference * (info.numer / info.denom);
-    tp->tv_sec = elapsednano * 1e-9;
-    tp->tv_nsec = elapsednano - (tp->tv_sec * 1e9);
-}
-#endif
 
 NSString *const KalDataSourceChangedNotification = @"KalDataSourceChangedNotification";
 
@@ -43,16 +26,29 @@ NSString *const KalDataSourceChangedNotification = @"KalDataSourceChangedNotific
 
 @implementation BlocosByDateViewController
 
-- (id)initWithSelectedDate:(NSDate *)date
+- (id)initWithSelectedDate:(NSDate *)date locale:(NSLocale *)locale
 {
     if ((self = [super init])) {
-        logic = [[KalLogic alloc] initForDate:date];
+        logic = [[KalLogic alloc] initForDate:date locale:locale];
         self.initialDate = date;
         self.selectedDate = date;
+        
+        dataSource = [[KalBlocosDataSource alloc] init];        
+        
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(significantTimeChangeOccurred) name:UIApplicationSignificantTimeChangeNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadData) name:KalDataSourceChangedNotification object:nil];
     }
     return self;
+}
+
+- (id)initWithSelectedDate:(NSDate *)date
+{
+    return [self initWithSelectedDate:date locale:nil];
+}
+
+- (id)initWithLocale:(NSLocale *)locale
+{
+    return [self initWithSelectedDate:[NSDate date] locale:locale];
 }
 
 - (id)init
@@ -62,31 +58,15 @@ NSString *const KalDataSourceChangedNotification = @"KalDataSourceChangedNotific
 
 - (KalView*)calendarView { return (KalView*)self.view; }
 
-- (void)setDataSource:(id<KalDataSource>)aDataSource
-{
-    if (_dataSource != aDataSource) {
-        _dataSource = aDataSource;
-        tableView.dataSource = _dataSource;
-    }
-}
-
-- (void)setDelegate:(id<UITableViewDelegate>)aDelegate
-{
-    if (_delegate != aDelegate) {
-        _delegate = aDelegate;
-        tableView.delegate = _delegate;
-    }
-}
-
 - (void)clearTable
 {
-    [_dataSource removeAllItems];
+    [dataSource removeAllItems];
     [tableView reloadData];
 }
 
 - (void)reloadData
 {
-    [_dataSource presentingDatesFrom:logic.fromDate to:logic.toDate delegate:self];
+    [dataSource presentingDatesFrom:logic.fromDate to:logic.toDate delegate:self];
 }
 
 - (void)significantTimeChangeOccurred
@@ -95,7 +75,7 @@ NSString *const KalDataSourceChangedNotification = @"KalDataSourceChangedNotific
     [self reloadData];
 }
 
-// -----------------------------------------
+
 #pragma mark KalViewDelegate protocol
 
 - (void)didSelectDate:(KalDate *)date
@@ -104,7 +84,7 @@ NSString *const KalDataSourceChangedNotification = @"KalDataSourceChangedNotific
     NSDate *from = [[date NSDate] cc_dateByMovingToBeginningOfDay];
     NSDate *to = [[date NSDate] cc_dateByMovingToEndOfDay];
     [self clearTable];
-    [_dataSource loadItemsFromDate:from toDate:to];
+    [dataSource loadItemsFromDate:from toDate:to];
     [tableView reloadData];
     [tableView flashScrollIndicators];
 }
@@ -125,7 +105,17 @@ NSString *const KalDataSourceChangedNotification = @"KalDataSourceChangedNotific
     [self reloadData];
 }
 
-// -----------------------------------------
+
+#pragma mark Table View delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    BlocoViewController *blocoViewController = [[BlocoViewController alloc] init];
+    blocoViewController.bloco = [dataSource paradeAtIndexPath:indexPath][@"bloco"];
+    [self.navigationController pushViewController:blocoViewController animated:YES];
+}
+
+
 #pragma mark KalDataSourceCallbacks protocol
 
 - (void)loadedDataSource:(id<KalDataSource>)theDataSource;
@@ -139,7 +129,7 @@ NSString *const KalDataSourceChangedNotification = @"KalDataSourceChangedNotific
     [self didSelectDate:self.calendarView.selectedDate];
 }
 
-// ---------------------------------------
+
 #pragma mark -
 
 - (void)showAndSelectDate:(NSDate *)date
@@ -148,20 +138,6 @@ NSString *const KalDataSourceChangedNotification = @"KalDataSourceChangedNotific
         return;
     
     [logic moveToMonthForDate:date];
-    
-#if PROFILER
-    uint64_t start, end;
-    struct timespec tp;
-    start = mach_absolute_time();
-#endif
-    
-    [[self calendarView] jumpToSelectedMonth];
-    
-#if PROFILER
-    end = mach_absolute_time();
-    mach_absolute_difference(end, start, &tp);
-    printf("[[self calendarView] jumpToSelectedMonth]: %.1f ms\n", tp.tv_nsec / 1e6);
-#endif
     
     [[self calendarView] selectDate:[KalDate dateFromNSDate:date]];
     [self reloadData];
@@ -173,7 +149,6 @@ NSString *const KalDataSourceChangedNotification = @"KalDataSourceChangedNotific
 }
 
 
-// -----------------------------------------------------------------------------------
 #pragma mark UIViewController
 
 - (void)didReceiveMemoryWarning
@@ -187,8 +162,8 @@ NSString *const KalDataSourceChangedNotification = @"KalDataSourceChangedNotific
     KalView *kalView = [[KalView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame] delegate:self logic:logic];
     self.view = kalView;
     tableView = kalView.tableView;
-    tableView.dataSource = _dataSource;
-    tableView.delegate = _delegate;
+    tableView.dataSource = dataSource;
+    tableView.delegate = self;
     [kalView selectDate:[KalDate dateFromNSDate:self.initialDate]];
     [self reloadData];
 }
