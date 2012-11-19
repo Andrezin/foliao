@@ -69,7 +69,7 @@
         NSString *firstLetter = [NSString stringWithFormat:@"%c", [bloco[@"name"] characterAtIndex:0]];
         for (NSDictionary *_sectionData in _tableData) {
             if ([firstLetter isEqualToString:_sectionData[@"section"]]) {
-                [_sectionData[@"rows"] addObject:bloco[@"name"]];
+                [_sectionData[@"rows"] addObject:bloco];
             }
         }
     }
@@ -116,7 +116,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    cell.textLabel.text = _tableData[indexPath.section][@"rows"][indexPath.row];
+    cell.textLabel.text = _tableData[indexPath.section][@"rows"][indexPath.row][@"name"];
     
     return cell;
 }
@@ -126,7 +126,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     BlocoViewController *blocoViewController = [[BlocoViewController alloc] init];
-    blocoViewController.bloco = self.blocos[indexPath.row];
+    blocoViewController.bloco = _tableData[indexPath.section][@"rows"][indexPath.row];
     [self.navigationController pushViewController:blocoViewController animated:YES];
 }
 
