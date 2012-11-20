@@ -15,10 +15,23 @@
 #import "BlocosByLocationViewController.h"
 #import "BlocosByNameViewController.h"
 #import "BlocosByDateViewController.h"
+#import "WhereAmIGoingViewController.h"
+
 
 @interface MenuViewController ()
+
 @property (strong, nonatomic) NSArray *menuItems;
+
+- (void)showBlocosByLocation;
+- (void)showBlocosByName;
+- (void)showBlocosByDate;
+
+- (void)showWhereAmIGoing;
+
+- (void)logout;
+
 @end
+
 
 @implementation MenuViewController
 
@@ -34,14 +47,14 @@
                 @"Por nome",
                 @"Por data"
             ]
-        }/*,
+        },
         @{
-            @"section_title": @"Que vai?",
+            @"section_title": @"Quem vai?",
             @"row_title": @[
                 @"Onde eu vou",
                 @"Onde meus amigos vão"
             ]
-        },
+        }/*,
         @{
             @"section_title": @"Onde tem mais?",
             @"row_title": @[
@@ -94,47 +107,84 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    ZUUIRevealController *revealController = [self.parentViewController isKindOfClass:[ZUUIRevealController class]] ? (ZUUIRevealController *)self.parentViewController : nil;
-    
-    if (indexPath.section == 0 && indexPath.row == 0) {
-
-		if ([revealController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)revealController.frontViewController).topViewController isKindOfClass:[BlocosByLocationViewController class]]) {
-			BlocosByLocationViewController *blocosByPlaceViewController = [[BlocosByLocationViewController alloc] init];
-			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:blocosByPlaceViewController];
-			[revealController setFrontViewController:navigationController animated:NO];
-			
-		} else {
-            [revealController revealToggle:self];
-        }
-        
-	} else if (indexPath.section == 0 && indexPath.row == 1) {
-
-		if ([revealController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)revealController.frontViewController).topViewController isKindOfClass:[BlocosByNameViewController class]]) {
-			BlocosByNameViewController *blocosByNameViewController = [[BlocosByNameViewController alloc] init];
-			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:blocosByNameViewController];
-			[revealController setFrontViewController:navigationController animated:NO];
-			
-		} else {
-            [revealController revealToggle:self];
-        }
-        
-    } else if (indexPath.section == 0 && indexPath.row == 2) {
-        
-        if ([revealController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)revealController.frontViewController).topViewController isKindOfClass:[BlocosByDateViewController class]]) {
-            NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:@"pt-BR"];
-			BlocosByDateViewController *blocosByDateViewController = [[BlocosByDateViewController alloc] initWithLocale:locale];
-			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:blocosByDateViewController];
-			[revealController setFrontViewController:navigationController animated:NO];
-			
-		} else {
-            [revealController revealToggle:self];
-        }
-    
-    } else if (indexPath.section == 1) {
-        [[PFFacebookUtils session] closeAndClearTokenInformation];
-        AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-        [appDelegate sessionStateChanged:nil];
+    switch (indexPath.section) {
+        case 0:
+            switch (indexPath.row) {
+                case 0:
+                    [self showBlocosByLocation]; break;
+                case 1:
+                    [self showBlocosByName]; break;
+                case 2:
+                    [self showBlocosByDate]; break;
+            } break;
+        case 1:
+            switch (indexPath.row) {
+                case 0:
+                    [self showWhereAmIGoing]; break;
+            } break;
+        case 2:
+            [self logout]; break;
     }
+}
+
+- (void)showBlocosByLocation
+{
+    ZUUIRevealController *revealController = [self.parentViewController isKindOfClass:[ZUUIRevealController class]] ? (ZUUIRevealController *)self.parentViewController : nil;
+    if ([revealController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)revealController.frontViewController).topViewController isKindOfClass:[BlocosByLocationViewController class]]) {
+        BlocosByLocationViewController *blocosByPlaceViewController = [[BlocosByLocationViewController alloc] init];
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:blocosByPlaceViewController];
+        [revealController setFrontViewController:navigationController animated:NO];
+        
+    } else {
+        [revealController revealToggle:self];
+    }
+}
+
+- (void)showBlocosByName
+{
+    ZUUIRevealController *revealController = [self.parentViewController isKindOfClass:[ZUUIRevealController class]] ? (ZUUIRevealController *)self.parentViewController : nil;
+    if ([revealController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)revealController.frontViewController).topViewController isKindOfClass:[BlocosByNameViewController class]]) {
+        BlocosByNameViewController *blocosByNameViewController = [[BlocosByNameViewController alloc] init];
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:blocosByNameViewController];
+        [revealController setFrontViewController:navigationController animated:NO];
+        
+    } else {
+        [revealController revealToggle:self];
+    }
+}
+
+- (void)showBlocosByDate
+{
+    ZUUIRevealController *revealController = [self.parentViewController isKindOfClass:[ZUUIRevealController class]] ? (ZUUIRevealController *)self.parentViewController : nil;
+    if ([revealController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)revealController.frontViewController).topViewController isKindOfClass:[BlocosByDateViewController class]]) {
+        NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:@"pt-BR"];
+        BlocosByDateViewController *blocosByDateViewController = [[BlocosByDateViewController alloc] initWithLocale:locale];
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:blocosByDateViewController];
+        [revealController setFrontViewController:navigationController animated:NO];
+        
+    } else {
+        [revealController revealToggle:self];
+    }
+}
+
+- (void)showWhereAmIGoing
+{
+    ZUUIRevealController *revealController = [self.parentViewController isKindOfClass:[ZUUIRevealController class]] ? (ZUUIRevealController *)self.parentViewController : nil;
+    if ([revealController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)revealController.frontViewController).topViewController isKindOfClass:[WhereAmIGoingViewController class]]) {
+        
+        WhereAmIGoingViewController *whereAmIGoingViewController = [[WhereAmIGoingViewController alloc] init];
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:whereAmIGoingViewController];
+        [revealController setFrontViewController:navigationController animated:NO];
+    } else {
+        [revealController revealToggle:self];
+    }
+}
+
+- (void)logout
+{
+    [[PFFacebookUtils session] closeAndClearTokenInformation];
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    [appDelegate sessionStateChanged:nil];
 }
 
 @end
