@@ -15,7 +15,7 @@
     NSMutableArray *allParades;
     NSMutableArray *paradesInSelectedDay;
     id<KalDataSourceCallbacks> callback;
-    BOOL dataIsReady;
+//    BOOL dataIsReady;
 }
 
 - (PFObject *)paradeAtIndexPath:(NSIndexPath *)indexPath;

@@ -19,7 +19,9 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
 
 @interface KalBlocosDataSource()
 
-- (void)fetchParades;
+@property (nonatomic, readonly) BOOL dataIsReady;
+
+- (void)fetchParadesFrom:(NSDate *)fromDate to:(NSDate *)toDate;
 - (NSArray *)paradesFrom:(NSDate *)fromDate to:(NSDate *)toDate;
 
 @end
@@ -62,19 +64,26 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
     return paradesInSelectedDay.count;
 }
 
-#pragma mark Fetch from Parse
+#pragma mark KalDataSource protocol conformance
 
-- (void)fetchParades
+- (void)presentingDatesFrom:(NSDate *)fromDate to:(NSDate *)toDate delegate:(id<KalDataSourceCallbacks>)delegate
 {
-    dataIsReady = NO;
+    callback = delegate;
+    [self fetchParadesFrom:fromDate to:toDate];
+    [callback loadedDataSource:self];
+}
+
+- (void)fetchParadesFrom:(NSDate *)fromDate to:(NSDate *)toDate
+{
     [allParades removeAllObjects];
     
     PFQuery *query = [PFQuery queryWithClassName:@"Parade"];
+    [query whereKey:@"date" greaterThanOrEqualTo:fromDate];
+    [query whereKey:@"date" lessThanOrEqualTo:toDate];
     [query includeKey:@"bloco"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             [allParades addObjectsFromArray:objects];
-            dataIsReady = YES;
             [callback loadedDataSource:self];
         } else {
             NSLog(@"Error when fetching blocos by date");
@@ -82,30 +91,9 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
     }];
 }
 
-
-#pragma mark KalDataSource protocol conformance
-
-- (void)presentingDatesFrom:(NSDate *)fromDate to:(NSDate *)toDate delegate:(id<KalDataSourceCallbacks>)delegate
-{
-    /*
-     * In this example, I load the entire dataset in one HTTP request, so the date range that is
-     * being presented is irrelevant. So all I need to do is make sure that the data is loaded
-     * the first time and that I always issue the callback to complete the asynchronous request
-     * (even in the trivial case where we are responding synchronously).
-     */
-    
-    if (dataIsReady) {
-        [callback loadedDataSource:self];
-        return;
-    }
-    
-    callback = delegate;
-    [self fetchParades];
-}
-
 - (NSArray *)markedDatesFrom:(NSDate *)fromDate to:(NSDate *)toDate
 {
-    if (!dataIsReady)
+    if (!self.dataIsReady)
         return [NSArray array];
     
     return [[self paradesFrom:fromDate to:toDate] valueForKeyPath:@"date"];
@@ -113,7 +101,7 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
 
 - (void)loadItemsFromDate:(NSDate *)fromDate toDate:(NSDate *)toDate
 {
-    if (!dataIsReady)
+    if (!self.dataIsReady)
         return;
     
     [paradesInSelectedDay addObjectsFromArray:[self paradesFrom:fromDate to:toDate]];
@@ -125,6 +113,11 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
 }
 
 #pragma mark -
+
+- (BOOL)dataIsReady
+{
+    return allParades.count > 0;
+}
 
 - (NSArray *)paradesFrom:(NSDate *)fromDate to:(NSDate *)toDate
 {
