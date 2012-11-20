@@ -17,12 +17,18 @@
     CLLocationManager *locationManager;
 }
 
+@property (strong, nonatomic) IBOutlet MKMapView *mapView;
+@property (strong, nonatomic) IBOutlet UIButton *buttonLocateMe;
+
 - (MKCoordinateRegion)regionThatFitsUserLocation:(CLLocation *)userLocation;
+- (IBAction)buttonLocateMeTapped:(UIButton *)button;
 
 @end
 
 
 @implementation BlocosByLocationViewController
+
+#pragma mark UIViewController life cycle
 
 - (void)viewDidLoad
 {
@@ -46,6 +52,8 @@
     [locationManager stopUpdatingLocation];
 }
 
+#pragma mark CLLocationManager delegate
+
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
     [self.mapView setCenterCoordinate:newLocation.coordinate];
@@ -64,6 +72,8 @@
     
     return region;
 }
+
+#pragma mark MKMapView delegate
 
 - (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
 {
@@ -91,6 +101,13 @@
             }
         }
     }];
+}
+
+#pragma mark -
+
+- (IBAction)buttonLocateMeTapped:(UIButton *)button
+{
+    [self.mapView setCenterCoordinate:self.mapView.userLocation.coordinate animated:YES];
 }
 
 @end

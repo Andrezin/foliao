@@ -67,6 +67,10 @@
 		01BE6284164B3D450000679C /* seta-quem-vai@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6276164B3D450000679C /* seta-quem-vai@2x.png */; };
 		01CC6355165B091E005F68BA /* 200x200.gif in Resources */ = {isa = PBXBuildFile; fileRef = 01CC6354165B091E005F68BA /* 200x200.gif */; };
 		01CC6358165B0FA4005F68BA /* FoliaoRankingTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CC6357165B0FA4005F68BA /* FoliaoRankingTitle.m */; };
+		01CC635B165B2FB1005F68BA /* bt-locate-me-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CC6359165B2FB1005F68BA /* bt-locate-me-bg.png */; };
+		01CC635C165B2FB1005F68BA /* bt-locate-me.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CC635A165B2FB1005F68BA /* bt-locate-me.png */; };
+		01CC635F165B2FC6005F68BA /* bt-locate-me-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CC635D165B2FC6005F68BA /* bt-locate-me-bg@2x.png */; };
+		01CC6360165B2FC6005F68BA /* bt-locate-me@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CC635E165B2FC6005F68BA /* bt-locate-me@2x.png */; };
 		01E0CFDA164BDD2600940C77 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFD9164BDD2600940C77 /* AudioToolbox.framework */; };
 		01E0CFDC164BDD2D00940C77 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFDB164BDD2D00940C77 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		01E0CFDE164BDD3A00940C77 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFDD164BDD3A00940C77 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -187,6 +191,10 @@
 		01CC6354165B091E005F68BA /* 200x200.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 200x200.gif; sourceTree = "<group>"; };
 		01CC6356165B0FA4005F68BA /* FoliaoRankingTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoliaoRankingTitle.h; sourceTree = "<group>"; };
 		01CC6357165B0FA4005F68BA /* FoliaoRankingTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoliaoRankingTitle.m; sourceTree = "<group>"; };
+		01CC6359165B2FB1005F68BA /* bt-locate-me-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-locate-me-bg.png"; sourceTree = "<group>"; };
+		01CC635A165B2FB1005F68BA /* bt-locate-me.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-locate-me.png"; sourceTree = "<group>"; };
+		01CC635D165B2FC6005F68BA /* bt-locate-me-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-locate-me-bg@2x.png"; sourceTree = "<group>"; };
+		01CC635E165B2FC6005F68BA /* bt-locate-me@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-locate-me@2x.png"; sourceTree = "<group>"; };
 		01E0CFD9164BDD2600940C77 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		01E0CFDB164BDD2D00940C77 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		01E0CFDD164BDD3A00940C77 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -472,6 +480,8 @@
 		01BE6267164B3D450000679C /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				01CC6359165B2FB1005F68BA /* bt-locate-me-bg.png */,
+				01CC635A165B2FB1005F68BA /* bt-locate-me.png */,
 				014EECBF164DC80000C4F626 /* navigation-bar.png */,
 				01BE6268164B3D450000679C /* bt-checkin.png */,
 				01BE6269164B3D450000679C /* bt-base.png */,
@@ -487,6 +497,8 @@
 		01BE626F164B3D450000679C /* Retina */ = {
 			isa = PBXGroup;
 			children = (
+				01CC635D165B2FC6005F68BA /* bt-locate-me-bg@2x.png */,
+				01CC635E165B2FC6005F68BA /* bt-locate-me@2x.png */,
 				01CC6354165B091E005F68BA /* 200x200.gif */,
 				014EECC1164DC80D00C4F626 /* navigation-bar@2x.png */,
 				01BE6270164B3D450000679C /* bt-checkin@2x.png */,
@@ -621,6 +633,10 @@
 				0168CB8116595795003DD8AF /* Kal.bundle in Resources */,
 				01400127165AD1C8008F0429 /* WhereAmIGoingViewController.xib in Resources */,
 				01CC6355165B091E005F68BA /* 200x200.gif in Resources */,
+				01CC635B165B2FB1005F68BA /* bt-locate-me-bg.png in Resources */,
+				01CC635C165B2FB1005F68BA /* bt-locate-me.png in Resources */,
+				01CC635F165B2FC6005F68BA /* bt-locate-me-bg@2x.png in Resources */,
+				01CC6360165B2FC6005F68BA /* bt-locate-me@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
