@@ -582,7 +582,7 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="bt-checkin.png">{600, 90}</string>
+			<string key="bt-checkin.png">{300, 45}</string>
 			<string key="seta-quem-vai.png">{8, 12}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">1929</string>

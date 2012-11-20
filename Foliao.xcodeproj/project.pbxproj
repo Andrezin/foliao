@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01179928165B05810095D425 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01179927165B05810095D425 /* SDWebImage.framework */; };
+		0117992A165B05A50095D425 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01179929165B05A50095D425 /* ImageIO.framework */; };
 		013341B8164B4C0700C2984B /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013341B6164B4C0700C2984B /* MenuViewController.m */; };
 		013341B9164B4C0700C2984B /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 013341B7164B4C0700C2984B /* MenuViewController.xib */; };
 		013341BD164B58C100C2984B /* BlocosByLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013341BB164B58C100C2984B /* BlocosByLocationViewController.m */; };
@@ -15,6 +17,8 @@
 		013341C7164B5DD900C2984B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 013341C6164B5DD900C2984B /* MapKit.framework */; };
 		0140011F165AB0BC008F0429 /* KalBlocosDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0140011E165AB0BC008F0429 /* KalBlocosDataSource.m */; };
 		01400122165AB490008F0429 /* ParadeAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 01400121165AB490008F0429 /* ParadeAnnotation.m */; };
+		01400126165AD1C8008F0429 /* WhereAmIGoingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01400124165AD1C8008F0429 /* WhereAmIGoingViewController.m */; };
+		01400127165AD1C8008F0429 /* WhereAmIGoingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01400125165AD1C8008F0429 /* WhereAmIGoingViewController.xib */; };
 		014EECC0164DC80000C4F626 /* navigation-bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 014EECBF164DC80000C4F626 /* navigation-bar.png */; };
 		014EECC2164DC80E00C4F626 /* navigation-bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 014EECC1164DC80D00C4F626 /* navigation-bar@2x.png */; };
 		014EECC4164DC82400C4F626 /* 57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 014EECC3164DC82400C4F626 /* 57x57.png */; };
@@ -61,6 +65,8 @@
 		01BE6282164B3D450000679C /* bt-voltar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6274164B3D450000679C /* bt-voltar@2x.png */; };
 		01BE6283164B3D450000679C /* marca@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6275164B3D450000679C /* marca@2x.png */; };
 		01BE6284164B3D450000679C /* seta-quem-vai@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6276164B3D450000679C /* seta-quem-vai@2x.png */; };
+		01CC6355165B091E005F68BA /* 200x200.gif in Resources */ = {isa = PBXBuildFile; fileRef = 01CC6354165B091E005F68BA /* 200x200.gif */; };
+		01CC6358165B0FA4005F68BA /* FoliaoRankingTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CC6357165B0FA4005F68BA /* FoliaoRankingTitle.m */; };
 		01E0CFDA164BDD2600940C77 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFD9164BDD2600940C77 /* AudioToolbox.framework */; };
 		01E0CFDC164BDD2D00940C77 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFDB164BDD2D00940C77 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		01E0CFDE164BDD3A00940C77 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFDD164BDD3A00940C77 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -103,6 +109,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01179927165B05810095D425 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = ../../../Downloads/SDWebImage.framework; sourceTree = "<group>"; };
+		01179929165B05A50095D425 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		013341B5164B4C0700C2984B /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = Controllers/MenuViewController.h; sourceTree = "<group>"; };
 		013341B6164B4C0700C2984B /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = Controllers/MenuViewController.m; sourceTree = "<group>"; };
 		013341B7164B4C0700C2984B /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MenuViewController.xib; path = ../Controllers/MenuViewController.xib; sourceTree = "<group>"; };
@@ -116,6 +124,9 @@
 		0140011E165AB0BC008F0429 /* KalBlocosDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalBlocosDataSource.m; sourceTree = "<group>"; };
 		01400120165AB490008F0429 /* ParadeAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParadeAnnotation.h; sourceTree = "<group>"; };
 		01400121165AB490008F0429 /* ParadeAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParadeAnnotation.m; sourceTree = "<group>"; };
+		01400123165AD1C8008F0429 /* WhereAmIGoingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WhereAmIGoingViewController.h; path = Controllers/WhereAmIGoingViewController.h; sourceTree = "<group>"; };
+		01400124165AD1C8008F0429 /* WhereAmIGoingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WhereAmIGoingViewController.m; path = Controllers/WhereAmIGoingViewController.m; sourceTree = "<group>"; };
+		01400125165AD1C8008F0429 /* WhereAmIGoingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WhereAmIGoingViewController.xib; path = ../Controllers/WhereAmIGoingViewController.xib; sourceTree = "<group>"; };
 		014EECBF164DC80000C4F626 /* navigation-bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation-bar.png"; sourceTree = "<group>"; };
 		014EECC1164DC80D00C4F626 /* navigation-bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation-bar@2x.png"; sourceTree = "<group>"; };
 		014EECC3164DC82400C4F626 /* 57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 57x57.png; sourceTree = "<group>"; };
@@ -173,6 +184,9 @@
 		01BE6274164B3D450000679C /* bt-voltar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-voltar@2x.png"; sourceTree = "<group>"; };
 		01BE6275164B3D450000679C /* marca@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "marca@2x.png"; sourceTree = "<group>"; };
 		01BE6276164B3D450000679C /* seta-quem-vai@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seta-quem-vai@2x.png"; sourceTree = "<group>"; };
+		01CC6354165B091E005F68BA /* 200x200.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 200x200.gif; sourceTree = "<group>"; };
+		01CC6356165B0FA4005F68BA /* FoliaoRankingTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoliaoRankingTitle.h; sourceTree = "<group>"; };
+		01CC6357165B0FA4005F68BA /* FoliaoRankingTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoliaoRankingTitle.m; sourceTree = "<group>"; };
 		01E0CFD9164BDD2600940C77 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		01E0CFDB164BDD2D00940C77 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		01E0CFDD164BDD3A00940C77 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -196,6 +210,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0117992A165B05A50095D425 /* ImageIO.framework in Frameworks */,
 				0168CB7F16595767003DD8AF /* libKal.a in Frameworks */,
 				01E0CFF2164BDD8600940C77 /* SystemConfiguration.framework in Frameworks */,
 				01E0CFF0164BDD8100940C77 /* StoreKit.framework in Frameworks */,
@@ -216,6 +231,7 @@
 				01BE622A164B3B000000679C /* Foundation.framework in Frameworks */,
 				018B5E6E164DA0CE00042B4E /* Parse.framework in Frameworks */,
 				018B5E70164DA0DE00042B4E /* FacebookSDK.framework in Frameworks */,
+				01179928165B05810095D425 /* SDWebImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +265,8 @@
 				018B5E65164D8E0500042B4E /* LoginViewController.m */,
 				018B5E73164DB19B00042B4E /* BlocoViewController.h */,
 				018B5E74164DB19B00042B4E /* BlocoViewController.m */,
+				01400123165AD1C8008F0429 /* WhereAmIGoingViewController.h */,
+				01400124165AD1C8008F0429 /* WhereAmIGoingViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -280,6 +298,7 @@
 				013341BC164B58C100C2984B /* BlocosByLocationViewController.xib */,
 				01E0CFF5164BE2A300940C77 /* BlocosByNameViewController.xib */,
 				018B5E75164DB19B00042B4E /* BlocoViewController.xib */,
+				01400125165AD1C8008F0429 /* WhereAmIGoingViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -291,6 +310,8 @@
 				0140011E165AB0BC008F0429 /* KalBlocosDataSource.m */,
 				01400120165AB490008F0429 /* ParadeAnnotation.h */,
 				01400121165AB490008F0429 /* ParadeAnnotation.m */,
+				01CC6356165B0FA4005F68BA /* FoliaoRankingTitle.h */,
+				01CC6357165B0FA4005F68BA /* FoliaoRankingTitle.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -344,6 +365,8 @@
 		01BE6226164B3B000000679C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				01179929165B05A50095D425 /* ImageIO.framework */,
+				01179927165B05810095D425 /* SDWebImage.framework */,
 				018B5E71164DA0F000042B4E /* FacebookSDKResources.bundle */,
 				018B5E6F164DA0DE00042B4E /* FacebookSDK.framework */,
 				018B5E6D164DA0CE00042B4E /* Parse.framework */,
@@ -464,6 +487,7 @@
 		01BE626F164B3D450000679C /* Retina */ = {
 			isa = PBXGroup;
 			children = (
+				01CC6354165B091E005F68BA /* 200x200.gif */,
 				014EECC1164DC80D00C4F626 /* navigation-bar@2x.png */,
 				01BE6270164B3D450000679C /* bt-checkin@2x.png */,
 				01BE6271164B3D450000679C /* bt-base@2x.png */,
@@ -595,6 +619,8 @@
 				019E6B3B1655DB790025786D /* Default@2x.png in Resources */,
 				019E6B4616565D660025786D /* SVProgressHUD.bundle in Resources */,
 				0168CB8116595795003DD8AF /* Kal.bundle in Resources */,
+				01400127165AD1C8008F0429 /* WhereAmIGoingViewController.xib in Resources */,
+				01CC6355165B091E005F68BA /* 200x200.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,6 +668,8 @@
 				0168CB841659586B003DD8AF /* BlocosByDateViewController.m in Sources */,
 				0140011F165AB0BC008F0429 /* KalBlocosDataSource.m in Sources */,
 				01400122165AB490008F0429 /* ParadeAnnotation.m in Sources */,
+				01400126165AD1C8008F0429 /* WhereAmIGoingViewController.m in Sources */,
+				01CC6358165B0FA4005F68BA /* FoliaoRankingTitle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -747,6 +775,7 @@
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/../../../Frameworks\"",
 					"\"$(SRCROOT)/../../../Frameworks/FacebookSDK\"",
+					"\"$(SRCROOT)/../../../Downloads\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Foliao/Foliao-Prefix.pch";
@@ -772,6 +801,7 @@
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/../../../Frameworks\"",
 					"\"$(SRCROOT)/../../../Frameworks/FacebookSDK\"",
+					"\"$(SRCROOT)/../../../Downloads\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Foliao/Foliao-Prefix.pch";
