@@ -14,8 +14,11 @@
 
 @interface BlocosByLocationViewController(){
     MKUserLocation *userFirstLocation;
+    CLLocationManager *locationManager;
 }
-- (MKCoordinateRegion)regionThatFitsUserLocation:(MKUserLocation *)userLocation;
+
+- (MKCoordinateRegion)regionThatFitsUserLocation:(CLLocation *)userLocation;
+
 @end
 
 
@@ -27,28 +30,29 @@
     
     self.mapView.userLocation.title = @"Tô pulando por aqui!";
     
-    PFQuery *query = [PFQuery queryWithClassName:@"Parade"];
-    [query includeKey:@"bloco"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            for (PFObject *parade in objects) {
-                ParadeAnnotation *annotation = [[ParadeAnnotation alloc] initWithParade:parade];
-                [self.mapView addAnnotation:annotation];
-            }
-        }
-    }];
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
+    locationManager.distanceFilter = 20; // in meters
+    locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+    
+    BOOL locationAllowed = [CLLocationManager locationServicesEnabled] &&
+                           [CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorized;
+    if (locationAllowed)
+        [locationManager startUpdatingLocation];
 }
 
-- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
+- (void)viewDidUnload
 {
-    if (!userFirstLocation) {
-        userFirstLocation = mapView.userLocation;
-        [mapView setCenterCoordinate:userLocation.coordinate animated:YES];
-        [mapView setRegion:[self regionThatFitsUserLocation:userLocation] animated:NO];
-    }
+    [locationManager stopUpdatingLocation];
 }
 
-- (MKCoordinateRegion)regionThatFitsUserLocation:(MKUserLocation *)userLocation
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    [self.mapView setCenterCoordinate:newLocation.coordinate];
+    [self.mapView setRegion:[self regionThatFitsUserLocation:newLocation]];
+}
+
+- (MKCoordinateRegion)regionThatFitsUserLocation:(CLLocation *)userLocation
 {
     MKCoordinateSpan span;
     span.latitudeDelta = 0.02;
@@ -59,6 +63,34 @@
     region.center = userLocation.coordinate;
     
     return region;
+}
+
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
+{
+    PFGeoPoint *southwest = [[PFGeoPoint alloc] init];
+    southwest.latitude = mapView.centerCoordinate.latitude - mapView.region.span.latitudeDelta/2;
+    southwest.longitude = mapView.centerCoordinate.longitude - mapView.region.span.longitudeDelta/2;
+    
+    PFGeoPoint *northeast = [[PFGeoPoint alloc] init];
+    northeast.latitude = mapView.centerCoordinate.latitude + mapView.region.span.latitudeDelta/2;
+    northeast.longitude = mapView.centerCoordinate.longitude + mapView.region.span.longitudeDelta/2;
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Parade"];
+    [query whereKey:@"location" withinGeoBoxFromSouthwest:southwest toNortheast:northeast];
+    [query includeKey:@"bloco"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            id userLocationAnnotation = self.mapView.userLocation;
+            NSMutableArray *annotations = [NSMutableArray arrayWithArray:self.mapView.annotations];
+            [annotations removeObject:userLocationAnnotation];
+            [self.mapView removeAnnotations:annotations];
+            
+            for (PFObject *parade in objects) {
+                ParadeAnnotation *annotation = [[ParadeAnnotation alloc] initWithParade:parade];
+                [self.mapView addAnnotation:annotation];
+            }
+        }
+    }];
 }
 
 @end
