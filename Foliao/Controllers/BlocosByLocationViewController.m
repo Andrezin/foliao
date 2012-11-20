@@ -49,7 +49,9 @@
 
 - (void)viewDidUnload
 {
+    [super viewDidUnload];
     [locationManager stopUpdatingLocation];
+    locationManager = nil;
 }
 
 #pragma mark CLLocationManager delegate
