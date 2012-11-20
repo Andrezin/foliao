@@ -22,6 +22,7 @@
 - (void)configureParse;
 - (void)configureRootViewController;
 - (void)showLoginView;
+- (void)takeMyFacebookData;
 
 @end
 
@@ -145,26 +146,32 @@
         if (!user) {
             NSLog(@"Uh oh. The user cancelled the Facebook login.");
             [self showLoginView];
-        } else if (user.isNew) {
-            NSLog(@"User signed up and logged in through Facebook!");
-            [self takeMyFacebookId];
         } else {
-            NSLog(@"User logged in through Facebook!");
+            if (user.isNew) {
+                NSLog(@"User signed up and logged in through Facebook!");
+            } else {
+                NSLog(@"User logged in through Facebook!");
+            }
+            [self takeMyFacebookData];
         }
+        
         [self sessionStateChanged:error];
     }];
 }
 
-- (void)takeMyFacebookId
+- (void)takeMyFacebookData
 {
     PF_FBRequest *request = [PF_FBRequest requestForMe];
     [request startWithCompletionHandler:^(PF_FBRequestConnection *connection,
                                           id result,
                                           NSError *error) {
         if (!error) {
-            // Store the current user's Facebook ID on the user
-            [[PFUser currentUser] setObject:[result objectForKey:@"id"]
-                                     forKey:@"facebookId"];
+            // Store the current user's data
+            [[PFUser currentUser] setObject:[result objectForKey:@"id"] forKey:@"facebookId"];
+            [[PFUser currentUser] setObject:[result objectForKey:@"first_name"] forKey:@"firstName"];
+            [[PFUser currentUser] setObject:[result objectForKey:@"last_name"] forKey:@"lastName"];
+            [[PFUser currentUser] setObject:[result objectForKey:@"first_name"] forKey:@"firstName"];
+            [[PFUser currentUser] setObject:[result objectForKey:@"gender"] forKey:@"gender"];
             [[PFUser currentUser] saveInBackground];
         }
     }];
