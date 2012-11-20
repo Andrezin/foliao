@@ -16,7 +16,7 @@
 #import "KalPrivate.h"
 
 
-NSString *const KalDataSourceChangedNotification = @"KalDataSourceChangedNotification";
+extern NSString *const KalDataSourceChangedNotification;
 
 @interface BlocosByDateViewController ()
 @property (nonatomic, retain, readwrite) NSDate *initialDate;
