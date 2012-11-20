@@ -6,8 +6,9 @@
 //  Copyright (c) 2012 7pixels. All rights reserved.
 //
 
-#import "BlocoViewController.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
+#import "BlocoViewController.h"
 #import "SVProgressHUD.h"
 
 @interface BlocoViewController ()
@@ -129,8 +130,7 @@
         if (i == self.folioes.count) break;
         
         NSString *picURL = [NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=normal", self.folioes[i][@"facebookId"]];
-        NSData *picture = [NSData dataWithContentsOfURL:[NSURL URLWithString:picURL]];
-        [pictureTemplates[i] setImage:[UIImage imageWithData:picture]];
+        [(UIImageView *)pictureTemplates[i] setImageWithURL:[NSURL URLWithString:picURL] placeholderImage:[UIImage imageNamed:@"110x110.gif"]];
     }
 }
 
