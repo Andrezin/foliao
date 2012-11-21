@@ -51,12 +51,7 @@
 
 - (void)customizeBackButton
 {
-    UIImage *backButtonImage = [UIImage imageNamed:@"bt-voltar"];
-    UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 43, 30)];
-    [backButton setBackgroundImage:backButtonImage forState:UIControlStateNormal];
-    [backButton addTarget:self action:@selector(popViewController) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
-    self.navigationItem.leftBarButtonItem = backButtonItem;
+    
 }
 
 - (void)popViewController

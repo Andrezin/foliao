@@ -24,6 +24,9 @@
 - (void)showLoginView;
 - (void)takeMyFacebookData;
 
+- (void)customizeAppearance;
+- (void)customizeBackButton;
+
 @end
 
 
@@ -33,6 +36,7 @@
 {
     [self configureParse];
     [self configureRootViewController];
+    [self customizeAppearance];
     
     if ([[PFFacebookUtils session] state] == PF_FBSessionStateCreatedTokenLoaded) {
         // Yes, so just open the session (this won't display any UX).
@@ -72,6 +76,18 @@
     
     self.window.rootViewController = self.mainViewController;
     [self.window makeKeyAndVisible];
+}
+
+- (void)customizeAppearance
+{
+    [self customizeBackButton];
+}
+
+- (void)customizeBackButton
+{
+    UIImage *backButtonImage = [[UIImage imageNamed:@"bt-voltar"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 43, 0, 0)];
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backButtonImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-100, 0) forBarMetrics:UIBarMetricsDefault];
 }
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
