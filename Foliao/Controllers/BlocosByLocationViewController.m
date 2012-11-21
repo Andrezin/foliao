@@ -15,6 +15,8 @@
 @interface BlocosByLocationViewController(){
     MKUserLocation *userFirstLocation;
     CLLocationManager *locationManager;
+    
+    BOOL locationLoaded;
 }
 
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
@@ -58,8 +60,11 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
+    if (locationLoaded) return;
+    
     [self.mapView setCenterCoordinate:newLocation.coordinate];
     [self.mapView setRegion:[self regionThatFitsUserLocation:newLocation]];
+    locationLoaded = YES;
 }
 
 - (MKCoordinateRegion)regionThatFitsUserLocation:(CLLocation *)userLocation
