@@ -11,6 +11,7 @@
 
 @interface BlocoViewController : UIViewController <UIActionSheetDelegate>
 
-@property (strong, nonatomic) PFObject *bloco;
+@property (strong, nonatomic) PFObject *bloco; // if I came from a list of "blocos"
+@property (strong, nonatomic) PFObject *parade; // if I came from a list of "parades"
 
 @end

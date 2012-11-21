@@ -12,22 +12,27 @@
 #import "SVProgressHUD.h"
 #import "WhoIsGoingViewController.h"
 
-@interface BlocoViewController ()
+typedef enum viewDomainClass {
+    ViewDomainClassBloco = 1,
+    ViewDomainClassParade = 2
+} ViewDomainClass;
 
-@property (strong, nonatomic) NSArray *parades;
+@interface BlocoViewController () {
+    ViewDomainClass _domainClass;
+}
+
+@property (strong, nonatomic) NSArray *blocoParades;
 @property (strong, nonatomic) NSArray *folioes;
+
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UIButton *buttonCheckIn;
 
-@property (strong, nonatomic) IBOutlet UIButton *buttonWhoIsGoing;
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewPictureFoliao0;
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewPictureFoliao1;
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewPictureFoliao2;
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewPictureFoliao3;
 
-- (void)customizeBackButton;
 - (void)sizeScrollViewToFit;
-- (void)popViewController;
 - (void)fillBlocoInfoInBackground;
 - (void)showWhoIsGoing;
 - (void)showFolioesPictures;
@@ -44,19 +49,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self customizeBackButton];
     [self sizeScrollViewToFit];
     [self fillBlocoInfoInBackground];
-}
-
-- (void)customizeBackButton
-{
-    
-}
-
-- (void)popViewController
-{
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)sizeScrollViewToFit
@@ -81,27 +75,38 @@
 
 - (void)fillBlocoInfoInBackground
 {
-    self.buttonCheckIn.enabled = NO;
-    
-    PFQuery *query = [PFQuery queryWithClassName:@"Parade"];
-    [query whereKey:@"bloco" equalTo:self.bloco];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            self.parades = objects;
-            if (self.parades.count) {
-                self.buttonCheckIn.enabled = YES;
-                [self showWhoIsGoing];
+    if (_domainClass == ViewDomainClassParade) {
+        self.buttonCheckIn.enabled = YES;
+        [self showWhoIsGoing];
+        
+    } else {
+        self.buttonCheckIn.enabled = NO;
+        
+        PFQuery *query = [PFQuery queryWithClassName:@"Parade"];
+        [query whereKey:@"bloco" equalTo:self.bloco];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (!error) {
+                self.blocoParades = objects;
+                if (self.blocoParades.count) {
+                    self.buttonCheckIn.enabled = YES;
+                    [self showWhoIsGoing];
+                }
             }
-        }
-    }];
+        }];
+    }
 }
 
 - (void)showWhoIsGoing
 {
     PFQuery *query = [PFQuery queryWithClassName:@"Presence"];
-    [query whereKey:@"parade" containedIn:self.parades];
+    
+    if (_domainClass == ViewDomainClassParade) {
+        [query whereKey:@"parade" equalTo:self.parade];
+    } else {
+        [query whereKey:@"parade" containedIn:self.blocoParades];
+    }
+    
     [query includeKey:@"user"];
-    [query includeKey:@"user.authData"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *presences, NSError *error) {
         if (!error) {
             NSLog(@"Found %d presences", presences.count);
@@ -133,26 +138,30 @@
 }
 
 - (IBAction)checkInButtonTapped:(UIButton *)sender
-{    
-    if (self.parades.count == 0)
-        return;
+{
+    if (_domainClass == ViewDomainClassParade) {
+        [self confirmPresenceInParade:self.parade];
+    } else {
+        if (self.blocoParades.count == 0)
+            return;
     
-    if (self.parades.count == 1) {
-        [self confirmPresenceInParade:self.parades[0]];
-        return;
+        else if (self.blocoParades.count == 1)
+            [self confirmPresenceInParade:self.blocoParades[0]];
+        
+        else {
+            UIActionSheet *confirmationSheet = [[UIActionSheet alloc] initWithTitle:@"Vai pular em qual dia?" delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:nil];
+            
+            for (PFObject *parade in self.blocoParades) {
+                [confirmationSheet addButtonWithTitle:[parade[@"date"] description]];
+            }
+            
+            confirmationSheet.cancelButtonIndex = self.blocoParades.count;
+            [confirmationSheet addButtonWithTitle:@"Nenhum"];
+            
+            confirmationSheet.actionSheetStyle = UIActionSheetStyleBlackTranslucent;
+            [confirmationSheet showInView:self.view];
+        }
     }
-    
-    UIActionSheet *confirmationSheet = [[UIActionSheet alloc] initWithTitle:@"Vai pular em qual dia?" delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:nil];
-    
-    for (PFObject *parade in self.parades) {
-        [confirmationSheet addButtonWithTitle:[parade[@"date"] description]];
-    }
-    
-    confirmationSheet.cancelButtonIndex = self.parades.count;
-    [confirmationSheet addButtonWithTitle:@"Nenhum"];
-    
-    confirmationSheet.actionSheetStyle = UIActionSheetStyleBlackTranslucent;
-    [confirmationSheet showInView:self.view];
 }
 
 - (IBAction)whoIsGoingButtonTapped:(UIButton *)sender
@@ -190,11 +199,11 @@
 #pragma mark - UIActionSheet delegate
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (buttonIndex >= self.parades.count) // cancelling...
+    if (buttonIndex >= self.blocoParades.count) // cancelling...
         return;
     
     NSLog(@"Confirming presence...");
-    [self confirmPresenceInParade:self.parades[buttonIndex]];
+    [self confirmPresenceInParade:self.blocoParades[buttonIndex]];
 }
 
 
@@ -203,6 +212,18 @@
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
     [self sizeScrollViewToFit];
+}
+
+- (void)setBloco:(PFObject *)bloco
+{
+    _bloco = bloco;
+    _domainClass = ViewDomainClassBloco;
+}
+
+- (void)setParade:(PFObject *)parade
+{
+    _parade = parade;
+    _domainClass = ViewDomainClassParade;
 }
 
 @end
