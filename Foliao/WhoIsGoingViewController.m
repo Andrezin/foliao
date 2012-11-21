@@ -6,6 +6,8 @@
 //  Copyright (c) 2012 7pixels. All rights reserved.
 //
 
+#import <SDWebImage/UIImageView+WebCache.h>
+
 #import "WhoIsGoingViewController.h"
 
 
@@ -31,6 +33,13 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
+    
+    NSURL *profileImageURL = [NSURL URLWithString:[
+                                    NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=normal",
+                                                   self.folioes[indexPath.row][@"facebookId"]]];
+    
+    cell.imageView.frame = CGRectMake(0, 0, cell.frame.size.height, cell.frame.size.height);
+    [cell.imageView setImageWithURL:profileImageURL placeholderImage:[UIImage imageNamed:@"100x100.gif"]];
     
     cell.textLabel.text = [NSString stringWithFormat:@"%@ %@",
                            self.folioes[indexPath.row][@"firstName"],
