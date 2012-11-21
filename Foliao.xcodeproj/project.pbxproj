@@ -71,6 +71,8 @@
 		01CC635C165B2FB1005F68BA /* bt-locate-me.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CC635A165B2FB1005F68BA /* bt-locate-me.png */; };
 		01CC635F165B2FC6005F68BA /* bt-locate-me-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CC635D165B2FC6005F68BA /* bt-locate-me-bg@2x.png */; };
 		01CC6360165B2FC6005F68BA /* bt-locate-me@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CC635E165B2FC6005F68BA /* bt-locate-me@2x.png */; };
+		01CC6364165B3A6A005F68BA /* WhoIsGoingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CC6362165B3A6A005F68BA /* WhoIsGoingViewController.m */; };
+		01CC6365165B3A6A005F68BA /* WhoIsGoingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01CC6363165B3A6A005F68BA /* WhoIsGoingViewController.xib */; };
 		01CC6370165B45B2005F68BA /* 110x110.gif in Resources */ = {isa = PBXBuildFile; fileRef = 01CC636F165B45B2005F68BA /* 110x110.gif */; };
 		01E0CFDA164BDD2600940C77 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFD9164BDD2600940C77 /* AudioToolbox.framework */; };
 		01E0CFDC164BDD2D00940C77 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFDB164BDD2D00940C77 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -196,6 +198,9 @@
 		01CC635A165B2FB1005F68BA /* bt-locate-me.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-locate-me.png"; sourceTree = "<group>"; };
 		01CC635D165B2FC6005F68BA /* bt-locate-me-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-locate-me-bg@2x.png"; sourceTree = "<group>"; };
 		01CC635E165B2FC6005F68BA /* bt-locate-me@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-locate-me@2x.png"; sourceTree = "<group>"; };
+		01CC6361165B3A6A005F68BA /* WhoIsGoingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhoIsGoingViewController.h; sourceTree = "<group>"; };
+		01CC6362165B3A6A005F68BA /* WhoIsGoingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhoIsGoingViewController.m; sourceTree = "<group>"; };
+		01CC6363165B3A6A005F68BA /* WhoIsGoingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WhoIsGoingViewController.xib; path = ../WhoIsGoingViewController.xib; sourceTree = "<group>"; };
 		01CC636F165B45B2005F68BA /* 110x110.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 110x110.gif; sourceTree = "<group>"; };
 		01E0CFD9164BDD2600940C77 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		01E0CFDB164BDD2D00940C77 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -277,6 +282,8 @@
 				018B5E74164DB19B00042B4E /* BlocoViewController.m */,
 				01400123165AD1C8008F0429 /* WhereAmIGoingViewController.h */,
 				01400124165AD1C8008F0429 /* WhereAmIGoingViewController.m */,
+				01CC6361165B3A6A005F68BA /* WhoIsGoingViewController.h */,
+				01CC6362165B3A6A005F68BA /* WhoIsGoingViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -303,6 +310,7 @@
 		013341C4164B5B1300C2984B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				01CC6363165B3A6A005F68BA /* WhoIsGoingViewController.xib */,
 				018B5E66164D8E0500042B4E /* LoginViewController.xib */,
 				013341B7164B4C0700C2984B /* MenuViewController.xib */,
 				013341BC164B58C100C2984B /* BlocosByLocationViewController.xib */,
@@ -409,6 +417,7 @@
 				013341C4164B5B1300C2984B /* Views */,
 				013341BF164B58D200C2984B /* Controllers */,
 				01BE6265164B3D450000679C /* Media */,
+				0140011C165AB0BC008F0429 /* Utils */,
 				01BE622E164B3B000000679C /* Supporting Files */,
 				01BE6236164B3B000000679C /* AppDelegate.h */,
 				01BE6237164B3B000000679C /* AppDelegate.m */,
@@ -419,7 +428,6 @@
 		01BE622E164B3B000000679C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0140011C165AB0BC008F0429 /* Utils */,
 				01BE622F164B3B000000679C /* Foliao-Info.plist */,
 				01BE6230164B3B000000679C /* InfoPlist.strings */,
 				01BE6233164B3B000000679C /* main.m */,
@@ -641,6 +649,7 @@
 				01CC635F165B2FC6005F68BA /* bt-locate-me-bg@2x.png in Resources */,
 				01CC6360165B2FC6005F68BA /* bt-locate-me@2x.png in Resources */,
 				01CC6370165B45B2005F68BA /* 110x110.gif in Resources */,
+				01CC6365165B3A6A005F68BA /* WhoIsGoingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,6 +699,7 @@
 				01400122165AB490008F0429 /* ParadeAnnotation.m in Sources */,
 				01400126165AD1C8008F0429 /* WhereAmIGoingViewController.m in Sources */,
 				01CC6358165B0FA4005F68BA /* FoliaoRankingTitle.m in Sources */,
+				01CC6364165B3A6A005F68BA /* WhoIsGoingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

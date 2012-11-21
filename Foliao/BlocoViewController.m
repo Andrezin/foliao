@@ -10,18 +10,20 @@
 
 #import "BlocoViewController.h"
 #import "SVProgressHUD.h"
+#import "WhoIsGoingViewController.h"
 
 @interface BlocoViewController ()
 
 @property (strong, nonatomic) NSArray *parades;
 @property (strong, nonatomic) NSArray *folioes;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (strong, nonatomic) IBOutlet UIButton *checkInButton;
+@property (strong, nonatomic) IBOutlet UIButton *buttonCheckIn;
 
-@property (strong, nonatomic) IBOutlet UIImageView *pictureFoliao0;
-@property (strong, nonatomic) IBOutlet UIImageView *pictureFoliao1;
-@property (strong, nonatomic) IBOutlet UIImageView *pictureFoliao2;
-@property (strong, nonatomic) IBOutlet UIImageView *pictureFoliao3;
+@property (strong, nonatomic) IBOutlet UIButton *buttonWhoIsGoing;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewPictureFoliao0;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewPictureFoliao1;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewPictureFoliao2;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewPictureFoliao3;
 
 - (void)customizeBackButton;
 - (void)sizeScrollViewToFit;
@@ -32,6 +34,7 @@
 - (void)confirmPresenceInParade:(PFObject *)parade;
 
 - (IBAction)checkInButtonTapped:(UIButton *)sender;
+- (IBAction)whoIsGoingButtonTapped:(UIButton *)sender;
 
 @end
 
@@ -83,7 +86,7 @@
 
 - (void)fillBlocoInfoInBackground
 {
-    self.checkInButton.enabled = NO;
+    self.buttonCheckIn.enabled = NO;
     
     PFQuery *query = [PFQuery queryWithClassName:@"Parade"];
     [query whereKey:@"bloco" equalTo:self.bloco];
@@ -91,7 +94,7 @@
         if (!error) {
             self.parades = objects;
             if (self.parades.count) {
-                self.checkInButton.enabled = YES;
+                self.buttonCheckIn.enabled = YES;
                 [self showWhoIsGoing];
             }
         }
@@ -121,10 +124,10 @@
 
 - (void)showFolioesPictures
 {
-    NSArray *pictureTemplates = [NSArray arrayWithObjects:self.pictureFoliao0,
-                                                          self.pictureFoliao1,
-                                                          self.pictureFoliao2,
-                                                          self.pictureFoliao3, nil];
+    NSArray *pictureTemplates = [NSArray arrayWithObjects:self.imageViewPictureFoliao0,
+                                                          self.imageViewPictureFoliao1,
+                                                          self.imageViewPictureFoliao2,
+                                                          self.imageViewPictureFoliao3, nil];
     
     for (int i=0; i < 3; i++) {
         if (i == self.folioes.count) break;
@@ -155,6 +158,13 @@
     
     confirmationSheet.actionSheetStyle = UIActionSheetStyleBlackTranslucent;
     [confirmationSheet showInView:self.view];
+}
+
+- (IBAction)whoIsGoingButtonTapped:(UIButton *)sender
+{
+    WhoIsGoingViewController *whoIsGoingViewController = [[WhoIsGoingViewController alloc] init];
+    whoIsGoingViewController.folioes = self.folioes;
+    [self.navigationController pushViewController:whoIsGoingViewController animated:YES];
 }
 
 - (void)confirmPresenceInParade:(PFObject *)parade
