@@ -11,6 +11,7 @@
 #import "WhereAmIGoingViewController.h"
 #import "BlocoViewController.h"
 #import "FoliaoRankingTitle.h"
+#import "AppConstants.h"
 
 @interface WhereAmIGoingViewController ()
 
@@ -32,8 +33,11 @@
     
     PFUser *me = [PFUser currentUser];
     [self.imageViewProfile setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=large", me[@"facebookId"]]] placeholderImage:[UIImage imageNamed:@"200x200.gif"]];
+    self.imageViewProfile.clipsToBounds = YES;
     self.labelName.text = [NSString stringWithFormat:@"%@ %@", me[@"firstName"], me[@"lastName"]];
     self.labelRanking.text = @"";
+    
+    self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -44,7 +48,10 @@
     [query orderByAscending:@"parade"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         self.presences = objects;
-        self.labelRanking.text = [FoliaoRankingTitle titleForBeingPresentIn:objects.count];
+#warning Refactor: rename var name
+        self.labelRanking.text = [NSString stringWithFormat:@"Confirmou %d bloco%@", self.presences.count, self.presences.count == 1 ? @"" : @"s"];
+        
+//        self.labelRanking.text = [FoliaoRankingTitle titleForBeingPresentIn:objects.count];
         [self.tableView reloadData];
     }];
 }
@@ -68,6 +75,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"seta-quem-vai"]];
     }
     
     cell.textLabel.text = self.presences[indexPath.row][@"parade"][@"bloco"][@"name"];
@@ -75,6 +83,10 @@
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return kTABLE_VIEW_CELL_HEIGHT;
+}
 
 #pragma mark UITableView delegate
 

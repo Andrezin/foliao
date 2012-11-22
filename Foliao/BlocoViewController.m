@@ -7,6 +7,7 @@
 //
 
 #import <SDWebImage/UIImageView+WebCache.h>
+#import <QuartzCore/QuartzCore.h>
 
 #import "BlocoViewController.h"
 #import "SVProgressHUD.h"
@@ -25,15 +26,18 @@ typedef enum viewDomainClass {
 @property (strong, nonatomic) NSArray *folioes;
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) IBOutlet UILabel *labelName;
+@property (strong, nonatomic) IBOutlet UILabel *labelInfo;
 @property (strong, nonatomic) IBOutlet UIButton *buttonCheckIn;
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewPictureFoliao0;
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewPictureFoliao1;
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewPictureFoliao2;
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewPictureFoliao3;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewPictureFoliao4;
 
 - (void)sizeScrollViewToFit;
-- (void)fillBlocoInfoInBackground;
+- (void)fillBlocoInfo;
 - (void)showWhoIsGoing;
 - (void)showFolioesPictures;
 - (void)confirmPresenceInParade:(PFObject *)parade;
@@ -50,7 +54,7 @@ typedef enum viewDomainClass {
 {
     [super viewDidLoad];
     [self sizeScrollViewToFit];
-    [self fillBlocoInfoInBackground];
+    [self fillBlocoInfo];
 }
 
 - (void)sizeScrollViewToFit
@@ -73,14 +77,17 @@ typedef enum viewDomainClass {
     [self.scrollView setContentSize:(CGSizeMake(self.scrollView.frame.size.width, scrollViewHeight+10))];
 }
 
-- (void)fillBlocoInfoInBackground
+- (void)fillBlocoInfo
 {
     if (_domainClass == ViewDomainClassParade) {
         self.buttonCheckIn.enabled = YES;
+        self.labelName.text = self.parade[@"bloco"][@"name"];
+        
         [self showWhoIsGoing];
         
     } else {
         self.buttonCheckIn.enabled = NO;
+        self.labelName.text = self.bloco[@"name"];
         
         PFQuery *query = [PFQuery queryWithClassName:@"Parade"];
         [query whereKey:@"bloco" equalTo:self.bloco];
@@ -127,13 +134,16 @@ typedef enum viewDomainClass {
     NSArray *pictureTemplates = [NSArray arrayWithObjects:self.imageViewPictureFoliao0,
                                                           self.imageViewPictureFoliao1,
                                                           self.imageViewPictureFoliao2,
-                                                          self.imageViewPictureFoliao3, nil];
+                                                          self.imageViewPictureFoliao3,
+                                                          self.imageViewPictureFoliao4, nil];
     
-    for (int i=0; i < 3; i++) {
-        if (i == self.folioes.count) break;
-        
+    for (int i=0; i < self.folioes.count; i++) {
         NSString *picURL = [NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=normal", self.folioes[i][@"facebookId"]];
-        [(UIImageView *)pictureTemplates[i] setImageWithURL:[NSURL URLWithString:picURL] placeholderImage:[UIImage imageNamed:@"110x110.gif"]];
+        UIImageView *profileImageView = (UIImageView *)pictureTemplates[i];
+        [profileImageView setImageWithURL:[NSURL URLWithString:picURL] placeholderImage:[UIImage imageNamed:@"110x110.gif"]];
+        profileImageView.layer.cornerRadius = 3.0;
+        profileImageView.contentMode = UIViewContentModeScaleAspectFill;
+        profileImageView.clipsToBounds = YES;
     }
 }
 

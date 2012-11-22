@@ -10,29 +10,26 @@
 		01179928165B05810095D425 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01179927165B05810095D425 /* SDWebImage.framework */; };
 		0117992A165B05A50095D425 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01179929165B05A50095D425 /* ImageIO.framework */; };
 		013341B8164B4C0700C2984B /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013341B6164B4C0700C2984B /* MenuViewController.m */; };
-		013341B9164B4C0700C2984B /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 013341B7164B4C0700C2984B /* MenuViewController.xib */; };
 		013341BD164B58C100C2984B /* BlocosByLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013341BB164B58C100C2984B /* BlocosByLocationViewController.m */; };
-		013341BE164B58C100C2984B /* BlocosByLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 013341BC164B58C100C2984B /* BlocosByLocationViewController.xib */; };
 		013341C5164B5B1300C2984B /* ZUUIRevealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013341C3164B5B1300C2984B /* ZUUIRevealController.m */; };
 		013341C7164B5DD900C2984B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 013341C6164B5DD900C2984B /* MapKit.framework */; };
 		0140011F165AB0BC008F0429 /* KalBlocosDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0140011E165AB0BC008F0429 /* KalBlocosDataSource.m */; };
 		01400122165AB490008F0429 /* ParadeAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 01400121165AB490008F0429 /* ParadeAnnotation.m */; };
 		01400126165AD1C8008F0429 /* WhereAmIGoingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01400124165AD1C8008F0429 /* WhereAmIGoingViewController.m */; };
-		01400127165AD1C8008F0429 /* WhereAmIGoingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01400125165AD1C8008F0429 /* WhereAmIGoingViewController.xib */; };
 		014EECC0164DC80000C4F626 /* navigation-bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 014EECBF164DC80000C4F626 /* navigation-bar.png */; };
 		014EECC2164DC80E00C4F626 /* navigation-bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 014EECC1164DC80D00C4F626 /* navigation-bar@2x.png */; };
 		014EECC4164DC82400C4F626 /* 57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 014EECC3164DC82400C4F626 /* 57x57.png */; };
+		015E88E9165EBEBB0008DED8 /* FoliaoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 015E88E8165EBEBB0008DED8 /* FoliaoCell.xib */; };
+		015E88EE165EC0410008DED8 /* FoliaoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 015E88ED165EC0410008DED8 /* FoliaoCell.m */; };
 		0168CB7F16595767003DD8AF /* libKal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0168CB7C1659560B003DD8AF /* libKal.a */; };
 		0168CB8116595795003DD8AF /* Kal.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0168CB8016595795003DD8AF /* Kal.bundle */; };
 		0168CB841659586B003DD8AF /* BlocosByDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0168CB831659586B003DD8AF /* BlocosByDateViewController.m */; };
 		018B5E63164D8B8600042B4E /* NavigationRootLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B5E62164D8B8600042B4E /* NavigationRootLevelViewController.m */; };
 		018B5E67164D8E0500042B4E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B5E65164D8E0500042B4E /* LoginViewController.m */; };
-		018B5E68164D8E0500042B4E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 018B5E66164D8E0500042B4E /* LoginViewController.xib */; };
 		018B5E6E164DA0CE00042B4E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018B5E6D164DA0CE00042B4E /* Parse.framework */; };
 		018B5E70164DA0DE00042B4E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018B5E6F164DA0DE00042B4E /* FacebookSDK.framework */; };
 		018B5E72164DA0F000042B4E /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 018B5E71164DA0F000042B4E /* FacebookSDKResources.bundle */; };
 		018B5E76164DB19B00042B4E /* BlocoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B5E74164DB19B00042B4E /* BlocoViewController.m */; };
-		018B5E77164DB19B00042B4E /* BlocoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 018B5E75164DB19B00042B4E /* BlocoViewController.xib */; };
 		019E6B3A1655DB790025786D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 019E6B381655DB790025786D /* Default.png */; };
 		019E6B3B1655DB790025786D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 019E6B391655DB790025786D /* Default@2x.png */; };
 		019E6B4416565C890025786D /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 019E6B4316565C890025786D /* SVProgressHUD.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -72,7 +69,6 @@
 		01CC635F165B2FC6005F68BA /* bt-locate-me-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CC635D165B2FC6005F68BA /* bt-locate-me-bg@2x.png */; };
 		01CC6360165B2FC6005F68BA /* bt-locate-me@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CC635E165B2FC6005F68BA /* bt-locate-me@2x.png */; };
 		01CC6364165B3A6A005F68BA /* WhoIsGoingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CC6362165B3A6A005F68BA /* WhoIsGoingViewController.m */; };
-		01CC6365165B3A6A005F68BA /* WhoIsGoingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01CC6363165B3A6A005F68BA /* WhoIsGoingViewController.xib */; };
 		01CC6370165B45B2005F68BA /* 110x110.gif in Resources */ = {isa = PBXBuildFile; fileRef = 01CC636F165B45B2005F68BA /* 110x110.gif */; };
 		01E0CFDA164BDD2600940C77 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFD9164BDD2600940C77 /* AudioToolbox.framework */; };
 		01E0CFDC164BDD2D00940C77 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFDB164BDD2D00940C77 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -88,7 +84,13 @@
 		01E0CFF0164BDD8100940C77 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFEF164BDD8100940C77 /* StoreKit.framework */; };
 		01E0CFF2164BDD8600940C77 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFF1164BDD8600940C77 /* SystemConfiguration.framework */; };
 		01E0CFF6164BE2A300940C77 /* BlocosByNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E0CFF4164BE2A300940C77 /* BlocosByNameViewController.m */; };
-		01E0CFF7164BE2A300940C77 /* BlocosByNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01E0CFF5164BE2A300940C77 /* BlocosByNameViewController.xib */; };
+		01EBA92A165D7422005C1847 /* BlocosByLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA923165D7422005C1847 /* BlocosByLocationViewController.xib */; };
+		01EBA92B165D7422005C1847 /* BlocosByNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA924165D7422005C1847 /* BlocosByNameViewController.xib */; };
+		01EBA92C165D7422005C1847 /* BlocoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA925165D7422005C1847 /* BlocoViewController.xib */; };
+		01EBA92D165D7422005C1847 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA926165D7422005C1847 /* LoginViewController.xib */; };
+		01EBA92E165D7422005C1847 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA927165D7422005C1847 /* MenuViewController.xib */; };
+		01EBA92F165D7422005C1847 /* WhereAmIGoingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA928165D7422005C1847 /* WhereAmIGoingViewController.xib */; };
+		01EBA930165D7422005C1847 /* WhoIsGoingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA929165D7422005C1847 /* WhoIsGoingViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,10 +122,8 @@
 		01179929165B05A50095D425 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		013341B5164B4C0700C2984B /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = Controllers/MenuViewController.h; sourceTree = "<group>"; };
 		013341B6164B4C0700C2984B /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = Controllers/MenuViewController.m; sourceTree = "<group>"; };
-		013341B7164B4C0700C2984B /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MenuViewController.xib; path = ../Controllers/MenuViewController.xib; sourceTree = "<group>"; };
 		013341BA164B58C100C2984B /* BlocosByLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlocosByLocationViewController.h; path = Controllers/BlocosByLocationViewController.h; sourceTree = "<group>"; };
 		013341BB164B58C100C2984B /* BlocosByLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlocosByLocationViewController.m; path = Controllers/BlocosByLocationViewController.m; sourceTree = "<group>"; };
-		013341BC164B58C100C2984B /* BlocosByLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BlocosByLocationViewController.xib; path = ../Controllers/BlocosByLocationViewController.xib; sourceTree = "<group>"; };
 		013341C2164B5B1300C2984B /* ZUUIRevealController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZUUIRevealController.h; sourceTree = "<group>"; };
 		013341C3164B5B1300C2984B /* ZUUIRevealController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZUUIRevealController.m; sourceTree = "<group>"; };
 		013341C6164B5DD900C2984B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -133,10 +133,12 @@
 		01400121165AB490008F0429 /* ParadeAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParadeAnnotation.m; sourceTree = "<group>"; };
 		01400123165AD1C8008F0429 /* WhereAmIGoingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WhereAmIGoingViewController.h; path = Controllers/WhereAmIGoingViewController.h; sourceTree = "<group>"; };
 		01400124165AD1C8008F0429 /* WhereAmIGoingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WhereAmIGoingViewController.m; path = Controllers/WhereAmIGoingViewController.m; sourceTree = "<group>"; };
-		01400125165AD1C8008F0429 /* WhereAmIGoingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WhereAmIGoingViewController.xib; path = ../Controllers/WhereAmIGoingViewController.xib; sourceTree = "<group>"; };
 		014EECBF164DC80000C4F626 /* navigation-bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation-bar.png"; sourceTree = "<group>"; };
 		014EECC1164DC80D00C4F626 /* navigation-bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation-bar@2x.png"; sourceTree = "<group>"; };
 		014EECC3164DC82400C4F626 /* 57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 57x57.png; sourceTree = "<group>"; };
+		015E88E8165EBEBB0008DED8 /* FoliaoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoliaoCell.xib; sourceTree = "<group>"; };
+		015E88EC165EC0410008DED8 /* FoliaoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoliaoCell.h; sourceTree = "<group>"; };
+		015E88ED165EC0410008DED8 /* FoliaoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoliaoCell.m; sourceTree = "<group>"; };
 		0168CB741659560B003DD8AF /* Kal.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kal.xcodeproj; path = ../../../../ios/Kal/src/Kal.xcodeproj; sourceTree = "<group>"; };
 		0168CB8016595795003DD8AF /* Kal.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Kal.bundle; path = ../../../../ios/Kal/src/Kal.bundle; sourceTree = "<group>"; };
 		0168CB821659586B003DD8AF /* BlocosByDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlocosByDateViewController.h; path = Controllers/BlocosByDateViewController.h; sourceTree = "<group>"; };
@@ -146,13 +148,11 @@
 		018B5E62164D8B8600042B4E /* NavigationRootLevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationRootLevelViewController.m; sourceTree = "<group>"; };
 		018B5E64164D8E0500042B4E /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		018B5E65164D8E0500042B4E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		018B5E66164D8E0500042B4E /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = ../LoginViewController.xib; sourceTree = "<group>"; };
 		018B5E6D164DA0CE00042B4E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../../../Frameworks/Parse.framework; sourceTree = "<group>"; };
 		018B5E6F164DA0DE00042B4E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Frameworks/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		018B5E71164DA0F000042B4E /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKResources.bundle; path = ../../../Frameworks/FacebookSDK/FacebookSDK.framework/Versions/A/Resources/FacebookSDKResources.bundle; sourceTree = "<group>"; };
 		018B5E73164DB19B00042B4E /* BlocoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlocoViewController.h; sourceTree = "<group>"; };
 		018B5E74164DB19B00042B4E /* BlocoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlocoViewController.m; sourceTree = "<group>"; };
-		018B5E75164DB19B00042B4E /* BlocoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BlocoViewController.xib; path = ../BlocoViewController.xib; sourceTree = "<group>"; };
 		019E6B381655DB790025786D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		019E6B391655DB790025786D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		019E6B4216565C890025786D /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
@@ -200,7 +200,6 @@
 		01CC635E165B2FC6005F68BA /* bt-locate-me@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-locate-me@2x.png"; sourceTree = "<group>"; };
 		01CC6361165B3A6A005F68BA /* WhoIsGoingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhoIsGoingViewController.h; sourceTree = "<group>"; };
 		01CC6362165B3A6A005F68BA /* WhoIsGoingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhoIsGoingViewController.m; sourceTree = "<group>"; };
-		01CC6363165B3A6A005F68BA /* WhoIsGoingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WhoIsGoingViewController.xib; path = ../WhoIsGoingViewController.xib; sourceTree = "<group>"; };
 		01CC636F165B45B2005F68BA /* 110x110.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 110x110.gif; sourceTree = "<group>"; };
 		01E0CFD9164BDD2600940C77 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		01E0CFDB164BDD2D00940C77 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -217,7 +216,13 @@
 		01E0CFF1164BDD8600940C77 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		01E0CFF3164BE2A300940C77 /* BlocosByNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlocosByNameViewController.h; path = Controllers/BlocosByNameViewController.h; sourceTree = "<group>"; };
 		01E0CFF4164BE2A300940C77 /* BlocosByNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlocosByNameViewController.m; path = Controllers/BlocosByNameViewController.m; sourceTree = "<group>"; };
-		01E0CFF5164BE2A300940C77 /* BlocosByNameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BlocosByNameViewController.xib; path = ../Controllers/BlocosByNameViewController.xib; sourceTree = "<group>"; };
+		01EBA923165D7422005C1847 /* BlocosByLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlocosByLocationViewController.xib; sourceTree = "<group>"; };
+		01EBA924165D7422005C1847 /* BlocosByNameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlocosByNameViewController.xib; sourceTree = "<group>"; };
+		01EBA925165D7422005C1847 /* BlocoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlocoViewController.xib; sourceTree = "<group>"; };
+		01EBA926165D7422005C1847 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		01EBA927165D7422005C1847 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		01EBA928165D7422005C1847 /* WhereAmIGoingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhereAmIGoingViewController.xib; sourceTree = "<group>"; };
+		01EBA929165D7422005C1847 /* WhoIsGoingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhoIsGoingViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,13 +230,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01E0CFEA164BDD7000940C77 /* QuartzCore.framework in Frameworks */,
 				0117992A165B05A50095D425 /* ImageIO.framework in Frameworks */,
 				0168CB7F16595767003DD8AF /* libKal.a in Frameworks */,
 				01E0CFF2164BDD8600940C77 /* SystemConfiguration.framework in Frameworks */,
 				01E0CFF0164BDD8100940C77 /* StoreKit.framework in Frameworks */,
 				01E0CFEE164BDD7C00940C77 /* Social.framework in Frameworks */,
 				01E0CFEC164BDD7500940C77 /* Security.framework in Frameworks */,
-				01E0CFEA164BDD7000940C77 /* QuartzCore.framework in Frameworks */,
 				01E0CFE8164BDD6A00940C77 /* MobileCoreServices.framework in Frameworks */,
 				01E0CFE6164BDD6400940C77 /* libz.1.1.3.dylib in Frameworks */,
 				01E0CFE4164BDD5B00940C77 /* libsqlite3.dylib in Frameworks */,
@@ -266,6 +271,7 @@
 		013341BF164B58D200C2984B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				015E88EB165EC0090008DED8 /* Cell */,
 				013341B5164B4C0700C2984B /* MenuViewController.h */,
 				013341B6164B4C0700C2984B /* MenuViewController.m */,
 				013341BA164B58C100C2984B /* BlocosByLocationViewController.h */,
@@ -307,20 +313,6 @@
 			path = ZUUIRevealController;
 			sourceTree = "<group>";
 		};
-		013341C4164B5B1300C2984B /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				01CC6363165B3A6A005F68BA /* WhoIsGoingViewController.xib */,
-				018B5E66164D8E0500042B4E /* LoginViewController.xib */,
-				013341B7164B4C0700C2984B /* MenuViewController.xib */,
-				013341BC164B58C100C2984B /* BlocosByLocationViewController.xib */,
-				01E0CFF5164BE2A300940C77 /* BlocosByNameViewController.xib */,
-				018B5E75164DB19B00042B4E /* BlocoViewController.xib */,
-				01400125165AD1C8008F0429 /* WhereAmIGoingViewController.xib */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		0140011C165AB0BC008F0429 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,6 +324,23 @@
 				01CC6357165B0FA4005F68BA /* FoliaoRankingTitle.m */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		015E88EA165EBFF60008DED8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				015E88E8165EBEBB0008DED8 /* FoliaoCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		015E88EB165EC0090008DED8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				015E88EC165EC0410008DED8 /* FoliaoCell.h */,
+				015E88ED165EC0410008DED8 /* FoliaoCell.m */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		0168CB72165955FB003DD8AF /* Kal */ = {
@@ -413,8 +422,8 @@
 		01BE622D164B3B000000679C /* Foliao */ = {
 			isa = PBXGroup;
 			children = (
+				01EBA922165D7422005C1847 /* Views */,
 				013341C0164B5B1300C2984B /* Submodules */,
-				013341C4164B5B1300C2984B /* Views */,
 				013341BF164B58D200C2984B /* Controllers */,
 				01BE6265164B3D450000679C /* Media */,
 				0140011C165AB0BC008F0429 /* Utils */,
@@ -523,6 +532,21 @@
 			path = Retina;
 			sourceTree = "<group>";
 		};
+		01EBA922165D7422005C1847 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				01EBA923165D7422005C1847 /* BlocosByLocationViewController.xib */,
+				01EBA924165D7422005C1847 /* BlocosByNameViewController.xib */,
+				01EBA925165D7422005C1847 /* BlocoViewController.xib */,
+				01EBA926165D7422005C1847 /* LoginViewController.xib */,
+				01EBA927165D7422005C1847 /* MenuViewController.xib */,
+				01EBA928165D7422005C1847 /* WhereAmIGoingViewController.xib */,
+				01EBA929165D7422005C1847 /* WhoIsGoingViewController.xib */,
+				015E88EA165EBFF60008DED8 /* Cell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -629,12 +653,7 @@
 				01BE6282164B3D450000679C /* bt-voltar@2x.png in Resources */,
 				01BE6283164B3D450000679C /* marca@2x.png in Resources */,
 				01BE6284164B3D450000679C /* seta-quem-vai@2x.png in Resources */,
-				013341B9164B4C0700C2984B /* MenuViewController.xib in Resources */,
-				013341BE164B58C100C2984B /* BlocosByLocationViewController.xib in Resources */,
-				01E0CFF7164BE2A300940C77 /* BlocosByNameViewController.xib in Resources */,
-				018B5E68164D8E0500042B4E /* LoginViewController.xib in Resources */,
 				018B5E72164DA0F000042B4E /* FacebookSDKResources.bundle in Resources */,
-				018B5E77164DB19B00042B4E /* BlocoViewController.xib in Resources */,
 				014EECC0164DC80000C4F626 /* navigation-bar.png in Resources */,
 				014EECC2164DC80E00C4F626 /* navigation-bar@2x.png in Resources */,
 				014EECC4164DC82400C4F626 /* 57x57.png in Resources */,
@@ -642,14 +661,20 @@
 				019E6B3B1655DB790025786D /* Default@2x.png in Resources */,
 				019E6B4616565D660025786D /* SVProgressHUD.bundle in Resources */,
 				0168CB8116595795003DD8AF /* Kal.bundle in Resources */,
-				01400127165AD1C8008F0429 /* WhereAmIGoingViewController.xib in Resources */,
 				01CC6355165B091E005F68BA /* 200x200.gif in Resources */,
 				01CC635B165B2FB1005F68BA /* bt-locate-me-bg.png in Resources */,
 				01CC635C165B2FB1005F68BA /* bt-locate-me.png in Resources */,
 				01CC635F165B2FC6005F68BA /* bt-locate-me-bg@2x.png in Resources */,
 				01CC6360165B2FC6005F68BA /* bt-locate-me@2x.png in Resources */,
 				01CC6370165B45B2005F68BA /* 110x110.gif in Resources */,
-				01CC6365165B3A6A005F68BA /* WhoIsGoingViewController.xib in Resources */,
+				01EBA92A165D7422005C1847 /* BlocosByLocationViewController.xib in Resources */,
+				01EBA92B165D7422005C1847 /* BlocosByNameViewController.xib in Resources */,
+				01EBA92C165D7422005C1847 /* BlocoViewController.xib in Resources */,
+				01EBA92D165D7422005C1847 /* LoginViewController.xib in Resources */,
+				01EBA92E165D7422005C1847 /* MenuViewController.xib in Resources */,
+				01EBA92F165D7422005C1847 /* WhereAmIGoingViewController.xib in Resources */,
+				01EBA930165D7422005C1847 /* WhoIsGoingViewController.xib in Resources */,
+				015E88E9165EBEBB0008DED8 /* FoliaoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,6 +725,7 @@
 				01400126165AD1C8008F0429 /* WhereAmIGoingViewController.m in Sources */,
 				01CC6358165B0FA4005F68BA /* FoliaoRankingTitle.m in Sources */,
 				01CC6364165B3A6A005F68BA /* WhoIsGoingViewController.m in Sources */,
+				015E88EE165EC0410008DED8 /* FoliaoCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

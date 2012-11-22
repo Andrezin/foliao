@@ -10,6 +10,7 @@
 
 #import "BlocosByNameViewController.h"
 #import "BlocoViewController.h"
+#import "AppConstants.h"
 
 #define kALPHABET @[@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",\
                     @"J",@"K", @"L",@"M",@"N",@"O",@"P",@"Q",@"R",\
@@ -119,6 +120,11 @@
     cell.textLabel.text = _tableData[indexPath.section][@"rows"][indexPath.row][@"name"];
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return kTABLE_VIEW_CELL_HEIGHT;
 }
 
 #pragma mark - Table view delegate

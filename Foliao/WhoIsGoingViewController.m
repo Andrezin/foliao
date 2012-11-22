@@ -6,10 +6,9 @@
 //  Copyright (c) 2012 7pixels. All rights reserved.
 //
 
-#import <SDWebImage/UIImageView+WebCache.h>
-
 #import "WhoIsGoingViewController.h"
-
+#import "FoliaoCell.h"
+#import "AppConstants.h"
 
 @implementation WhoIsGoingViewController
 
@@ -29,23 +28,21 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"UserCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    FoliaoCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        UINib *foliaoNib = [UINib nibWithNibName:@"FoliaoCell" bundle:[NSBundle mainBundle]];
+        NSArray *viewsFound = [foliaoNib instantiateWithOwner:self options:nil];
+        cell = (FoliaoCell *)viewsFound[0];
     }
     
-    NSURL *profileImageURL = [NSURL URLWithString:[
-                                    NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=normal",
-                                                   self.folioes[indexPath.row][@"facebookId"]]];
-    
-    cell.imageView.frame = CGRectMake(0, 0, cell.frame.size.height, cell.frame.size.height);
-    [cell.imageView setImageWithURL:profileImageURL placeholderImage:[UIImage imageNamed:@"100x100.gif"]];
-    
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@",
-                           self.folioes[indexPath.row][@"firstName"],
-                           self.folioes[indexPath.row][@"lastName"]];
+    cell.foliao = self.folioes[indexPath.row];
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return kTABLE_VIEW_CELL_WITH_IMAGE_HEIGHT;
 }
 
 #pragma mark - Table view delegate
