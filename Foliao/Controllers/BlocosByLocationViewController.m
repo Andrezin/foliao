@@ -62,9 +62,13 @@
 {
     if (locationLoaded) return;
     
-    [self.mapView setCenterCoordinate:newLocation.coordinate];
-    [self.mapView setRegion:[self regionThatFitsUserLocation:newLocation]];
-    locationLoaded = YES;
+    if (newLocation.coordinate.latitude >= -90 && newLocation.coordinate.latitude <= 90 &&
+        newLocation.coordinate.longitude >= -90 && newLocation.coordinate.longitude <= 90) {
+
+        [self.mapView setCenterCoordinate:newLocation.coordinate];
+        [self.mapView setRegion:[self regionThatFitsUserLocation:newLocation]];
+        locationLoaded = YES;
+    }
 }
 
 - (MKCoordinateRegion)regionThatFitsUserLocation:(CLLocation *)userLocation
