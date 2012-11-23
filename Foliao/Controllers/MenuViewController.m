@@ -48,6 +48,9 @@
 {
     [super viewDidLoad];
     
+    self.tableView.backgroundColor = [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
     self.menuItems = @[
         @{
             @"section_title": [@"Buscar por" uppercaseString],
