@@ -45,6 +45,7 @@ typedef enum viewDomainClass {
 - (void)showWhoIsGoing;
 - (void)showFolioesPictures;
 - (void)confirmPresenceInParade:(PFObject *)parade;
+- (void)addFoliaoToPresencesBox;
 
 - (IBAction)checkInButtonTapped:(UIButton *)sender;
 - (IBAction)whoIsGoingButtonTapped:(UIButton *)sender;
@@ -211,12 +212,18 @@ typedef enum viewDomainClass {
                 if (!error && succeeded) {
                     NSLog(@"Confirmed!");
                     [SVProgressHUD showSuccessWithStatus:@"Ah muleque!"];
+                    [self addFoliaoToPresencesBox];
                 } else {
                     NSLog(@"Error when confirming presence.");
                 }
             }];
         }
     }];
+}
+
+- (void)addFoliaoToPresencesBox
+{
+#warning TODO and remove HUD.
 }
 
 - (IBAction)expandMap:(UIButton *)sender

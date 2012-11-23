@@ -38,11 +38,13 @@
     [self configureRootViewController];
     [self customizeAppearance];
     
-    if ([[PFFacebookUtils session] state] == PF_FBSessionStateCreatedTokenLoaded) {
+    
+    PF_FBSession *session = [PFFacebookUtils session];
+    if (session.state == PF_FBSessionStateCreatedTokenLoaded) {
         // Yes, so just open the session (this won't display any UX).
         [self openSession];
     } else {
-        // No, display the login page.
+        // No, display the login page
         [self showLoginView];
     }
     
@@ -132,14 +134,17 @@
             }
         }
             break;
-        case PF_FBSessionStateClosed:
+        case PF_FBSessionStateClosed: {
             // Once the user has logged in, we want them to
             // be looking at the root view.
-            [(UINavigationController *)self.mainViewController.frontViewController popToRootViewControllerAnimated:NO];
+            BlocosByLocationViewController *blocosByPlaceViewController = [[BlocosByLocationViewController alloc] init];
+            UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:blocosByPlaceViewController];
+            [self.mainViewController setFrontViewController:navigationController animated:NO];
             
             [[PFFacebookUtils session] closeAndClearTokenInformation];
             
             [self showLoginView];
+        }
             break;
         default:
             break;
