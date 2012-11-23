@@ -15,7 +15,9 @@
 #import "BlocosByLocationViewController.h"
 #import "BlocosByNameViewController.h"
 #import "BlocosByDateViewController.h"
+
 #import "ProfileViewController.h"
+#import "WhereMyFriendsAreGoingViewController.h"
 
 
 @interface MenuViewController ()
@@ -27,6 +29,7 @@
 - (void)showBlocosByDate;
 
 - (void)showWhereAmIGoing;
+- (void)showWhereMyFriendsAreGoing;
 
 - (void)logout;
 
@@ -121,6 +124,8 @@
             switch (indexPath.row) {
                 case 0:
                     [self showWhereAmIGoing]; break;
+                case 1:
+                    [self showWhereMyFriendsAreGoing]; break;
             } break;
         case 2:
             [self logout]; break;
@@ -174,6 +179,19 @@
         
         ProfileViewController *whereAmIGoingViewController = [[ProfileViewController alloc] init];
         UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:whereAmIGoingViewController];
+        [revealController setFrontViewController:navigationController animated:NO];
+    } else {
+        [revealController revealToggle:self];
+    }
+}
+
+- (void)showWhereMyFriendsAreGoing
+{
+    ZUUIRevealController *revealController = [self.parentViewController isKindOfClass:[ZUUIRevealController class]] ? (ZUUIRevealController *)self.parentViewController : nil;
+    if ([revealController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)revealController.frontViewController).topViewController isKindOfClass:[WhereMyFriendsAreGoingViewController class]]) {
+        
+        WhereMyFriendsAreGoingViewController *whereMyFriendsAreGoingViewController = [[WhereMyFriendsAreGoingViewController alloc] init];
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:whereMyFriendsAreGoingViewController];
         [revealController setFrontViewController:navigationController animated:NO];
     } else {
         [revealController revealToggle:self];

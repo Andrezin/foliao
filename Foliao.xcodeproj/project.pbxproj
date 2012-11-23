@@ -21,6 +21,8 @@
 		014EECC4164DC82400C4F626 /* 57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 014EECC3164DC82400C4F626 /* 57x57.png */; };
 		015E88E9165EBEBB0008DED8 /* FoliaoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 015E88E8165EBEBB0008DED8 /* FoliaoCell.xib */; };
 		015E88EE165EC0410008DED8 /* FoliaoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 015E88ED165EC0410008DED8 /* FoliaoCell.m */; };
+		015E88F1165F19E40008DED8 /* WhereMyFriendsAreGoingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 015E88F0165F19E40008DED8 /* WhereMyFriendsAreGoingViewController.m */; };
+		015E88F3165F1A000008DED8 /* WhereMyFriendsAreGoingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 015E88F2165F1A000008DED8 /* WhereMyFriendsAreGoingViewController.xib */; };
 		0168CB7F16595767003DD8AF /* libKal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0168CB7C1659560B003DD8AF /* libKal.a */; };
 		0168CB8116595795003DD8AF /* Kal.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0168CB8016595795003DD8AF /* Kal.bundle */; };
 		0168CB841659586B003DD8AF /* BlocosByDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0168CB831659586B003DD8AF /* BlocosByDateViewController.m */; };
@@ -139,6 +141,9 @@
 		015E88E8165EBEBB0008DED8 /* FoliaoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoliaoCell.xib; sourceTree = "<group>"; };
 		015E88EC165EC0410008DED8 /* FoliaoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoliaoCell.h; sourceTree = "<group>"; };
 		015E88ED165EC0410008DED8 /* FoliaoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoliaoCell.m; sourceTree = "<group>"; };
+		015E88EF165F19E30008DED8 /* WhereMyFriendsAreGoingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhereMyFriendsAreGoingViewController.h; sourceTree = "<group>"; };
+		015E88F0165F19E40008DED8 /* WhereMyFriendsAreGoingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhereMyFriendsAreGoingViewController.m; sourceTree = "<group>"; };
+		015E88F2165F1A000008DED8 /* WhereMyFriendsAreGoingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhereMyFriendsAreGoingViewController.xib; sourceTree = "<group>"; };
 		0168CB741659560B003DD8AF /* Kal.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kal.xcodeproj; path = ../../../../ios/Kal/src/Kal.xcodeproj; sourceTree = "<group>"; };
 		0168CB8016595795003DD8AF /* Kal.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Kal.bundle; path = ../../../../ios/Kal/src/Kal.bundle; sourceTree = "<group>"; };
 		0168CB821659586B003DD8AF /* BlocosByDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlocosByDateViewController.h; path = Controllers/BlocosByDateViewController.h; sourceTree = "<group>"; };
@@ -290,6 +295,8 @@
 				01400124165AD1C8008F0429 /* ProfileViewController.m */,
 				01CC6361165B3A6A005F68BA /* WhoIsGoingViewController.h */,
 				01CC6362165B3A6A005F68BA /* WhoIsGoingViewController.m */,
+				015E88EF165F19E30008DED8 /* WhereMyFriendsAreGoingViewController.h */,
+				015E88F0165F19E40008DED8 /* WhereMyFriendsAreGoingViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -535,6 +542,7 @@
 		01EBA922165D7422005C1847 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				015E88EA165EBFF60008DED8 /* Cell */,
 				01EBA923165D7422005C1847 /* BlocosByLocationViewController.xib */,
 				01EBA924165D7422005C1847 /* BlocosByNameViewController.xib */,
 				01EBA925165D7422005C1847 /* BlocoViewController.xib */,
@@ -542,7 +550,7 @@
 				01EBA927165D7422005C1847 /* MenuViewController.xib */,
 				01EBA928165D7422005C1847 /* ProfileViewController.xib */,
 				01EBA929165D7422005C1847 /* WhoIsGoingViewController.xib */,
-				015E88EA165EBFF60008DED8 /* Cell */,
+				015E88F2165F1A000008DED8 /* WhereMyFriendsAreGoingViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -675,6 +683,7 @@
 				01EBA92F165D7422005C1847 /* ProfileViewController.xib in Resources */,
 				01EBA930165D7422005C1847 /* WhoIsGoingViewController.xib in Resources */,
 				015E88E9165EBEBB0008DED8 /* FoliaoCell.xib in Resources */,
+				015E88F3165F1A000008DED8 /* WhereMyFriendsAreGoingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -726,6 +735,7 @@
 				01CC6358165B0FA4005F68BA /* FoliaoRankingTitle.m in Sources */,
 				01CC6364165B3A6A005F68BA /* WhoIsGoingViewController.m in Sources */,
 				015E88EE165EC0410008DED8 /* FoliaoCell.m in Sources */,
+				015E88F1165F19E40008DED8 /* WhereMyFriendsAreGoingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
