@@ -25,7 +25,7 @@ typedef enum viewDomainClass {
 }
 
 @property (strong, nonatomic) NSArray *blocoParades;
-@property (strong, nonatomic) NSArray *folioes;
+@property (strong, nonatomic) NSMutableArray *folioes;
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
@@ -42,6 +42,7 @@ typedef enum viewDomainClass {
 
 - (void)sizeScrollViewToFit;
 - (void)fillBlocoInfo;
+- (BOOL)foliaoIsAlreadyGoing:(PFUser *)foliao;
 - (void)showWhoIsGoing;
 - (void)showFolioesPictures;
 - (void)confirmPresenceInParade:(PFObject *)parade;
@@ -132,16 +133,34 @@ typedef enum viewDomainClass {
     [query findObjectsInBackgroundWithBlock:^(NSArray *presences, NSError *error) {
         if (!error) {
             NSLog(@"Found %d presences", presences.count);
+            self.folioes = [[NSMutableArray alloc] initWithCapacity:presences.count];
             
-            NSMutableArray *whoIsGoing = [[NSMutableArray alloc] initWithCapacity:presences.count];
             for (PFObject *presence in presences) {
                 PFUser *user = presence[@"user"];
-                [whoIsGoing addObject:user];
+                if ([self foliaoIsAlreadyGoing:user])
+                    continue;
+                
+                [self.folioes addObject:user];
             }
-            self.folioes = [NSArray arrayWithArray:whoIsGoing];
             [self showFolioesPictures];
         }
     }];
+}
+
+- (BOOL)foliaoIsAlreadyGoing:(PFUser *)foliao
+{
+    if (!self.folioes.count)
+        return NO;
+    
+    BOOL isAlreadyGoing = NO;
+    for (PFUser *foliaoGoing in self.folioes) {
+        if ([foliaoGoing.objectId isEqualToString:foliao.objectId]) {
+            isAlreadyGoing = YES;
+            break;
+        }
+    }
+    
+    return isAlreadyGoing;
 }
 
 - (void)showFolioesPictures
