@@ -22,6 +22,7 @@ typedef enum viewDomainClass {
 @interface BlocoViewController () {
     ViewDomainClass _domainClass;
     BOOL _mapIsOpen;
+    NSMutableArray *friendIds;
 }
 
 @property (strong, nonatomic) NSArray *blocoParades;
@@ -140,8 +141,12 @@ typedef enum viewDomainClass {
                 if ([self foliaoIsAlreadyGoing:user])
                     continue;
                 
-                [self.folioes addObject:user];
+                if ([user.objectId isEqualToString:[PFUser currentUser].objectId])
+                    [self.folioes addObject:[PFUser currentUser]]; // just to make an easy sort method
+                else
+                    [self.folioes addObject:user];
             }
+            
             [self showFolioesPictures];
         }
     }];
@@ -165,20 +170,56 @@ typedef enum viewDomainClass {
 
 - (void)showFolioesPictures
 {
-    NSArray *pictureTemplates = [NSArray arrayWithObjects:self.imageViewPictureFoliao0,
-                                                          self.imageViewPictureFoliao1,
-                                                          self.imageViewPictureFoliao2,
-                                                          self.imageViewPictureFoliao3,
-                                                          self.imageViewPictureFoliao4, nil];
+    PF_FBRequest *request = [PF_FBRequest requestForMyFriends];
+    [request startWithCompletionHandler:^(PF_FBRequestConnection *connection, id result, NSError *error) {
+        if (!error) {
+            NSArray *friendObjects = [result objectForKey:@"data"];
+            friendIds = [NSMutableArray arrayWithCapacity:friendObjects.count];
+            for (NSDictionary *friendObject in friendObjects) {
+                [friendIds addObject:[friendObject objectForKey:@"id"]];
+            }
+            
+            [self sortFolioesList];
+        }
+        
+        NSArray *pictureTemplates = [NSArray arrayWithObjects:
+                                     self.imageViewPictureFoliao0,
+                                     self.imageViewPictureFoliao1,
+                                     self.imageViewPictureFoliao2,
+                                     self.imageViewPictureFoliao3,
+                                     self.imageViewPictureFoliao4, nil];
+        
+        for (int i=0; i < self.folioes.count; i++) {
+            NSString *picURL = [NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=normal", self.folioes[i][@"facebookId"]];
+            UIImageView *profileImageView = (UIImageView *)pictureTemplates[i];
+            [profileImageView setImageWithURL:[NSURL URLWithString:picURL] placeholderImage:[UIImage imageNamed:@"110x110.gif"]];
+            profileImageView.layer.cornerRadius = 3.0;
+            profileImageView.contentMode = UIViewContentModeScaleAspectFill;
+            profileImageView.clipsToBounds = YES;
+        }
+    }];
+}
+
+- (void)sortFolioesList
+{
+    // based on my friends...
+    [self.folioes sortUsingComparator:^NSComparisonResult(PFUser *user1, PFUser *user2) {
+        if ([friendIds containsObject:user1[@"facebookId"]] &&
+            ![friendIds containsObject:user2[@"facebookId"]]) {
+            return NSOrderedAscending;
+        }
+        
+        if (![friendIds containsObject:user1[@"facebookId"]] &&
+            [friendIds containsObject:user2[@"facebookId"]]) {
+            return NSOrderedDescending;
+        }
+        
+        return NSOrderedSame;
+    }];
     
-    for (int i=0; i < self.folioes.count; i++) {
-        NSString *picURL = [NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=normal", self.folioes[i][@"facebookId"]];
-        UIImageView *profileImageView = (UIImageView *)pictureTemplates[i];
-        [profileImageView setImageWithURL:[NSURL URLWithString:picURL] placeholderImage:[UIImage imageNamed:@"110x110.gif"]];
-        profileImageView.layer.cornerRadius = 3.0;
-        profileImageView.contentMode = UIViewContentModeScaleAspectFill;
-        profileImageView.clipsToBounds = YES;
-    }
+    // ... and "moi" first :)
+    [self.folioes removeObject:[PFUser currentUser]];
+    [self.folioes insertObject:[PFUser currentUser] atIndex:0];
 }
 
 - (IBAction)checkInButtonTapped:(UIButton *)sender
