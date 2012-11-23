@@ -137,6 +137,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
     BlocoViewController *blocoViewController = [[BlocoViewController alloc] init];
     blocoViewController.bloco = self.presences[indexPath.row][@"parade"][@"bloco"];;
     [self.navigationController pushViewController:blocoViewController animated:YES];

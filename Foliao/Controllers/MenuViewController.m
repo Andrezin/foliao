@@ -110,6 +110,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
     switch (indexPath.section) {
         case 0:
             switch (indexPath.row) {

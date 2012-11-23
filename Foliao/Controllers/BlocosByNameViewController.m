@@ -33,7 +33,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     PFQuery *query = [PFQuery queryWithClassName:@"Bloco"];
     [query orderByAscending:@"name"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -131,6 +131,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
     BlocoViewController *blocoViewController = [[BlocoViewController alloc] init];
     blocoViewController.bloco = _tableData[indexPath.section][@"rows"][indexPath.row];
     [self.navigationController pushViewController:blocoViewController animated:YES];

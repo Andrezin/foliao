@@ -82,6 +82,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
     ProfileViewController *profileViewController = [[ProfileViewController alloc] init];
     profileViewController.user = self.friends[indexPath.row];
     [self.navigationController pushViewController:profileViewController animated:YES];

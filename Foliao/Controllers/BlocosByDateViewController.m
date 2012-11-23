@@ -110,6 +110,8 @@ extern NSString *const KalDataSourceChangedNotification;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
     BlocoViewController *blocoViewController = [[BlocoViewController alloc] init];
     blocoViewController.parade = [dataSource paradeAtIndexPath:indexPath];
     [self.navigationController pushViewController:blocoViewController animated:YES];
