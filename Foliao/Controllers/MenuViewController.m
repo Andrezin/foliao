@@ -19,6 +19,8 @@
 #import "ProfileViewController.h"
 #import "WhereMyFriendsAreGoingViewController.h"
 
+#import "RankingPeopleViewController.h"
+
 
 @interface MenuViewController ()
 
@@ -30,6 +32,8 @@
 
 - (void)showWhereAmIGoing;
 - (void)showWhereMyFriendsAreGoing;
+
+- (void)showPeopleRanking;
 
 - (void)logout;
 
@@ -57,15 +61,15 @@
                 @"Onde eu vou",
                 @"Onde meus amigos vão"
             ]
-        }/*,
+        },
         @{
             @"section_title": @"Onde tem mais?",
             @"row_title": @[
-                @"Gente",
+                @"Gente"/*,
                 @"Mulher",
-                @"Homem"
+                @"Homem"*/
             ]
-        }*/,
+        },
         @{
             @"section_title": @"Configurações",
             @"row_title": @[
@@ -130,6 +134,11 @@
                     [self showWhereMyFriendsAreGoing]; break;
             } break;
         case 2:
+            switch (indexPath.row) {
+                case 0:
+                    [self showPeopleRanking]; break;
+            } break;
+        case 3:
             [self logout]; break;
     }
 }
@@ -194,6 +203,19 @@
         
         WhereMyFriendsAreGoingViewController *whereMyFriendsAreGoingViewController = [[WhereMyFriendsAreGoingViewController alloc] init];
         UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:whereMyFriendsAreGoingViewController];
+        [revealController setFrontViewController:navigationController animated:NO];
+    } else {
+        [revealController revealToggle:self];
+    }
+}
+
+- (void)showPeopleRanking
+{
+    ZUUIRevealController *revealController = [self.parentViewController isKindOfClass:[ZUUIRevealController class]] ? (ZUUIRevealController *)self.parentViewController : nil;
+    if ([revealController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)revealController.frontViewController).topViewController isKindOfClass:[RankingPeopleViewController class]]) {
+        
+        RankingPeopleViewController *rankingPeopleVC = [[RankingPeopleViewController alloc] init];
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:rankingPeopleVC];
         [revealController setFrontViewController:navigationController animated:NO];
     } else {
         [revealController revealToggle:self];

@@ -219,8 +219,10 @@ typedef enum viewDomainClass {
     }];
     
     // ... and "moi" first :)
-    [self.folioes removeObject:[PFUser currentUser]];
-    [self.folioes insertObject:[PFUser currentUser] atIndex:0];
+    if ([self.folioes containsObject:[PFUser currentUser]]) {
+        [self.folioes removeObject:[PFUser currentUser]];
+        [self.folioes insertObject:[PFUser currentUser] atIndex:0];
+    }
 }
 
 - (IBAction)checkInButtonTapped:(UIButton *)sender
@@ -272,6 +274,10 @@ typedef enum viewDomainClass {
             [presence saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                 if (!error && succeeded) {
                     NSLog(@"Confirmed!");
+                    
+                    [parade incrementKey:@"presencesCount"];
+                    [parade saveInBackground];
+                    
                     [SVProgressHUD showSuccessWithStatus:@"Ah muleque!"];
                     [self addFoliaoToPresencesBox];
                 } else {

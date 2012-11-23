@@ -156,11 +156,18 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    PFObject *removedPresence = self.presences[indexPath.row];
-    [self.presences removeObject:removedPresence];
+    PFObject *presenceToRemove = self.presences[indexPath.row];
+    [self.presences removeObject:presenceToRemove];
     [self showNumberOfPresences];
     [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
-    [removedPresence deleteInBackground];
+    
+    [presenceToRemove deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error && succeeded) {
+            PFObject *parade = presenceToRemove[@"parade"];
+            [parade incrementKey:@"presencesCount" byAmount:[NSNumber numberWithInt:-1]];
+            [parade saveInBackground];
+        }
+    }];
 }
 
 @end
