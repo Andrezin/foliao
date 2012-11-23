@@ -164,7 +164,13 @@
     [presenceToRemove deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error && succeeded) {
             PFObject *parade = presenceToRemove[@"parade"];
-            [parade incrementKey:@"presencesCount" byAmount:[NSNumber numberWithInt:-1]];
+            
+            if ([[PFUser currentUser][@"gender"] isEqualToString:@"male"])
+                [parade incrementKey:@"malePresencesCount" byAmount:[NSNumber numberWithInt:-1]];
+            if ([[PFUser currentUser][@"gender"] isEqualToString:@"female"])
+                [parade incrementKey:@"femalePresencesCount" byAmount:[NSNumber numberWithInt:-1]];
+            
+            [parade incrementKey:@"totalPresencesCount" byAmount:[NSNumber numberWithInt:-1]];
             [parade saveInBackground];
         }
     }];

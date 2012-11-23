@@ -275,7 +275,12 @@ typedef enum viewDomainClass {
                 if (!error && succeeded) {
                     NSLog(@"Confirmed!");
                     
-                    [parade incrementKey:@"presencesCount"];
+                    if ([[PFUser currentUser][@"gender"] isEqualToString:@"male"])
+                        [parade incrementKey:@"malePresencesCount"];
+                    if ([[PFUser currentUser][@"gender"] isEqualToString:@"female"])
+                        [parade incrementKey:@"femalePresencesCount"];
+                    
+                    [parade incrementKey:@"totalPresencesCount"];
                     [parade saveInBackground];
                     
                     [SVProgressHUD showSuccessWithStatus:@"Ah muleque!"];

@@ -8,18 +8,19 @@
 
 #import <Parse/Parse.h>
 
-#import "RankingPeopleViewController.h"
+#import "WhereAreMoreViewController.h"
 #import "BlocoViewController.h"
+#import "AppConstants.h"
 
-@interface RankingPeopleViewController ()
+@interface WhereAreMoreViewController ()
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) NSArray *parades;
+@property (strong, nonatomic) NSMutableArray *parades;
 
 @end
 
 
-@implementation RankingPeopleViewController
+@implementation WhereAreMoreViewController
 
 
 - (void)viewDidLoad
@@ -27,11 +28,18 @@
     [super viewDidLoad];
     
     PFQuery *query = [PFQuery queryWithClassName:@"Parade"];
+    
+    if (self.what == WhereAreMorePeople)
+        [query orderByDescending:@"totalPresencesCount"];
+    if (self.what == WhereAreMoreWomen)
+        [query orderByDescending:@"femalePresencesCount"];
+    if (self.what == WhereAreMoreMen)
+        [query orderByDescending:@"malePresencesCount"];
+    
     [query includeKey:@"bloco"];
-    [query orderByDescending:@"presencesCount"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
-            self.parades = objects;
+            self.parades = [NSMutableArray arrayWithArray:objects];
             [self.tableView reloadData];
         }
     }];
@@ -60,12 +68,30 @@
     
     cell.textLabel.text = self.parades[indexPath.row][@"bloco"][@"name"];
     
-    NSString *count = [NSString stringWithFormat:@"%d pessoa%@",
-                       [self.parades[indexPath.row][@"presencesCount"] integerValue],
-                       [self.parades[indexPath.row][@"presencesCount"] integerValue] == 1 ? @"" : @"s"];
+    NSString *count = @"";
+    if (self.what == WhereAreMorePeople)
+        count = [NSString stringWithFormat:@"%d pessoa%@",
+               [self.parades[indexPath.row][@"totalPresencesCount"] integerValue],
+               [self.parades[indexPath.row][@"totalPresencesCount"] integerValue] == 1 ? @"" : @"s"];
+    
+    if (self.what == WhereAreMoreWomen)
+        count = [NSString stringWithFormat:@"%d mulher%@",
+                 [self.parades[indexPath.row][@"femalePresencesCount"] integerValue],
+                 [self.parades[indexPath.row][@"femalePresencesCount"] integerValue] == 1 ? @"" : @"es"];
+    
+    if (self.what == WhereAreMoreMen)
+        count = [NSString stringWithFormat:@"%d home%@",
+                 [self.parades[indexPath.row][@"malePresencesCount"] integerValue],
+                 [self.parades[indexPath.row][@"malePresencesCount"] integerValue] == 1 ? @"m" : @"ns"];
+    
     cell.detailTextLabel.text = count;
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return kTABLE_VIEW_CELL_HEIGHT;
 }
 
 #pragma mark - Table view delegate

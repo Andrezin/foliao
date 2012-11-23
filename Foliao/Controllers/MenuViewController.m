@@ -19,7 +19,7 @@
 #import "ProfileViewController.h"
 #import "WhereMyFriendsAreGoingViewController.h"
 
-#import "RankingPeopleViewController.h"
+#import "WhereAreMoreViewController.h"
 
 
 @interface MenuViewController ()
@@ -34,6 +34,8 @@
 - (void)showWhereMyFriendsAreGoing;
 
 - (void)showPeopleRanking;
+- (void)showWomanRanking;
+- (void)showManRanking;
 
 - (void)logout;
 
@@ -65,9 +67,9 @@
         @{
             @"section_title": @"Onde tem mais?",
             @"row_title": @[
-                @"Gente"/*,
+                @"Gente",
                 @"Mulher",
-                @"Homem"*/
+                @"Homem"
             ]
         },
         @{
@@ -137,6 +139,10 @@
             switch (indexPath.row) {
                 case 0:
                     [self showPeopleRanking]; break;
+                case 1:
+                    [self showWomanRanking]; break;
+                case 2:
+                    [self showManRanking]; break;
             } break;
         case 3:
             [self logout]; break;
@@ -212,10 +218,48 @@
 - (void)showPeopleRanking
 {
     ZUUIRevealController *revealController = [self.parentViewController isKindOfClass:[ZUUIRevealController class]] ? (ZUUIRevealController *)self.parentViewController : nil;
-    if ([revealController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)revealController.frontViewController).topViewController isKindOfClass:[RankingPeopleViewController class]]) {
+    UIViewController *topViewController = ((UINavigationController *)revealController.frontViewController).topViewController;
+    if (![topViewController isKindOfClass:[WhereAreMoreViewController class]] ||
+        ([topViewController isKindOfClass:[WhereAreMoreViewController class]] &&
+         [(WhereAreMoreViewController *)topViewController what] != WhereAreMorePeople)) {
         
-        RankingPeopleViewController *rankingPeopleVC = [[RankingPeopleViewController alloc] init];
-        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:rankingPeopleVC];
+        WhereAreMoreViewController *whereAreMoreVC = [[WhereAreMoreViewController alloc] init];
+        whereAreMoreVC.what = WhereAreMorePeople;
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:whereAreMoreVC];
+        [revealController setFrontViewController:navigationController animated:NO];
+    } else {
+        [revealController revealToggle:self];
+    }
+}
+
+- (void)showWomanRanking
+{
+    ZUUIRevealController *revealController = [self.parentViewController isKindOfClass:[ZUUIRevealController class]] ? (ZUUIRevealController *)self.parentViewController : nil;
+    UIViewController *topViewController = ((UINavigationController *)revealController.frontViewController).topViewController;
+    if (![topViewController isKindOfClass:[WhereAreMoreViewController class]] ||
+        ([topViewController isKindOfClass:[WhereAreMoreViewController class]] &&
+         [(WhereAreMoreViewController *)topViewController what] != WhereAreMoreWomen)) {
+        
+        WhereAreMoreViewController *whereAreMoreVC = [[WhereAreMoreViewController alloc] init];
+        whereAreMoreVC.what = WhereAreMoreWomen;
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:whereAreMoreVC];
+        [revealController setFrontViewController:navigationController animated:NO];
+    } else {
+        [revealController revealToggle:self];
+    }
+}
+
+- (void)showManRanking
+{
+    ZUUIRevealController *revealController = [self.parentViewController isKindOfClass:[ZUUIRevealController class]] ? (ZUUIRevealController *)self.parentViewController : nil;
+    UIViewController *topViewController = ((UINavigationController *)revealController.frontViewController).topViewController;
+    if (![topViewController isKindOfClass:[WhereAreMoreViewController class]] ||
+        ([topViewController isKindOfClass:[WhereAreMoreViewController class]] &&
+         [(WhereAreMoreViewController *)topViewController what] != WhereAreMoreMen)) {
+        
+        WhereAreMoreViewController *whereAreMoreVC = [[WhereAreMoreViewController alloc] init];
+        whereAreMoreVC.what = WhereAreMoreMen;
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:whereAreMoreVC];
         [revealController setFrontViewController:navigationController animated:NO];
     } else {
         [revealController revealToggle:self];
