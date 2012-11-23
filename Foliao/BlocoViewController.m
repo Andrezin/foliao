@@ -11,6 +11,7 @@
 
 #import "BlocoViewController.h"
 #import "SVProgressHUD.h"
+#import "ParadeAnnotation.h"
 #import "WhoIsGoingViewController.h"
 
 typedef enum viewDomainClass {
@@ -20,12 +21,15 @@ typedef enum viewDomainClass {
 
 @interface BlocoViewController () {
     ViewDomainClass _domainClass;
+    BOOL _mapIsOpen;
 }
 
 @property (strong, nonatomic) NSArray *blocoParades;
 @property (strong, nonatomic) NSArray *folioes;
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) IBOutlet MKMapView *mapView;
+@property (strong, nonatomic) IBOutlet UIButton *buttonExpandMap;
 @property (strong, nonatomic) IBOutlet UILabel *labelName;
 @property (strong, nonatomic) IBOutlet UILabel *labelInfo;
 @property (strong, nonatomic) IBOutlet UIButton *buttonCheckIn;
@@ -44,6 +48,7 @@ typedef enum viewDomainClass {
 
 - (IBAction)checkInButtonTapped:(UIButton *)sender;
 - (IBAction)whoIsGoingButtonTapped:(UIButton *)sender;
+- (IBAction)expandMap:(UIButton *)sender;
 
 @end
 
@@ -80,6 +85,9 @@ typedef enum viewDomainClass {
 - (void)fillBlocoInfo
 {
     if (_domainClass == ViewDomainClassParade) {
+        ParadeAnnotation *annotation = [[ParadeAnnotation alloc] initWithParade:self.parade];
+        [self.mapView addAnnotation:annotation];
+        
         self.buttonCheckIn.enabled = YES;
         self.labelName.text = self.parade[@"bloco"][@"name"];
         
@@ -90,11 +98,17 @@ typedef enum viewDomainClass {
         self.labelName.text = self.bloco[@"name"];
         
         PFQuery *query = [PFQuery queryWithClassName:@"Parade"];
+        [query includeKey:@"bloco"];
         [query whereKey:@"bloco" equalTo:self.bloco];
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (!error) {
                 self.blocoParades = objects;
                 if (self.blocoParades.count) {
+                    
+#warning Mostrar a primeira Parade? As duas juntas?
+                    ParadeAnnotation *annotation = [[ParadeAnnotation alloc] initWithParade:self.blocoParades[0]];
+                    [self.mapView addAnnotation:annotation];
+                    
                     self.buttonCheckIn.enabled = YES;
                     [self showWhoIsGoing];
                 }
@@ -205,6 +219,26 @@ typedef enum viewDomainClass {
     }];
 }
 
+- (IBAction)expandMap:(UIButton *)sender
+{
+    if (_mapIsOpen) {
+        
+        [UIView animateWithDuration:0.2 animations:^{
+            self.mapView.frame = CGRectMake(0, 0, 320, 110);
+        } completion:^(BOOL finished) {
+            [self.buttonExpandMap setTitle:@"+" forState:UIControlStateNormal];
+            _mapIsOpen = !_mapIsOpen;
+        }];
+    } else {
+        [UIView animateWithDuration:0.2 animations:^{
+            self.mapView.frame = self.view.frame;
+        } completion:^(BOOL finished) {
+            [self.buttonExpandMap setTitle:@"-" forState:UIControlStateNormal];
+            _mapIsOpen = !_mapIsOpen;
+        }];
+    }
+}
+
 
 #pragma mark - UIActionSheet delegate
 
@@ -214,6 +248,25 @@ typedef enum viewDomainClass {
     
     NSLog(@"Confirming presence...");
     [self confirmPresenceInParade:self.blocoParades[buttonIndex]];
+}
+
+
+#pragma mark - MKMapView delegate
+
+- (void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray *)views
+{
+    CLLocationCoordinate2D paradeCoordinate = [(ParadeAnnotation *)views[0] coordinate];
+    [self.mapView setCenterCoordinate:paradeCoordinate animated:YES];
+    
+    MKCoordinateSpan span;
+    span.latitudeDelta = 0.002;
+    span.longitudeDelta = 0.002;
+    
+    MKCoordinateRegion region;
+    region.span = span;
+    region.center = paradeCoordinate;
+    
+    [self.mapView setRegion:region];
 }
 
 
