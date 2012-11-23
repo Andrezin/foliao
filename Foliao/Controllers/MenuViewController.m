@@ -15,7 +15,7 @@
 #import "BlocosByLocationViewController.h"
 #import "BlocosByNameViewController.h"
 #import "BlocosByDateViewController.h"
-#import "WhereAmIGoingViewController.h"
+#import "ProfileViewController.h"
 
 
 @interface MenuViewController ()
@@ -170,9 +170,9 @@
 - (void)showWhereAmIGoing
 {
     ZUUIRevealController *revealController = [self.parentViewController isKindOfClass:[ZUUIRevealController class]] ? (ZUUIRevealController *)self.parentViewController : nil;
-    if ([revealController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)revealController.frontViewController).topViewController isKindOfClass:[WhereAmIGoingViewController class]]) {
+    if ([revealController.frontViewController isKindOfClass:[UINavigationController class]] && ![((UINavigationController *)revealController.frontViewController).topViewController isKindOfClass:[ProfileViewController class]]) {
         
-        WhereAmIGoingViewController *whereAmIGoingViewController = [[WhereAmIGoingViewController alloc] init];
+        ProfileViewController *whereAmIGoingViewController = [[ProfileViewController alloc] init];
         UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:whereAmIGoingViewController];
         [revealController setFrontViewController:navigationController animated:NO];
     } else {

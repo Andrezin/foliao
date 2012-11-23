@@ -8,16 +8,15 @@
 
 #import <SDWebImage/UIImageView+WebCache.h>
 
-#import "WhereAmIGoingViewController.h"
+#import "ProfileViewController.h"
 #import "BlocoViewController.h"
-#import "FoliaoRankingTitle.h"
 #import "AppConstants.h"
 
-@interface WhereAmIGoingViewController ()
+@interface ProfileViewController ()
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewProfile;
 @property (strong, nonatomic) IBOutlet UILabel *labelName;
-@property (strong, nonatomic) IBOutlet UILabel *labelRanking;
+@property (strong, nonatomic) IBOutlet UILabel *labelNumberOfPresences;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic) NSArray *presences;
@@ -25,7 +24,7 @@
 @end
 
 
-@implementation WhereAmIGoingViewController
+@implementation ProfileViewController
 
 - (void)viewDidLoad
 {
@@ -35,7 +34,7 @@
     [self.imageViewProfile setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=large", me[@"facebookId"]]] placeholderImage:[UIImage imageNamed:@"200x200.gif"]];
     self.imageViewProfile.clipsToBounds = YES;
     self.labelName.text = [NSString stringWithFormat:@"%@ %@", me[@"firstName"], me[@"lastName"]];
-    self.labelRanking.text = @"";
+    self.labelNumberOfPresences.text = @"";
     
     self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
 }
@@ -48,10 +47,7 @@
     [query orderByAscending:@"parade"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         self.presences = objects;
-#warning Refactor: rename var name
-        self.labelRanking.text = [NSString stringWithFormat:@"Confirmou %d bloco%@", self.presences.count, self.presences.count == 1 ? @"" : @"s"];
-        
-//        self.labelRanking.text = [FoliaoRankingTitle titleForBeingPresentIn:objects.count];
+        self.labelNumberOfPresences.text = [NSString stringWithFormat:@"Confirmou %d bloco%@", self.presences.count, self.presences.count == 1 ? @"" : @"s"];
         [self.tableView reloadData];
     }];
 }

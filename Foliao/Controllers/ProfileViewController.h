@@ -10,7 +10,7 @@
 
 #import "NavigationRootLevelViewController.h"
 
-@interface WhereAmIGoingViewController : NavigationRootLevelViewController <UITableViewDataSource, UITableViewDelegate>
+@interface ProfileViewController : NavigationRootLevelViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) PFObject *user;
 

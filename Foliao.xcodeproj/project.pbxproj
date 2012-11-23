@@ -15,7 +15,7 @@
 		013341C7164B5DD900C2984B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 013341C6164B5DD900C2984B /* MapKit.framework */; };
 		0140011F165AB0BC008F0429 /* KalBlocosDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0140011E165AB0BC008F0429 /* KalBlocosDataSource.m */; };
 		01400122165AB490008F0429 /* ParadeAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 01400121165AB490008F0429 /* ParadeAnnotation.m */; };
-		01400126165AD1C8008F0429 /* WhereAmIGoingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01400124165AD1C8008F0429 /* WhereAmIGoingViewController.m */; };
+		01400126165AD1C8008F0429 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01400124165AD1C8008F0429 /* ProfileViewController.m */; };
 		014EECC0164DC80000C4F626 /* navigation-bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 014EECBF164DC80000C4F626 /* navigation-bar.png */; };
 		014EECC2164DC80E00C4F626 /* navigation-bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 014EECC1164DC80D00C4F626 /* navigation-bar@2x.png */; };
 		014EECC4164DC82400C4F626 /* 57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 014EECC3164DC82400C4F626 /* 57x57.png */; };
@@ -89,7 +89,7 @@
 		01EBA92C165D7422005C1847 /* BlocoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA925165D7422005C1847 /* BlocoViewController.xib */; };
 		01EBA92D165D7422005C1847 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA926165D7422005C1847 /* LoginViewController.xib */; };
 		01EBA92E165D7422005C1847 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA927165D7422005C1847 /* MenuViewController.xib */; };
-		01EBA92F165D7422005C1847 /* WhereAmIGoingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA928165D7422005C1847 /* WhereAmIGoingViewController.xib */; };
+		01EBA92F165D7422005C1847 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA928165D7422005C1847 /* ProfileViewController.xib */; };
 		01EBA930165D7422005C1847 /* WhoIsGoingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA929165D7422005C1847 /* WhoIsGoingViewController.xib */; };
 /* End PBXBuildFile section */
 
@@ -131,8 +131,8 @@
 		0140011E165AB0BC008F0429 /* KalBlocosDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalBlocosDataSource.m; sourceTree = "<group>"; };
 		01400120165AB490008F0429 /* ParadeAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParadeAnnotation.h; sourceTree = "<group>"; };
 		01400121165AB490008F0429 /* ParadeAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParadeAnnotation.m; sourceTree = "<group>"; };
-		01400123165AD1C8008F0429 /* WhereAmIGoingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WhereAmIGoingViewController.h; path = Controllers/WhereAmIGoingViewController.h; sourceTree = "<group>"; };
-		01400124165AD1C8008F0429 /* WhereAmIGoingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WhereAmIGoingViewController.m; path = Controllers/WhereAmIGoingViewController.m; sourceTree = "<group>"; };
+		01400123165AD1C8008F0429 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = Controllers/ProfileViewController.h; sourceTree = "<group>"; };
+		01400124165AD1C8008F0429 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = Controllers/ProfileViewController.m; sourceTree = "<group>"; };
 		014EECBF164DC80000C4F626 /* navigation-bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation-bar.png"; sourceTree = "<group>"; };
 		014EECC1164DC80D00C4F626 /* navigation-bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation-bar@2x.png"; sourceTree = "<group>"; };
 		014EECC3164DC82400C4F626 /* 57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 57x57.png; sourceTree = "<group>"; };
@@ -221,7 +221,7 @@
 		01EBA925165D7422005C1847 /* BlocoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlocoViewController.xib; sourceTree = "<group>"; };
 		01EBA926165D7422005C1847 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		01EBA927165D7422005C1847 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
-		01EBA928165D7422005C1847 /* WhereAmIGoingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhereAmIGoingViewController.xib; sourceTree = "<group>"; };
+		01EBA928165D7422005C1847 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		01EBA929165D7422005C1847 /* WhoIsGoingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhoIsGoingViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -286,8 +286,8 @@
 				018B5E65164D8E0500042B4E /* LoginViewController.m */,
 				018B5E73164DB19B00042B4E /* BlocoViewController.h */,
 				018B5E74164DB19B00042B4E /* BlocoViewController.m */,
-				01400123165AD1C8008F0429 /* WhereAmIGoingViewController.h */,
-				01400124165AD1C8008F0429 /* WhereAmIGoingViewController.m */,
+				01400123165AD1C8008F0429 /* ProfileViewController.h */,
+				01400124165AD1C8008F0429 /* ProfileViewController.m */,
 				01CC6361165B3A6A005F68BA /* WhoIsGoingViewController.h */,
 				01CC6362165B3A6A005F68BA /* WhoIsGoingViewController.m */,
 			);
@@ -540,7 +540,7 @@
 				01EBA925165D7422005C1847 /* BlocoViewController.xib */,
 				01EBA926165D7422005C1847 /* LoginViewController.xib */,
 				01EBA927165D7422005C1847 /* MenuViewController.xib */,
-				01EBA928165D7422005C1847 /* WhereAmIGoingViewController.xib */,
+				01EBA928165D7422005C1847 /* ProfileViewController.xib */,
 				01EBA929165D7422005C1847 /* WhoIsGoingViewController.xib */,
 				015E88EA165EBFF60008DED8 /* Cell */,
 			);
@@ -672,7 +672,7 @@
 				01EBA92C165D7422005C1847 /* BlocoViewController.xib in Resources */,
 				01EBA92D165D7422005C1847 /* LoginViewController.xib in Resources */,
 				01EBA92E165D7422005C1847 /* MenuViewController.xib in Resources */,
-				01EBA92F165D7422005C1847 /* WhereAmIGoingViewController.xib in Resources */,
+				01EBA92F165D7422005C1847 /* ProfileViewController.xib in Resources */,
 				01EBA930165D7422005C1847 /* WhoIsGoingViewController.xib in Resources */,
 				015E88E9165EBEBB0008DED8 /* FoliaoCell.xib in Resources */,
 			);
@@ -722,7 +722,7 @@
 				0168CB841659586B003DD8AF /* BlocosByDateViewController.m in Sources */,
 				0140011F165AB0BC008F0429 /* KalBlocosDataSource.m in Sources */,
 				01400122165AB490008F0429 /* ParadeAnnotation.m in Sources */,
-				01400126165AD1C8008F0429 /* WhereAmIGoingViewController.m in Sources */,
+				01400126165AD1C8008F0429 /* ProfileViewController.m in Sources */,
 				01CC6358165B0FA4005F68BA /* FoliaoRankingTitle.m in Sources */,
 				01CC6364165B3A6A005F68BA /* WhoIsGoingViewController.m in Sources */,
 				015E88EE165EC0410008DED8 /* FoliaoCell.m in Sources */,
