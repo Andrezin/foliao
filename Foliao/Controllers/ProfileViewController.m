@@ -19,7 +19,12 @@
 @property (strong, nonatomic) IBOutlet UILabel *labelNumberOfPresences;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
-@property (strong, nonatomic) NSArray *presences;
+@property (strong, nonatomic) NSMutableArray *presences;
+
+- (void)showNumberOfPresences;
+- (void)showEditButton;
+- (void)editButtonTapped;
+- (void)loadFoliaoPresences;
 
 @end
 
@@ -30,8 +35,10 @@
 {
     [super viewDidLoad];
     
-    if (!self.user)
+    if (!self.user) {
         self.user = [PFUser currentUser];
+        [self showEditButton];
+    }
     
     [self.imageViewProfile setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=large", self.user[@"facebookId"]]] placeholderImage:[UIImage imageNamed:@"200x200.gif"]];
     self.imageViewProfile.clipsToBounds = YES;
@@ -39,19 +46,59 @@
     self.labelNumberOfPresences.text = @"";
     
     self.tableView.contentInset = UIEdgeInsetsMake(1, 0, 0, 0);
+    
+    [self loadFoliaoPresences];
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)showEditButton
+{
+    UIButton *editButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 43, 30)];
+    editButton.titleLabel.font = [UIFont boldSystemFontOfSize:11];
+    [editButton setTitle:@"Editar" forState:UIControlStateNormal];
+    [editButton setBackgroundImage:[UIImage imageNamed:@"bt-base"] forState:UIControlStateNormal];
+    [editButton addTarget:self action:@selector(editButtonTapped) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *editButtonItem = [[UIBarButtonItem alloc] initWithCustomView:editButton];
+    self.navigationItem.rightBarButtonItem = editButtonItem;
+}
+
+- (void)editButtonTapped
+{
+    [self.tableView setEditing:!self.tableView.editing animated:YES];
+    
+    UIButton *editButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 43, 30)];
+    editButton.titleLabel.font = [UIFont boldSystemFontOfSize:11];
+    
+    if (self.tableView.editing) {
+        [editButton setBackgroundImage:[UIImage imageNamed:@"bt-ok"]
+                                       forState:UIControlStateNormal];
+        [editButton setTitle:@"OK" forState:UIControlStateNormal];
+    } else {
+        [editButton setBackgroundImage:[UIImage imageNamed:@"bt-base"]
+                                       forState:UIControlStateNormal];
+        [editButton setTitle:@"Editar" forState:UIControlStateNormal];
+    }
+    
+    [editButton addTarget:self action:@selector(editButtonTapped) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *editButtonItem = [[UIBarButtonItem alloc] initWithCustomView:editButton];
+    self.navigationItem.rightBarButtonItem = editButtonItem;
+}
+
+- (void)loadFoliaoPresences
 {
     PFQuery *query = [PFQuery queryWithClassName:@"Presence"];
     [query whereKey:@"user" equalTo:self.user];
     [query includeKey:@"parade.bloco"];
     [query orderByAscending:@"parade"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        self.presences = objects;
-        self.labelNumberOfPresences.text = [NSString stringWithFormat:@"Confirmou %d bloco%@", self.presences.count, self.presences.count == 1 ? @"" : @"s"];
+        self.presences = [NSMutableArray arrayWithArray:objects];
+        [self showNumberOfPresences];
         [self.tableView reloadData];
     }];
+}
+
+- (void)showNumberOfPresences
+{
+    self.labelNumberOfPresences.text = [NSString stringWithFormat:@"Confirmou %d bloco%@", self.presences.count, self.presences.count == 1 ? @"" : @"s"];
 }
 
 
@@ -93,6 +140,25 @@
     BlocoViewController *blocoViewController = [[BlocoViewController alloc] init];
     blocoViewController.bloco = self.presences[indexPath.row][@"parade"][@"bloco"];;
     [self.navigationController pushViewController:blocoViewController animated:YES];
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return self.user == [PFUser currentUser];
+}
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewCellEditingStyleDelete;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    PFObject *removedPresence = self.presences[indexPath.row];
+    [self.presences removeObject:removedPresence];
+    [self showNumberOfPresences];
+    [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+    [removedPresence deleteInBackground];
 }
 
 @end
