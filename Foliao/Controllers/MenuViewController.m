@@ -50,22 +50,22 @@
     
     self.menuItems = @[
         @{
-            @"section_title": @"Blocos",
+            @"section_title": [@"Buscar por" uppercaseString],
             @"row_title": @[
-                @"Por localização",
-                @"Por nome",
-                @"Por data"
+                @"Localização",
+                @"Nome",
+                @"Data"
             ]
         },
         @{
-            @"section_title": @"Quem vai?",
+            @"section_title": [@"Programação" uppercaseString],
             @"row_title": @[
-                @"Onde eu vou",
+                @"Blocos que eu vou",
                 @"Onde meus amigos vão"
             ]
         },
         @{
-            @"section_title": @"Onde tem mais?",
+            @"section_title": [@"Bombando de" uppercaseString],
             @"row_title": @[
                 @"Gente",
                 @"Mulher",
@@ -73,7 +73,7 @@
             ]
         },
         @{
-            @"section_title": @"Configurações",
+            @"section_title": [@"Configurações" uppercaseString],
             @"row_title": @[
                 @"Logout"
             ]
@@ -89,9 +89,22 @@
     return self.menuItems.count;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    return self.menuItems[section][@"section_title"];
+    UIImageView *sectionView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 12)];
+    [sectionView setImage:[UIImage imageNamed:@"menu-section-background"]];
+    
+    UILabel *labelSectionTitle = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, tableView.frame.size.width-10, 15)];
+    labelSectionTitle.backgroundColor = [UIColor clearColor];
+    labelSectionTitle.text = self.menuItems[section][@"section_title"];
+    labelSectionTitle.textColor = [UIColor colorWithRed:180/255.0 green:180/255.0 blue:180/255.0 alpha:1];
+    labelSectionTitle.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:13];
+    labelSectionTitle.shadowOffset = CGSizeMake(0, 1);
+    labelSectionTitle.shadowColor = [UIColor blackColor];
+    
+    [sectionView addSubview:labelSectionTitle];
+    
+    return sectionView;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -105,11 +118,33 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:18];
+        cell.textLabel.textColor = [UIColor whiteColor];
+        cell.textLabel.shadowOffset = CGSizeMake(0, 1);
+        cell.textLabel.shadowColor = [UIColor blackColor];
+        cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"seta-branca"]];
+        
+//        if (indexPath.row != 0) {
+            UIView *topBorder = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 1)];
+            [topBorder setBackgroundColor:[UIColor colorWithRed:30/255.0 green:30/255.0 blue:30/255.0 alpha:1]];
+            [cell addSubview:topBorder];
+//        }
+        
+        if (indexPath.row+1 != [tableView numberOfRowsInSection:indexPath.section]) {
+            UIView *bottomBorder = [[UIView alloc] initWithFrame:CGRectMake(0, cell.frame.size.height-1, tableView.frame.size.width, 1)];
+            [bottomBorder setBackgroundColor:[UIColor colorWithRed:70/255.0 green:70/255.0 blue:70/255.0 alpha:1]];
+            [cell addSubview:bottomBorder];
+        }
     }
     
     cell.textLabel.text = self.menuItems[indexPath.section][@"row_title"][indexPath.row];
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 42.0;
 }
 
 #pragma mark - Table view delegate

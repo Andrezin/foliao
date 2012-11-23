@@ -74,7 +74,7 @@
     // https://github.com/pkluz/ZUUIRevealController/issues/40
     CGRect appFrame = [[UIScreen mainScreen] applicationFrame];
     CGRect statusBarFrame = [[UIApplication sharedApplication] statusBarFrame];
-    revealController.rearViewController.view.frame = CGRectMake(0.0, 0.0, appFrame.size.width, appFrame.size.height + statusBarFrame.size.height);
+    revealController.rearViewController.view.frame = CGRectMake(0.0, 0.0, appFrame.size.width - 60, appFrame.size.height + statusBarFrame.size.height);
     
     self.window.rootViewController = self.mainViewController;
     [self.window makeKeyAndVisible];

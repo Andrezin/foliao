@@ -96,6 +96,10 @@
 		01EBA92E165D7422005C1847 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA927165D7422005C1847 /* MenuViewController.xib */; };
 		01EBA92F165D7422005C1847 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA928165D7422005C1847 /* ProfileViewController.xib */; };
 		01EBA930165D7422005C1847 /* WhoIsGoingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA929165D7422005C1847 /* WhoIsGoingViewController.xib */; };
+		01F2519316602F71009C52B4 /* seta-branca.png in Resources */ = {isa = PBXBuildFile; fileRef = 01F2519216602F71009C52B4 /* seta-branca.png */; };
+		01F2519516602F96009C52B4 /* seta-branca@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01F2519416602F96009C52B4 /* seta-branca@2x.png */; };
+		01F25197166033C1009C52B4 /* menu-section-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01F25196166033C1009C52B4 /* menu-section-background@2x.png */; };
+		01F25199166033E7009C52B4 /* menu-section-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 01F25198166033E7009C52B4 /* menu-section-background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -236,6 +240,10 @@
 		01EBA927165D7422005C1847 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		01EBA928165D7422005C1847 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		01EBA929165D7422005C1847 /* WhoIsGoingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhoIsGoingViewController.xib; sourceTree = "<group>"; };
+		01F2519216602F71009C52B4 /* seta-branca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seta-branca.png"; sourceTree = "<group>"; };
+		01F2519416602F96009C52B4 /* seta-branca@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seta-branca@2x.png"; sourceTree = "<group>"; };
+		01F25196166033C1009C52B4 /* menu-section-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-section-background@2x.png"; sourceTree = "<group>"; };
+		01F25198166033E7009C52B4 /* menu-section-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-section-background.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -518,6 +526,8 @@
 		01BE6267164B3D450000679C /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				01F25198166033E7009C52B4 /* menu-section-background.png */,
+				01F2519216602F71009C52B4 /* seta-branca.png */,
 				01CC6359165B2FB1005F68BA /* bt-locate-me-bg.png */,
 				01CC635A165B2FB1005F68BA /* bt-locate-me.png */,
 				014EECBF164DC80000C4F626 /* navigation-bar.png */,
@@ -535,6 +545,8 @@
 		01BE626F164B3D450000679C /* Retina */ = {
 			isa = PBXGroup;
 			children = (
+				01F25196166033C1009C52B4 /* menu-section-background@2x.png */,
+				01F2519416602F96009C52B4 /* seta-branca@2x.png */,
 				01CC636F165B45B2005F68BA /* 110x110.gif */,
 				01CC6354165B091E005F68BA /* 200x200.gif */,
 				01CC635D165B2FC6005F68BA /* bt-locate-me-bg@2x.png */,
@@ -698,6 +710,10 @@
 				015E88E9165EBEBB0008DED8 /* FoliaoCell.xib in Resources */,
 				015E88F3165F1A000008DED8 /* WhereMyFriendsAreGoingViewController.xib in Resources */,
 				015E88F8165F449F0008DED8 /* WhereAreMoreViewController.xib in Resources */,
+				01F2519316602F71009C52B4 /* seta-branca.png in Resources */,
+				01F2519516602F96009C52B4 /* seta-branca@2x.png in Resources */,
+				01F25197166033C1009C52B4 /* menu-section-background@2x.png in Resources */,
+				01F25199166033E7009C52B4 /* menu-section-background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
