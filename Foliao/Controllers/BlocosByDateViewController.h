@@ -12,11 +12,11 @@
 #import "KalDataSource.h" // for the KalDataSourceCallbacks protocol
 #import "KalBlocosDataSource.h"
 
-#import "NavigationRootLevelViewController.h"
+#import "BaseViewController.h"
 
 @class KalLogic, KalDate;
 
-@interface BlocosByDateViewController : NavigationRootLevelViewController <UITableViewDelegate, KalViewDelegate, KalDataSourceCallbacks>
+@interface BlocosByDateViewController : BaseViewController <UITableViewDelegate, KalViewDelegate, KalDataSourceCallbacks>
 {
     KalBlocosDataSource *dataSource;
     KalLogic *logic;

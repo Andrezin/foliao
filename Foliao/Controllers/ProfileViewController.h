@@ -8,9 +8,9 @@
 
 #import <Parse/Parse.h>
 
-#import "NavigationRootLevelViewController.h"
+#import "BaseViewController.h"
 
-@interface ProfileViewController : NavigationRootLevelViewController <UITableViewDataSource, UITableViewDelegate>
+@interface ProfileViewController : BaseViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) PFObject *user;
 

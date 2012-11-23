@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-#import "NavigationRootLevelViewController.h"
+#import "BaseViewController.h"
 
-@interface BlocosByLocationViewController : NavigationRootLevelViewController <MKMapViewDelegate, CLLocationManagerDelegate>
+@interface BlocosByLocationViewController : BaseViewController <MKMapViewDelegate, CLLocationManagerDelegate>
 
 @end

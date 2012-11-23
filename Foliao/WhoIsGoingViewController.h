@@ -8,7 +8,9 @@
 
 #import <Parse/Parse.h>
 
-@interface WhoIsGoingViewController : UITableViewController
+#import "BaseViewController.h"
+
+@interface WhoIsGoingViewController : BaseViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) NSArray *folioes;
 

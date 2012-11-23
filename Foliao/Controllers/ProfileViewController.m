@@ -30,19 +30,21 @@
 {
     [super viewDidLoad];
     
-    PFUser *me = [PFUser currentUser];
-    [self.imageViewProfile setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=large", me[@"facebookId"]]] placeholderImage:[UIImage imageNamed:@"200x200.gif"]];
+    if (!self.user)
+        self.user = [PFUser currentUser];
+    
+    [self.imageViewProfile setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=large", self.user[@"facebookId"]]] placeholderImage:[UIImage imageNamed:@"200x200.gif"]];
     self.imageViewProfile.clipsToBounds = YES;
-    self.labelName.text = [NSString stringWithFormat:@"%@ %@", me[@"firstName"], me[@"lastName"]];
+    self.labelName.text = [NSString stringWithFormat:@"%@ %@", self.user[@"firstName"], self.user[@"lastName"]];
     self.labelNumberOfPresences.text = @"";
     
-    self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
+    self.tableView.contentInset = UIEdgeInsetsMake(1, 0, 0, 0);
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     PFQuery *query = [PFQuery queryWithClassName:@"Presence"];
-    [query whereKey:@"user" equalTo:[PFUser currentUser]];
+    [query whereKey:@"user" equalTo:self.user];
     [query includeKey:@"parade.bloco"];
     [query orderByAscending:@"parade"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {

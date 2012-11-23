@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-#import "NavigationRootLevelViewController.h"
+#import "BaseViewController.h"
 
-@interface BlocosByNameViewController : NavigationRootLevelViewController <UITableViewDataSource, UITableViewDelegate>
+@interface BlocosByNameViewController : BaseViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 

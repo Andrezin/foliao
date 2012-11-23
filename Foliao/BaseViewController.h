@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NavigationRootLevelViewController : UIViewController
+@interface BaseViewController : UIViewController
 
 @end
