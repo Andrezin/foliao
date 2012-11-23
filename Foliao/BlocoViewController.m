@@ -13,6 +13,7 @@
 #import "SVProgressHUD.h"
 #import "ParadeAnnotation.h"
 #import "WhoIsGoingViewController.h"
+#import "DateUtil.h"
 
 typedef enum viewDomainClass {
     ViewDomainClassBloco = 1,
@@ -237,7 +238,7 @@ typedef enum viewDomainClass {
             UIActionSheet *confirmationSheet = [[UIActionSheet alloc] initWithTitle:@"Vai pular em qual dia?" delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:nil];
             
             for (PFObject *parade in self.blocoParades) {
-                [confirmationSheet addButtonWithTitle:[parade[@"date"] description]];
+                [confirmationSheet addButtonWithTitle:[DateUtil stringFromDate:(NSDate *)parade[@"date"]]];
             }
             
             confirmationSheet.cancelButtonIndex = self.blocoParades.count;

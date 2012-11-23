@@ -7,6 +7,7 @@
 //
 
 #import "ParadeAnnotation.h"
+#import "DateUtil.h"
 
 @implementation ParadeAnnotation
 
@@ -31,7 +32,7 @@
     if (!self.parade)
         return @"";
     
-    return [(NSDate *)self.parade[@"date"] description];
+    return [DateUtil stringFromDate:(NSDate *)self.parade[@"date"]];
 }
 
 - (CLLocationCoordinate2D)coordinate

@@ -36,6 +36,7 @@
 		019E6B3B1655DB790025786D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 019E6B391655DB790025786D /* Default@2x.png */; };
 		019E6B4416565C890025786D /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 019E6B4316565C890025786D /* SVProgressHUD.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		019E6B4616565D660025786D /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 019E6B4516565D660025786D /* SVProgressHUD.bundle */; };
+		01AA2AE9165FFFF0001AEBFB /* DateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AA2AE8165FFFF0001AEBFB /* DateUtil.m */; };
 		01BE6228164B3B000000679C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BE6227164B3B000000679C /* UIKit.framework */; };
 		01BE622A164B3B000000679C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BE6229164B3B000000679C /* Foundation.framework */; };
 		01BE622C164B3B000000679C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BE622B164B3B000000679C /* CoreGraphics.framework */; };
@@ -163,6 +164,8 @@
 		019E6B4216565C890025786D /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		019E6B4316565C890025786D /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		019E6B4516565D660025786D /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		01AA2AE7165FFFF0001AEBFB /* DateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtil.h; sourceTree = "<group>"; };
+		01AA2AE8165FFFF0001AEBFB /* DateUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtil.m; sourceTree = "<group>"; };
 		01BE6223164B3B000000679C /* Foliao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foliao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01BE6227164B3B000000679C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		01BE6229164B3B000000679C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -329,6 +332,8 @@
 				01400121165AB490008F0429 /* ParadeAnnotation.m */,
 				01CC6356165B0FA4005F68BA /* FoliaoRankingTitle.h */,
 				01CC6357165B0FA4005F68BA /* FoliaoRankingTitle.m */,
+				01AA2AE7165FFFF0001AEBFB /* DateUtil.h */,
+				01AA2AE8165FFFF0001AEBFB /* DateUtil.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -736,6 +741,7 @@
 				01CC6364165B3A6A005F68BA /* WhoIsGoingViewController.m in Sources */,
 				015E88EE165EC0410008DED8 /* FoliaoCell.m in Sources */,
 				015E88F1165F19E40008DED8 /* WhereMyFriendsAreGoingViewController.m in Sources */,
+				01AA2AE9165FFFF0001AEBFB /* DateUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
