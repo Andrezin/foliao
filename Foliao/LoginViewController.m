@@ -6,12 +6,15 @@
 //  Copyright (c) 2012 7pixels. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
+
 #import "LoginViewController.h"
 #import "AppDelegate.h"
 
 @interface LoginViewController ()
 
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
+@property (strong, nonatomic) IBOutlet UIButton *buttonLogin;
 
 - (IBAction)performLogin:(id)sender;
 
@@ -23,7 +26,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    self.buttonLogin.alpha = 0;
+    self.buttonLogin.layer.cornerRadius = 3;
+    self.buttonLogin.clipsToBounds = YES;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [UIView animateWithDuration:0.5 animations:^{
+        self.buttonLogin.alpha = 1;
+    }];
 }
 
 - (IBAction)performLogin:(id)sender

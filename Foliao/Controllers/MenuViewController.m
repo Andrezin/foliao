@@ -306,9 +306,8 @@
 
 - (void)logout
 {
-    [[PFFacebookUtils session] closeAndClearTokenInformation];
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    [appDelegate sessionStateChanged:nil];
+    [appDelegate logOut];
 }
 
 @end

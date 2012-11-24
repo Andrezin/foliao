@@ -21,9 +21,8 @@
 
 - (void)configureParse;
 - (void)configureRootViewController;
-- (void)showLoginView;
 - (void)takeMyFacebookData;
-
+- (void)showLoginView:(BOOL)animated;
 - (void)customizeAppearance;
 - (void)customizeBackButton;
 
@@ -42,15 +41,10 @@
                                                     UIRemoteNotificationTypeAlert|
                                                     UIRemoteNotificationTypeSound];
     
-    PF_FBSession *session = [PFFacebookUtils session];
-    if (session.state == PF_FBSessionStateCreatedTokenLoaded) {
-        // Yes, so just open the session (this won't display any UX).
-        [self openSession];
-    } else {
-        // No, display the login page
-        [self showLoginView];
+    if (![PFUser currentUser]) {
+        [self showLoginView:NO];
     }
-    
+
     return YES;
 }
 
@@ -106,7 +100,7 @@
     return [PFFacebookUtils handleOpenURL:url];
 }
 
-- (void)showLoginView
+- (void)showLoginView:(BOOL)animated
 {
     UIViewController *topViewController = [(UINavigationController *)self.mainViewController.frontViewController topViewController];
     UIViewController *modalViewController = [topViewController modalViewController];
@@ -116,51 +110,11 @@
     // complete. In that case, notify the login view so it can update its UI appropriately.
     if (![modalViewController isKindOfClass:[LoginViewController class]]) {
         LoginViewController *loginViewController = [[LoginViewController alloc] init];
-        [topViewController presentModalViewController:loginViewController animated:NO];
+        loginViewController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+        [topViewController presentModalViewController:loginViewController animated:animated];
     } else {
         LoginViewController *loginViewController = (LoginViewController *)modalViewController;
         [loginViewController loginFailed];
-    }
-}
-
-- (void)sessionStateChanged:(NSError *)error
-{
-    PF_FBSessionState state = [[PFFacebookUtils session] state];
-    
-    switch (state) {
-        case PF_FBSessionStateOpen: {
-            UIViewController *topViewController =
-            [(UINavigationController *)self.mainViewController.frontViewController topViewController];
-            if ([[topViewController modalViewController]
-                 isKindOfClass:[LoginViewController class]]) {
-                [topViewController dismissModalViewControllerAnimated:YES];
-            }
-        }
-            break;
-        case PF_FBSessionStateClosed: {
-            // Once the user has logged in, we want them to
-            // be looking at the root view.
-            BlocosByLocationViewController *blocosByPlaceViewController = [[BlocosByLocationViewController alloc] init];
-            UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:blocosByPlaceViewController];
-            [self.mainViewController setFrontViewController:navigationController animated:NO];
-            
-            [[PFFacebookUtils session] closeAndClearTokenInformation];
-            
-            [self showLoginView];
-        }
-            break;
-        default:
-            break;
-    }
-    
-    if (error) {
-        UIAlertView *alertView = [[UIAlertView alloc]
-                                  initWithTitle:@"Error"
-                                  message:error.localizedDescription
-                                  delegate:nil
-                                  cancelButtonTitle:@"OK"
-                                  otherButtonTitles:nil];
-        [alertView show];
     }
 }
 
@@ -169,7 +123,7 @@
     [PFFacebookUtils logInWithPermissions:nil block:^(PFUser *user, NSError *error) {
         if (!user) {
             NSLog(@"Uh oh. The user cancelled the Facebook login.");
-            [self showLoginView];
+            [self showLoginView:NO];
         } else {
             if (user.isNew) {
                 NSLog(@"User signed up and logged in through Facebook!");
@@ -177,9 +131,10 @@
                 NSLog(@"User logged in through Facebook!");
             }
             [self takeMyFacebookData];
+            UIViewController *topViewController = [(UINavigationController *)self.mainViewController.frontViewController topViewController];
+            UIViewController *modalViewController = [topViewController modalViewController];
+            [modalViewController dismissModalViewControllerAnimated:YES];
         }
-        
-        [self sessionStateChanged:error];
     }];
 }
 
@@ -199,6 +154,18 @@
             [[PFUser currentUser] saveInBackground];
         }
     }];
+}
+
+- (void)logOut
+{
+    // Backing Navigation Controller to default view controller (blocos by location)
+//    BlocosByLocationViewController *blocosByLocationViewController = [[BlocosByLocationViewController alloc] init];
+//    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:blocosByLocationViewController];
+//    [self.mainViewController setFrontViewController:navigationController animated:NO];
+    
+    [PFUser logOut];
+    [self configureRootViewController]; 
+    [self showLoginView:YES];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
