@@ -36,11 +36,14 @@ typedef enum viewDomainClass {
 @property (strong, nonatomic) IBOutlet UILabel *labelInfo;
 @property (strong, nonatomic) IBOutlet UIButton *buttonCheckIn;
 
+@property (strong, nonatomic) IBOutlet UIButton *buttonWhoIsGoing;
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewPictureFoliao0;
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewPictureFoliao1;
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewPictureFoliao2;
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewPictureFoliao3;
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewPictureFoliao4;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewAccessoryWhoIsGoing;
+@property (strong, nonatomic) IBOutlet UILabel *labelEmptyBloco;
 
 - (void)sizeScrollViewToFit;
 - (void)fillBlocoInfo;
@@ -142,8 +145,14 @@ typedef enum viewDomainClass {
     [query findObjectsInBackgroundWithBlock:^(NSArray *presences, NSError *error) {
         if (!error) {
             NSLog(@"Found %d presences", presences.count);
-            self.folioes = [[NSMutableArray alloc] initWithCapacity:presences.count];
             
+            if (presences.count == 0) {
+                self.labelEmptyBloco.hidden = NO;
+                self.buttonWhoIsGoing.enabled = NO;
+                return;
+            }
+            
+            self.folioes = [[NSMutableArray alloc] initWithCapacity:presences.count];
             for (PFObject *presence in presences) {
                 PFUser *user = presence[@"user"];
                 if ([self foliaoIsAlreadyGoing:user])
@@ -205,6 +214,8 @@ typedef enum viewDomainClass {
             profileImageView.contentMode = UIViewContentModeScaleAspectFill;
             profileImageView.clipsToBounds = YES;
         }
+        
+        self.imageViewAccessoryWhoIsGoing.hidden = NO;
     }];
 }
 
