@@ -309,8 +309,16 @@
 
 - (void)logout
 {
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    [appDelegate logOut];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Folião" message:@"Tem certeza que quer sair?" delegate:self cancelButtonTitle:@"Não" otherButtonTitles: @"Sim", nil];
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex != alertView.cancelButtonIndex) {
+        AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+        [appDelegate logOut];
+    }
 }
 
 @end
