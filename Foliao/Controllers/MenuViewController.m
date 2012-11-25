@@ -117,7 +117,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"MenuCell";
+    NSString *CellIdentifier = @"MenuCell";
+    
+    if (indexPath.row+1 != [tableView numberOfRowsInSection:indexPath.section]) {
+        CellIdentifier = @"MenuSectionLastCell";
+    }
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
@@ -127,11 +132,9 @@
         cell.textLabel.shadowColor = [UIColor blackColor];
         cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"seta-branca"]];
         
-//        if (indexPath.row != 0) {
-            UIView *topBorder = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 1)];
-            [topBorder setBackgroundColor:[UIColor colorWithRed:30/255.0 green:30/255.0 blue:30/255.0 alpha:1]];
-            [cell addSubview:topBorder];
-//        }
+        UIView *topBorder = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 1)];
+        [topBorder setBackgroundColor:[UIColor colorWithRed:30/255.0 green:30/255.0 blue:30/255.0 alpha:1]];
+        [cell addSubview:topBorder];
         
         if (indexPath.row+1 != [tableView numberOfRowsInSection:indexPath.section]) {
             UIView *bottomBorder = [[UIView alloc] initWithFrame:CGRectMake(0, cell.frame.size.height-1, tableView.frame.size.width, 1)];
