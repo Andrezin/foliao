@@ -9,6 +9,7 @@
 #import <Parse/Parse.h>
 
 #import "BlocosByLocationViewController.h"
+#import "BlocoViewController.h"
 #import "ParadeAnnotation.h"
 
 
@@ -112,6 +113,33 @@
             }
         }
     }];
+}
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+    if ([annotation isKindOfClass:[MKUserLocation class]]) {
+        return nil; // user location
+    }
+    
+    static NSString *pinIdentifier = @"ParadePin";
+    
+    MKAnnotationView *annotationView = (MKAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:pinIdentifier];
+    if (annotationView == nil) {
+        annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:pinIdentifier];
+        annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+        annotationView.canShowCallout = YES;
+    }
+    
+    annotationView.annotation = annotation;
+    
+    return annotationView;
+}
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+{
+    BlocoViewController *blocoViewController = [[BlocoViewController alloc] init];
+    blocoViewController.parade = [(ParadeAnnotation *)view.annotation parade];
+    [self.navigationController pushViewController:blocoViewController animated:YES];
 }
 
 #pragma mark -
