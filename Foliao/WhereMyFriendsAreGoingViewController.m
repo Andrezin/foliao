@@ -37,6 +37,9 @@
             PFQuery *friendQuery = [PFUser query];
             [friendQuery whereKey:@"facebookId" containedIn:friendIds];
             
+            friendQuery.cachePolicy = kPFCachePolicyCacheElseNetwork;
+            friendQuery.maxCacheAge = 10 * 60; // ten minutes
+            
             [friendQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
                 self.friends = objects;
                 [self.tableView reloadData];

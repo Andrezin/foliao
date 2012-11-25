@@ -104,6 +104,10 @@ typedef enum viewDomainClass {
         PFQuery *query = [PFQuery queryWithClassName:@"Parade"];
         [query includeKey:@"bloco"];
         [query whereKey:@"bloco" equalTo:self.bloco];
+        
+        query.cachePolicy = kPFCachePolicyCacheElseNetwork;
+        query.maxCacheAge = 0.5 * 60 * 60; // half hour
+        
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (!error) {
                 self.blocoParades = objects;
@@ -130,6 +134,9 @@ typedef enum viewDomainClass {
     } else {
         [query whereKey:@"parade" containedIn:self.blocoParades];
     }
+    
+    query.cachePolicy = kPFCachePolicyCacheElseNetwork;
+    query.maxCacheAge = 0.5 * 60 * 60; // half hour
     
     [query includeKey:@"user"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *presences, NSError *error) {
@@ -282,6 +289,8 @@ typedef enum viewDomainClass {
                     
                     [parade incrementKey:@"totalPresencesCount"];
                     [parade saveInBackground];
+                    
+                    [PFQuery clearAllCachedResults];
                     
                     [SVProgressHUD showSuccessWithStatus:@"Ah muleque!"];
                     [self addFoliaoToPresencesBox];

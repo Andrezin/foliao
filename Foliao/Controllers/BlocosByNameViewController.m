@@ -36,6 +36,8 @@
     
     PFQuery *query = [PFQuery queryWithClassName:@"Bloco"];
     [query orderByAscending:@"name"];
+    query.cachePolicy = kPFCachePolicyCacheElseNetwork;
+    query.maxCacheAge = 0.5 * 60 * 60; // half hour
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             NSLog(@"Successfully retrieved %d blocos.", objects.count);

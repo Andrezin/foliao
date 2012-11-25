@@ -157,12 +157,7 @@
 }
 
 - (void)logOut
-{
-    // Backing Navigation Controller to default view controller (blocos by location)
-//    BlocosByLocationViewController *blocosByLocationViewController = [[BlocosByLocationViewController alloc] init];
-//    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:blocosByLocationViewController];
-//    [self.mainViewController setFrontViewController:navigationController animated:NO];
-    
+{   
     [PFUser logOut];
     [self configureRootViewController]; 
     [self showLoginView:YES];

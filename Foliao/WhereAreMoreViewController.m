@@ -36,6 +36,9 @@
     if (self.what == WhereAreMoreMen)
         [query orderByDescending:@"malePresencesCount"];
     
+    query.cachePolicy = kPFCachePolicyCacheElseNetwork;
+    query.maxCacheAge = 10 * 60; // ten minutes
+    
     [query includeKey:@"bloco"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {

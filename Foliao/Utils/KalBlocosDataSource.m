@@ -81,6 +81,10 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
     [query whereKey:@"date" greaterThanOrEqualTo:fromDate];
     [query whereKey:@"date" lessThanOrEqualTo:toDate];
     [query includeKey:@"bloco"];
+    
+    query.cachePolicy = kPFCachePolicyCacheElseNetwork;
+    query.maxCacheAge = 0.5 * 60 * 60; // half hour
+    
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             [allParades addObjectsFromArray:objects];

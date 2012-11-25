@@ -89,6 +89,10 @@
     [query whereKey:@"user" equalTo:self.user];
     [query includeKey:@"parade.bloco"];
     [query orderByAscending:@"parade"];
+    
+    query.cachePolicy = kPFCachePolicyCacheElseNetwork;
+    query.maxCacheAge = 0.5 * 60 * 60; // half hour
+    
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         self.presences = [NSMutableArray arrayWithArray:objects];
         [self showNumberOfPresences];
@@ -172,6 +176,7 @@
             
             [parade incrementKey:@"totalPresencesCount" byAmount:[NSNumber numberWithInt:-1]];
             [parade saveInBackground];
+            [PFQuery clearAllCachedResults];
         }
     }];
 }
