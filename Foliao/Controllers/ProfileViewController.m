@@ -11,6 +11,7 @@
 #import "ProfileViewController.h"
 #import "BlocoViewController.h"
 #import "AppConstants.h"
+#import "DateUtil.h"
 
 @interface ProfileViewController ()
 
@@ -123,11 +124,12 @@
     static NSString *CellIdentifier = @"BlocoCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
         cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"seta-quem-vai"]];
     }
     
     cell.textLabel.text = self.presences[indexPath.row][@"parade"][@"bloco"][@"name"];
+    cell.detailTextLabel.text = [DateUtil stringFromDate:self.presences[indexPath.row][@"parade"][@"date"]];
     
     return cell;
 }
