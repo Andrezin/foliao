@@ -36,7 +36,7 @@
 {
     [super viewDidLoad];
     
-    if (!self.user) {
+    if (!self.user || self.user == [PFUser currentUser]) {
         self.user = [PFUser currentUser];
         [self showEditButton];
     }
