@@ -295,6 +295,27 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
+							<object class="IBUILabel" id="784002574">
+								<reference key="NSNextResponder" ref="901473629"/>
+								<int key="NSvFlags">-2147483356</int>
+								<string key="NSFrame">{{34, 306}, {252, 21}}</string>
+								<reference key="NSSuperview" ref="901473629"/>
+								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="705181042"/>
+								<string key="NSReuseIdentifierKey">_NS:9</string>
+								<bool key="IBUIOpaque">NO</bool>
+								<bool key="IBUIClipsSubviews">YES</bool>
+								<int key="IBUIContentMode">7</int>
+								<bool key="IBUIUserInteractionEnabled">NO</bool>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<string key="IBUIText">Ih! O bloco ainda tá vazio. Seja o primeiro!</string>
+								<reference key="IBUITextColor" ref="469905510"/>
+								<nil key="IBUIHighlightedColor"/>
+								<int key="IBUIBaselineAdjustment">0</int>
+								<reference key="IBUIFontDescription" ref="534806329"/>
+								<reference key="IBUIFont" ref="803155649"/>
+								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
+							</object>
 							<object class="IBUIImageView" id="703291534">
 								<reference key="NSNextResponder" ref="901473629"/>
 								<int key="NSvFlags">-2147483356</int>
@@ -343,27 +364,6 @@
 								<reference key="IBUINormalTitleShadowColor" ref="661881522"/>
 								<reference key="IBUIFontDescription" ref="473484965"/>
 								<reference key="IBUIFont" ref="795589226"/>
-							</object>
-							<object class="IBUILabel" id="784002574">
-								<reference key="NSNextResponder" ref="901473629"/>
-								<int key="NSvFlags">-2147483356</int>
-								<string key="NSFrame">{{34, 306}, {252, 21}}</string>
-								<reference key="NSSuperview" ref="901473629"/>
-								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="705181042"/>
-								<string key="NSReuseIdentifierKey">_NS:9</string>
-								<bool key="IBUIOpaque">NO</bool>
-								<bool key="IBUIClipsSubviews">YES</bool>
-								<int key="IBUIContentMode">7</int>
-								<bool key="IBUIUserInteractionEnabled">NO</bool>
-								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-								<string key="IBUIText">Ih! O bloco ainda tá vazio. Seja o primeiro!</string>
-								<reference key="IBUITextColor" ref="469905510"/>
-								<nil key="IBUIHighlightedColor"/>
-								<int key="IBUIBaselineAdjustment">0</int>
-								<reference key="IBUIFontDescription" ref="534806329"/>
-								<reference key="IBUIFont" ref="803155649"/>
-								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
 						</array>
 						<string key="NSFrameSize">{320, 504}</string>
