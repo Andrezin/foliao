@@ -76,6 +76,23 @@
             }
         }
     }
+    
+    // Sort table data
+    [_tableData sortUsingComparator:^NSComparisonResult(NSDictionary *section1, NSDictionary *section2) {
+        NSString *sectionLetter1 = section1[@"section"];
+        NSString *sectionLetter2 = section2[@"section"];
+        
+        return [sectionLetter1 compare:sectionLetter2];
+    }];
+    
+    for (NSDictionary *_sectionData in _tableData) {
+        [(NSMutableArray *)_sectionData[@"rows"] sortUsingComparator:^NSComparisonResult(PFObject *bloco1, PFObject *bloco2) {
+            NSString *blocoName1 = bloco1[@"name"];
+            NSString *blocoName2 = bloco2[@"name"];
+
+            return [blocoName1 compare:blocoName2];
+        }];
+    }
 }
 
 #pragma mark - Table view data source
