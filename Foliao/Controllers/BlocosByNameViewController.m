@@ -137,6 +137,7 @@
     }
     
     cell.textLabel.text = _tableData[indexPath.section][@"rows"][indexPath.row][@"name"];
+    cell.textLabel.textColor = [UIColor colorWithRed:68/255.0 green:68/255.0 blue:68/255.0 alpha:1];
     
     return cell;
 }

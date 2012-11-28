@@ -38,7 +38,7 @@
 
 - (void)addMenuButton
 {
-    UIImage *menuButtonBackground = [UIImage imageNamed:@"bt-menu"];
+    UIImage *menuButtonBackground = [UIImage imageNamed:@"bt-menu-laranja"];
     UIButton *menuButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 43, 30)];
     [menuButton setBackgroundImage:menuButtonBackground forState:UIControlStateNormal];
     [menuButton addTarget:self.navigationController.parentViewController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];

@@ -25,6 +25,7 @@
 {
     _foliao = foliao;
     self.labelName.text = [NSString stringWithFormat:@"%@ %@", _foliao[@"firstName"], _foliao[@"lastName"]];
+    self.labelName.textColor = [UIColor colorWithRed:68/255.0 green:68/255.0 blue:68/255.0 alpha:1];
     
     [self.imageViewProfile setImageWithURL:[self foliaoImageURL] placeholderImage:[UIImage imageNamed:@"110x110.gif"]
       success:^(UIImage *image, BOOL cached) {

@@ -56,6 +56,7 @@ static BOOL IsDateBetweenInclusive(NSDate *date, NSDate *begin, NSDate *end)
     
     PFObject *parade = [self paradeAtIndexPath:indexPath];
     cell.textLabel.text = parade[@"bloco"][@"name"];
+    cell.textLabel.textColor = [UIColor colorWithRed:68/255.0 green:68/255.0 blue:68/255.0 alpha:1];
     return cell;
 }
 

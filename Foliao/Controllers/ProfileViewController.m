@@ -129,6 +129,8 @@
     }
     
     cell.textLabel.text = self.presences[indexPath.row][@"parade"][@"bloco"][@"name"];
+    cell.textLabel.textColor = [UIColor colorWithRed:68/255.0 green:68/255.0 blue:68/255.0 alpha:1];
+    
     cell.detailTextLabel.text = [DateUtil stringFromDate:self.presences[indexPath.row][@"parade"][@"date"]];
     
     return cell;

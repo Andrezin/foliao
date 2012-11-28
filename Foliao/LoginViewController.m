@@ -26,10 +26,29 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    UIImage *backgroundImage;
+    if (IS_IPHONE_5) {
+        backgroundImage = [UIImage imageNamed:@"Default-568h"];
+    } else {
+        backgroundImage = [UIImage imageNamed:@"Default"];
+    }
+    
+    UIImageView *bgImageView = [[UIImageView alloc] initWithImage:backgroundImage];
+    bgImageView.frame = CGRectMake(0, -20, backgroundImage.size.width, backgroundImage.size.height);
+    [self.view insertSubview:bgImageView belowSubview:self.buttonLogin];
     
     self.buttonLogin.alpha = 0;
     self.buttonLogin.layer.cornerRadius = 3;
     self.buttonLogin.clipsToBounds = YES;
+    self.buttonLogin.frame = CGRectMake(self.buttonLogin.frame.origin.x,
+                                        [UIScreen mainScreen].bounds.size.height * 0.6,
+                                        self.buttonLogin.frame.size.width,
+                                        self.buttonLogin.frame.size.height);
+    self.spinner.frame = CGRectMake(self.spinner.frame.origin.x,
+                                    self.buttonLogin.frame.origin.y + self.buttonLogin.frame.size.height + 10,
+                                    self.spinner.frame.size.width,
+                                    self.spinner.frame.size.height);
 }
 
 - (void)viewDidAppear:(BOOL)animated
