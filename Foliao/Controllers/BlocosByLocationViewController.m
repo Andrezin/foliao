@@ -9,6 +9,7 @@
 #import <Parse/Parse.h>
 
 #import "BlocosByLocationViewController.h"
+#import "MapSettingsViewController.h"
 #import "BlocoViewController.h"
 #import "ParadeAnnotation.h"
 
@@ -25,6 +26,7 @@
 
 - (MKCoordinateRegion)regionThatFitsUserLocation:(CLLocation *)userLocation;
 - (IBAction)buttonLocateMeTapped:(UIButton *)button;
+- (IBAction)buttonSettingsTapped:(UIButton *)button;
 
 @end
 
@@ -148,6 +150,13 @@
 - (IBAction)buttonLocateMeTapped:(UIButton *)button
 {
     [self.mapView setCenterCoordinate:self.mapView.userLocation.coordinate animated:YES];
+}
+
+- (IBAction)buttonSettingsTapped:(UIButton *)button
+{
+    MapSettingsViewController *mapSettings = [[MapSettingsViewController alloc] init];
+    mapSettings.modalTransitionStyle = UIModalTransitionStylePartialCurl;
+    [self presentModalViewController:mapSettings animated:YES];
 }
 
 @end
