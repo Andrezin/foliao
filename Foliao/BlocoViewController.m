@@ -303,7 +303,7 @@ typedef enum viewDomainClass {
                     
                     [PFQuery clearAllCachedResults];
                     
-                    [SVProgressHUD showSuccessWithStatus:@"Ah muleque!"];
+//                    [SVProgressHUD showSuccessWithStatus:@"Ah muleque!"];
                     [self addFoliaoToPresencesBox];
                 } else {
                     NSLog(@"Error when confirming presence.");
@@ -315,7 +315,38 @@ typedef enum viewDomainClass {
 
 - (void)addFoliaoToPresencesBox
 {
-#warning TODO and remove HUD.
+    [self.folioes insertObject:[PFUser currentUser] atIndex:0];
+    self.labelEmptyBloco.hidden = YES;
+    
+    __block CGRect firstImageFrame = self.imageViewPictureFoliao0.frame;
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        self.imageViewPictureFoliao0.frame = self.imageViewPictureFoliao1.frame;
+        self.imageViewPictureFoliao1.frame = self.imageViewPictureFoliao2.frame;
+        self.imageViewPictureFoliao2.frame = self.imageViewPictureFoliao3.frame;
+        self.imageViewPictureFoliao3.frame = self.imageViewPictureFoliao4.frame;
+        self.imageViewPictureFoliao4.alpha = 0.0;
+    } completion:^(BOOL finished) {
+        self.imageViewPictureFoliao4.hidden = YES;
+        __block UIImageView *imageViewNewPresence = [[UIImageView alloc] initWithFrame:firstImageFrame];
+        imageViewNewPresence.layer.cornerRadius = 3.0;
+        imageViewNewPresence.contentMode = UIViewContentModeScaleAspectFill;
+        imageViewNewPresence.clipsToBounds = YES;
+        imageViewNewPresence.alpha = 0;
+        [self.imageViewPictureFoliao1.superview addSubview:imageViewNewPresence];
+        
+        NSString *picURL = [NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=normal", [PFUser currentUser][@"facebookId"]];
+        
+        [imageViewNewPresence setImageWithURL:[NSURL URLWithString:picURL]
+                             placeholderImage:[UIImage imageNamed:@"110x110.gif"]
+                                      success:^(UIImage *image, BOOL cached) {
+                                          
+          [UIView animateWithDuration:0.5 animations:^{
+              imageViewNewPresence.alpha = 1;
+          }];
+            
+        } failure:^(NSError *error) {}];
+    }];
 }
 
 - (IBAction)expandMap:(UIButton *)sender
