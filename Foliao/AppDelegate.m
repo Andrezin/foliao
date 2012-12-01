@@ -96,11 +96,18 @@
     UIImage *barButtonImage = [[UIImage imageNamed:@"bt-branco"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 5, 0, 5)];
     [[UIBarButtonItem appearance] setBackgroundImage:barButtonImage
                                             forState:UIControlStateNormal
+                                               style:UIBarButtonItemStyleBordered
                                           barMetrics:UIBarMetricsDefault];
     
     [[UIBarButtonItem appearance] setBackButtonBackgroundImage:barButtonImage
                                                       forState:UIControlStateNormal
                                                     barMetrics:UIBarMetricsDefault];
+    
+    UIImage *barButtonDoneImage = [[UIImage imageNamed:@"bt-roxo"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 5, 0, 5)];
+    [[UIBarButtonItem appearance] setBackgroundImage:barButtonDoneImage
+                                            forState:UIControlStateNormal
+                                               style:UIBarButtonItemStyleDone
+                                          barMetrics:UIBarMetricsDefault];
 }
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url

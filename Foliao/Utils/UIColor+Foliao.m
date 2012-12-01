@@ -37,7 +37,7 @@
 
 + (UIColor *)foliaoPurpleColor
 {
-    return [UIColor colorWithRed:255/255.0 green:167/255.0 blue:28/255.0 alpha:1];
+    return [UIColor colorWithRed:124/255.0 green:118/255.0 blue:247/255.0 alpha:1];
 }
 
 @end

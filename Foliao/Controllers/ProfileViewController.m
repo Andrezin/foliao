@@ -12,6 +12,7 @@
 #import "BlocoViewController.h"
 #import "AppConstants.h"
 #import "DateUtil.h"
+#import "UIColor+Foliao.h"
 
 @interface ProfileViewController ()
 
@@ -23,7 +24,7 @@
 @property (strong, nonatomic) NSMutableArray *presences;
 
 - (void)showNumberOfPresences;
-- (void)showEditButton;
+- (void)customizeEditButton;
 - (void)editButtonTapped;
 - (void)loadFoliaoPresences;
 
@@ -36,9 +37,12 @@
 {
     [super viewDidLoad];
     
+    [self customizeEditButton];
+        
     if (!self.user || self.user == [PFUser currentUser]) {
         self.user = [PFUser currentUser];
-        [self showEditButton];
+    } else {
+        self.navigationItem.rightBarButtonItem = nil;
     }
     
     [self.imageViewProfile setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=large", self.user[@"facebookId"]]] placeholderImage:[UIImage imageNamed:@"200x200.gif"]];
@@ -51,37 +55,45 @@
     [self loadFoliaoPresences];
 }
 
-- (void)showEditButton
+- (void)customizeEditButton
 {
-    UIButton *editButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 43, 30)];
-    editButton.titleLabel.font = [UIFont boldSystemFontOfSize:11];
-    [editButton setTitle:@"Editar" forState:UIControlStateNormal];
-    [editButton setBackgroundImage:[UIImage imageNamed:@"bt-base"] forState:UIControlStateNormal];
-    [editButton addTarget:self action:@selector(editButtonTapped) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *editButtonItem = [[UIBarButtonItem alloc] initWithCustomView:editButton];
-    self.navigationItem.rightBarButtonItem = editButtonItem;
+    NSDictionary *attrs = @{
+        UITextAttributeTextColor: [UIColor foliaoOrangeColor],
+        UITextAttributeTextShadowColor: [UIColor clearColor],
+    };
+    [self.editButtonItem setTitleTextAttributes:attrs forState:UIControlStateNormal];
+    [self.editButtonItem setTitle:@"Editar"];
+    
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)editButtonTapped
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated
 {
-    [self.tableView setEditing:!self.tableView.editing animated:YES];
+    [super setEditing:editing animated:animated];
+    [self.tableView setEditing:editing animated:animated];
+
     
-    UIButton *editButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 43, 30)];
-    editButton.titleLabel.font = [UIFont boldSystemFontOfSize:11];
-    
-    if (self.tableView.editing) {
-        [editButton setBackgroundImage:[UIImage imageNamed:@"bt-ok"]
-                                       forState:UIControlStateNormal];
-        [editButton setTitle:@"OK" forState:UIControlStateNormal];
+    NSDictionary *attrs;
+    UIImage *buttonImage;
+    if(editing == YES) {
+        [self.editButtonItem setTitle:@"OK"];
+        buttonImage = [[UIImage imageNamed:@"bt-roxo"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 5, 0, 5)];
+        attrs = @{
+            UITextAttributeTextColor: [UIColor whiteColor],
+            UITextAttributeTextShadowColor: [UIColor clearColor],
+        };
+        
     } else {
-        [editButton setBackgroundImage:[UIImage imageNamed:@"bt-base"]
-                                       forState:UIControlStateNormal];
-        [editButton setTitle:@"Editar" forState:UIControlStateNormal];
+        [self.editButtonItem setTitle:@"Editar"];
+        buttonImage = [[UIImage imageNamed:@"bt-branco"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 5, 0, 5)];
+        attrs = @{
+            UITextAttributeTextColor: [UIColor foliaoOrangeColor],
+            UITextAttributeTextShadowColor: [UIColor clearColor],
+        };
     }
     
-    [editButton addTarget:self action:@selector(editButtonTapped) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *editButtonItem = [[UIBarButtonItem alloc] initWithCustomView:editButton];
-    self.navigationItem.rightBarButtonItem = editButtonItem;
+    [self.editButtonItem setBackgroundImage:buttonImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    [self.editButtonItem setTitleTextAttributes:attrs forState:UIControlStateNormal];
 }
 
 - (void)loadFoliaoPresences
