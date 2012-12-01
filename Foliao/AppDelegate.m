@@ -15,6 +15,7 @@
 #import "ZUUIRevealController.h"
 #import "MenuViewController.h"
 #import "BlocosByLocationViewController.h"
+#import "UIColor+Foliao.h"
 #import "AppConstants.h"
 
 @interface AppDelegate()
@@ -24,7 +25,8 @@
 - (void)takeMyFacebookData;
 - (void)showLoginView:(BOOL)animated;
 - (void)customizeAppearance;
-- (void)customizeBackButton;
+- (void)customizeNavigationBar;
+- (void)customizeBarButtonItem;
 
 @end
 
@@ -79,14 +81,26 @@
 
 - (void)customizeAppearance
 {
-    [self customizeBackButton];
+    [self customizeNavigationBar];
+    [self customizeBarButtonItem];
 }
 
-- (void)customizeBackButton
+- (void)customizeNavigationBar
 {
-    UIImage *backButtonImage = [[UIImage imageNamed:@"bt-voltar"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 43, 0, 0)];
-    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backButtonImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-100, 0) forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigation-bar"]
+                                             forBarMetrics:UIBarMetricsDefault];
+}
+
+- (void)customizeBarButtonItem
+{
+    UIImage *barButtonImage = [[UIImage imageNamed:@"bt-branco"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 5, 0, 5)];
+    [[UIBarButtonItem appearance] setBackgroundImage:barButtonImage
+                                            forState:UIControlStateNormal
+                                          barMetrics:UIBarMetricsDefault];
+    
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:barButtonImage
+                                                      forState:UIControlStateNormal
+                                                    barMetrics:UIBarMetricsDefault];
 }
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url

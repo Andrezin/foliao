@@ -13,7 +13,10 @@
 
 @interface BaseViewController()
 
+- (void)addGestureRecognizerToNavigationBar;
+- (BOOL)isRootViewController;
 - (void)addMenuButton;
+- (void)addBackButton;
 
 @end
 
@@ -24,26 +27,57 @@
 {
     [super viewWillAppear:animated];
     
-    if (self == self.navigationController.viewControllers[0]) {
-        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigation-bar"] forBarMetrics:UIBarMetricsDefault];
-        
-        if ([self.navigationController.parentViewController respondsToSelector:@selector(revealGesture:)] && [self.navigationController.parentViewController respondsToSelector:@selector(revealToggle:)]) {
-            UIPanGestureRecognizer *navigationBarPanGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self.navigationController.parentViewController action:@selector(revealGesture:)];
-            [self.navigationController.navigationBar addGestureRecognizer:navigationBarPanGestureRecognizer];
-            
-            [self addMenuButton];
-        }
-    }
+    [self addGestureRecognizerToNavigationBar];
+    
+    if ([self isRootViewController])
+        [self addMenuButton];
+    else
+        [self addBackButton];
+}
+
+- (void)addGestureRecognizerToNavigationBar
+{
+    
+    UIPanGestureRecognizer *navigationBarPanGestureRecognizer =
+    [[UIPanGestureRecognizer alloc] initWithTarget:self.navigationController.parentViewController
+                                            action:@selector(revealGesture:)];
+    
+    [self.navigationController.navigationBar addGestureRecognizer:navigationBarPanGestureRecognizer];
+}
+
+- (BOOL)isRootViewController
+{
+    return self == self.navigationController.viewControllers[0];
 }
 
 - (void)addMenuButton
 {
     UIImage *menuButtonBackground = [UIImage imageNamed:@"bt-menu-laranja"];
-    UIButton *menuButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 43, 30)];
-    [menuButton setBackgroundImage:menuButtonBackground forState:UIControlStateNormal];
-    [menuButton addTarget:self.navigationController.parentViewController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:menuButtonBackground style:UIBarButtonItemStylePlain target:self.navigationController.parentViewController action:@selector(revealToggle:)];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:menuButton];
+    self.navigationItem.leftBarButtonItem = menuButton;
+}
+
+- (void)addBackButton
+{
+    UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 43, 30)];
+    
+    UIImage *whiteBackground = [[UIImage imageNamed:@"bt-branco"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 5, 0, 5)];
+    [backButton setBackgroundImage:whiteBackground forState:UIControlStateNormal];
+    [backButton setImage:[UIImage imageNamed:@"bt-voltar-laranja"] forState:UIControlStateNormal];
+    [backButton setTitle:@"" forState:UIControlStateNormal];
+    [backButton addTarget:self
+                   action:@selector(popViewControllerAnimated)
+         forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+    
+    self.navigationItem.leftBarButtonItem = backButtonItem;
+}
+
+- (void)popViewControllerAnimated
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

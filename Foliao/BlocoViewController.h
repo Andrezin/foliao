@@ -8,8 +8,9 @@
 
 #import <MapKit/MapKit.h>
 #import <Parse/Parse.h>
+#import "BaseViewController.h"
 
-@interface BlocoViewController : UIViewController <UIActionSheetDelegate, MKMapViewDelegate>
+@interface BlocoViewController : BaseViewController <UIActionSheetDelegate, MKMapViewDelegate>
 
 @property (strong, nonatomic) PFObject *bloco; // if I came from a list of "blocos"
 @property (strong, nonatomic) PFObject *parade; // if I came from a list of "parades"

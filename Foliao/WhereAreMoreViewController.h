@@ -8,10 +8,10 @@
 
 #import "BaseViewController.h"
 
-typedef enum whereAreMoreSomething {
+typedef enum {
     WhereAreMorePeople = 1,
-    WhereAreMoreWomen = 2,
-    WhereAreMoreMen = 3
+    WhereAreMoreWomen,
+    WhereAreMoreMen
 } WhereAreMoreSomething;
 
 @interface WhereAreMoreViewController : BaseViewController <UITableViewDataSource, UITableViewDelegate>
