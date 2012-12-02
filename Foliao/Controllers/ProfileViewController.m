@@ -13,6 +13,7 @@
 #import "AppConstants.h"
 #import "DateUtil.h"
 #import "UIColor+Foliao.h"
+#import "ThemeManager.h"
 
 @interface ProfileViewController ()
 
@@ -58,7 +59,7 @@
 - (void)customizeEditButton
 {
     NSDictionary *attrs = @{
-        UITextAttributeTextColor: [UIColor foliaoOrangeColor],
+        UITextAttributeTextColor: [[ThemeManager currentTheme] color],
         UITextAttributeTextShadowColor: [UIColor clearColor],
     };
     [self.editButtonItem setTitleTextAttributes:attrs forState:UIControlStateNormal];
@@ -87,7 +88,7 @@
         [self.editButtonItem setTitle:@"Editar"];
         buttonImage = [[UIImage imageNamed:@"bt-branco"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 5, 0, 5)];
         attrs = @{
-            UITextAttributeTextColor: [UIColor foliaoOrangeColor],
+            UITextAttributeTextColor: [[ThemeManager currentTheme] color],
             UITextAttributeTextShadowColor: [UIColor clearColor],
         };
     }
@@ -137,7 +138,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-        cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"seta-quem-vai"]];
+        cell.accessoryView = [[UIImageView alloc] initWithImage:[[ThemeManager currentTheme] accessoryViewImage]];
     }
     
     cell.textLabel.text = self.presences[indexPath.row][@"parade"][@"bloco"][@"name"];

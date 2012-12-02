@@ -14,6 +14,7 @@
 #import "ParadeAnnotation.h"
 #import "WhoIsGoingViewController.h"
 #import "DateUtil.h"
+#import "ThemeManager.h"
 
 typedef enum viewDomainClass {
     ViewDomainClassBloco = 1,
@@ -216,6 +217,7 @@ typedef enum viewDomainClass {
         }
         
         self.imageViewAccessoryWhoIsGoing.hidden = NO;
+        self.imageViewAccessoryWhoIsGoing.image = [[ThemeManager currentTheme] accessoryViewImage];
     }];
 }
 

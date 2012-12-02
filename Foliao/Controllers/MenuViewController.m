@@ -64,7 +64,7 @@
             @"section_title": [@"Programação" uppercaseString],
             @"row_title": @[
                 @"Blocos que eu vou",
-                @"Onde meus amigos vão"
+                @"Aonde meus amigos vão"
             ]
         },
         @{

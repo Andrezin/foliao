@@ -42,22 +42,25 @@
 		019E6B4416565C890025786D /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 019E6B4316565C890025786D /* SVProgressHUD.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		019E6B4616565D660025786D /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 019E6B4516565D660025786D /* SVProgressHUD.bundle */; };
 		01AA2AE9165FFFF0001AEBFB /* DateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AA2AE8165FFFF0001AEBFB /* DateUtil.m */; };
-		01B42BC016668F9A0080F2C9 /* seta-laranja.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B42BBC16668F9A0080F2C9 /* seta-laranja.png */; };
-		01B42BC116668F9A0080F2C9 /* seta-rosa.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B42BBD16668F9A0080F2C9 /* seta-rosa.png */; };
-		01B42BC816668FAD0080F2C9 /* seta-laranja@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B42BC416668FAD0080F2C9 /* seta-laranja@2x.png */; };
-		01B42BC916668FAD0080F2C9 /* seta-rosa@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B42BC516668FAD0080F2C9 /* seta-rosa@2x.png */; };
-		01B42BCB166690C30080F2C9 /* bt-menu-rosa.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B42BCA166690C30080F2C9 /* bt-menu-rosa.png */; };
-		01B42BCD166690E20080F2C9 /* bt-menu-rosa@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B42BCC166690E20080F2C9 /* bt-menu-rosa@2x.png */; };
+		01AAF180166BE689002CA70D /* bt-menu-laranja.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AAF177166BE689002CA70D /* bt-menu-laranja.png */; };
+		01AAF181166BE689002CA70D /* bt-voltar-laranja.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AAF178166BE689002CA70D /* bt-voltar-laranja.png */; };
+		01AAF182166BE689002CA70D /* seta-laranja.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AAF179166BE689002CA70D /* seta-laranja.png */; };
+		01AAF183166BE689002CA70D /* bt-menu-rosa.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AAF17B166BE689002CA70D /* bt-menu-rosa.png */; };
+		01AAF184166BE689002CA70D /* bt-voltar-rosa.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AAF17C166BE689002CA70D /* bt-voltar-rosa.png */; };
+		01AAF185166BE689002CA70D /* seta-rosa.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AAF17D166BE689002CA70D /* seta-rosa.png */; };
+		01AAF193166BE691002CA70D /* bt-menu-laranja@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AAF18A166BE691002CA70D /* bt-menu-laranja@2x.png */; };
+		01AAF194166BE691002CA70D /* bt-voltar-laranja@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AAF18B166BE691002CA70D /* bt-voltar-laranja@2x.png */; };
+		01AAF195166BE691002CA70D /* seta-laranja@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AAF18C166BE691002CA70D /* seta-laranja@2x.png */; };
+		01AAF196166BE691002CA70D /* bt-menu-rosa@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AAF18E166BE691002CA70D /* bt-menu-rosa@2x.png */; };
+		01AAF197166BE691002CA70D /* bt-voltar-rosa@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AAF18F166BE691002CA70D /* bt-voltar-rosa@2x.png */; };
+		01AAF198166BE691002CA70D /* seta-rosa@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AAF190166BE691002CA70D /* seta-rosa@2x.png */; };
+		01AAF19C166BE7F1002CA70D /* ThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AAF19B166BE7F1002CA70D /* ThemeManager.m */; };
+		01AAF19F166BE8CD002CA70D /* OrangeTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AAF19E166BE8CD002CA70D /* OrangeTheme.m */; };
+		01AAF1A2166BEA88002CA70D /* PinkTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AAF1A1166BEA88002CA70D /* PinkTheme.m */; };
 		01B42BCF166699700080F2C9 /* bt-branco@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B42BCE166699700080F2C9 /* bt-branco@2x.png */; };
 		01B42BD1166699800080F2C9 /* bt-branco.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B42BD0166699800080F2C9 /* bt-branco.png */; };
 		01B42BD31666A1E10080F2C9 /* bt-roxo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B42BD21666A1E10080F2C9 /* bt-roxo@2x.png */; };
 		01B42BD51666A1F80080F2C9 /* bt-roxo.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B42BD41666A1F80080F2C9 /* bt-roxo.png */; };
-		01B42BD71666BBD90080F2C9 /* bt-voltar-rosa.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B42BD61666BBD90080F2C9 /* bt-voltar-rosa.png */; };
-		01B42BD91666BBE50080F2C9 /* bt-voltar-rosa@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B42BD81666BBE50080F2C9 /* bt-voltar-rosa@2x.png */; };
-		01B42BED1666D5890080F2C9 /* bt-menu-laranja@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B42BEC1666D5880080F2C9 /* bt-menu-laranja@2x.png */; };
-		01B42BEF1666D59C0080F2C9 /* bt-menu-laranja.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B42BEE1666D59C0080F2C9 /* bt-menu-laranja.png */; };
-		01B42BF11666E6350080F2C9 /* bt-voltar-laranja@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B42BF01666E6340080F2C9 /* bt-voltar-laranja@2x.png */; };
-		01B42BF31666E64C0080F2C9 /* bt-voltar-laranja.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B42BF21666E64C0080F2C9 /* bt-voltar-laranja.png */; };
 		01BE6228164B3B000000679C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BE6227164B3B000000679C /* UIKit.framework */; };
 		01BE622A164B3B000000679C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BE6229164B3B000000679C /* Foundation.framework */; };
 		01BE622C164B3B000000679C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BE622B164B3B000000679C /* CoreGraphics.framework */; };
@@ -74,18 +77,10 @@
 		01BE6264164B3CEA0000679C /* 512x512.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6262164B3CEA0000679C /* 512x512.png */; };
 		01BE6277164B3D450000679C /* bt-checkin.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6268164B3D450000679C /* bt-checkin.png */; };
 		01BE6278164B3D450000679C /* bt-base.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6269164B3D450000679C /* bt-base.png */; };
-		01BE6279164B3D450000679C /* bt-menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE626A164B3D450000679C /* bt-menu.png */; };
-		01BE627A164B3D450000679C /* bt-ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE626B164B3D450000679C /* bt-ok.png */; };
-		01BE627B164B3D450000679C /* bt-voltar.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE626C164B3D450000679C /* bt-voltar.png */; };
 		01BE627C164B3D450000679C /* marca.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE626D164B3D450000679C /* marca.png */; };
-		01BE627D164B3D450000679C /* seta-quem-vai.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE626E164B3D450000679C /* seta-quem-vai.png */; };
 		01BE627E164B3D450000679C /* bt-checkin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6270164B3D450000679C /* bt-checkin@2x.png */; };
 		01BE627F164B3D450000679C /* bt-base@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6271164B3D450000679C /* bt-base@2x.png */; };
-		01BE6280164B3D450000679C /* bt-menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6272164B3D450000679C /* bt-menu@2x.png */; };
-		01BE6281164B3D450000679C /* bt-ok@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6273164B3D450000679C /* bt-ok@2x.png */; };
-		01BE6282164B3D450000679C /* bt-voltar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6274164B3D450000679C /* bt-voltar@2x.png */; };
 		01BE6283164B3D450000679C /* marca@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6275164B3D450000679C /* marca@2x.png */; };
-		01BE6284164B3D450000679C /* seta-quem-vai@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6276164B3D450000679C /* seta-quem-vai@2x.png */; };
 		01CC6355165B091E005F68BA /* 200x200.gif in Resources */ = {isa = PBXBuildFile; fileRef = 01CC6354165B091E005F68BA /* 200x200.gif */; };
 		01CC6358165B0FA4005F68BA /* FoliaoRankingTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CC6357165B0FA4005F68BA /* FoliaoRankingTitle.m */; };
 		01CC635B165B2FB1005F68BA /* bt-locate-me-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CC6359165B2FB1005F68BA /* bt-locate-me-bg.png */; };
@@ -199,22 +194,28 @@
 		019E6B4516565D660025786D /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		01AA2AE7165FFFF0001AEBFB /* DateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtil.h; sourceTree = "<group>"; };
 		01AA2AE8165FFFF0001AEBFB /* DateUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtil.m; sourceTree = "<group>"; };
-		01B42BBC16668F9A0080F2C9 /* seta-laranja.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seta-laranja.png"; sourceTree = "<group>"; };
-		01B42BBD16668F9A0080F2C9 /* seta-rosa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seta-rosa.png"; sourceTree = "<group>"; };
-		01B42BC416668FAD0080F2C9 /* seta-laranja@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seta-laranja@2x.png"; sourceTree = "<group>"; };
-		01B42BC516668FAD0080F2C9 /* seta-rosa@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seta-rosa@2x.png"; sourceTree = "<group>"; };
-		01B42BCA166690C30080F2C9 /* bt-menu-rosa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-menu-rosa.png"; sourceTree = "<group>"; };
-		01B42BCC166690E20080F2C9 /* bt-menu-rosa@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-menu-rosa@2x.png"; sourceTree = "<group>"; };
+		01AAF177166BE689002CA70D /* bt-menu-laranja.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-menu-laranja.png"; sourceTree = "<group>"; };
+		01AAF178166BE689002CA70D /* bt-voltar-laranja.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-voltar-laranja.png"; sourceTree = "<group>"; };
+		01AAF179166BE689002CA70D /* seta-laranja.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seta-laranja.png"; sourceTree = "<group>"; };
+		01AAF17B166BE689002CA70D /* bt-menu-rosa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-menu-rosa.png"; sourceTree = "<group>"; };
+		01AAF17C166BE689002CA70D /* bt-voltar-rosa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-voltar-rosa.png"; sourceTree = "<group>"; };
+		01AAF17D166BE689002CA70D /* seta-rosa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seta-rosa.png"; sourceTree = "<group>"; };
+		01AAF18A166BE691002CA70D /* bt-menu-laranja@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-menu-laranja@2x.png"; sourceTree = "<group>"; };
+		01AAF18B166BE691002CA70D /* bt-voltar-laranja@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-voltar-laranja@2x.png"; sourceTree = "<group>"; };
+		01AAF18C166BE691002CA70D /* seta-laranja@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seta-laranja@2x.png"; sourceTree = "<group>"; };
+		01AAF18E166BE691002CA70D /* bt-menu-rosa@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-menu-rosa@2x.png"; sourceTree = "<group>"; };
+		01AAF18F166BE691002CA70D /* bt-voltar-rosa@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-voltar-rosa@2x.png"; sourceTree = "<group>"; };
+		01AAF190166BE691002CA70D /* seta-rosa@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seta-rosa@2x.png"; sourceTree = "<group>"; };
+		01AAF19A166BE7F1002CA70D /* ThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeManager.h; sourceTree = "<group>"; };
+		01AAF19B166BE7F1002CA70D /* ThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeManager.m; sourceTree = "<group>"; };
+		01AAF19D166BE8CD002CA70D /* OrangeTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrangeTheme.h; sourceTree = "<group>"; };
+		01AAF19E166BE8CD002CA70D /* OrangeTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrangeTheme.m; sourceTree = "<group>"; };
+		01AAF1A0166BEA88002CA70D /* PinkTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinkTheme.h; sourceTree = "<group>"; };
+		01AAF1A1166BEA88002CA70D /* PinkTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinkTheme.m; sourceTree = "<group>"; };
 		01B42BCE166699700080F2C9 /* bt-branco@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-branco@2x.png"; sourceTree = "<group>"; };
 		01B42BD0166699800080F2C9 /* bt-branco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-branco.png"; sourceTree = "<group>"; };
 		01B42BD21666A1E10080F2C9 /* bt-roxo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-roxo@2x.png"; sourceTree = "<group>"; };
 		01B42BD41666A1F80080F2C9 /* bt-roxo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-roxo.png"; sourceTree = "<group>"; };
-		01B42BD61666BBD90080F2C9 /* bt-voltar-rosa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-voltar-rosa.png"; sourceTree = "<group>"; };
-		01B42BD81666BBE50080F2C9 /* bt-voltar-rosa@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-voltar-rosa@2x.png"; sourceTree = "<group>"; };
-		01B42BEC1666D5880080F2C9 /* bt-menu-laranja@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-menu-laranja@2x.png"; sourceTree = "<group>"; };
-		01B42BEE1666D59C0080F2C9 /* bt-menu-laranja.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-menu-laranja.png"; sourceTree = "<group>"; };
-		01B42BF01666E6340080F2C9 /* bt-voltar-laranja@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-voltar-laranja@2x.png"; sourceTree = "<group>"; };
-		01B42BF21666E64C0080F2C9 /* bt-voltar-laranja.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-voltar-laranja.png"; sourceTree = "<group>"; };
 		01BE6223164B3B000000679C /* Foliao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foliao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01BE6227164B3B000000679C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		01BE6229164B3B000000679C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -236,18 +237,10 @@
 		01BE6262164B3CEA0000679C /* 512x512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 512x512.png; sourceTree = "<group>"; };
 		01BE6268164B3D450000679C /* bt-checkin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-checkin.png"; sourceTree = "<group>"; };
 		01BE6269164B3D450000679C /* bt-base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-base.png"; sourceTree = "<group>"; };
-		01BE626A164B3D450000679C /* bt-menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-menu.png"; sourceTree = "<group>"; };
-		01BE626B164B3D450000679C /* bt-ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-ok.png"; sourceTree = "<group>"; };
-		01BE626C164B3D450000679C /* bt-voltar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-voltar.png"; sourceTree = "<group>"; };
 		01BE626D164B3D450000679C /* marca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marca.png; sourceTree = "<group>"; };
-		01BE626E164B3D450000679C /* seta-quem-vai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seta-quem-vai.png"; sourceTree = "<group>"; };
 		01BE6270164B3D450000679C /* bt-checkin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-checkin@2x.png"; sourceTree = "<group>"; };
 		01BE6271164B3D450000679C /* bt-base@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-base@2x.png"; sourceTree = "<group>"; };
-		01BE6272164B3D450000679C /* bt-menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-menu@2x.png"; sourceTree = "<group>"; };
-		01BE6273164B3D450000679C /* bt-ok@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-ok@2x.png"; sourceTree = "<group>"; };
-		01BE6274164B3D450000679C /* bt-voltar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-voltar@2x.png"; sourceTree = "<group>"; };
 		01BE6275164B3D450000679C /* marca@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "marca@2x.png"; sourceTree = "<group>"; };
-		01BE6276164B3D450000679C /* seta-quem-vai@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seta-quem-vai@2x.png"; sourceTree = "<group>"; };
 		01CC6354165B091E005F68BA /* 200x200.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 200x200.gif; sourceTree = "<group>"; };
 		01CC6356165B0FA4005F68BA /* FoliaoRankingTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoliaoRankingTitle.h; sourceTree = "<group>"; };
 		01CC6357165B0FA4005F68BA /* FoliaoRankingTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoliaoRankingTitle.m; sourceTree = "<group>"; };
@@ -383,6 +376,7 @@
 		0140011C165AB0BC008F0429 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				01AAF199166BE7CE002CA70D /* Theme */,
 				0140011D165AB0BC008F0429 /* KalBlocosDataSource.h */,
 				0140011E165AB0BC008F0429 /* KalBlocosDataSource.m */,
 				01400120165AB490008F0429 /* ParadeAnnotation.h */,
@@ -439,6 +433,141 @@
 				019E6B4316565C890025786D /* SVProgressHUD.m */,
 			);
 			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		01AAF173166BE689002CA70D /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				01AAF174166BE689002CA70D /* Blue */,
+				01AAF175166BE689002CA70D /* Green */,
+				01AAF176166BE689002CA70D /* Orange */,
+				01AAF17A166BE689002CA70D /* Pink */,
+				01AAF17E166BE689002CA70D /* Purple */,
+				01AAF17F166BE689002CA70D /* Yellow */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
+		01AAF174166BE689002CA70D /* Blue */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Blue;
+			sourceTree = "<group>";
+		};
+		01AAF175166BE689002CA70D /* Green */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Green;
+			sourceTree = "<group>";
+		};
+		01AAF176166BE689002CA70D /* Orange */ = {
+			isa = PBXGroup;
+			children = (
+				01AAF177166BE689002CA70D /* bt-menu-laranja.png */,
+				01AAF178166BE689002CA70D /* bt-voltar-laranja.png */,
+				01AAF179166BE689002CA70D /* seta-laranja.png */,
+			);
+			path = Orange;
+			sourceTree = "<group>";
+		};
+		01AAF17A166BE689002CA70D /* Pink */ = {
+			isa = PBXGroup;
+			children = (
+				01AAF17B166BE689002CA70D /* bt-menu-rosa.png */,
+				01AAF17C166BE689002CA70D /* bt-voltar-rosa.png */,
+				01AAF17D166BE689002CA70D /* seta-rosa.png */,
+			);
+			path = Pink;
+			sourceTree = "<group>";
+		};
+		01AAF17E166BE689002CA70D /* Purple */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Purple;
+			sourceTree = "<group>";
+		};
+		01AAF17F166BE689002CA70D /* Yellow */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Yellow;
+			sourceTree = "<group>";
+		};
+		01AAF186166BE691002CA70D /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				01AAF187166BE691002CA70D /* Blue */,
+				01AAF188166BE691002CA70D /* Green */,
+				01AAF189166BE691002CA70D /* Orange */,
+				01AAF18D166BE691002CA70D /* Pink */,
+				01AAF191166BE691002CA70D /* Purple */,
+				01AAF192166BE691002CA70D /* Yellow */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
+		01AAF187166BE691002CA70D /* Blue */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Blue;
+			sourceTree = "<group>";
+		};
+		01AAF188166BE691002CA70D /* Green */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Green;
+			sourceTree = "<group>";
+		};
+		01AAF189166BE691002CA70D /* Orange */ = {
+			isa = PBXGroup;
+			children = (
+				01AAF18A166BE691002CA70D /* bt-menu-laranja@2x.png */,
+				01AAF18B166BE691002CA70D /* bt-voltar-laranja@2x.png */,
+				01AAF18C166BE691002CA70D /* seta-laranja@2x.png */,
+			);
+			path = Orange;
+			sourceTree = "<group>";
+		};
+		01AAF18D166BE691002CA70D /* Pink */ = {
+			isa = PBXGroup;
+			children = (
+				01AAF18E166BE691002CA70D /* bt-menu-rosa@2x.png */,
+				01AAF18F166BE691002CA70D /* bt-voltar-rosa@2x.png */,
+				01AAF190166BE691002CA70D /* seta-rosa@2x.png */,
+			);
+			path = Pink;
+			sourceTree = "<group>";
+		};
+		01AAF191166BE691002CA70D /* Purple */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Purple;
+			sourceTree = "<group>";
+		};
+		01AAF192166BE691002CA70D /* Yellow */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Yellow;
+			sourceTree = "<group>";
+		};
+		01AAF199166BE7CE002CA70D /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				01AAF19A166BE7F1002CA70D /* ThemeManager.h */,
+				01AAF19B166BE7F1002CA70D /* ThemeManager.m */,
+				01AAF19D166BE8CD002CA70D /* OrangeTheme.h */,
+				01AAF19E166BE8CD002CA70D /* OrangeTheme.m */,
+				01AAF1A0166BEA88002CA70D /* PinkTheme.h */,
+				01AAF1A1166BEA88002CA70D /* PinkTheme.m */,
+			);
+			name = Theme;
 			sourceTree = "<group>";
 		};
 		01BE6218164B3B000000679C = {
@@ -570,14 +699,9 @@
 		01BE6267164B3D450000679C /* Basic */ = {
 			isa = PBXGroup;
 			children = (
-				01B42BF21666E64C0080F2C9 /* bt-voltar-laranja.png */,
-				01B42BEE1666D59C0080F2C9 /* bt-menu-laranja.png */,
-				01B42BD61666BBD90080F2C9 /* bt-voltar-rosa.png */,
+				01AAF173166BE689002CA70D /* Themes */,
 				01B42BD41666A1F80080F2C9 /* bt-roxo.png */,
 				01B42BD0166699800080F2C9 /* bt-branco.png */,
-				01B42BCA166690C30080F2C9 /* bt-menu-rosa.png */,
-				01B42BBC16668F9A0080F2C9 /* seta-laranja.png */,
-				01B42BBD16668F9A0080F2C9 /* seta-rosa.png */,
 				01F25198166033E7009C52B4 /* menu-section-background.png */,
 				01F2519216602F71009C52B4 /* seta-branca.png */,
 				01CC6359165B2FB1005F68BA /* bt-locate-me-bg.png */,
@@ -585,11 +709,7 @@
 				014EECBF164DC80000C4F626 /* navigation-bar.png */,
 				01BE6268164B3D450000679C /* bt-checkin.png */,
 				01BE6269164B3D450000679C /* bt-base.png */,
-				01BE626A164B3D450000679C /* bt-menu.png */,
-				01BE626B164B3D450000679C /* bt-ok.png */,
-				01BE626C164B3D450000679C /* bt-voltar.png */,
 				01BE626D164B3D450000679C /* marca.png */,
-				01BE626E164B3D450000679C /* seta-quem-vai.png */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -597,14 +717,9 @@
 		01BE626F164B3D450000679C /* Retina */ = {
 			isa = PBXGroup;
 			children = (
-				01B42BF01666E6340080F2C9 /* bt-voltar-laranja@2x.png */,
-				01B42BEC1666D5880080F2C9 /* bt-menu-laranja@2x.png */,
-				01B42BD81666BBE50080F2C9 /* bt-voltar-rosa@2x.png */,
+				01AAF186166BE691002CA70D /* Themes */,
 				01B42BD21666A1E10080F2C9 /* bt-roxo@2x.png */,
 				01B42BCE166699700080F2C9 /* bt-branco@2x.png */,
-				01B42BCC166690E20080F2C9 /* bt-menu-rosa@2x.png */,
-				01B42BC416668FAD0080F2C9 /* seta-laranja@2x.png */,
-				01B42BC516668FAD0080F2C9 /* seta-rosa@2x.png */,
 				01F25196166033C1009C52B4 /* menu-section-background@2x.png */,
 				01F2519416602F96009C52B4 /* seta-branca@2x.png */,
 				01CC636F165B45B2005F68BA /* 110x110.gif */,
@@ -614,11 +729,7 @@
 				014EECC1164DC80D00C4F626 /* navigation-bar@2x.png */,
 				01BE6270164B3D450000679C /* bt-checkin@2x.png */,
 				01BE6271164B3D450000679C /* bt-base@2x.png */,
-				01BE6272164B3D450000679C /* bt-menu@2x.png */,
-				01BE6273164B3D450000679C /* bt-ok@2x.png */,
-				01BE6274164B3D450000679C /* bt-voltar@2x.png */,
 				01BE6275164B3D450000679C /* marca@2x.png */,
-				01BE6276164B3D450000679C /* seta-quem-vai@2x.png */,
 			);
 			path = Retina;
 			sourceTree = "<group>";
@@ -735,18 +846,10 @@
 				01BE6264164B3CEA0000679C /* 512x512.png in Resources */,
 				01BE6277164B3D450000679C /* bt-checkin.png in Resources */,
 				01BE6278164B3D450000679C /* bt-base.png in Resources */,
-				01BE6279164B3D450000679C /* bt-menu.png in Resources */,
-				01BE627A164B3D450000679C /* bt-ok.png in Resources */,
-				01BE627B164B3D450000679C /* bt-voltar.png in Resources */,
 				01BE627C164B3D450000679C /* marca.png in Resources */,
-				01BE627D164B3D450000679C /* seta-quem-vai.png in Resources */,
 				01BE627E164B3D450000679C /* bt-checkin@2x.png in Resources */,
 				01BE627F164B3D450000679C /* bt-base@2x.png in Resources */,
-				01BE6280164B3D450000679C /* bt-menu@2x.png in Resources */,
-				01BE6281164B3D450000679C /* bt-ok@2x.png in Resources */,
-				01BE6282164B3D450000679C /* bt-voltar@2x.png in Resources */,
 				01BE6283164B3D450000679C /* marca@2x.png in Resources */,
-				01BE6284164B3D450000679C /* seta-quem-vai@2x.png in Resources */,
 				018B5E72164DA0F000042B4E /* FacebookSDKResources.bundle in Resources */,
 				014EECC0164DC80000C4F626 /* navigation-bar.png in Resources */,
 				014EECC2164DC80E00C4F626 /* navigation-bar@2x.png in Resources */,
@@ -776,22 +879,22 @@
 				01F25197166033C1009C52B4 /* menu-section-background@2x.png in Resources */,
 				01F25199166033E7009C52B4 /* menu-section-background.png in Resources */,
 				0197C4361664016A00BA532D /* MapSettingsViewController.xib in Resources */,
-				01B42BC016668F9A0080F2C9 /* seta-laranja.png in Resources */,
-				01B42BC116668F9A0080F2C9 /* seta-rosa.png in Resources */,
-				01B42BC816668FAD0080F2C9 /* seta-laranja@2x.png in Resources */,
-				01B42BC916668FAD0080F2C9 /* seta-rosa@2x.png in Resources */,
-				01B42BCB166690C30080F2C9 /* bt-menu-rosa.png in Resources */,
-				01B42BCD166690E20080F2C9 /* bt-menu-rosa@2x.png in Resources */,
 				01B42BCF166699700080F2C9 /* bt-branco@2x.png in Resources */,
 				01B42BD1166699800080F2C9 /* bt-branco.png in Resources */,
 				01B42BD31666A1E10080F2C9 /* bt-roxo@2x.png in Resources */,
 				01B42BD51666A1F80080F2C9 /* bt-roxo.png in Resources */,
-				01B42BD71666BBD90080F2C9 /* bt-voltar-rosa.png in Resources */,
-				01B42BD91666BBE50080F2C9 /* bt-voltar-rosa@2x.png in Resources */,
-				01B42BED1666D5890080F2C9 /* bt-menu-laranja@2x.png in Resources */,
-				01B42BEF1666D59C0080F2C9 /* bt-menu-laranja.png in Resources */,
-				01B42BF11666E6350080F2C9 /* bt-voltar-laranja@2x.png in Resources */,
-				01B42BF31666E64C0080F2C9 /* bt-voltar-laranja.png in Resources */,
+				01AAF180166BE689002CA70D /* bt-menu-laranja.png in Resources */,
+				01AAF181166BE689002CA70D /* bt-voltar-laranja.png in Resources */,
+				01AAF182166BE689002CA70D /* seta-laranja.png in Resources */,
+				01AAF183166BE689002CA70D /* bt-menu-rosa.png in Resources */,
+				01AAF184166BE689002CA70D /* bt-voltar-rosa.png in Resources */,
+				01AAF185166BE689002CA70D /* seta-rosa.png in Resources */,
+				01AAF193166BE691002CA70D /* bt-menu-laranja@2x.png in Resources */,
+				01AAF194166BE691002CA70D /* bt-voltar-laranja@2x.png in Resources */,
+				01AAF195166BE691002CA70D /* seta-laranja@2x.png in Resources */,
+				01AAF196166BE691002CA70D /* bt-menu-rosa@2x.png in Resources */,
+				01AAF197166BE691002CA70D /* bt-voltar-rosa@2x.png in Resources */,
+				01AAF198166BE691002CA70D /* seta-rosa@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -848,6 +951,9 @@
 				01AA2AE9165FFFF0001AEBFB /* DateUtil.m in Sources */,
 				0197C4341664013F00BA532D /* MapSettingsViewController.m in Sources */,
 				0173BAF6166A6C2900B89082 /* UIColor+Foliao.m in Sources */,
+				01AAF19C166BE7F1002CA70D /* ThemeManager.m in Sources */,
+				01AAF19F166BE8CD002CA70D /* OrangeTheme.m in Sources */,
+				01AAF1A2166BEA88002CA70D /* PinkTheme.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

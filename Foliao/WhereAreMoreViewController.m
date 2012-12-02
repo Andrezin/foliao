@@ -11,6 +11,7 @@
 #import "WhereAreMoreViewController.h"
 #import "BlocoViewController.h"
 #import "AppConstants.h"
+#import "ThemeManager.h"
 
 @interface WhereAreMoreViewController ()
 
@@ -66,7 +67,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-        cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"seta-quem-vai"]];
+        cell.accessoryView = [[UIImageView alloc] initWithImage:[[ThemeManager currentTheme] accessoryViewImage]];
     }
     
     cell.textLabel.text = self.parades[indexPath.row][@"bloco"][@"name"];

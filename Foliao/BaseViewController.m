@@ -9,7 +9,7 @@
 #import <Parse/Parse.h>
 
 #import "BaseViewController.h"
-
+#import "ThemeManager.h"
 
 @interface BaseViewController()
 
@@ -52,7 +52,7 @@
 
 - (void)addMenuButton
 {
-    UIImage *menuButtonBackground = [UIImage imageNamed:@"bt-menu-laranja"];
+    UIImage *menuButtonBackground = [[ThemeManager currentTheme] menuButtonImage];
     UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:menuButtonBackground style:UIBarButtonItemStylePlain target:self.navigationController.parentViewController action:@selector(revealToggle:)];
     
     self.navigationItem.leftBarButtonItem = menuButton;
@@ -64,7 +64,7 @@
     
     UIImage *whiteBackground = [[UIImage imageNamed:@"bt-branco"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 5, 0, 5)];
     [backButton setBackgroundImage:whiteBackground forState:UIControlStateNormal];
-    [backButton setImage:[UIImage imageNamed:@"bt-voltar-laranja"] forState:UIControlStateNormal];
+    [backButton setImage:[[ThemeManager currentTheme] backButtonImage] forState:UIControlStateNormal];
     [backButton setTitle:@"" forState:UIControlStateNormal];
     [backButton addTarget:self
                    action:@selector(popViewControllerAnimated)

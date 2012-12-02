@@ -10,6 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 #import "FoliaoCell.h"
+#import "ThemeManager.h"
 
 @interface FoliaoCell()
 
@@ -26,6 +27,7 @@
     _foliao = foliao;
     self.labelName.text = [NSString stringWithFormat:@"%@ %@", _foliao[@"firstName"], _foliao[@"lastName"]];
     self.labelName.textColor = [UIColor colorWithRed:68/255.0 green:68/255.0 blue:68/255.0 alpha:1];
+    self.accessoryView = [[UIImageView alloc] initWithImage:[[ThemeManager currentTheme] accessoryViewImage]];
     
     [self.imageViewProfile setImageWithURL:[self foliaoImageURL] placeholderImage:[UIImage imageNamed:@"110x110.gif"]
       success:^(UIImage *image, BOOL cached) {
