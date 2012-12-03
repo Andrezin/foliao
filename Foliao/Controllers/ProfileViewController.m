@@ -26,7 +26,6 @@
 
 - (void)showNumberOfPresences;
 - (void)customizeEditButton;
-- (void)editButtonTapped;
 - (void)loadFoliaoPresences;
 
 @end

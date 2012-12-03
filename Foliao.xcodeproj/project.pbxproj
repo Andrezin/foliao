@@ -39,8 +39,6 @@
 		0197C4361664016A00BA532D /* MapSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0197C4351664016A00BA532D /* MapSettingsViewController.xib */; };
 		019E6B3A1655DB790025786D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 019E6B381655DB790025786D /* Default.png */; };
 		019E6B3B1655DB790025786D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 019E6B391655DB790025786D /* Default@2x.png */; };
-		019E6B4416565C890025786D /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 019E6B4316565C890025786D /* SVProgressHUD.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		019E6B4616565D660025786D /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 019E6B4516565D660025786D /* SVProgressHUD.bundle */; };
 		01AA2AE9165FFFF0001AEBFB /* DateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AA2AE8165FFFF0001AEBFB /* DateUtil.m */; };
 		01AAF180166BE689002CA70D /* bt-menu-laranja.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AAF177166BE689002CA70D /* bt-menu-laranja.png */; };
 		01AAF181166BE689002CA70D /* bt-voltar-laranja.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AAF178166BE689002CA70D /* bt-voltar-laranja.png */; };
@@ -189,9 +187,6 @@
 		0197C4351664016A00BA532D /* MapSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapSettingsViewController.xib; sourceTree = "<group>"; };
 		019E6B381655DB790025786D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		019E6B391655DB790025786D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		019E6B4216565C890025786D /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
-		019E6B4316565C890025786D /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
-		019E6B4516565D660025786D /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		01AA2AE7165FFFF0001AEBFB /* DateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtil.h; sourceTree = "<group>"; };
 		01AA2AE8165FFFF0001AEBFB /* DateUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtil.m; sourceTree = "<group>"; };
 		01AAF177166BE689002CA70D /* bt-menu-laranja.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-menu-laranja.png"; sourceTree = "<group>"; };
@@ -358,7 +353,6 @@
 			isa = PBXGroup;
 			children = (
 				0168CB72165955FB003DD8AF /* Kal */,
-				019E6B4116565C890025786D /* SVProgressHUD */,
 				013341C1164B5B1300C2984B /* ZUUIRevealController */,
 			);
 			path = Submodules;
@@ -423,16 +417,6 @@
 				0168CB7C1659560B003DD8AF /* libKal.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		019E6B4116565C890025786D /* SVProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				019E6B4516565D660025786D /* SVProgressHUD.bundle */,
-				019E6B4216565C890025786D /* SVProgressHUD.h */,
-				019E6B4316565C890025786D /* SVProgressHUD.m */,
-			);
-			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 		01AAF173166BE689002CA70D /* Themes */ = {
@@ -856,7 +840,6 @@
 				014EECC4164DC82400C4F626 /* 57x57.png in Resources */,
 				019E6B3A1655DB790025786D /* Default.png in Resources */,
 				019E6B3B1655DB790025786D /* Default@2x.png in Resources */,
-				019E6B4616565D660025786D /* SVProgressHUD.bundle in Resources */,
 				0168CB8116595795003DD8AF /* Kal.bundle in Resources */,
 				01CC6355165B091E005F68BA /* 200x200.gif in Resources */,
 				01CC635B165B2FB1005F68BA /* bt-locate-me-bg.png in Resources */,
@@ -938,7 +921,6 @@
 				018B5E63164D8B8600042B4E /* BaseViewController.m in Sources */,
 				018B5E67164D8E0500042B4E /* LoginViewController.m in Sources */,
 				018B5E76164DB19B00042B4E /* BlocoViewController.m in Sources */,
-				019E6B4416565C890025786D /* SVProgressHUD.m in Sources */,
 				0168CB841659586B003DD8AF /* BlocosByDateViewController.m in Sources */,
 				0140011F165AB0BC008F0429 /* KalBlocosDataSource.m in Sources */,
 				01400122165AB490008F0429 /* ParadeAnnotation.m in Sources */,

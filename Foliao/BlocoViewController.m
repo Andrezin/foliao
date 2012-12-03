@@ -10,7 +10,6 @@
 #import <QuartzCore/QuartzCore.h>
 
 #import "BlocoViewController.h"
-#import "SVProgressHUD.h"
 #import "ParadeAnnotation.h"
 #import "WhoIsGoingViewController.h"
 #import "DateUtil.h"
@@ -305,7 +304,6 @@ typedef enum viewDomainClass {
                     
                     [PFQuery clearAllCachedResults];
                     
-//                    [SVProgressHUD showSuccessWithStatus:@"Ah muleque!"];
                     [self addFoliaoToPresencesBox];
                 } else {
                     NSLog(@"Error when confirming presence.");
