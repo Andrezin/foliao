@@ -76,14 +76,12 @@
 		01BE627E164B3D450000679C /* bt-checkin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6270164B3D450000679C /* bt-checkin@2x.png */; };
 		01BE627F164B3D450000679C /* bt-base@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6271164B3D450000679C /* bt-base@2x.png */; };
 		01BE6283164B3D450000679C /* marca@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6275164B3D450000679C /* marca@2x.png */; };
-		01CC6355165B091E005F68BA /* 200x200.gif in Resources */ = {isa = PBXBuildFile; fileRef = 01CC6354165B091E005F68BA /* 200x200.gif */; };
 		01CC6358165B0FA4005F68BA /* FoliaoRankingTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CC6357165B0FA4005F68BA /* FoliaoRankingTitle.m */; };
 		01CC635B165B2FB1005F68BA /* bt-locate-me-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CC6359165B2FB1005F68BA /* bt-locate-me-bg.png */; };
 		01CC635C165B2FB1005F68BA /* bt-locate-me.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CC635A165B2FB1005F68BA /* bt-locate-me.png */; };
 		01CC635F165B2FC6005F68BA /* bt-locate-me-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CC635D165B2FC6005F68BA /* bt-locate-me-bg@2x.png */; };
 		01CC6360165B2FC6005F68BA /* bt-locate-me@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CC635E165B2FC6005F68BA /* bt-locate-me@2x.png */; };
 		01CC6364165B3A6A005F68BA /* WhoIsGoingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CC6362165B3A6A005F68BA /* WhoIsGoingViewController.m */; };
-		01CC6370165B45B2005F68BA /* 110x110.gif in Resources */ = {isa = PBXBuildFile; fileRef = 01CC636F165B45B2005F68BA /* 110x110.gif */; };
 		01E0CFDA164BDD2600940C77 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFD9164BDD2600940C77 /* AudioToolbox.framework */; };
 		01E0CFDC164BDD2D00940C77 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFDB164BDD2D00940C77 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		01E0CFDE164BDD3A00940C77 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFDD164BDD3A00940C77 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -245,7 +243,6 @@
 		01BE6270164B3D450000679C /* bt-checkin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-checkin@2x.png"; sourceTree = "<group>"; };
 		01BE6271164B3D450000679C /* bt-base@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-base@2x.png"; sourceTree = "<group>"; };
 		01BE6275164B3D450000679C /* marca@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "marca@2x.png"; sourceTree = "<group>"; };
-		01CC6354165B091E005F68BA /* 200x200.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 200x200.gif; sourceTree = "<group>"; };
 		01CC6356165B0FA4005F68BA /* FoliaoRankingTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoliaoRankingTitle.h; sourceTree = "<group>"; };
 		01CC6357165B0FA4005F68BA /* FoliaoRankingTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoliaoRankingTitle.m; sourceTree = "<group>"; };
 		01CC6359165B2FB1005F68BA /* bt-locate-me-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-locate-me-bg.png"; sourceTree = "<group>"; };
@@ -254,7 +251,6 @@
 		01CC635E165B2FC6005F68BA /* bt-locate-me@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-locate-me@2x.png"; sourceTree = "<group>"; };
 		01CC6361165B3A6A005F68BA /* WhoIsGoingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhoIsGoingViewController.h; sourceTree = "<group>"; };
 		01CC6362165B3A6A005F68BA /* WhoIsGoingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhoIsGoingViewController.m; sourceTree = "<group>"; };
-		01CC636F165B45B2005F68BA /* 110x110.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 110x110.gif; sourceTree = "<group>"; };
 		01E0CFD9164BDD2600940C77 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		01E0CFDB164BDD2D00940C77 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		01E0CFDD164BDD3A00940C77 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -741,8 +737,6 @@
 				01B42BCE166699700080F2C9 /* bt-branco@2x.png */,
 				01F25196166033C1009C52B4 /* menu-section-background@2x.png */,
 				01F2519416602F96009C52B4 /* seta-branca@2x.png */,
-				01CC636F165B45B2005F68BA /* 110x110.gif */,
-				01CC6354165B091E005F68BA /* 200x200.gif */,
 				01CC635D165B2FC6005F68BA /* bt-locate-me-bg@2x.png */,
 				01CC635E165B2FC6005F68BA /* bt-locate-me@2x.png */,
 				014EECC1164DC80D00C4F626 /* navigation-bar@2x.png */,
@@ -924,12 +918,10 @@
 				014EECC4164DC82400C4F626 /* 57x57.png in Resources */,
 				019E6B3A1655DB790025786D /* Default.png in Resources */,
 				019E6B3B1655DB790025786D /* Default@2x.png in Resources */,
-				01CC6355165B091E005F68BA /* 200x200.gif in Resources */,
 				01CC635B165B2FB1005F68BA /* bt-locate-me-bg.png in Resources */,
 				01CC635C165B2FB1005F68BA /* bt-locate-me.png in Resources */,
 				01CC635F165B2FC6005F68BA /* bt-locate-me-bg@2x.png in Resources */,
 				01CC6360165B2FC6005F68BA /* bt-locate-me@2x.png in Resources */,
-				01CC6370165B45B2005F68BA /* 110x110.gif in Resources */,
 				01EBA92A165D7422005C1847 /* BlocosByLocationViewController.xib in Resources */,
 				01EBA92B165D7422005C1847 /* BlocosByNameViewController.xib in Resources */,
 				01EBA92C165D7422005C1847 /* BlocoViewController.xib in Resources */,

@@ -45,7 +45,7 @@
         self.navigationItem.rightBarButtonItem = nil;
     }
     
-    [self.imageViewProfile setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=large", self.user[@"facebookId"]]] placeholderImage:[UIImage imageNamed:@"200x200.gif"]];
+    [self.imageViewProfile setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=large", self.user[@"facebookId"]]] placeholderImage:[UIImage imageNamed:@"fb_blank_profile_square"]];
     self.imageViewProfile.clipsToBounds = YES;
     self.labelName.text = [NSString stringWithFormat:@"%@ %@", self.user[@"firstName"], self.user[@"lastName"]];
     self.labelNumberOfPresences.text = @"";

@@ -29,7 +29,7 @@
     self.labelName.textColor = [UIColor colorWithRed:68/255.0 green:68/255.0 blue:68/255.0 alpha:1];
     self.accessoryView = [[UIImageView alloc] initWithImage:[[ThemeManager currentTheme] accessoryViewImage]];
     
-    [self.imageViewProfile setImageWithURL:[self foliaoImageURL] placeholderImage:[UIImage imageNamed:@"110x110.gif"]
+    [self.imageViewProfile setImageWithURL:[self foliaoImageURL] placeholderImage:[UIImage imageNamed:@"default"]
       success:^(UIImage *image, BOOL cached) {
       
           self.imageViewProfile.layer.cornerRadius = 3.0;

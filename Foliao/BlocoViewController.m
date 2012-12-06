@@ -209,7 +209,7 @@ typedef enum viewDomainClass {
         for (int i=0; i < self.folioes.count; i++) {
             NSString *picURL = [NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=normal", self.folioes[i][@"facebookId"]];
             UIImageView *profileImageView = (UIImageView *)pictureTemplates[i];
-            [profileImageView setImageWithURL:[NSURL URLWithString:picURL] placeholderImage:[UIImage imageNamed:@"110x110.gif"]];
+            [profileImageView setImageWithURL:[NSURL URLWithString:picURL] placeholderImage:[UIImage imageNamed:@"default"]];
             profileImageView.layer.cornerRadius = 3.0;
             profileImageView.contentMode = UIViewContentModeScaleAspectFill;
             profileImageView.clipsToBounds = YES;
@@ -338,7 +338,7 @@ typedef enum viewDomainClass {
         NSString *picURL = [NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=normal", [PFUser currentUser][@"facebookId"]];
         
         [imageViewNewPresence setImageWithURL:[NSURL URLWithString:picURL]
-                             placeholderImage:[UIImage imageNamed:@"110x110.gif"]
+                             placeholderImage:[UIImage imageNamed:@"default"]
                                       success:^(UIImage *image, BOOL cached) {
                                           
           [UIView animateWithDuration:0.5 animations:^{
