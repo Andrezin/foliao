@@ -1,3 +1,5 @@
+#source: https://github.com/github/gitignore/blob/master/Objective-C.gitignore
+
 # Xcode
 .DS_Store
 build/
@@ -17,4 +19,5 @@ profile
 DerivedData
 .idea/
 
-#source: https://github.com/github/gitignore/blob/master/Objective-C.gitignore
+# Project
+Submodules/

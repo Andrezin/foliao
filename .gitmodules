@@ -1,0 +1,6 @@
+[submodule "Submodules/ZUUIRevealController"]
+	path = Submodules/ZUUIRevealController
+	url = https://github.com/pkluz/ZUUIRevealController.git
+[submodule "Submodules/Kal"]
+	path = Submodules/Kal
+	url = https://github.com/barbosa/Kal.git

@@ -10,7 +10,6 @@
 		0117992A165B05A50095D425 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01179929165B05A50095D425 /* ImageIO.framework */; };
 		013341B8164B4C0700C2984B /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013341B6164B4C0700C2984B /* MenuViewController.m */; };
 		013341BD164B58C100C2984B /* BlocosByLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013341BB164B58C100C2984B /* BlocosByLocationViewController.m */; };
-		013341C5164B5B1300C2984B /* ZUUIRevealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013341C3164B5B1300C2984B /* ZUUIRevealController.m */; };
 		013341C7164B5DD900C2984B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 013341C6164B5DD900C2984B /* MapKit.framework */; };
 		0140011F165AB0BC008F0429 /* KalBlocosDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0140011E165AB0BC008F0429 /* KalBlocosDataSource.m */; };
 		01400122165AB490008F0429 /* ParadeAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 01400121165AB490008F0429 /* ParadeAnnotation.m */; };
@@ -24,8 +23,6 @@
 		015E88F3165F1A000008DED8 /* WhereMyFriendsAreGoingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 015E88F2165F1A000008DED8 /* WhereMyFriendsAreGoingViewController.xib */; };
 		015E88F6165F447D0008DED8 /* WhereAreMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 015E88F5165F447C0008DED8 /* WhereAreMoreViewController.m */; };
 		015E88F8165F449F0008DED8 /* WhereAreMoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 015E88F7165F449F0008DED8 /* WhereAreMoreViewController.xib */; };
-		0168CB7F16595767003DD8AF /* libKal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0168CB7C1659560B003DD8AF /* libKal.a */; };
-		0168CB8116595795003DD8AF /* Kal.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0168CB8016595795003DD8AF /* Kal.bundle */; };
 		0168CB841659586B003DD8AF /* BlocosByDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0168CB831659586B003DD8AF /* BlocosByDateViewController.m */; };
 		0173BAF0166A62CC00B89082 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0173BAEF166A62CC00B89082 /* SDWebImage.framework */; };
 		0173BAF6166A6C2900B89082 /* UIColor+Foliao.m in Sources */ = {isa = PBXBuildFile; fileRef = 0173BAF5166A6C2900B89082 /* UIColor+Foliao.m */; };
@@ -108,6 +105,18 @@
 		01EBA92E165D7422005C1847 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA927165D7422005C1847 /* MenuViewController.xib */; };
 		01EBA92F165D7422005C1847 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA928165D7422005C1847 /* ProfileViewController.xib */; };
 		01EBA930165D7422005C1847 /* WhoIsGoingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA929165D7422005C1847 /* WhoIsGoingViewController.xib */; };
+		01ECEC6E16710B5500336482 /* Kal.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 01ECEBF616710B5400336482 /* Kal.bundle */; };
+		01ECEC6F16710B5500336482 /* KalDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ECEBFD16710B5400336482 /* KalDataSource.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		01ECEC7016710B5500336482 /* KalDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ECEBFF16710B5400336482 /* KalDate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		01ECEC7116710B5500336482 /* KalGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ECEC0116710B5400336482 /* KalGridView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		01ECEC7216710B5500336482 /* KalLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ECEC0316710B5400336482 /* KalLogic.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		01ECEC7316710B5500336482 /* KalMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ECEC0516710B5400336482 /* KalMonthView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		01ECEC7416710B5500336482 /* KalTileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ECEC0816710B5400336482 /* KalTileView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		01ECEC7516710B5500336482 /* KalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ECEC0A16710B5400336482 /* KalView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		01ECEC7616710B5500336482 /* KalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ECEC0C16710B5400336482 /* KalViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		01ECEC7716710B5500336482 /* NSDateAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ECEC0E16710B5400336482 /* NSDateAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		01ECEC7816710B5500336482 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ECEC1016710B5400336482 /* UIViewAdditions.m */; };
+		01ECEC8A16710B5500336482 /* ZUUIRevealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ECEC3816710B5400336482 /* ZUUIRevealController.m */; };
 		01F2519316602F71009C52B4 /* seta-branca.png in Resources */ = {isa = PBXBuildFile; fileRef = 01F2519216602F71009C52B4 /* seta-branca.png */; };
 		01F2519516602F96009C52B4 /* seta-branca@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01F2519416602F96009C52B4 /* seta-branca@2x.png */; };
 		01F25197166033C1009C52B4 /* menu-section-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01F25196166033C1009C52B4 /* menu-section-background@2x.png */; };
@@ -268,6 +277,32 @@
 		01EBA927165D7422005C1847 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		01EBA928165D7422005C1847 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		01EBA929165D7422005C1847 /* WhoIsGoingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhoIsGoingViewController.xib; sourceTree = "<group>"; };
+		01ECEBF616710B5400336482 /* Kal.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Kal.bundle; path = src/Kal.bundle; sourceTree = "<group>"; };
+		01ECEBF716710B5400336482 /* Kal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Kal.h; path = src/Kal.h; sourceTree = "<group>"; };
+		01ECEBFB16710B5400336482 /* Kal_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Kal_Prefix.pch; path = src/Kal_Prefix.pch; sourceTree = "<group>"; };
+		01ECEBFC16710B5400336482 /* KalDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KalDataSource.h; path = src/KalDataSource.h; sourceTree = "<group>"; };
+		01ECEBFD16710B5400336482 /* KalDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KalDataSource.m; path = src/KalDataSource.m; sourceTree = "<group>"; };
+		01ECEBFE16710B5400336482 /* KalDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KalDate.h; path = src/KalDate.h; sourceTree = "<group>"; };
+		01ECEBFF16710B5400336482 /* KalDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KalDate.m; path = src/KalDate.m; sourceTree = "<group>"; };
+		01ECEC0016710B5400336482 /* KalGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KalGridView.h; path = src/KalGridView.h; sourceTree = "<group>"; };
+		01ECEC0116710B5400336482 /* KalGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KalGridView.m; path = src/KalGridView.m; sourceTree = "<group>"; };
+		01ECEC0216710B5400336482 /* KalLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KalLogic.h; path = src/KalLogic.h; sourceTree = "<group>"; };
+		01ECEC0316710B5400336482 /* KalLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KalLogic.m; path = src/KalLogic.m; sourceTree = "<group>"; };
+		01ECEC0416710B5400336482 /* KalMonthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KalMonthView.h; path = src/KalMonthView.h; sourceTree = "<group>"; };
+		01ECEC0516710B5400336482 /* KalMonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KalMonthView.m; path = src/KalMonthView.m; sourceTree = "<group>"; };
+		01ECEC0616710B5400336482 /* KalPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KalPrivate.h; path = src/KalPrivate.h; sourceTree = "<group>"; };
+		01ECEC0716710B5400336482 /* KalTileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KalTileView.h; path = src/KalTileView.h; sourceTree = "<group>"; };
+		01ECEC0816710B5400336482 /* KalTileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KalTileView.m; path = src/KalTileView.m; sourceTree = "<group>"; };
+		01ECEC0916710B5400336482 /* KalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KalView.h; path = src/KalView.h; sourceTree = "<group>"; };
+		01ECEC0A16710B5400336482 /* KalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KalView.m; path = src/KalView.m; sourceTree = "<group>"; };
+		01ECEC0B16710B5400336482 /* KalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KalViewController.h; path = src/KalViewController.h; sourceTree = "<group>"; };
+		01ECEC0C16710B5400336482 /* KalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KalViewController.m; path = src/KalViewController.m; sourceTree = "<group>"; };
+		01ECEC0D16710B5400336482 /* NSDateAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSDateAdditions.h; path = src/NSDateAdditions.h; sourceTree = "<group>"; };
+		01ECEC0E16710B5400336482 /* NSDateAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSDateAdditions.m; path = src/NSDateAdditions.m; sourceTree = "<group>"; };
+		01ECEC0F16710B5400336482 /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIViewAdditions.h; path = src/UIViewAdditions.h; sourceTree = "<group>"; };
+		01ECEC1016710B5400336482 /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIViewAdditions.m; path = src/UIViewAdditions.m; sourceTree = "<group>"; };
+		01ECEC3716710B5400336482 /* ZUUIRevealController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZUUIRevealController.h; path = ZUUIRevealController/ZUUIRevealController.h; sourceTree = "<group>"; };
+		01ECEC3816710B5400336482 /* ZUUIRevealController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZUUIRevealController.m; path = ZUUIRevealController/ZUUIRevealController.m; sourceTree = "<group>"; };
 		01F2519216602F71009C52B4 /* seta-branca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seta-branca.png"; sourceTree = "<group>"; };
 		01F2519416602F96009C52B4 /* seta-branca@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seta-branca@2x.png"; sourceTree = "<group>"; };
 		01F25196166033C1009C52B4 /* menu-section-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-section-background@2x.png"; sourceTree = "<group>"; };
@@ -281,7 +316,6 @@
 			files = (
 				01E0CFEA164BDD7000940C77 /* QuartzCore.framework in Frameworks */,
 				0117992A165B05A50095D425 /* ImageIO.framework in Frameworks */,
-				0168CB7F16595767003DD8AF /* libKal.a in Frameworks */,
 				01E0CFF2164BDD8600940C77 /* SystemConfiguration.framework in Frameworks */,
 				01E0CFF0164BDD8100940C77 /* StoreKit.framework in Frameworks */,
 				01E0CFEE164BDD7C00940C77 /* Social.framework in Frameworks */,
@@ -559,6 +593,7 @@
 			children = (
 				01BE624B164B3B010000679C /* FoliaoTests */,
 				01BE622D164B3B000000679C /* Foliao */,
+				01ECEBB116710B5400336482 /* Submodules */,
 				01BE6226164B3B000000679C /* Frameworks */,
 				01BE6224164B3B000000679C /* Products */,
 			);
@@ -736,6 +771,55 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		01ECEBB116710B5400336482 /* Submodules */ = {
+			isa = PBXGroup;
+			children = (
+				01ECEBB216710B5400336482 /* Kal */,
+				01ECEC1116710B5400336482 /* ZUUIRevealController */,
+			);
+			path = Submodules;
+			sourceTree = "<group>";
+		};
+		01ECEBB216710B5400336482 /* Kal */ = {
+			isa = PBXGroup;
+			children = (
+				01ECEBF616710B5400336482 /* Kal.bundle */,
+				01ECEBF716710B5400336482 /* Kal.h */,
+				01ECEBFB16710B5400336482 /* Kal_Prefix.pch */,
+				01ECEBFC16710B5400336482 /* KalDataSource.h */,
+				01ECEBFD16710B5400336482 /* KalDataSource.m */,
+				01ECEBFE16710B5400336482 /* KalDate.h */,
+				01ECEBFF16710B5400336482 /* KalDate.m */,
+				01ECEC0016710B5400336482 /* KalGridView.h */,
+				01ECEC0116710B5400336482 /* KalGridView.m */,
+				01ECEC0216710B5400336482 /* KalLogic.h */,
+				01ECEC0316710B5400336482 /* KalLogic.m */,
+				01ECEC0416710B5400336482 /* KalMonthView.h */,
+				01ECEC0516710B5400336482 /* KalMonthView.m */,
+				01ECEC0616710B5400336482 /* KalPrivate.h */,
+				01ECEC0716710B5400336482 /* KalTileView.h */,
+				01ECEC0816710B5400336482 /* KalTileView.m */,
+				01ECEC0916710B5400336482 /* KalView.h */,
+				01ECEC0A16710B5400336482 /* KalView.m */,
+				01ECEC0B16710B5400336482 /* KalViewController.h */,
+				01ECEC0C16710B5400336482 /* KalViewController.m */,
+				01ECEC0D16710B5400336482 /* NSDateAdditions.h */,
+				01ECEC0E16710B5400336482 /* NSDateAdditions.m */,
+				01ECEC0F16710B5400336482 /* UIViewAdditions.h */,
+				01ECEC1016710B5400336482 /* UIViewAdditions.m */,
+			);
+			path = Kal;
+			sourceTree = "<group>";
+		};
+		01ECEC1116710B5400336482 /* ZUUIRevealController */ = {
+			isa = PBXGroup;
+			children = (
+				01ECEC3716710B5400336482 /* ZUUIRevealController.h */,
+				01ECEC3816710B5400336482 /* ZUUIRevealController.m */,
+			);
+			path = ZUUIRevealController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -840,7 +924,6 @@
 				014EECC4164DC82400C4F626 /* 57x57.png in Resources */,
 				019E6B3A1655DB790025786D /* Default.png in Resources */,
 				019E6B3B1655DB790025786D /* Default@2x.png in Resources */,
-				0168CB8116595795003DD8AF /* Kal.bundle in Resources */,
 				01CC6355165B091E005F68BA /* 200x200.gif in Resources */,
 				01CC635B165B2FB1005F68BA /* bt-locate-me-bg.png in Resources */,
 				01CC635C165B2FB1005F68BA /* bt-locate-me.png in Resources */,
@@ -878,6 +961,7 @@
 				01AAF196166BE691002CA70D /* bt-menu-rosa@2x.png in Resources */,
 				01AAF197166BE691002CA70D /* bt-voltar-rosa@2x.png in Resources */,
 				01AAF198166BE691002CA70D /* seta-rosa@2x.png in Resources */,
+				01ECEC6E16710B5500336482 /* Kal.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -916,7 +1000,6 @@
 				01BE6238164B3B000000679C /* AppDelegate.m in Sources */,
 				013341B8164B4C0700C2984B /* MenuViewController.m in Sources */,
 				013341BD164B58C100C2984B /* BlocosByLocationViewController.m in Sources */,
-				013341C5164B5B1300C2984B /* ZUUIRevealController.m in Sources */,
 				01E0CFF6164BE2A300940C77 /* BlocosByNameViewController.m in Sources */,
 				018B5E63164D8B8600042B4E /* BaseViewController.m in Sources */,
 				018B5E67164D8E0500042B4E /* LoginViewController.m in Sources */,
@@ -936,6 +1019,17 @@
 				01AAF19C166BE7F1002CA70D /* ThemeManager.m in Sources */,
 				01AAF19F166BE8CD002CA70D /* OrangeTheme.m in Sources */,
 				01AAF1A2166BEA88002CA70D /* PinkTheme.m in Sources */,
+				01ECEC6F16710B5500336482 /* KalDataSource.m in Sources */,
+				01ECEC7016710B5500336482 /* KalDate.m in Sources */,
+				01ECEC7116710B5500336482 /* KalGridView.m in Sources */,
+				01ECEC7216710B5500336482 /* KalLogic.m in Sources */,
+				01ECEC7316710B5500336482 /* KalMonthView.m in Sources */,
+				01ECEC7416710B5500336482 /* KalTileView.m in Sources */,
+				01ECEC7516710B5500336482 /* KalView.m in Sources */,
+				01ECEC7616710B5500336482 /* KalViewController.m in Sources */,
+				01ECEC7716710B5500336482 /* NSDateAdditions.m in Sources */,
+				01ECEC7816710B5500336482 /* UIViewAdditions.m in Sources */,
+				01ECEC8A16710B5500336482 /* ZUUIRevealController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1051,7 +1145,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Foliao/Foliao-Prefix.pch";
-				HEADER_SEARCH_PATHS = "../../ios/Kal/src/**";
+				HEADER_SEARCH_PATHS = "Submodules/**";
 				INFOPLIST_FILE = "Foliao/Foliao-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				"LIBRARY_SEARCH_PATHS[arch=*]" = /Users/barbosa/Projects/ios/Kal/src;
@@ -1079,7 +1173,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Foliao/Foliao-Prefix.pch";
-				HEADER_SEARCH_PATHS = "../../ios/Kal/src/**";
+				HEADER_SEARCH_PATHS = "Submodules/**";
 				INFOPLIST_FILE = "Foliao/Foliao-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = /Users/barbosa/Projects/ios/Kal/src;
