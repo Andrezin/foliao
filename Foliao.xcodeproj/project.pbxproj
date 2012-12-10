@@ -24,8 +24,136 @@
 		015E88F6165F447D0008DED8 /* WhereAreMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 015E88F5165F447C0008DED8 /* WhereAreMoreViewController.m */; };
 		015E88F8165F449F0008DED8 /* WhereAreMoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 015E88F7165F449F0008DED8 /* WhereAreMoreViewController.xib */; };
 		0168CB841659586B003DD8AF /* BlocosByDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0168CB831659586B003DD8AF /* BlocosByDateViewController.m */; };
+		0171D6B616722B6300521346 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6233164B3B000000679C /* main.m */; };
+		0171D6B716722B6300521346 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6237164B3B000000679C /* AppDelegate.m */; };
+		0171D6B816722B6300521346 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013341B6164B4C0700C2984B /* MenuViewController.m */; };
+		0171D6B916722B6300521346 /* BlocosByLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013341BB164B58C100C2984B /* BlocosByLocationViewController.m */; };
+		0171D6BA16722B6300521346 /* BlocosByNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E0CFF4164BE2A300940C77 /* BlocosByNameViewController.m */; };
+		0171D6BB16722B6300521346 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B5E62164D8B8600042B4E /* BaseViewController.m */; };
+		0171D6BC16722B6300521346 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B5E65164D8E0500042B4E /* LoginViewController.m */; };
+		0171D6BD16722B6300521346 /* BlocoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B5E74164DB19B00042B4E /* BlocoViewController.m */; };
+		0171D6BE16722B6300521346 /* BlocosByDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0168CB831659586B003DD8AF /* BlocosByDateViewController.m */; };
+		0171D6BF16722B6300521346 /* KalBlocosDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0140011E165AB0BC008F0429 /* KalBlocosDataSource.m */; };
+		0171D6C016722B6300521346 /* ParadeAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 01400121165AB490008F0429 /* ParadeAnnotation.m */; };
+		0171D6C116722B6300521346 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01400124165AD1C8008F0429 /* ProfileViewController.m */; };
+		0171D6C216722B6300521346 /* FoliaoRankingTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CC6357165B0FA4005F68BA /* FoliaoRankingTitle.m */; };
+		0171D6C316722B6300521346 /* WhoIsGoingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CC6362165B3A6A005F68BA /* WhoIsGoingViewController.m */; };
+		0171D6C416722B6300521346 /* FoliaoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 015E88ED165EC0410008DED8 /* FoliaoCell.m */; };
+		0171D6C516722B6300521346 /* WhereMyFriendsAreGoingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 015E88F0165F19E40008DED8 /* WhereMyFriendsAreGoingViewController.m */; };
+		0171D6C616722B6300521346 /* WhereAreMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 015E88F5165F447C0008DED8 /* WhereAreMoreViewController.m */; };
+		0171D6C716722B6300521346 /* DateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AA2AE8165FFFF0001AEBFB /* DateUtil.m */; };
+		0171D6C816722B6300521346 /* MapSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0197C4331664013F00BA532D /* MapSettingsViewController.m */; };
+		0171D6C916722B6300521346 /* UIColor+Foliao.m in Sources */ = {isa = PBXBuildFile; fileRef = 0173BAF5166A6C2900B89082 /* UIColor+Foliao.m */; };
+		0171D6CA16722B6300521346 /* ThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AAF19B166BE7F1002CA70D /* ThemeManager.m */; };
+		0171D6CB16722B6300521346 /* OrangeTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AAF19E166BE8CD002CA70D /* OrangeTheme.m */; };
+		0171D6CC16722B6300521346 /* PinkTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AAF1A1166BEA88002CA70D /* PinkTheme.m */; };
+		0171D6CD16722B6300521346 /* KalDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ECEBFD16710B5400336482 /* KalDataSource.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0171D6CE16722B6300521346 /* KalDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ECEBFF16710B5400336482 /* KalDate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0171D6CF16722B6300521346 /* KalGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ECEC0116710B5400336482 /* KalGridView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0171D6D016722B6300521346 /* KalLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ECEC0316710B5400336482 /* KalLogic.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0171D6D116722B6300521346 /* KalMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ECEC0516710B5400336482 /* KalMonthView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0171D6D216722B6300521346 /* KalTileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ECEC0816710B5400336482 /* KalTileView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0171D6D316722B6300521346 /* KalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ECEC0A16710B5400336482 /* KalView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0171D6D416722B6300521346 /* KalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ECEC0C16710B5400336482 /* KalViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0171D6D516722B6300521346 /* NSDateAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ECEC0E16710B5400336482 /* NSDateAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0171D6D616722B6300521346 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ECEC1016710B5400336482 /* UIViewAdditions.m */; };
+		0171D6D716722B6300521346 /* ZUUIRevealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ECEC3816710B5400336482 /* ZUUIRevealController.m */; };
+		0171D6D916722B6300521346 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFE9164BDD7000940C77 /* QuartzCore.framework */; };
+		0171D6DA16722B6300521346 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01179929165B05A50095D425 /* ImageIO.framework */; };
+		0171D6DB16722B6300521346 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFF1164BDD8600940C77 /* SystemConfiguration.framework */; };
+		0171D6DC16722B6300521346 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFEF164BDD8100940C77 /* StoreKit.framework */; };
+		0171D6DD16722B6300521346 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFED164BDD7C00940C77 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		0171D6DE16722B6300521346 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFEB164BDD7500940C77 /* Security.framework */; };
+		0171D6DF16722B6300521346 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFE7164BDD6A00940C77 /* MobileCoreServices.framework */; };
+		0171D6E016722B6300521346 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFE5164BDD6400940C77 /* libz.1.1.3.dylib */; };
+		0171D6E116722B6300521346 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFE3164BDD5B00940C77 /* libsqlite3.dylib */; };
+		0171D6E216722B6300521346 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFE1164BDD5100940C77 /* CoreLocation.framework */; };
+		0171D6E316722B6300521346 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BE622B164B3B000000679C /* CoreGraphics.framework */; };
+		0171D6E416722B6300521346 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFDF164BDD4000940C77 /* CFNetwork.framework */; };
+		0171D6E516722B6300521346 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFDD164BDD3A00940C77 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		0171D6E616722B6300521346 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFDB164BDD2D00940C77 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		0171D6E716722B6300521346 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFD9164BDD2600940C77 /* AudioToolbox.framework */; };
+		0171D6E816722B6300521346 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 013341C6164B5DD900C2984B /* MapKit.framework */; };
+		0171D6E916722B6300521346 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BE6227164B3B000000679C /* UIKit.framework */; };
+		0171D6EA16722B6300521346 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BE6229164B3B000000679C /* Foundation.framework */; };
+		0171D6EB16722B6300521346 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018B5E6D164DA0CE00042B4E /* Parse.framework */; };
+		0171D6EC16722B6300521346 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018B5E6F164DA0DE00042B4E /* FacebookSDK.framework */; };
+		0171D6ED16722B6300521346 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0173BAEF166A62CC00B89082 /* SDWebImage.framework */; };
+		0171D6EF16722B6300521346 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6230164B3B000000679C /* InfoPlist.strings */; };
+		0171D6F016722B6300521346 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE623D164B3B000000679C /* Default-568h@2x.png */; };
+		0171D6F116722B6300521346 /* 114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6261164B3CEA0000679C /* 114x114.png */; };
+		0171D6F216722B6300521346 /* 512x512.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6262164B3CEA0000679C /* 512x512.png */; };
+		0171D6F316722B6300521346 /* bt-checkin.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6268164B3D450000679C /* bt-checkin.png */; };
+		0171D6F416722B6300521346 /* bt-base.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6269164B3D450000679C /* bt-base.png */; };
+		0171D6F516722B6300521346 /* marca.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE626D164B3D450000679C /* marca.png */; };
+		0171D6F616722B6300521346 /* bt-checkin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6270164B3D450000679C /* bt-checkin@2x.png */; };
+		0171D6F716722B6300521346 /* bt-base@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6271164B3D450000679C /* bt-base@2x.png */; };
+		0171D6F816722B6300521346 /* marca@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6275164B3D450000679C /* marca@2x.png */; };
+		0171D6F916722B6300521346 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 018B5E71164DA0F000042B4E /* FacebookSDKResources.bundle */; };
+		0171D6FA16722B6300521346 /* navigation-bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 014EECBF164DC80000C4F626 /* navigation-bar.png */; };
+		0171D6FB16722B6300521346 /* navigation-bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 014EECC1164DC80D00C4F626 /* navigation-bar@2x.png */; };
+		0171D6FC16722B6300521346 /* 57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 014EECC3164DC82400C4F626 /* 57x57.png */; };
+		0171D6FD16722B6300521346 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 019E6B381655DB790025786D /* Default.png */; };
+		0171D6FE16722B6300521346 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 019E6B391655DB790025786D /* Default@2x.png */; };
+		0171D6FF16722B6300521346 /* bt-locate-me-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CC6359165B2FB1005F68BA /* bt-locate-me-bg.png */; };
+		0171D70016722B6300521346 /* bt-locate-me.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CC635A165B2FB1005F68BA /* bt-locate-me.png */; };
+		0171D70116722B6300521346 /* bt-locate-me-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CC635D165B2FC6005F68BA /* bt-locate-me-bg@2x.png */; };
+		0171D70216722B6300521346 /* bt-locate-me@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CC635E165B2FC6005F68BA /* bt-locate-me@2x.png */; };
+		0171D70316722B6300521346 /* BlocosByLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA923165D7422005C1847 /* BlocosByLocationViewController.xib */; };
+		0171D70416722B6300521346 /* BlocosByNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA924165D7422005C1847 /* BlocosByNameViewController.xib */; };
+		0171D70516722B6300521346 /* BlocoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA925165D7422005C1847 /* BlocoViewController.xib */; };
+		0171D70616722B6300521346 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA926165D7422005C1847 /* LoginViewController.xib */; };
+		0171D70716722B6300521346 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA927165D7422005C1847 /* MenuViewController.xib */; };
+		0171D70816722B6300521346 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA928165D7422005C1847 /* ProfileViewController.xib */; };
+		0171D70916722B6300521346 /* WhoIsGoingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA929165D7422005C1847 /* WhoIsGoingViewController.xib */; };
+		0171D70A16722B6300521346 /* FoliaoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 015E88E8165EBEBB0008DED8 /* FoliaoCell.xib */; };
+		0171D70B16722B6300521346 /* WhereMyFriendsAreGoingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 015E88F2165F1A000008DED8 /* WhereMyFriendsAreGoingViewController.xib */; };
+		0171D70C16722B6300521346 /* WhereAreMoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 015E88F7165F449F0008DED8 /* WhereAreMoreViewController.xib */; };
+		0171D70D16722B6300521346 /* seta-branca.png in Resources */ = {isa = PBXBuildFile; fileRef = 01F2519216602F71009C52B4 /* seta-branca.png */; };
+		0171D70E16722B6300521346 /* seta-branca@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01F2519416602F96009C52B4 /* seta-branca@2x.png */; };
+		0171D70F16722B6300521346 /* menu-section-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01F25196166033C1009C52B4 /* menu-section-background@2x.png */; };
+		0171D71016722B6300521346 /* menu-section-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 01F25198166033E7009C52B4 /* menu-section-background.png */; };
+		0171D71116722B6300521346 /* MapSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0197C4351664016A00BA532D /* MapSettingsViewController.xib */; };
+		0171D71216722B6300521346 /* bt-branco@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B42BCE166699700080F2C9 /* bt-branco@2x.png */; };
+		0171D71316722B6300521346 /* bt-branco.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B42BD0166699800080F2C9 /* bt-branco.png */; };
+		0171D71416722B6300521346 /* bt-roxo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B42BD21666A1E10080F2C9 /* bt-roxo@2x.png */; };
+		0171D71516722B6300521346 /* bt-roxo.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B42BD41666A1F80080F2C9 /* bt-roxo.png */; };
+		0171D71616722B6300521346 /* bt-menu-laranja.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AAF177166BE689002CA70D /* bt-menu-laranja.png */; };
+		0171D71716722B6300521346 /* bt-voltar-laranja.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AAF178166BE689002CA70D /* bt-voltar-laranja.png */; };
+		0171D71816722B6300521346 /* seta-laranja.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AAF179166BE689002CA70D /* seta-laranja.png */; };
+		0171D71916722B6300521346 /* bt-menu-rosa.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AAF17B166BE689002CA70D /* bt-menu-rosa.png */; };
+		0171D71A16722B6300521346 /* bt-voltar-rosa.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AAF17C166BE689002CA70D /* bt-voltar-rosa.png */; };
+		0171D71B16722B6300521346 /* seta-rosa.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AAF17D166BE689002CA70D /* seta-rosa.png */; };
+		0171D71C16722B6300521346 /* bt-menu-laranja@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AAF18A166BE691002CA70D /* bt-menu-laranja@2x.png */; };
+		0171D71D16722B6300521346 /* bt-voltar-laranja@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AAF18B166BE691002CA70D /* bt-voltar-laranja@2x.png */; };
+		0171D71E16722B6300521346 /* seta-laranja@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AAF18C166BE691002CA70D /* seta-laranja@2x.png */; };
+		0171D71F16722B6300521346 /* bt-menu-rosa@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AAF18E166BE691002CA70D /* bt-menu-rosa@2x.png */; };
+		0171D72016722B6300521346 /* bt-voltar-rosa@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AAF18F166BE691002CA70D /* bt-voltar-rosa@2x.png */; };
+		0171D72116722B6300521346 /* seta-rosa@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AAF190166BE691002CA70D /* seta-rosa@2x.png */; };
+		0171D72216722B6300521346 /* Kal.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 01ECEBF616710B5400336482 /* Kal.bundle */; };
+		0171D73716722F3400521346 /* FoliaoTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0171D73616722F3400521346 /* FoliaoTestController.m */; };
 		0173BAF0166A62CC00B89082 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0173BAEF166A62CC00B89082 /* SDWebImage.framework */; };
 		0173BAF6166A6C2900B89082 /* UIColor+Foliao.m in Sources */ = {isa = PBXBuildFile; fileRef = 0173BAF5166A6C2900B89082 /* UIColor+Foliao.m */; };
+		0186D45B167293BE009F13E5 /* CGGeometry-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0186D3E9167293BE009F13E5 /* CGGeometry-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0186D45C167293BE009F13E5 /* NSFileManager-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0186D3EC167293BE009F13E5 /* NSFileManager-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0186D45D167293BE009F13E5 /* UIAccessibilityElement-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0186D3EE167293BE009F13E5 /* UIAccessibilityElement-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0186D45E167293BE009F13E5 /* UIApplication-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0186D3F0167293BE009F13E5 /* UIApplication-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0186D45F167293BE009F13E5 /* UIScrollView-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0186D3F2167293BE009F13E5 /* UIScrollView-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0186D460167293BE009F13E5 /* UITouch-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0186D3F4167293BE009F13E5 /* UITouch-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0186D461167293BE009F13E5 /* UIView-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0186D3F6167293BE009F13E5 /* UIView-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0186D462167293BE009F13E5 /* UIWindow-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0186D3F8167293BE009F13E5 /* UIWindow-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0186D463167293BE009F13E5 /* KIFTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0186D3FC167293BE009F13E5 /* KIFTestController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0186D464167293BE009F13E5 /* KIFTestScenario.m in Sources */ = {isa = PBXBuildFile; fileRef = 0186D3FE167293BE009F13E5 /* KIFTestScenario.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0186D465167293BE009F13E5 /* KIFTestStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 0186D400167293BE009F13E5 /* KIFTestStep.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0186D466167293BE009F13E5 /* KIFTypist.m in Sources */ = {isa = PBXBuildFile; fileRef = 0186D402167293BE009F13E5 /* KIFTypist.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0186D498167295B3009F13E5 /* FoliaoTestController.h in Sources */ = {isa = PBXBuildFile; fileRef = 0171D73516722F3400521346 /* FoliaoTestController.h */; };
+		0186D499167295B3009F13E5 /* FoliaoTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0171D73616722F3400521346 /* FoliaoTestController.m */; };
+		0186D49C16729620009F13E5 /* KIFTestScenario+FoliaoAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0186D49B16729620009F13E5 /* KIFTestScenario+FoliaoAdditions.m */; };
+		0186D49F16729662009F13E5 /* KIFTestStep+FoliaoAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0186D49E16729662009F13E5 /* KIFTestStep+FoliaoAdditions.m */; };
+		0186D4A01672990C009F13E5 /* KIFTestScenario+FoliaoAdditions.h in Sources */ = {isa = PBXBuildFile; fileRef = 0186D49A16729620009F13E5 /* KIFTestScenario+FoliaoAdditions.h */; };
+		0186D4A11672990C009F13E5 /* KIFTestScenario+FoliaoAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0186D49B16729620009F13E5 /* KIFTestScenario+FoliaoAdditions.m */; };
+		0186D4A21672990C009F13E5 /* KIFTestStep+FoliaoAdditions.h in Sources */ = {isa = PBXBuildFile; fileRef = 0186D49D16729662009F13E5 /* KIFTestStep+FoliaoAdditions.h */; };
+		0186D4A31672990C009F13E5 /* KIFTestStep+FoliaoAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0186D49E16729662009F13E5 /* KIFTestStep+FoliaoAdditions.m */; };
 		018B5E63164D8B8600042B4E /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B5E62164D8B8600042B4E /* BaseViewController.m */; };
 		018B5E67164D8E0500042B4E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B5E65164D8E0500042B4E /* LoginViewController.m */; };
 		018B5E6E164DA0CE00042B4E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018B5E6D164DA0CE00042B4E /* Parse.framework */; };
@@ -136,6 +264,20 @@
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = Kal;
 		};
+		0171D6B416722B6300521346 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0168CB741659560B003DD8AF /* Kal.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = Kal;
+		};
+		0186D48C167293BF009F13E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0186D44C167293BE009F13E5 /* KIF.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AAB07268139719AC008AF393;
+			remoteInfo = KIF;
+		};
 		01BE6249164B3B010000679C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 01BE621A164B3B000000679C /* Project object */;
@@ -176,9 +318,44 @@
 		0168CB8016595795003DD8AF /* Kal.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Kal.bundle; path = ../../../../ios/Kal/src/Kal.bundle; sourceTree = "<group>"; };
 		0168CB821659586B003DD8AF /* BlocosByDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlocosByDateViewController.h; path = Controllers/BlocosByDateViewController.h; sourceTree = "<group>"; };
 		0168CB831659586B003DD8AF /* BlocosByDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlocosByDateViewController.m; path = Controllers/BlocosByDateViewController.m; sourceTree = "<group>"; };
+		0171D72616722B6300521346 /* Functional Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Functional Tests.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0171D72816722B6300521346 /* FunctionalTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FunctionalTests-Info.plist"; path = "/Users/barbosa/Projects/7pixels/Foliao/FunctionalTests-Info.plist"; sourceTree = "<absolute>"; };
+		0171D73516722F3400521346 /* FoliaoTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoliaoTestController.h; path = FoliaoTests/FoliaoTestController.h; sourceTree = SOURCE_ROOT; };
+		0171D73616722F3400521346 /* FoliaoTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoliaoTestController.m; path = FoliaoTests/FoliaoTestController.m; sourceTree = SOURCE_ROOT; };
 		0173BAEF166A62CC00B89082 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = ../../../Frameworks/SDWebImage.framework; sourceTree = "<group>"; };
 		0173BAF4166A6C2900B89082 /* UIColor+Foliao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Foliao.h"; sourceTree = "<group>"; };
 		0173BAF5166A6C2900B89082 /* UIColor+Foliao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Foliao.m"; sourceTree = "<group>"; };
+		0186D3E8167293BE009F13E5 /* CGGeometry-KIFAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGGeometry-KIFAdditions.h"; sourceTree = "<group>"; };
+		0186D3E9167293BE009F13E5 /* CGGeometry-KIFAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGGeometry-KIFAdditions.m"; sourceTree = "<group>"; };
+		0186D3EA167293BE009F13E5 /* LoadableCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadableCategory.h; sourceTree = "<group>"; };
+		0186D3EB167293BE009F13E5 /* NSFileManager-KIFAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager-KIFAdditions.h"; sourceTree = "<group>"; };
+		0186D3EC167293BE009F13E5 /* NSFileManager-KIFAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager-KIFAdditions.m"; sourceTree = "<group>"; };
+		0186D3ED167293BE009F13E5 /* UIAccessibilityElement-KIFAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAccessibilityElement-KIFAdditions.h"; sourceTree = "<group>"; };
+		0186D3EE167293BE009F13E5 /* UIAccessibilityElement-KIFAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAccessibilityElement-KIFAdditions.m"; sourceTree = "<group>"; };
+		0186D3EF167293BE009F13E5 /* UIApplication-KIFAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication-KIFAdditions.h"; sourceTree = "<group>"; };
+		0186D3F0167293BE009F13E5 /* UIApplication-KIFAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication-KIFAdditions.m"; sourceTree = "<group>"; };
+		0186D3F1167293BE009F13E5 /* UIScrollView-KIFAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView-KIFAdditions.h"; sourceTree = "<group>"; };
+		0186D3F2167293BE009F13E5 /* UIScrollView-KIFAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView-KIFAdditions.m"; sourceTree = "<group>"; };
+		0186D3F3167293BE009F13E5 /* UITouch-KIFAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITouch-KIFAdditions.h"; sourceTree = "<group>"; };
+		0186D3F4167293BE009F13E5 /* UITouch-KIFAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITouch-KIFAdditions.m"; sourceTree = "<group>"; };
+		0186D3F5167293BE009F13E5 /* UIView-KIFAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView-KIFAdditions.h"; sourceTree = "<group>"; };
+		0186D3F6167293BE009F13E5 /* UIView-KIFAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView-KIFAdditions.m"; sourceTree = "<group>"; };
+		0186D3F7167293BE009F13E5 /* UIWindow-KIFAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow-KIFAdditions.h"; sourceTree = "<group>"; };
+		0186D3F8167293BE009F13E5 /* UIWindow-KIFAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow-KIFAdditions.m"; sourceTree = "<group>"; };
+		0186D3FA167293BE009F13E5 /* KIF-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KIF-Prefix.pch"; sourceTree = "<group>"; };
+		0186D3FB167293BE009F13E5 /* KIFTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KIFTestController.h; sourceTree = "<group>"; };
+		0186D3FC167293BE009F13E5 /* KIFTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KIFTestController.m; sourceTree = "<group>"; };
+		0186D3FD167293BE009F13E5 /* KIFTestScenario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KIFTestScenario.h; sourceTree = "<group>"; };
+		0186D3FE167293BE009F13E5 /* KIFTestScenario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KIFTestScenario.m; sourceTree = "<group>"; };
+		0186D3FF167293BE009F13E5 /* KIFTestStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KIFTestStep.h; sourceTree = "<group>"; };
+		0186D400167293BE009F13E5 /* KIFTestStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KIFTestStep.m; sourceTree = "<group>"; };
+		0186D401167293BE009F13E5 /* KIFTypist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KIFTypist.h; sourceTree = "<group>"; };
+		0186D402167293BE009F13E5 /* KIFTypist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KIFTypist.m; sourceTree = "<group>"; };
+		0186D44C167293BE009F13E5 /* KIF.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = KIF.xcodeproj; sourceTree = "<group>"; };
+		0186D49A16729620009F13E5 /* KIFTestScenario+FoliaoAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KIFTestScenario+FoliaoAdditions.h"; sourceTree = "<group>"; };
+		0186D49B16729620009F13E5 /* KIFTestScenario+FoliaoAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KIFTestScenario+FoliaoAdditions.m"; sourceTree = "<group>"; };
+		0186D49D16729662009F13E5 /* KIFTestStep+FoliaoAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KIFTestStep+FoliaoAdditions.h"; sourceTree = "<group>"; };
+		0186D49E16729662009F13E5 /* KIFTestStep+FoliaoAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KIFTestStep+FoliaoAdditions.m"; sourceTree = "<group>"; };
 		018B5E60164D869000042B4E /* AppConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
 		018B5E61164D8B8600042B4E /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		018B5E62164D8B8600042B4E /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
@@ -306,6 +483,34 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0171D6D816722B6300521346 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0171D6D916722B6300521346 /* QuartzCore.framework in Frameworks */,
+				0171D6DA16722B6300521346 /* ImageIO.framework in Frameworks */,
+				0171D6DB16722B6300521346 /* SystemConfiguration.framework in Frameworks */,
+				0171D6DC16722B6300521346 /* StoreKit.framework in Frameworks */,
+				0171D6DD16722B6300521346 /* Social.framework in Frameworks */,
+				0171D6DE16722B6300521346 /* Security.framework in Frameworks */,
+				0171D6DF16722B6300521346 /* MobileCoreServices.framework in Frameworks */,
+				0171D6E016722B6300521346 /* libz.1.1.3.dylib in Frameworks */,
+				0171D6E116722B6300521346 /* libsqlite3.dylib in Frameworks */,
+				0171D6E216722B6300521346 /* CoreLocation.framework in Frameworks */,
+				0171D6E316722B6300521346 /* CoreGraphics.framework in Frameworks */,
+				0171D6E416722B6300521346 /* CFNetwork.framework in Frameworks */,
+				0171D6E516722B6300521346 /* AdSupport.framework in Frameworks */,
+				0171D6E616722B6300521346 /* Accounts.framework in Frameworks */,
+				0171D6E716722B6300521346 /* AudioToolbox.framework in Frameworks */,
+				0171D6E816722B6300521346 /* MapKit.framework in Frameworks */,
+				0171D6E916722B6300521346 /* UIKit.framework in Frameworks */,
+				0171D6EA16722B6300521346 /* Foundation.framework in Frameworks */,
+				0171D6EB16722B6300521346 /* Parse.framework in Frameworks */,
+				0171D6EC16722B6300521346 /* FacebookSDK.framework in Frameworks */,
+				0171D6ED16722B6300521346 /* SDWebImage.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		01BE6220164B3B000000679C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -445,6 +650,86 @@
 			isa = PBXGroup;
 			children = (
 				0168CB7C1659560B003DD8AF /* libKal.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0171D72A16722C0700521346 /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+				01BE6251164B3B010000679C /* FoliaoTests.h */,
+				01BE6252164B3B010000679C /* FoliaoTests.m */,
+			);
+			name = Unit;
+			sourceTree = "<group>";
+		};
+		0171D72B16722C0E00521346 /* Functional */ = {
+			isa = PBXGroup;
+			children = (
+				0171D73516722F3400521346 /* FoliaoTestController.h */,
+				0171D73616722F3400521346 /* FoliaoTestController.m */,
+				0186D49A16729620009F13E5 /* KIFTestScenario+FoliaoAdditions.h */,
+				0186D49B16729620009F13E5 /* KIFTestScenario+FoliaoAdditions.m */,
+				0186D49D16729662009F13E5 /* KIFTestStep+FoliaoAdditions.h */,
+				0186D49E16729662009F13E5 /* KIFTestStep+FoliaoAdditions.m */,
+			);
+			name = Functional;
+			sourceTree = "<group>";
+		};
+		0186D3E5167293BE009F13E5 /* KIF */ = {
+			isa = PBXGroup;
+			children = (
+				0186D3E7167293BE009F13E5 /* Additions */,
+				0186D3F9167293BE009F13E5 /* Classes */,
+				0186D44C167293BE009F13E5 /* KIF.xcodeproj */,
+			);
+			path = KIF;
+			sourceTree = "<group>";
+		};
+		0186D3E7167293BE009F13E5 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				0186D3E8167293BE009F13E5 /* CGGeometry-KIFAdditions.h */,
+				0186D3E9167293BE009F13E5 /* CGGeometry-KIFAdditions.m */,
+				0186D3EA167293BE009F13E5 /* LoadableCategory.h */,
+				0186D3EB167293BE009F13E5 /* NSFileManager-KIFAdditions.h */,
+				0186D3EC167293BE009F13E5 /* NSFileManager-KIFAdditions.m */,
+				0186D3ED167293BE009F13E5 /* UIAccessibilityElement-KIFAdditions.h */,
+				0186D3EE167293BE009F13E5 /* UIAccessibilityElement-KIFAdditions.m */,
+				0186D3EF167293BE009F13E5 /* UIApplication-KIFAdditions.h */,
+				0186D3F0167293BE009F13E5 /* UIApplication-KIFAdditions.m */,
+				0186D3F1167293BE009F13E5 /* UIScrollView-KIFAdditions.h */,
+				0186D3F2167293BE009F13E5 /* UIScrollView-KIFAdditions.m */,
+				0186D3F3167293BE009F13E5 /* UITouch-KIFAdditions.h */,
+				0186D3F4167293BE009F13E5 /* UITouch-KIFAdditions.m */,
+				0186D3F5167293BE009F13E5 /* UIView-KIFAdditions.h */,
+				0186D3F6167293BE009F13E5 /* UIView-KIFAdditions.m */,
+				0186D3F7167293BE009F13E5 /* UIWindow-KIFAdditions.h */,
+				0186D3F8167293BE009F13E5 /* UIWindow-KIFAdditions.m */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		0186D3F9167293BE009F13E5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0186D3FA167293BE009F13E5 /* KIF-Prefix.pch */,
+				0186D3FB167293BE009F13E5 /* KIFTestController.h */,
+				0186D3FC167293BE009F13E5 /* KIFTestController.m */,
+				0186D3FD167293BE009F13E5 /* KIFTestScenario.h */,
+				0186D3FE167293BE009F13E5 /* KIFTestScenario.m */,
+				0186D3FF167293BE009F13E5 /* KIFTestStep.h */,
+				0186D400167293BE009F13E5 /* KIFTestStep.m */,
+				0186D401167293BE009F13E5 /* KIFTypist.h */,
+				0186D402167293BE009F13E5 /* KIFTypist.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		0186D44D167293BE009F13E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0186D48D167293BF009F13E5 /* libKIF.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -600,6 +885,7 @@
 			children = (
 				01BE6223164B3B000000679C /* Foliao.app */,
 				01BE6244164B3B010000679C /* FoliaoTests.octest */,
+				0171D72616722B6300521346 /* Functional Tests.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -665,8 +951,8 @@
 		01BE624B164B3B010000679C /* FoliaoTests */ = {
 			isa = PBXGroup;
 			children = (
-				01BE6251164B3B010000679C /* FoliaoTests.h */,
-				01BE6252164B3B010000679C /* FoliaoTests.m */,
+				0171D72B16722C0E00521346 /* Functional */,
+				0171D72A16722C0700521346 /* Unit */,
 				01BE624C164B3B010000679C /* Supporting Files */,
 			);
 			path = FoliaoTests;
@@ -675,6 +961,7 @@
 		01BE624C164B3B010000679C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0171D72816722B6300521346 /* FunctionalTests-Info.plist */,
 				01BE624D164B3B010000679C /* FoliaoTests-Info.plist */,
 				01BE624E164B3B010000679C /* InfoPlist.strings */,
 			);
@@ -768,6 +1055,7 @@
 		01ECEBB116710B5400336482 /* Submodules */ = {
 			isa = PBXGroup;
 			children = (
+				0186D3E5167293BE009F13E5 /* KIF */,
 				01ECEBB216710B5400336482 /* Kal */,
 				01ECEC1116710B5400336482 /* ZUUIRevealController */,
 			);
@@ -817,6 +1105,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0171D6B216722B6300521346 /* FunctionalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0171D72316722B6300521346 /* Build configuration list for PBXNativeTarget "FunctionalTests" */;
+			buildPhases = (
+				0171D6B516722B6300521346 /* Sources */,
+				0171D6D816722B6300521346 /* Frameworks */,
+				0171D6EE16722B6300521346 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0171D6B316722B6300521346 /* PBXTargetDependency */,
+			);
+			name = FunctionalTests;
+			productName = Foliao;
+			productReference = 0171D72616722B6300521346 /* Functional Tests.app */;
+			productType = "com.apple.product-type.application";
+		};
 		01BE6222164B3B000000679C /* Foliao */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01BE6256164B3B010000679C /* Build configuration list for PBXNativeTarget "Foliao" */;
@@ -878,11 +1184,16 @@
 					ProductGroup = 0168CB751659560B003DD8AF /* Products */;
 					ProjectRef = 0168CB741659560B003DD8AF /* Kal.xcodeproj */;
 				},
+				{
+					ProductGroup = 0186D44D167293BE009F13E5 /* Products */;
+					ProjectRef = 0186D44C167293BE009F13E5 /* KIF.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
 				01BE6222164B3B000000679C /* Foliao */,
 				01BE6243164B3B010000679C /* FoliaoTests */,
+				0171D6B216722B6300521346 /* FunctionalTests */,
 			);
 		};
 /* End PBXProject section */
@@ -895,9 +1206,75 @@
 			remoteRef = 0168CB7B1659560B003DD8AF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		0186D48D167293BF009F13E5 /* libKIF.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libKIF.a;
+			remoteRef = 0186D48C167293BF009F13E5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0171D6EE16722B6300521346 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0171D6EF16722B6300521346 /* InfoPlist.strings in Resources */,
+				0171D6F016722B6300521346 /* Default-568h@2x.png in Resources */,
+				0171D6F116722B6300521346 /* 114x114.png in Resources */,
+				0171D6F216722B6300521346 /* 512x512.png in Resources */,
+				0171D6F316722B6300521346 /* bt-checkin.png in Resources */,
+				0171D6F416722B6300521346 /* bt-base.png in Resources */,
+				0171D6F516722B6300521346 /* marca.png in Resources */,
+				0171D6F616722B6300521346 /* bt-checkin@2x.png in Resources */,
+				0171D6F716722B6300521346 /* bt-base@2x.png in Resources */,
+				0171D6F816722B6300521346 /* marca@2x.png in Resources */,
+				0171D6F916722B6300521346 /* FacebookSDKResources.bundle in Resources */,
+				0171D6FA16722B6300521346 /* navigation-bar.png in Resources */,
+				0171D6FB16722B6300521346 /* navigation-bar@2x.png in Resources */,
+				0171D6FC16722B6300521346 /* 57x57.png in Resources */,
+				0171D6FD16722B6300521346 /* Default.png in Resources */,
+				0171D6FE16722B6300521346 /* Default@2x.png in Resources */,
+				0171D6FF16722B6300521346 /* bt-locate-me-bg.png in Resources */,
+				0171D70016722B6300521346 /* bt-locate-me.png in Resources */,
+				0171D70116722B6300521346 /* bt-locate-me-bg@2x.png in Resources */,
+				0171D70216722B6300521346 /* bt-locate-me@2x.png in Resources */,
+				0171D70316722B6300521346 /* BlocosByLocationViewController.xib in Resources */,
+				0171D70416722B6300521346 /* BlocosByNameViewController.xib in Resources */,
+				0171D70516722B6300521346 /* BlocoViewController.xib in Resources */,
+				0171D70616722B6300521346 /* LoginViewController.xib in Resources */,
+				0171D70716722B6300521346 /* MenuViewController.xib in Resources */,
+				0171D70816722B6300521346 /* ProfileViewController.xib in Resources */,
+				0171D70916722B6300521346 /* WhoIsGoingViewController.xib in Resources */,
+				0171D70A16722B6300521346 /* FoliaoCell.xib in Resources */,
+				0171D70B16722B6300521346 /* WhereMyFriendsAreGoingViewController.xib in Resources */,
+				0171D70C16722B6300521346 /* WhereAreMoreViewController.xib in Resources */,
+				0171D70D16722B6300521346 /* seta-branca.png in Resources */,
+				0171D70E16722B6300521346 /* seta-branca@2x.png in Resources */,
+				0171D70F16722B6300521346 /* menu-section-background@2x.png in Resources */,
+				0171D71016722B6300521346 /* menu-section-background.png in Resources */,
+				0171D71116722B6300521346 /* MapSettingsViewController.xib in Resources */,
+				0171D71216722B6300521346 /* bt-branco@2x.png in Resources */,
+				0171D71316722B6300521346 /* bt-branco.png in Resources */,
+				0171D71416722B6300521346 /* bt-roxo@2x.png in Resources */,
+				0171D71516722B6300521346 /* bt-roxo.png in Resources */,
+				0171D71616722B6300521346 /* bt-menu-laranja.png in Resources */,
+				0171D71716722B6300521346 /* bt-voltar-laranja.png in Resources */,
+				0171D71816722B6300521346 /* seta-laranja.png in Resources */,
+				0171D71916722B6300521346 /* bt-menu-rosa.png in Resources */,
+				0171D71A16722B6300521346 /* bt-voltar-rosa.png in Resources */,
+				0171D71B16722B6300521346 /* seta-rosa.png in Resources */,
+				0171D71C16722B6300521346 /* bt-menu-laranja@2x.png in Resources */,
+				0171D71D16722B6300521346 /* bt-voltar-laranja@2x.png in Resources */,
+				0171D71E16722B6300521346 /* seta-laranja@2x.png in Resources */,
+				0171D71F16722B6300521346 /* bt-menu-rosa@2x.png in Resources */,
+				0171D72016722B6300521346 /* bt-voltar-rosa@2x.png in Resources */,
+				0171D72116722B6300521346 /* seta-rosa@2x.png in Resources */,
+				0171D72216722B6300521346 /* Kal.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		01BE6221164B3B000000679C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -984,6 +1361,65 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0171D6B516722B6300521346 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0186D4A01672990C009F13E5 /* KIFTestScenario+FoliaoAdditions.h in Sources */,
+				0186D4A11672990C009F13E5 /* KIFTestScenario+FoliaoAdditions.m in Sources */,
+				0186D4A21672990C009F13E5 /* KIFTestStep+FoliaoAdditions.h in Sources */,
+				0186D4A31672990C009F13E5 /* KIFTestStep+FoliaoAdditions.m in Sources */,
+				0186D498167295B3009F13E5 /* FoliaoTestController.h in Sources */,
+				0186D499167295B3009F13E5 /* FoliaoTestController.m in Sources */,
+				0171D6B616722B6300521346 /* main.m in Sources */,
+				0171D6B716722B6300521346 /* AppDelegate.m in Sources */,
+				0171D6B816722B6300521346 /* MenuViewController.m in Sources */,
+				0171D6B916722B6300521346 /* BlocosByLocationViewController.m in Sources */,
+				0171D6BA16722B6300521346 /* BlocosByNameViewController.m in Sources */,
+				0171D6BB16722B6300521346 /* BaseViewController.m in Sources */,
+				0171D6BC16722B6300521346 /* LoginViewController.m in Sources */,
+				0171D6BD16722B6300521346 /* BlocoViewController.m in Sources */,
+				0171D6BE16722B6300521346 /* BlocosByDateViewController.m in Sources */,
+				0171D6BF16722B6300521346 /* KalBlocosDataSource.m in Sources */,
+				0171D6C016722B6300521346 /* ParadeAnnotation.m in Sources */,
+				0171D6C116722B6300521346 /* ProfileViewController.m in Sources */,
+				0171D6C216722B6300521346 /* FoliaoRankingTitle.m in Sources */,
+				0171D6C316722B6300521346 /* WhoIsGoingViewController.m in Sources */,
+				0171D6C416722B6300521346 /* FoliaoCell.m in Sources */,
+				0171D6C516722B6300521346 /* WhereMyFriendsAreGoingViewController.m in Sources */,
+				0171D6C616722B6300521346 /* WhereAreMoreViewController.m in Sources */,
+				0171D6C716722B6300521346 /* DateUtil.m in Sources */,
+				0171D6C816722B6300521346 /* MapSettingsViewController.m in Sources */,
+				0171D6C916722B6300521346 /* UIColor+Foliao.m in Sources */,
+				0171D6CA16722B6300521346 /* ThemeManager.m in Sources */,
+				0171D6CB16722B6300521346 /* OrangeTheme.m in Sources */,
+				0171D6CC16722B6300521346 /* PinkTheme.m in Sources */,
+				0171D6CD16722B6300521346 /* KalDataSource.m in Sources */,
+				0171D6CE16722B6300521346 /* KalDate.m in Sources */,
+				0171D6CF16722B6300521346 /* KalGridView.m in Sources */,
+				0171D6D016722B6300521346 /* KalLogic.m in Sources */,
+				0171D6D116722B6300521346 /* KalMonthView.m in Sources */,
+				0171D6D216722B6300521346 /* KalTileView.m in Sources */,
+				0171D6D316722B6300521346 /* KalView.m in Sources */,
+				0171D6D416722B6300521346 /* KalViewController.m in Sources */,
+				0171D6D516722B6300521346 /* NSDateAdditions.m in Sources */,
+				0171D6D616722B6300521346 /* UIViewAdditions.m in Sources */,
+				0171D6D716722B6300521346 /* ZUUIRevealController.m in Sources */,
+				0186D45B167293BE009F13E5 /* CGGeometry-KIFAdditions.m in Sources */,
+				0186D45C167293BE009F13E5 /* NSFileManager-KIFAdditions.m in Sources */,
+				0186D45D167293BE009F13E5 /* UIAccessibilityElement-KIFAdditions.m in Sources */,
+				0186D45E167293BE009F13E5 /* UIApplication-KIFAdditions.m in Sources */,
+				0186D45F167293BE009F13E5 /* UIScrollView-KIFAdditions.m in Sources */,
+				0186D460167293BE009F13E5 /* UITouch-KIFAdditions.m in Sources */,
+				0186D461167293BE009F13E5 /* UIView-KIFAdditions.m in Sources */,
+				0186D462167293BE009F13E5 /* UIWindow-KIFAdditions.m in Sources */,
+				0186D463167293BE009F13E5 /* KIFTestController.m in Sources */,
+				0186D464167293BE009F13E5 /* KIFTestScenario.m in Sources */,
+				0186D465167293BE009F13E5 /* KIFTestStep.m in Sources */,
+				0186D466167293BE009F13E5 /* KIFTypist.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		01BE621F164B3B000000679C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1030,6 +1466,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				01BE6253164B3B010000679C /* FoliaoTests.m in Sources */,
+				0171D73716722F3400521346 /* FoliaoTestController.m in Sources */,
+				0186D49C16729620009F13E5 /* KIFTestScenario+FoliaoAdditions.m in Sources */,
+				0186D49F16729662009F13E5 /* KIFTestStep+FoliaoAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1040,6 +1479,11 @@
 			isa = PBXTargetDependency;
 			name = Kal;
 			targetProxy = 0168CB7D1659575D003DD8AF /* PBXContainerItemProxy */;
+		};
+		0171D6B316722B6300521346 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Kal;
+			targetProxy = 0171D6B416722B6300521346 /* PBXContainerItemProxy */;
 		};
 		01BE624A164B3B010000679C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1068,6 +1512,77 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0171D72416722B6300521346 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Gustavo Barbosa (W63BE6GZBF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../../../Frameworks\"",
+					"\"$(SRCROOT)/../../../Frameworks/FacebookSDK\"",
+					"\"$(SRCROOT)/../../../Downloads\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Foliao/Foliao-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"RUN_KIF_TESTS=1",
+					"DEBUG=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Submodules\"/**",
+					"\"$(SRCROOT)/FoliaoTests\"/**",
+				);
+				INFOPLIST_FILE = "FunctionalTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /Users/barbosa/Projects/ios/Kal/src;
+				"OTHER_LDFLAGS[arch=*]" = (
+					"$(inherited)",
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "Functional Tests";
+				PROVISIONING_PROFILE = "238D3B28-06BA-44FC-88B5-2D9D5C660C7D";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0171D72516722B6300521346 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: GUSTAVO BARBOSA";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../../../Frameworks\"",
+					"\"$(SRCROOT)/../../../Frameworks/FacebookSDK\"",
+					"\"$(SRCROOT)/../../../Downloads\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Foliao/Foliao-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Submodules\"/**",
+					"\"$(SRCROOT)/FoliaoTests\"/**",
+				);
+				INFOPLIST_FILE = "FunctionalTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = /Users/barbosa/Projects/ios/Kal/src;
+				"OTHER_LDFLAGS[arch=*]" = (
+					"$(inherited)",
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "Functional Tests";
+				PROVISIONING_PROFILE = "50A2ADB2-841A-472F-8594-CB123B95250D";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		01BE6254164B3B010000679C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1083,10 +1598,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -1111,6 +1623,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: GUSTAVO BARBOSA";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -1216,6 +1729,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0171D72316722B6300521346 /* Build configuration list for PBXNativeTarget "FunctionalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0171D72416722B6300521346 /* Debug */,
+				0171D72516722B6300521346 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		01BE621D164B3B000000679C /* Build configuration list for PBXProject "Foliao" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

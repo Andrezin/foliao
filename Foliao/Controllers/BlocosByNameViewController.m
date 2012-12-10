@@ -33,6 +33,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.tableView.accessibilityLabel = @"Lista de blocos";
     
     PFQuery *query = [PFQuery queryWithClassName:@"Bloco"];
     [query orderByAscending:@"name"];
@@ -134,6 +135,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell.accessibilityLabel = @"Nome do bloco";
     }
     
     cell.textLabel.text = _tableData[indexPath.section][@"rows"][indexPath.row][@"name"];

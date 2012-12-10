@@ -67,6 +67,10 @@ typedef enum viewDomainClass {
     [super viewDidLoad];
     [self sizeScrollViewToFit];
     [self fillBlocoInfo];
+    
+    self.mapView.accessibilityLabel = @"Mapa do bloco";
+    self.labelName.accessibilityLabel = @"Nome do bloco";
+    self.labelInfo.accessibilityLabel = @"Informações do bloco";
 }
 
 - (void)sizeScrollViewToFit

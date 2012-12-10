@@ -54,6 +54,7 @@
 {
     UIImage *menuButtonBackground = [[ThemeManager currentTheme] menuButtonImage];
     UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:menuButtonBackground style:UIBarButtonItemStylePlain target:self.navigationController.parentViewController action:@selector(revealToggle:)];
+    menuButton.accessibilityLabel = @"Botão Menu";
     
     self.navigationItem.leftBarButtonItem = menuButton;
 }

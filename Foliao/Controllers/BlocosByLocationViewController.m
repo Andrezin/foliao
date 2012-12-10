@@ -40,6 +40,7 @@
     [super viewDidLoad];
     
     self.mapView.userLocation.title = @"Tô pulando por aqui!";
+    self.mapView.accessibilityLabel = @"Mapa de blocos";
     
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;

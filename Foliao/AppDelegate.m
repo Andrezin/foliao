@@ -21,6 +21,10 @@
 #import "PinkTheme.h"
 #import "OrangeTheme.h"
 
+#if RUN_KIF_TESTS
+#import "FoliaoTestController.h"
+#endif
+
 @interface AppDelegate()
 
 - (void)configureParse;
@@ -44,13 +48,22 @@
     
     [ThemeManager setCurrentTheme:[OrangeTheme class]];
     
+    #ifndef RUN_KIF_TESTS
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
                                                     UIRemoteNotificationTypeAlert|
                                                     UIRemoteNotificationTypeSound];
+    #endif
     
     if (![PFUser currentUser]) {
         [self showLoginView:NO];
     }
+    
+    #if RUN_KIF_TESTS
+    [[FoliaoTestController sharedInstance] startTestingWithCompletionBlock:^{
+        // Exit after the tests complete so that CI knows we're done
+        exit([[FoliaoTestController sharedInstance] failureCount]);
+    }];
+    #endif
 
     return YES;
 }
