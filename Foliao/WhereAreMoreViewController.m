@@ -30,12 +30,16 @@
     
     PFQuery *query = [PFQuery queryWithClassName:@"Parade"];
     
-    if (self.what == WhereAreMorePeople)
+    if (self.what == WhereAreMorePeople) {
+        [query whereKey:@"totalPresencesCount" greaterThan:[NSNumber numberWithInt:0]];
         [query orderByDescending:@"totalPresencesCount"];
-    if (self.what == WhereAreMoreWomen)
+    } else if (self.what == WhereAreMoreWomen) {
+        [query whereKey:@"femalePresencesCount" greaterThan:[NSNumber numberWithInt:0]];
         [query orderByDescending:@"femalePresencesCount"];
-    if (self.what == WhereAreMoreMen)
+    } else if (self.what == WhereAreMoreMen) {
+        [query whereKey:@"malePresencesCount" greaterThan:[NSNumber numberWithInt:0]];
         [query orderByDescending:@"malePresencesCount"];
+    }
     
     query.cachePolicy = kPFCachePolicyCacheElseNetwork;
     query.maxCacheAge = 10 * 60; // ten minutes
