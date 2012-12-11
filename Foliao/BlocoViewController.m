@@ -210,8 +210,8 @@ typedef enum viewDomainClass {
                                      self.imageViewPictureFoliao3,
                                      self.imageViewPictureFoliao4, nil];
         
-        for (int i=0; i < self.folioes.count; i++) {
-            NSString *picURL = [NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=normal", self.folioes[i][@"facebookId"]];
+        for (int i=0; i < 5; i++) {
+            NSString *picURL = [NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=normal", self.folioes[0][@"facebookId"]];
             UIImageView *profileImageView = (UIImageView *)pictureTemplates[i];
             [profileImageView setImageWithURL:[NSURL URLWithString:picURL] placeholderImage:[UIImage imageNamed:@"default"]];
             profileImageView.layer.cornerRadius = 3.0;

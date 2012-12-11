@@ -224,6 +224,10 @@
 		01E0CFF0164BDD8100940C77 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFEF164BDD8100940C77 /* StoreKit.framework */; };
 		01E0CFF2164BDD8600940C77 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFF1164BDD8600940C77 /* SystemConfiguration.framework */; };
 		01E0CFF6164BE2A300940C77 /* BlocosByNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E0CFF4164BE2A300940C77 /* BlocosByNameViewController.m */; };
+		01E9CADA167796C800D4E990 /* formatAllSources.sh in Resources */ = {isa = PBXBuildFile; fileRef = 01E9CACE167796C800D4E990 /* formatAllSources.sh */; };
+		01E9CADB167796C800D4E990 /* formatOpenedSources.sh in Resources */ = {isa = PBXBuildFile; fileRef = 01E9CACF167796C800D4E990 /* formatOpenedSources.sh */; };
+		01E9CADC167796C800D4E990 /* uncrustify_objective_c.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 01E9CAD0167796C800D4E990 /* uncrustify_objective_c.cfg */; };
+		01E9CADD167796C800D4E990 /* Uncrustify_opened_Xcode_sources.workflow in Resources */ = {isa = PBXBuildFile; fileRef = 01E9CAD1167796C800D4E990 /* Uncrustify_opened_Xcode_sources.workflow */; };
 		01EBA92A165D7422005C1847 /* BlocosByLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA923165D7422005C1847 /* BlocosByLocationViewController.xib */; };
 		01EBA92B165D7422005C1847 /* BlocosByNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA924165D7422005C1847 /* BlocosByNameViewController.xib */; };
 		01EBA92C165D7422005C1847 /* BlocoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA925165D7422005C1847 /* BlocoViewController.xib */; };
@@ -250,27 +254,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0168CB7B1659560B003DD8AF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0168CB741659560B003DD8AF /* Kal.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D;
-			remoteInfo = Kal;
-		};
-		0168CB7D1659575D003DD8AF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0168CB741659560B003DD8AF /* Kal.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D;
-			remoteInfo = Kal;
-		};
-		0171D6B416722B6300521346 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0168CB741659560B003DD8AF /* Kal.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D;
-			remoteInfo = Kal;
-		};
 		0186D48C167293BF009F13E5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0186D44C167293BE009F13E5 /* KIF.xcodeproj */;
@@ -293,8 +276,6 @@
 		013341B6164B4C0700C2984B /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = Controllers/MenuViewController.m; sourceTree = "<group>"; };
 		013341BA164B58C100C2984B /* BlocosByLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlocosByLocationViewController.h; path = Controllers/BlocosByLocationViewController.h; sourceTree = "<group>"; };
 		013341BB164B58C100C2984B /* BlocosByLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlocosByLocationViewController.m; path = Controllers/BlocosByLocationViewController.m; sourceTree = "<group>"; };
-		013341C2164B5B1300C2984B /* ZUUIRevealController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZUUIRevealController.h; sourceTree = "<group>"; };
-		013341C3164B5B1300C2984B /* ZUUIRevealController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZUUIRevealController.m; sourceTree = "<group>"; };
 		013341C6164B5DD900C2984B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0140011D165AB0BC008F0429 /* KalBlocosDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalBlocosDataSource.h; sourceTree = "<group>"; };
 		0140011E165AB0BC008F0429 /* KalBlocosDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalBlocosDataSource.m; sourceTree = "<group>"; };
@@ -314,8 +295,6 @@
 		015E88F4165F447B0008DED8 /* WhereAreMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhereAreMoreViewController.h; sourceTree = "<group>"; };
 		015E88F5165F447C0008DED8 /* WhereAreMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhereAreMoreViewController.m; sourceTree = "<group>"; };
 		015E88F7165F449F0008DED8 /* WhereAreMoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhereAreMoreViewController.xib; sourceTree = "<group>"; };
-		0168CB741659560B003DD8AF /* Kal.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kal.xcodeproj; path = ../../../../ios/Kal/src/Kal.xcodeproj; sourceTree = "<group>"; };
-		0168CB8016595795003DD8AF /* Kal.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Kal.bundle; path = ../../../../ios/Kal/src/Kal.bundle; sourceTree = "<group>"; };
 		0168CB821659586B003DD8AF /* BlocosByDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlocosByDateViewController.h; path = Controllers/BlocosByDateViewController.h; sourceTree = "<group>"; };
 		0168CB831659586B003DD8AF /* BlocosByDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlocosByDateViewController.m; path = Controllers/BlocosByDateViewController.m; sourceTree = "<group>"; };
 		0171D72616722B6300521346 /* Functional Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Functional Tests.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -443,6 +422,10 @@
 		01E0CFF1164BDD8600940C77 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		01E0CFF3164BE2A300940C77 /* BlocosByNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlocosByNameViewController.h; path = Controllers/BlocosByNameViewController.h; sourceTree = "<group>"; };
 		01E0CFF4164BE2A300940C77 /* BlocosByNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlocosByNameViewController.m; path = Controllers/BlocosByNameViewController.m; sourceTree = "<group>"; };
+		01E9CACE167796C800D4E990 /* formatAllSources.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = formatAllSources.sh; sourceTree = "<group>"; };
+		01E9CACF167796C800D4E990 /* formatOpenedSources.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = formatOpenedSources.sh; sourceTree = "<group>"; };
+		01E9CAD0167796C800D4E990 /* uncrustify_objective_c.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = uncrustify_objective_c.cfg; sourceTree = "<group>"; };
+		01E9CAD1167796C800D4E990 /* Uncrustify_opened_Xcode_sources.workflow */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Uncrustify_opened_Xcode_sources.workflow; sourceTree = "<group>"; };
 		01EBA923165D7422005C1847 /* BlocosByLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlocosByLocationViewController.xib; sourceTree = "<group>"; };
 		01EBA924165D7422005C1847 /* BlocosByNameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlocosByNameViewController.xib; sourceTree = "<group>"; };
 		01EBA925165D7422005C1847 /* BlocoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlocoViewController.xib; sourceTree = "<group>"; };
@@ -584,24 +567,6 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
-		013341C0164B5B1300C2984B /* Submodules */ = {
-			isa = PBXGroup;
-			children = (
-				0168CB72165955FB003DD8AF /* Kal */,
-				013341C1164B5B1300C2984B /* ZUUIRevealController */,
-			);
-			path = Submodules;
-			sourceTree = "<group>";
-		};
-		013341C1164B5B1300C2984B /* ZUUIRevealController */ = {
-			isa = PBXGroup;
-			children = (
-				013341C2164B5B1300C2984B /* ZUUIRevealController.h */,
-				013341C3164B5B1300C2984B /* ZUUIRevealController.m */,
-			);
-			path = ZUUIRevealController;
-			sourceTree = "<group>";
-		};
 		0140011C165AB0BC008F0429 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -635,23 +600,6 @@
 				015E88ED165EC0410008DED8 /* FoliaoCell.m */,
 			);
 			name = Cell;
-			sourceTree = "<group>";
-		};
-		0168CB72165955FB003DD8AF /* Kal */ = {
-			isa = PBXGroup;
-			children = (
-				0168CB8016595795003DD8AF /* Kal.bundle */,
-				0168CB741659560B003DD8AF /* Kal.xcodeproj */,
-			);
-			name = Kal;
-			sourceTree = "<group>";
-		};
-		0168CB751659560B003DD8AF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0168CB7C1659560B003DD8AF /* libKal.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		0171D72A16722C0700521346 /* Unit */ = {
@@ -924,7 +872,6 @@
 			isa = PBXGroup;
 			children = (
 				01EBA922165D7422005C1847 /* Views */,
-				013341C0164B5B1300C2984B /* Submodules */,
 				013341BF164B58D200C2984B /* Controllers */,
 				01BE6265164B3D450000679C /* Media */,
 				0140011C165AB0BC008F0429 /* Utils */,
@@ -1034,6 +981,33 @@
 			path = Retina;
 			sourceTree = "<group>";
 		};
+		01E9CACA167796C800D4E990 /* Xcode-formatter */ = {
+			isa = PBXGroup;
+			children = (
+				01E9CACB167796C800D4E990 /* CodeFormatter */,
+			);
+			path = "Xcode-formatter";
+			sourceTree = "<group>";
+		};
+		01E9CACB167796C800D4E990 /* CodeFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				01E9CACD167796C800D4E990 /* scripts */,
+				01E9CAD0167796C800D4E990 /* uncrustify_objective_c.cfg */,
+				01E9CAD1167796C800D4E990 /* Uncrustify_opened_Xcode_sources.workflow */,
+			);
+			path = CodeFormatter;
+			sourceTree = "<group>";
+		};
+		01E9CACD167796C800D4E990 /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				01E9CACE167796C800D4E990 /* formatAllSources.sh */,
+				01E9CACF167796C800D4E990 /* formatOpenedSources.sh */,
+			);
+			path = scripts;
+			sourceTree = "<group>";
+		};
 		01EBA922165D7422005C1847 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -1055,6 +1029,7 @@
 		01ECEBB116710B5400336482 /* Submodules */ = {
 			isa = PBXGroup;
 			children = (
+				01E9CACA167796C800D4E990 /* Xcode-formatter */,
 				0186D3E5167293BE009F13E5 /* KIF */,
 				01ECEBB216710B5400336482 /* Kal */,
 				01ECEC1116710B5400336482 /* ZUUIRevealController */,
@@ -1116,7 +1091,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				0171D6B316722B6300521346 /* PBXTargetDependency */,
 			);
 			name = FunctionalTests;
 			productName = Foliao;
@@ -1130,11 +1104,11 @@
 				01BE621F164B3B000000679C /* Sources */,
 				01BE6220164B3B000000679C /* Frameworks */,
 				01BE6221164B3B000000679C /* Resources */,
+				01E9CAE41677978800D4E990 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0168CB7E1659575D003DD8AF /* PBXTargetDependency */,
 			);
 			name = Foliao;
 			productName = Foliao;
@@ -1181,10 +1155,6 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 0168CB751659560B003DD8AF /* Products */;
-					ProjectRef = 0168CB741659560B003DD8AF /* Kal.xcodeproj */;
-				},
-				{
 					ProductGroup = 0186D44D167293BE009F13E5 /* Products */;
 					ProjectRef = 0186D44C167293BE009F13E5 /* KIF.xcodeproj */;
 				},
@@ -1199,13 +1169,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		0168CB7C1659560B003DD8AF /* libKal.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libKal.a;
-			remoteRef = 0168CB7B1659560B003DD8AF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		0186D48D167293BF009F13E5 /* libKIF.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1331,6 +1294,10 @@
 				01AAF197166BE691002CA70D /* bt-voltar-rosa@2x.png in Resources */,
 				01AAF198166BE691002CA70D /* seta-rosa@2x.png in Resources */,
 				01ECEC6E16710B5500336482 /* Kal.bundle in Resources */,
+				01E9CADA167796C800D4E990 /* formatAllSources.sh in Resources */,
+				01E9CADB167796C800D4E990 /* formatOpenedSources.sh in Resources */,
+				01E9CADC167796C800D4E990 /* uncrustify_objective_c.cfg in Resources */,
+				01E9CADD167796C800D4E990 /* Uncrustify_opened_Xcode_sources.workflow in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1357,6 +1324,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		01E9CAE41677978800D4E990 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "sh Submodules/Xcode-formatter/CodeFormatter/scripts/formatOpenedSources.sh";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1475,16 +1455,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0168CB7E1659575D003DD8AF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Kal;
-			targetProxy = 0168CB7D1659575D003DD8AF /* PBXContainerItemProxy */;
-		};
-		0171D6B316722B6300521346 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Kal;
-			targetProxy = 0171D6B416722B6300521346 /* PBXContainerItemProxy */;
-		};
 		01BE624A164B3B010000679C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 01BE6222164B3B000000679C /* Foliao */;
