@@ -9,7 +9,7 @@
 
 #import "BlocosByDateViewController.h"
 
-#import "BlocoViewController.h"
+#import "ParadeViewController.h"
 #import "KalLogic.h"
 #import "KalDataSource.h"
 #import "KalDate.h"
@@ -112,7 +112,7 @@ extern NSString *const KalDataSourceChangedNotification;
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    BlocoViewController *blocoViewController = [[BlocoViewController alloc] init];
+    ParadeViewController *blocoViewController = [[ParadeViewController alloc] init];
     blocoViewController.parade = [dataSource paradeAtIndexPath:indexPath];
     [self.navigationController pushViewController:blocoViewController animated:YES];
 }

@@ -9,7 +9,7 @@
 #import <Parse/Parse.h>
 
 #import "WhereAreMoreViewController.h"
-#import "BlocoViewController.h"
+#import "ParadeViewController.h"
 #import "AppConstants.h"
 #import "ThemeManager.h"
 
@@ -108,7 +108,7 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    BlocoViewController *blocoViewController = [[BlocoViewController alloc] init];
+    ParadeViewController *blocoViewController = [[ParadeViewController alloc] init];
     blocoViewController.parade = self.parades[indexPath.row];
     [self.navigationController pushViewController:blocoViewController animated:YES];
 }

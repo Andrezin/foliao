@@ -9,24 +9,18 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <QuartzCore/QuartzCore.h>
 
-#import "BlocoViewController.h"
+#import "ParadeViewController.h"
 #import "ParadeAnnotation.h"
 #import "WhoIsGoingViewController.h"
 #import "DateUtil.h"
 #import "ThemeManager.h"
 
-typedef enum viewDomainClass {
-    ViewDomainClassBloco = 1,
-    ViewDomainClassParade = 2
-} ViewDomainClass;
 
-@interface BlocoViewController () {
-    ViewDomainClass _domainClass;
+@interface ParadeViewController () {
     BOOL _mapIsOpen;
     NSMutableArray *friendIds;
 }
 
-@property (strong, nonatomic) NSArray *blocoParades;
 @property (strong, nonatomic) NSMutableArray *folioes;
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -43,10 +37,10 @@ typedef enum viewDomainClass {
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewPictureFoliao3;
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewPictureFoliao4;
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewAccessoryWhoIsGoing;
-@property (strong, nonatomic) IBOutlet UILabel *labelEmptyBloco;
+@property (strong, nonatomic) IBOutlet UILabel *labelEmptyParade;
 
 - (void)sizeScrollViewToFit;
-- (void)fillBlocoInfo;
+- (void)fillParadeInfo;
 - (BOOL)foliaoIsAlreadyGoing:(PFUser *)foliao;
 - (void)showWhoIsGoing;
 - (void)showFolioesPictures;
@@ -60,13 +54,13 @@ typedef enum viewDomainClass {
 @end
 
 
-@implementation BlocoViewController
+@implementation ParadeViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self sizeScrollViewToFit];
-    [self fillBlocoInfo];
+    [self fillParadeInfo];
     
     self.mapView.accessibilityLabel = @"Mapa do bloco";
     self.labelName.accessibilityLabel = @"Nome do bloco";
@@ -93,55 +87,22 @@ typedef enum viewDomainClass {
     [self.scrollView setContentSize:(CGSizeMake(self.scrollView.frame.size.width, scrollViewHeight+10))];
 }
 
-- (void)fillBlocoInfo
+- (void)fillParadeInfo
 {
-    if (_domainClass == ViewDomainClassParade) {
-        ParadeAnnotation *annotation = [[ParadeAnnotation alloc] initWithParade:self.parade];
-        [self.mapView addAnnotation:annotation];
-        
-        self.buttonCheckIn.enabled = YES;
-        self.labelName.text = self.parade[@"bloco"][@"name"];
-        
-        [self showWhoIsGoing];
-        
-    } else {
-        self.buttonCheckIn.enabled = NO;
-        self.labelName.text = self.bloco[@"name"];
-        
-        PFQuery *query = [PFQuery queryWithClassName:@"Parade"];
-        [query includeKey:@"bloco"];
-        [query whereKey:@"bloco" equalTo:self.bloco];
-        
-        query.cachePolicy = kPFCachePolicyCacheElseNetwork;
-        query.maxCacheAge = 0.5 * 60 * 60; // half hour
-        
-        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-            if (!error) {
-                self.blocoParades = objects;
-                if (self.blocoParades.count) {
-                    
-#warning Mostrar a primeira Parade? As duas juntas?
-                    ParadeAnnotation *annotation = [[ParadeAnnotation alloc] initWithParade:self.blocoParades[0]];
-                    [self.mapView addAnnotation:annotation];
-                    
-                    self.buttonCheckIn.enabled = YES;
-                    [self showWhoIsGoing];
-                }
-            }
-        }];
-    }
-}
+    ParadeAnnotation *annotation = [[ParadeAnnotation alloc] initWithParade:self.parade];
+    [self.mapView addAnnotation:annotation];
+    
+    self.buttonCheckIn.enabled = YES;
+    self.labelName.text = self.parade[@"bloco"][@"name"];
+    
+    [self showWhoIsGoing];
+ }
 
 - (void)showWhoIsGoing
 {
     PFQuery *query = [PFQuery queryWithClassName:@"Presence"];
-    
-    if (_domainClass == ViewDomainClassParade) {
-        [query whereKey:@"parade" equalTo:self.parade];
-    } else {
-        [query whereKey:@"parade" containedIn:self.blocoParades];
-    }
-    
+    [query whereKey:@"parade" equalTo:self.parade];
+
     query.cachePolicy = kPFCachePolicyCacheElseNetwork;
     query.maxCacheAge = 0.5 * 60 * 60; // half hour
     
@@ -151,7 +112,7 @@ typedef enum viewDomainClass {
             NSLog(@"Found %d presences", presences.count);
             
             if (presences.count == 0) {
-                self.labelEmptyBloco.hidden = NO;
+                self.labelEmptyParade.hidden = NO;
                 self.buttonWhoIsGoing.enabled = NO;
                 return;
             }
@@ -250,29 +211,7 @@ typedef enum viewDomainClass {
 
 - (IBAction)checkInButtonTapped:(UIButton *)sender
 {
-    if (_domainClass == ViewDomainClassParade) {
-        [self confirmPresenceInParade:self.parade];
-    } else {
-        if (self.blocoParades.count == 0)
-            return;
-    
-        else if (self.blocoParades.count == 1)
-            [self confirmPresenceInParade:self.blocoParades[0]];
-        
-        else {
-            UIActionSheet *confirmationSheet = [[UIActionSheet alloc] initWithTitle:@"Vai pular em qual dia?" delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:nil];
-            
-            for (PFObject *parade in self.blocoParades) {
-                [confirmationSheet addButtonWithTitle:[DateUtil stringFromDate:(NSDate *)parade[@"date"]]];
-            }
-            
-            confirmationSheet.cancelButtonIndex = self.blocoParades.count;
-            [confirmationSheet addButtonWithTitle:@"Nenhum"];
-            
-            confirmationSheet.actionSheetStyle = UIActionSheetStyleBlackTranslucent;
-            [confirmationSheet showInView:self.view];
-        }
-    }
+    [self confirmPresenceInParade:self.parade];
 }
 
 - (IBAction)whoIsGoingButtonTapped:(UIButton *)sender
@@ -320,7 +259,7 @@ typedef enum viewDomainClass {
 - (void)addFoliaoToPresencesBox
 {
     [self.folioes insertObject:[PFUser currentUser] atIndex:0];
-    self.labelEmptyBloco.hidden = YES;
+    self.labelEmptyParade.hidden = YES;
     
     __block CGRect firstImageFrame = self.imageViewPictureFoliao0.frame;
     
@@ -374,17 +313,6 @@ typedef enum viewDomainClass {
 }
 
 
-#pragma mark - UIActionSheet delegate
-
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (buttonIndex >= self.blocoParades.count) // cancelling...
-        return;
-    
-    NSLog(@"Confirming presence...");
-    [self confirmPresenceInParade:self.blocoParades[buttonIndex]];
-}
-
-
 #pragma mark - MKMapView delegate
 
 - (void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray *)views
@@ -409,18 +337,6 @@ typedef enum viewDomainClass {
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
     [self sizeScrollViewToFit];
-}
-
-- (void)setBloco:(PFObject *)bloco
-{
-    _bloco = bloco;
-    _domainClass = ViewDomainClassBloco;
-}
-
-- (void)setParade:(PFObject *)parade
-{
-    _parade = parade;
-    _domainClass = ViewDomainClassParade;
 }
 
 @end

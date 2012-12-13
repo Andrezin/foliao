@@ -31,7 +31,7 @@
 		0171D6BA16722B6300521346 /* BlocosByNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E0CFF4164BE2A300940C77 /* BlocosByNameViewController.m */; };
 		0171D6BB16722B6300521346 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B5E62164D8B8600042B4E /* BaseViewController.m */; };
 		0171D6BC16722B6300521346 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B5E65164D8E0500042B4E /* LoginViewController.m */; };
-		0171D6BD16722B6300521346 /* BlocoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B5E74164DB19B00042B4E /* BlocoViewController.m */; };
+		0171D6BD16722B6300521346 /* ParadeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B5E74164DB19B00042B4E /* ParadeViewController.m */; };
 		0171D6BE16722B6300521346 /* BlocosByDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0168CB831659586B003DD8AF /* BlocosByDateViewController.m */; };
 		0171D6BF16722B6300521346 /* KalBlocosDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0140011E165AB0BC008F0429 /* KalBlocosDataSource.m */; };
 		0171D6C016722B6300521346 /* ParadeAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 01400121165AB490008F0429 /* ParadeAnnotation.m */; };
@@ -101,7 +101,7 @@
 		0171D70216722B6300521346 /* bt-locate-me@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CC635E165B2FC6005F68BA /* bt-locate-me@2x.png */; };
 		0171D70316722B6300521346 /* BlocosByLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA923165D7422005C1847 /* BlocosByLocationViewController.xib */; };
 		0171D70416722B6300521346 /* BlocosByNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA924165D7422005C1847 /* BlocosByNameViewController.xib */; };
-		0171D70516722B6300521346 /* BlocoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA925165D7422005C1847 /* BlocoViewController.xib */; };
+		0171D70516722B6300521346 /* ParadeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA925165D7422005C1847 /* ParadeViewController.xib */; };
 		0171D70616722B6300521346 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA926165D7422005C1847 /* LoginViewController.xib */; };
 		0171D70716722B6300521346 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA927165D7422005C1847 /* MenuViewController.xib */; };
 		0171D70816722B6300521346 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA928165D7422005C1847 /* ProfileViewController.xib */; };
@@ -159,7 +159,7 @@
 		018B5E6E164DA0CE00042B4E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018B5E6D164DA0CE00042B4E /* Parse.framework */; };
 		018B5E70164DA0DE00042B4E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018B5E6F164DA0DE00042B4E /* FacebookSDK.framework */; };
 		018B5E72164DA0F000042B4E /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 018B5E71164DA0F000042B4E /* FacebookSDKResources.bundle */; };
-		018B5E76164DB19B00042B4E /* BlocoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B5E74164DB19B00042B4E /* BlocoViewController.m */; };
+		018B5E76164DB19B00042B4E /* ParadeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B5E74164DB19B00042B4E /* ParadeViewController.m */; };
 		0197C4341664013F00BA532D /* MapSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0197C4331664013F00BA532D /* MapSettingsViewController.m */; };
 		0197C4361664016A00BA532D /* MapSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0197C4351664016A00BA532D /* MapSettingsViewController.xib */; };
 		019E6B3A1655DB790025786D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 019E6B381655DB790025786D /* Default.png */; };
@@ -226,7 +226,7 @@
 		01E0CFF6164BE2A300940C77 /* BlocosByNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E0CFF4164BE2A300940C77 /* BlocosByNameViewController.m */; };
 		01EBA92A165D7422005C1847 /* BlocosByLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA923165D7422005C1847 /* BlocosByLocationViewController.xib */; };
 		01EBA92B165D7422005C1847 /* BlocosByNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA924165D7422005C1847 /* BlocosByNameViewController.xib */; };
-		01EBA92C165D7422005C1847 /* BlocoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA925165D7422005C1847 /* BlocoViewController.xib */; };
+		01EBA92C165D7422005C1847 /* ParadeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA925165D7422005C1847 /* ParadeViewController.xib */; };
 		01EBA92D165D7422005C1847 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA926165D7422005C1847 /* LoginViewController.xib */; };
 		01EBA92E165D7422005C1847 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA927165D7422005C1847 /* MenuViewController.xib */; };
 		01EBA92F165D7422005C1847 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA928165D7422005C1847 /* ProfileViewController.xib */; };
@@ -339,8 +339,8 @@
 		018B5E6D164DA0CE00042B4E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../../../Frameworks/Parse.framework; sourceTree = "<group>"; };
 		018B5E6F164DA0DE00042B4E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Frameworks/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		018B5E71164DA0F000042B4E /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKResources.bundle; path = ../../../Frameworks/FacebookSDK/FacebookSDK.framework/Versions/A/Resources/FacebookSDKResources.bundle; sourceTree = "<group>"; };
-		018B5E73164DB19B00042B4E /* BlocoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlocoViewController.h; sourceTree = "<group>"; };
-		018B5E74164DB19B00042B4E /* BlocoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlocoViewController.m; sourceTree = "<group>"; };
+		018B5E73164DB19B00042B4E /* ParadeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParadeViewController.h; sourceTree = "<group>"; };
+		018B5E74164DB19B00042B4E /* ParadeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParadeViewController.m; sourceTree = "<group>"; };
 		0197C4321664013F00BA532D /* MapSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapSettingsViewController.h; sourceTree = "<group>"; };
 		0197C4331664013F00BA532D /* MapSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapSettingsViewController.m; sourceTree = "<group>"; };
 		0197C4351664016A00BA532D /* MapSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapSettingsViewController.xib; sourceTree = "<group>"; };
@@ -420,7 +420,7 @@
 		01E0CFF4164BE2A300940C77 /* BlocosByNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlocosByNameViewController.m; path = Controllers/BlocosByNameViewController.m; sourceTree = "<group>"; };
 		01EBA923165D7422005C1847 /* BlocosByLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlocosByLocationViewController.xib; sourceTree = "<group>"; };
 		01EBA924165D7422005C1847 /* BlocosByNameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlocosByNameViewController.xib; sourceTree = "<group>"; };
-		01EBA925165D7422005C1847 /* BlocoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlocoViewController.xib; sourceTree = "<group>"; };
+		01EBA925165D7422005C1847 /* ParadeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParadeViewController.xib; sourceTree = "<group>"; };
 		01EBA926165D7422005C1847 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		01EBA927165D7422005C1847 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		01EBA928165D7422005C1847 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
@@ -543,8 +543,8 @@
 				018B5E62164D8B8600042B4E /* BaseViewController.m */,
 				018B5E64164D8E0500042B4E /* LoginViewController.h */,
 				018B5E65164D8E0500042B4E /* LoginViewController.m */,
-				018B5E73164DB19B00042B4E /* BlocoViewController.h */,
-				018B5E74164DB19B00042B4E /* BlocoViewController.m */,
+				018B5E73164DB19B00042B4E /* ParadeViewController.h */,
+				018B5E74164DB19B00042B4E /* ParadeViewController.m */,
 				01400123165AD1C8008F0429 /* ProfileViewController.h */,
 				01400124165AD1C8008F0429 /* ProfileViewController.m */,
 				01CC6361165B3A6A005F68BA /* WhoIsGoingViewController.h */,
@@ -979,7 +979,7 @@
 				015E88EA165EBFF60008DED8 /* Cell */,
 				01EBA923165D7422005C1847 /* BlocosByLocationViewController.xib */,
 				01EBA924165D7422005C1847 /* BlocosByNameViewController.xib */,
-				01EBA925165D7422005C1847 /* BlocoViewController.xib */,
+				01EBA925165D7422005C1847 /* ParadeViewController.xib */,
 				01EBA926165D7422005C1847 /* LoginViewController.xib */,
 				01EBA927165D7422005C1847 /* MenuViewController.xib */,
 				01EBA928165D7422005C1847 /* ProfileViewController.xib */,
@@ -1169,7 +1169,7 @@
 				0171D70216722B6300521346 /* bt-locate-me@2x.png in Resources */,
 				0171D70316722B6300521346 /* BlocosByLocationViewController.xib in Resources */,
 				0171D70416722B6300521346 /* BlocosByNameViewController.xib in Resources */,
-				0171D70516722B6300521346 /* BlocoViewController.xib in Resources */,
+				0171D70516722B6300521346 /* ParadeViewController.xib in Resources */,
 				0171D70616722B6300521346 /* LoginViewController.xib in Resources */,
 				0171D70716722B6300521346 /* MenuViewController.xib in Resources */,
 				0171D70816722B6300521346 /* ProfileViewController.xib in Resources */,
@@ -1228,7 +1228,7 @@
 				01CC6360165B2FC6005F68BA /* bt-locate-me@2x.png in Resources */,
 				01EBA92A165D7422005C1847 /* BlocosByLocationViewController.xib in Resources */,
 				01EBA92B165D7422005C1847 /* BlocosByNameViewController.xib in Resources */,
-				01EBA92C165D7422005C1847 /* BlocoViewController.xib in Resources */,
+				01EBA92C165D7422005C1847 /* ParadeViewController.xib in Resources */,
 				01EBA92D165D7422005C1847 /* LoginViewController.xib in Resources */,
 				01EBA92E165D7422005C1847 /* MenuViewController.xib in Resources */,
 				01EBA92F165D7422005C1847 /* ProfileViewController.xib in Resources */,
@@ -1318,7 +1318,7 @@
 				0171D6BA16722B6300521346 /* BlocosByNameViewController.m in Sources */,
 				0171D6BB16722B6300521346 /* BaseViewController.m in Sources */,
 				0171D6BC16722B6300521346 /* LoginViewController.m in Sources */,
-				0171D6BD16722B6300521346 /* BlocoViewController.m in Sources */,
+				0171D6BD16722B6300521346 /* ParadeViewController.m in Sources */,
 				0171D6BE16722B6300521346 /* BlocosByDateViewController.m in Sources */,
 				0171D6BF16722B6300521346 /* KalBlocosDataSource.m in Sources */,
 				0171D6C016722B6300521346 /* ParadeAnnotation.m in Sources */,
@@ -1371,7 +1371,7 @@
 				01E0CFF6164BE2A300940C77 /* BlocosByNameViewController.m in Sources */,
 				018B5E63164D8B8600042B4E /* BaseViewController.m in Sources */,
 				018B5E67164D8E0500042B4E /* LoginViewController.m in Sources */,
-				018B5E76164DB19B00042B4E /* BlocoViewController.m in Sources */,
+				018B5E76164DB19B00042B4E /* ParadeViewController.m in Sources */,
 				0168CB841659586B003DD8AF /* BlocosByDateViewController.m in Sources */,
 				0140011F165AB0BC008F0429 /* KalBlocosDataSource.m in Sources */,
 				01400122165AB490008F0429 /* ParadeAnnotation.m in Sources */,

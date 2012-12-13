@@ -9,7 +9,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 
 #import "ProfileViewController.h"
-#import "BlocoViewController.h"
+#import "ParadeViewController.h"
 #import "AppConstants.h"
 #import "DateUtil.h"
 #import "UIColor+Foliao.h"
@@ -159,9 +159,9 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    BlocoViewController *blocoViewController = [[BlocoViewController alloc] init];
-    blocoViewController.bloco = self.presences[indexPath.row][@"parade"][@"bloco"];;
-    [self.navigationController pushViewController:blocoViewController animated:YES];
+    ParadeViewController *paradeViewController = [[ParadeViewController alloc] init];
+    paradeViewController.parade = self.presences[indexPath.row][@"parade"];
+    [self.navigationController pushViewController:paradeViewController animated:YES];
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath

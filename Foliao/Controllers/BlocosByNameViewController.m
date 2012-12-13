@@ -9,8 +9,9 @@
 #import <Parse/Parse.h>
 
 #import "BlocosByNameViewController.h"
-#import "BlocoViewController.h"
+#import "ParadeViewController.h"
 #import "AppConstants.h"
+#import "DateUtil.h"
 
 #define kALPHABET @[@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",\
                     @"J",@"K", @"L",@"M",@"N",@"O",@"P",@"Q",@"R",\
@@ -21,7 +22,7 @@
     NSMutableArray *_tableData;
 }
 
-@property (strong, nonatomic) NSArray *blocos;
+@property (strong, nonatomic) NSArray *parades;
 
 - (void)arrangeTableData;
 
@@ -35,14 +36,17 @@
     [super viewDidLoad];
     self.tableView.accessibilityLabel = @"Lista de blocos";
     
-    PFQuery *query = [PFQuery queryWithClassName:@"Bloco"];
-    [query orderByAscending:@"name"];
+    PFQuery *query = [PFQuery queryWithClassName:@"Parade"];
+    [query whereKey:@"date" greaterThanOrEqualTo:[DateUtil todaysMidnight]];
+    [query includeKey:@"bloco"];
+    
     query.cachePolicy = kPFCachePolicyCacheElseNetwork;
     query.maxCacheAge = 0.5 * 60 * 60; // half hour
+    
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             NSLog(@"Successfully retrieved %d blocos.", objects.count);
-            self.blocos = objects;
+            self.parades = objects;
             [self arrangeTableData];
             [self.tableView reloadData];
         } else {
@@ -58,8 +62,8 @@
     
     // Takes only letters with at least one bloco
     NSMutableSet *lettersWithAtLeastOneBloco = [NSMutableSet set];
-    for (PFObject *bloco in self.blocos) {
-        NSString *firstLetter = [NSString stringWithFormat:@"%c", [bloco[@"name"] characterAtIndex:0]];
+    for (PFObject *parade in self.parades) {
+        NSString *firstLetter = [NSString stringWithFormat:@"%c", [parade[@"bloco"][@"name"] characterAtIndex:0]];
         [lettersWithAtLeastOneBloco addObject:firstLetter];
     }
     
@@ -69,11 +73,11 @@
     }
     
     // Fill table data
-    for (PFObject *bloco in self.blocos) {
-        NSString *firstLetter = [NSString stringWithFormat:@"%c", [bloco[@"name"] characterAtIndex:0]];
+    for (PFObject *parade in self.parades) {
+        NSString *firstLetter = [NSString stringWithFormat:@"%c", [parade[@"bloco"][@"name"] characterAtIndex:0]];
         for (NSDictionary *_sectionData in _tableData) {
             if ([firstLetter isEqualToString:_sectionData[@"section"]]) {
-                [_sectionData[@"rows"] addObject:bloco];
+                [_sectionData[@"rows"] addObject:parade];
             }
         }
     }
@@ -87,9 +91,9 @@
     }];
     
     for (NSDictionary *_sectionData in _tableData) {
-        [(NSMutableArray *)_sectionData[@"rows"] sortUsingComparator:^NSComparisonResult(PFObject *bloco1, PFObject *bloco2) {
-            NSString *blocoName1 = bloco1[@"name"];
-            NSString *blocoName2 = bloco2[@"name"];
+        [(NSMutableArray *)_sectionData[@"rows"] sortUsingComparator:^NSComparisonResult(PFObject *parade1, PFObject *parade2) {
+            NSString *blocoName1 = parade1[@"bloco"][@"name"];
+            NSString *blocoName2 = parade2[@"bloco"][@"name"];
 
             return [blocoName1 compare:blocoName2];
         }];
@@ -134,11 +138,13 @@
     static NSString *CellIdentifier = @"BlocoCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
         cell.accessibilityLabel = @"Nome do bloco";
     }
     
-    cell.textLabel.text = _tableData[indexPath.section][@"rows"][indexPath.row][@"name"];
+    PFObject *parade = _tableData[indexPath.section][@"rows"][indexPath.row];
+    cell.textLabel.text = parade[@"bloco"][@"name"];
+    cell.detailTextLabel.text = [DateUtil stringFromDate:parade[@"date"]];
     cell.textLabel.textColor = [UIColor colorWithRed:68/255.0 green:68/255.0 blue:68/255.0 alpha:1];
     
     return cell;
@@ -155,9 +161,9 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    BlocoViewController *blocoViewController = [[BlocoViewController alloc] init];
-    blocoViewController.bloco = _tableData[indexPath.section][@"rows"][indexPath.row];
-    [self.navigationController pushViewController:blocoViewController animated:YES];
+    ParadeViewController *paradeViewController = [[ParadeViewController alloc] init];
+    paradeViewController.parade = _tableData[indexPath.section][@"rows"][indexPath.row];
+    [self.navigationController pushViewController:paradeViewController animated:YES];
 }
 
 @end

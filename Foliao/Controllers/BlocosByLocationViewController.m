@@ -10,7 +10,7 @@
 
 #import "BlocosByLocationViewController.h"
 #import "MapSettingsViewController.h"
-#import "BlocoViewController.h"
+#import "ParadeViewController.h"
 #import "ParadeAnnotation.h"
 
 
@@ -141,7 +141,7 @@
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
-    BlocoViewController *blocoViewController = [[BlocoViewController alloc] init];
+    ParadeViewController *blocoViewController = [[ParadeViewController alloc] init];
     blocoViewController.parade = [(ParadeAnnotation *)view.annotation parade];
     [self.navigationController pushViewController:blocoViewController animated:YES];
 }
