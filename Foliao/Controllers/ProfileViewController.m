@@ -197,4 +197,9 @@
     }];
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return @"não vou";
+}
+
 @end
