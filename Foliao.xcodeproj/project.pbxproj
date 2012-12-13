@@ -224,10 +224,6 @@
 		01E0CFF0164BDD8100940C77 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFEF164BDD8100940C77 /* StoreKit.framework */; };
 		01E0CFF2164BDD8600940C77 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E0CFF1164BDD8600940C77 /* SystemConfiguration.framework */; };
 		01E0CFF6164BE2A300940C77 /* BlocosByNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E0CFF4164BE2A300940C77 /* BlocosByNameViewController.m */; };
-		01E9CADA167796C800D4E990 /* formatAllSources.sh in Resources */ = {isa = PBXBuildFile; fileRef = 01E9CACE167796C800D4E990 /* formatAllSources.sh */; };
-		01E9CADB167796C800D4E990 /* formatOpenedSources.sh in Resources */ = {isa = PBXBuildFile; fileRef = 01E9CACF167796C800D4E990 /* formatOpenedSources.sh */; };
-		01E9CADC167796C800D4E990 /* uncrustify_objective_c.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 01E9CAD0167796C800D4E990 /* uncrustify_objective_c.cfg */; };
-		01E9CADD167796C800D4E990 /* Uncrustify_opened_Xcode_sources.workflow in Resources */ = {isa = PBXBuildFile; fileRef = 01E9CAD1167796C800D4E990 /* Uncrustify_opened_Xcode_sources.workflow */; };
 		01EBA92A165D7422005C1847 /* BlocosByLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA923165D7422005C1847 /* BlocosByLocationViewController.xib */; };
 		01EBA92B165D7422005C1847 /* BlocosByNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA924165D7422005C1847 /* BlocosByNameViewController.xib */; };
 		01EBA92C165D7422005C1847 /* BlocoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EBA925165D7422005C1847 /* BlocoViewController.xib */; };
@@ -422,10 +418,6 @@
 		01E0CFF1164BDD8600940C77 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		01E0CFF3164BE2A300940C77 /* BlocosByNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlocosByNameViewController.h; path = Controllers/BlocosByNameViewController.h; sourceTree = "<group>"; };
 		01E0CFF4164BE2A300940C77 /* BlocosByNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlocosByNameViewController.m; path = Controllers/BlocosByNameViewController.m; sourceTree = "<group>"; };
-		01E9CACE167796C800D4E990 /* formatAllSources.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = formatAllSources.sh; sourceTree = "<group>"; };
-		01E9CACF167796C800D4E990 /* formatOpenedSources.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = formatOpenedSources.sh; sourceTree = "<group>"; };
-		01E9CAD0167796C800D4E990 /* uncrustify_objective_c.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = uncrustify_objective_c.cfg; sourceTree = "<group>"; };
-		01E9CAD1167796C800D4E990 /* Uncrustify_opened_Xcode_sources.workflow */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Uncrustify_opened_Xcode_sources.workflow; sourceTree = "<group>"; };
 		01EBA923165D7422005C1847 /* BlocosByLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlocosByLocationViewController.xib; sourceTree = "<group>"; };
 		01EBA924165D7422005C1847 /* BlocosByNameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlocosByNameViewController.xib; sourceTree = "<group>"; };
 		01EBA925165D7422005C1847 /* BlocoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlocoViewController.xib; sourceTree = "<group>"; };
@@ -981,33 +973,6 @@
 			path = Retina;
 			sourceTree = "<group>";
 		};
-		01E9CACA167796C800D4E990 /* Xcode-formatter */ = {
-			isa = PBXGroup;
-			children = (
-				01E9CACB167796C800D4E990 /* CodeFormatter */,
-			);
-			path = "Xcode-formatter";
-			sourceTree = "<group>";
-		};
-		01E9CACB167796C800D4E990 /* CodeFormatter */ = {
-			isa = PBXGroup;
-			children = (
-				01E9CACD167796C800D4E990 /* scripts */,
-				01E9CAD0167796C800D4E990 /* uncrustify_objective_c.cfg */,
-				01E9CAD1167796C800D4E990 /* Uncrustify_opened_Xcode_sources.workflow */,
-			);
-			path = CodeFormatter;
-			sourceTree = "<group>";
-		};
-		01E9CACD167796C800D4E990 /* scripts */ = {
-			isa = PBXGroup;
-			children = (
-				01E9CACE167796C800D4E990 /* formatAllSources.sh */,
-				01E9CACF167796C800D4E990 /* formatOpenedSources.sh */,
-			);
-			path = scripts;
-			sourceTree = "<group>";
-		};
 		01EBA922165D7422005C1847 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -1029,7 +994,6 @@
 		01ECEBB116710B5400336482 /* Submodules */ = {
 			isa = PBXGroup;
 			children = (
-				01E9CACA167796C800D4E990 /* Xcode-formatter */,
 				0186D3E5167293BE009F13E5 /* KIF */,
 				01ECEBB216710B5400336482 /* Kal */,
 				01ECEC1116710B5400336482 /* ZUUIRevealController */,
@@ -1294,10 +1258,6 @@
 				01AAF197166BE691002CA70D /* bt-voltar-rosa@2x.png in Resources */,
 				01AAF198166BE691002CA70D /* seta-rosa@2x.png in Resources */,
 				01ECEC6E16710B5500336482 /* Kal.bundle in Resources */,
-				01E9CADA167796C800D4E990 /* formatAllSources.sh in Resources */,
-				01E9CADB167796C800D4E990 /* formatOpenedSources.sh in Resources */,
-				01E9CADC167796C800D4E990 /* uncrustify_objective_c.cfg in Resources */,
-				01E9CADD167796C800D4E990 /* Uncrustify_opened_Xcode_sources.workflow in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1336,7 +1296,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "sh Submodules/Xcode-formatter/CodeFormatter/scripts/formatOpenedSources.sh";
+			shellScript = "";
 		};
 /* End PBXShellScriptBuildPhase section */
 
