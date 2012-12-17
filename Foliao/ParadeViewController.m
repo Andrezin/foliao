@@ -95,8 +95,30 @@
     self.buttonCheckIn.enabled = YES;
     self.labelName.text = self.parade[@"bloco"][@"name"];
     
+    self.labelInfo.text = [NSString stringWithFormat:@"Começa às %@ %@",
+                           [DateUtil shortTimeFromDate:self.parade[@"date"]],
+                           [self formattedParadeAddress]];
+    
     [self showWhoIsGoing];
- }
+}
+
+- (NSString *)formattedParadeAddress
+{
+    NSArray *componentsNo = [NSArray arrayWithObject:@"Largo"];
+    NSArray *componentsNos = [NSArray arrayWithObject:@"Arcos"];
+    // maybe a "nas" option too
+    
+    for (NSString *addressType in componentsNo)
+        if ([self.parade[@"address"] hasPrefix:addressType])
+            return [NSString stringWithFormat:@"no %@", self.parade[@"address"]];
+    
+    for (NSString *addressType in componentsNos)
+        if ([self.parade[@"address"] hasPrefix:addressType])
+            return [NSString stringWithFormat:@"nos %@", self.parade[@"address"]];
+    
+    // default and the default option
+    return [NSString stringWithFormat:@"na %@", self.parade[@"address"]];
+}
 
 - (void)showWhoIsGoing
 {
@@ -172,7 +194,9 @@
         for (int i=0; i < self.folioes.count; i++) {
             NSString *picURL = [NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=normal", self.folioes[i][@"facebookId"]];
             UIImageView *profileImageView = (UIImageView *)pictureTemplates[i];
-            [profileImageView setImageWithURL:[NSURL URLWithString:picURL] placeholderImage:[UIImage imageNamed:@"default"]];
+            
+            [profileImageView setImageWithURL:[NSURL URLWithString:picURL]
+                             placeholderImage:[UIImage imageNamed:[NSString stringWithFormat:@"avatar-%@", self.folioes[i][@"genre"]]]];
             profileImageView.layer.cornerRadius = 3.0;
             profileImageView.contentMode = UIViewContentModeScaleAspectFill;
             profileImageView.clipsToBounds = YES;
@@ -279,7 +303,7 @@
         NSString *picURL = [NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=normal", [PFUser currentUser][@"facebookId"]];
         
         [imageViewNewPresence setImageWithURL:[NSURL URLWithString:picURL]
-                             placeholderImage:[UIImage imageNamed:@"default"]
+                             placeholderImage:[UIImage imageNamed:[NSString stringWithFormat:@"avatar-%@", [PFUser currentUser][@"genre"]]]
                                       success:^(UIImage *image, BOOL cached) {
                                           
           [UIView animateWithDuration:0.5 animations:^{

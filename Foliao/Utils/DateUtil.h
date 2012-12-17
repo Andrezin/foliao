@@ -11,6 +11,7 @@
 @interface DateUtil : NSObject
 
 + (NSString *)stringFromDate:(NSDate *)date;
++ (NSString *)shortTimeFromDate:(NSDate *)date;
 + (NSDate *)todaysMidnight;
 
 

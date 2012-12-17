@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		010475FA167F94CB002B4DF6 /* avatar-female.png in Resources */ = {isa = PBXBuildFile; fileRef = 010475F8167F94CB002B4DF6 /* avatar-female.png */; };
+		010475FB167F94CB002B4DF6 /* avatar-male.png in Resources */ = {isa = PBXBuildFile; fileRef = 010475F9167F94CB002B4DF6 /* avatar-male.png */; };
+		010475FE167F94D9002B4DF6 /* avatar-female@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 010475FC167F94D9002B4DF6 /* avatar-female@2x.png */; };
+		010475FF167F94D9002B4DF6 /* avatar-male@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 010475FD167F94D9002B4DF6 /* avatar-male@2x.png */; };
 		0117992A165B05A50095D425 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01179929165B05A50095D425 /* ImageIO.framework */; };
 		013341B8164B4C0700C2984B /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013341B6164B4C0700C2984B /* MenuViewController.m */; };
 		013341BD164B58C100C2984B /* BlocosByLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013341BB164B58C100C2984B /* BlocosByLocationViewController.m */; };
@@ -267,6 +271,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		010475F8167F94CB002B4DF6 /* avatar-female.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-female.png"; sourceTree = "<group>"; };
+		010475F9167F94CB002B4DF6 /* avatar-male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-male.png"; sourceTree = "<group>"; };
+		010475FC167F94D9002B4DF6 /* avatar-female@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-female@2x.png"; sourceTree = "<group>"; };
+		010475FD167F94D9002B4DF6 /* avatar-male@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-male@2x.png"; sourceTree = "<group>"; };
 		01179929165B05A50095D425 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		013341B5164B4C0700C2984B /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = Controllers/MenuViewController.h; sourceTree = "<group>"; };
 		013341B6164B4C0700C2984B /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = Controllers/MenuViewController.m; sourceTree = "<group>"; };
@@ -940,6 +948,8 @@
 		01BE6267164B3D450000679C /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				010475F8167F94CB002B4DF6 /* avatar-female.png */,
+				010475F9167F94CB002B4DF6 /* avatar-male.png */,
 				01AAF173166BE689002CA70D /* Themes */,
 				01B42BD41666A1F80080F2C9 /* bt-roxo.png */,
 				01B42BD0166699800080F2C9 /* bt-branco.png */,
@@ -958,6 +968,8 @@
 		01BE626F164B3D450000679C /* Retina */ = {
 			isa = PBXGroup;
 			children = (
+				010475FC167F94D9002B4DF6 /* avatar-female@2x.png */,
+				010475FD167F94D9002B4DF6 /* avatar-male@2x.png */,
 				01AAF186166BE691002CA70D /* Themes */,
 				01B42BD21666A1E10080F2C9 /* bt-roxo@2x.png */,
 				01B42BCE166699700080F2C9 /* bt-branco@2x.png */,
@@ -1258,6 +1270,10 @@
 				01AAF197166BE691002CA70D /* bt-voltar-rosa@2x.png in Resources */,
 				01AAF198166BE691002CA70D /* seta-rosa@2x.png in Resources */,
 				01ECEC6E16710B5500336482 /* Kal.bundle in Resources */,
+				010475FA167F94CB002B4DF6 /* avatar-female.png in Resources */,
+				010475FB167F94CB002B4DF6 /* avatar-male.png in Resources */,
+				010475FE167F94D9002B4DF6 /* avatar-female@2x.png in Resources */,
+				010475FF167F94D9002B4DF6 /* avatar-male@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
