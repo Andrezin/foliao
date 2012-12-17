@@ -109,8 +109,6 @@
     [query includeKey:@"user"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *presences, NSError *error) {
         if (!error) {
-            NSLog(@"Found %d presences", presences.count);
-            
             if (presences.count == 0) {
                 self.labelEmptyParade.hidden = NO;
                 self.buttonWhoIsGoing.enabled = NO;
