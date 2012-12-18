@@ -29,7 +29,7 @@
     self.labelName.textColor = [UIColor colorWithRed:68/255.0 green:68/255.0 blue:68/255.0 alpha:1];
     self.accessoryView = [[UIImageView alloc] initWithImage:[[ThemeManager currentTheme] accessoryViewImage]];
     
-    [self.imageViewProfile setImageWithURL:[self foliaoImageURL] placeholderImage:[UIImage imageNamed:@"default"]
+    [self.imageViewProfile setImageWithURL:[self foliaoImageURL] placeholderImage:[UIImage imageNamed:[NSString stringWithFormat:@"avatar-%@", _foliao[@"gender"]]]
       success:^(UIImage *image, BOOL cached) {
       
           self.imageViewProfile.layer.cornerRadius = 3.0;

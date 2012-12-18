@@ -12,6 +12,7 @@
 #import "MapSettingsViewController.h"
 #import "ParadeViewController.h"
 #import "ParadeAnnotation.h"
+#import "DateUtil.h"
 
 
 @interface BlocosByLocationViewController(){
@@ -21,6 +22,7 @@
     BOOL locationLoaded;
 }
 
+@property (strong, nonatomic) NSMutableArray *parades;
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong, nonatomic) IBOutlet UIButton *buttonLocateMe;
 
@@ -38,6 +40,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.parades = [NSMutableArray array];
     
     self.mapView.userLocation.title = @"Tô pulando por aqui!";
     self.mapView.accessibilityLabel = @"Mapa de blocos";
@@ -102,17 +106,21 @@
     
     PFQuery *query = [PFQuery queryWithClassName:@"Parade"];
     [query whereKey:@"location" withinGeoBoxFromSouthwest:southwest toNortheast:northeast];
+    [query whereKey:@"date" greaterThanOrEqualTo:[DateUtil todaysMidnight]];
     [query includeKey:@"bloco"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
-            id userLocationAnnotation = self.mapView.userLocation;
-            NSMutableArray *annotations = [NSMutableArray arrayWithArray:self.mapView.annotations];
-            [annotations removeObject:userLocationAnnotation];
-            [self.mapView removeAnnotations:annotations];
-            
             for (PFObject *parade in objects) {
-                ParadeAnnotation *annotation = [[ParadeAnnotation alloc] initWithParade:parade];
-                [self.mapView addAnnotation:annotation];
+                BOOL alreadExists = NO;
+                for (PFObject *existentParade in self.parades) {
+                    if ([parade.objectId isEqualToString:existentParade.objectId])
+                        alreadExists = YES;
+                }
+                if (!alreadExists) {
+                    ParadeAnnotation *annotation = [[ParadeAnnotation alloc] initWithParade:parade];
+                    [self.mapView addAnnotation:annotation];
+                    [self.parades addObject:parade];
+                }
             }
         }
     }];

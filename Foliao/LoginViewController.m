@@ -35,7 +35,7 @@
     }
     
     UIImageView *bgImageView = [[UIImageView alloc] initWithImage:backgroundImage];
-    bgImageView.frame = CGRectMake(0, -20, backgroundImage.size.width, backgroundImage.size.height);
+    bgImageView.frame = CGRectMake(0, 0, backgroundImage.size.width, backgroundImage.size.height);
     [self.view insertSubview:bgImageView belowSubview:self.buttonLogin];
     
     self.buttonLogin.alpha = 0;
