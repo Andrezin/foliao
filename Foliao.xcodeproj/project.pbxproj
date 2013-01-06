@@ -28,6 +28,12 @@
 		015E88F6165F447D0008DED8 /* WhereAreMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 015E88F5165F447C0008DED8 /* WhereAreMoreViewController.m */; };
 		015E88F8165F449F0008DED8 /* WhereAreMoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 015E88F7165F449F0008DED8 /* WhereAreMoreViewController.xib */; };
 		0168CB841659586B003DD8AF /* BlocosByDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0168CB831659586B003DD8AF /* BlocosByDateViewController.m */; };
+		016B0D20169A0F06002DF519 /* bt-facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 016B0D1F169A0F06002DF519 /* bt-facebook.png */; };
+		016B0D22169A0F14002DF519 /* bt-facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 016B0D21169A0F14002DF519 /* bt-facebook@2x.png */; };
+		016B0D24169A1025002DF519 /* bg-shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 016B0D23169A1025002DF519 /* bg-shadow.png */; };
+		016B0D26169A102A002DF519 /* bg-shadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 016B0D25169A102A002DF519 /* bg-shadow@2x.png */; };
+		016B0D28169A119F002DF519 /* marca2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 016B0D27169A119E002DF519 /* marca2@2x.png */; };
+		016B0D2A169A11A6002DF519 /* marca2.png in Resources */ = {isa = PBXBuildFile; fileRef = 016B0D29169A11A6002DF519 /* marca2.png */; };
 		0171D6B616722B6300521346 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6233164B3B000000679C /* main.m */; };
 		0171D6B716722B6300521346 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BE6237164B3B000000679C /* AppDelegate.m */; };
 		0171D6B816722B6300521346 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013341B6164B4C0700C2984B /* MenuViewController.m */; };
@@ -301,6 +307,12 @@
 		015E88F7165F449F0008DED8 /* WhereAreMoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhereAreMoreViewController.xib; sourceTree = "<group>"; };
 		0168CB821659586B003DD8AF /* BlocosByDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlocosByDateViewController.h; path = Controllers/BlocosByDateViewController.h; sourceTree = "<group>"; };
 		0168CB831659586B003DD8AF /* BlocosByDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlocosByDateViewController.m; path = Controllers/BlocosByDateViewController.m; sourceTree = "<group>"; };
+		016B0D1F169A0F06002DF519 /* bt-facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-facebook.png"; sourceTree = "<group>"; };
+		016B0D21169A0F14002DF519 /* bt-facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-facebook@2x.png"; sourceTree = "<group>"; };
+		016B0D23169A1025002DF519 /* bg-shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-shadow.png"; sourceTree = "<group>"; };
+		016B0D25169A102A002DF519 /* bg-shadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-shadow@2x.png"; sourceTree = "<group>"; };
+		016B0D27169A119E002DF519 /* marca2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "marca2@2x.png"; sourceTree = "<group>"; };
+		016B0D29169A11A6002DF519 /* marca2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marca2.png; sourceTree = "<group>"; };
 		0171D72616722B6300521346 /* Functional Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Functional Tests.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0171D72816722B6300521346 /* FunctionalTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FunctionalTests-Info.plist"; path = "/Users/barbosa/Projects/7pixels/Foliao/FunctionalTests-Info.plist"; sourceTree = "<absolute>"; };
 		0171D73516722F3400521346 /* FoliaoTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoliaoTestController.h; path = FoliaoTests/FoliaoTestController.h; sourceTree = SOURCE_ROOT; };
@@ -948,6 +960,9 @@
 		01BE6267164B3D450000679C /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				016B0D29169A11A6002DF519 /* marca2.png */,
+				016B0D23169A1025002DF519 /* bg-shadow.png */,
+				016B0D1F169A0F06002DF519 /* bt-facebook.png */,
 				010475F8167F94CB002B4DF6 /* avatar-female.png */,
 				010475F9167F94CB002B4DF6 /* avatar-male.png */,
 				01AAF173166BE689002CA70D /* Themes */,
@@ -968,6 +983,9 @@
 		01BE626F164B3D450000679C /* Retina */ = {
 			isa = PBXGroup;
 			children = (
+				016B0D27169A119E002DF519 /* marca2@2x.png */,
+				016B0D25169A102A002DF519 /* bg-shadow@2x.png */,
+				016B0D21169A0F14002DF519 /* bt-facebook@2x.png */,
 				010475FC167F94D9002B4DF6 /* avatar-female@2x.png */,
 				010475FD167F94D9002B4DF6 /* avatar-male@2x.png */,
 				01AAF186166BE691002CA70D /* Themes */,
@@ -1274,6 +1292,12 @@
 				010475FB167F94CB002B4DF6 /* avatar-male.png in Resources */,
 				010475FE167F94D9002B4DF6 /* avatar-female@2x.png in Resources */,
 				010475FF167F94D9002B4DF6 /* avatar-male@2x.png in Resources */,
+				016B0D20169A0F06002DF519 /* bt-facebook.png in Resources */,
+				016B0D22169A0F14002DF519 /* bt-facebook@2x.png in Resources */,
+				016B0D24169A1025002DF519 /* bg-shadow.png in Resources */,
+				016B0D26169A102A002DF519 /* bg-shadow@2x.png in Resources */,
+				016B0D28169A119F002DF519 /* marca2@2x.png in Resources */,
+				016B0D2A169A11A6002DF519 /* marca2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

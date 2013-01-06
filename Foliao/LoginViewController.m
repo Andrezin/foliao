@@ -13,6 +13,8 @@
 
 @interface LoginViewController ()
 
+@property (strong, nonatomic) UIImageView *imageViewCover;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewBackgroundShadow;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 @property (strong, nonatomic) IBOutlet UIButton *buttonLogin;
 
@@ -34,27 +36,20 @@
         backgroundImage = [UIImage imageNamed:@"Default"];
     }
     
-    UIImageView *bgImageView = [[UIImageView alloc] initWithImage:backgroundImage];
-    bgImageView.frame = CGRectMake(0, 0, backgroundImage.size.width, backgroundImage.size.height);
-    [self.view insertSubview:bgImageView belowSubview:self.buttonLogin];
+    self.imageViewCover = [[UIImageView alloc] initWithImage:backgroundImage];
+    self.imageViewCover.frame = CGRectMake(0, 0, backgroundImage.size.width, backgroundImage.size.height);
+    [self.view addSubview:self.imageViewCover];
     
-    self.buttonLogin.alpha = 0;
-    self.buttonLogin.layer.cornerRadius = 3;
-    self.buttonLogin.clipsToBounds = YES;
-    self.buttonLogin.frame = CGRectMake(self.buttonLogin.frame.origin.x,
-                                        [UIScreen mainScreen].bounds.size.height * 0.6,
-                                        self.buttonLogin.frame.size.width,
-                                        self.buttonLogin.frame.size.height);
-    self.spinner.frame = CGRectMake(self.spinner.frame.origin.x,
-                                    self.buttonLogin.frame.origin.y + self.buttonLogin.frame.size.height + 10,
-                                    self.spinner.frame.size.width,
-                                    self.spinner.frame.size.height);
+    self.imageViewBackgroundShadow.frame = [[UIScreen mainScreen] bounds];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [UIView animateWithDuration:0.5 animations:^{
-        self.buttonLogin.alpha = 1;
+    [super viewDidAppear:animated];
+    [UIView animateWithDuration:1.0 animations:^{
+        self.imageViewCover.alpha = 0;
+    } completion:^(BOOL finished) {
+        [self.imageViewCover removeFromSuperview];
     }];
 }
 
