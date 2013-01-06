@@ -65,6 +65,9 @@
     self.mapView.accessibilityLabel = @"Mapa do bloco";
     self.labelName.accessibilityLabel = @"Nome do bloco";
     self.labelInfo.accessibilityLabel = @"Informações do bloco";
+    
+    self.buttonExpandMap.imageView.contentMode = UIViewContentModeCenter;
+    self.buttonExpandMap.imageView.transform = CGAffineTransformRotate(self.buttonExpandMap.imageView.transform, M_PI_2);
 }
 
 - (void)sizeScrollViewToFit
@@ -317,18 +320,27 @@
 - (IBAction)expandMap:(UIButton *)sender
 {
     if (_mapIsOpen) {
-        
+        // closing ...
         [UIView animateWithDuration:0.2 animations:^{
             self.mapView.frame = CGRectMake(0, 0, 320, 110);
+            self.buttonExpandMap.imageView.transform = CGAffineTransformMakeRotation(M_PI_2);
+            self.buttonExpandMap.frame = CGRectMake(self.buttonExpandMap.frame.origin.x,
+                                                    self.mapView.frame.size.height - self.buttonExpandMap.frame.size.height - 5,
+                                                    self.buttonExpandMap.frame.size.height,
+                                                    self.buttonExpandMap.frame.size.width);
         } completion:^(BOOL finished) {
-            [self.buttonExpandMap setTitle:@"+" forState:UIControlStateNormal];
             _mapIsOpen = !_mapIsOpen;
         }];
     } else {
+        // opening ...
         [UIView animateWithDuration:0.2 animations:^{
             self.mapView.frame = self.view.frame;
+            self.buttonExpandMap.imageView.transform = CGAffineTransformMakeRotation(3*M_PI_2);
+            self.buttonExpandMap.frame = CGRectMake(self.buttonExpandMap.frame.origin.x,
+                                                    self.mapView.frame.size.height - self.buttonExpandMap.frame.size.height - 5,
+                                                    self.buttonExpandMap.frame.size.height,
+                                                    self.buttonExpandMap.frame.size.width);
         } completion:^(BOOL finished) {
-            [self.buttonExpandMap setTitle:@"-" forState:UIControlStateNormal];
             _mapIsOpen = !_mapIsOpen;
         }];
     }

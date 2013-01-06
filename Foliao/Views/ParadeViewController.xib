@@ -190,7 +190,7 @@
 								<string key="NSFrame">{{12, 275}, {84, 21}}</string>
 								<reference key="NSSuperview" ref="901473629"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
+								<reference key="NSNextKeyView" ref="130858867"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -337,7 +337,7 @@
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-								<object class="NSCustomResource" key="IBUIImage">
+								<object class="NSCustomResource" key="IBUIImage" id="774954539">
 									<string key="NSClassName">NSImage</string>
 									<string key="NSResourceName">seta-laranja.png</string>
 								</object>
@@ -357,23 +357,27 @@
 							<object class="IBUIButton" id="105734237">
 								<reference key="NSNextResponder" ref="901473629"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{279, 6}, {34, 32}}</string>
+								<string key="NSFrame">{{276, 72}, {32, 30}}</string>
 								<reference key="NSSuperview" ref="901473629"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="840950072"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
+								<object class="NSColor" key="IBUIBackgroundColor" id="982713805">
+									<int key="NSColorSpace">3</int>
+									<bytes key="NSWhite">MCAwAA</bytes>
+								</object>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<int key="IBUIContentHorizontalAlignment">0</int>
 								<int key="IBUIContentVerticalAlignment">0</int>
-								<int key="IBUIButtonType">1</int>
-								<string key="IBUINormalTitle">+</string>
 								<reference key="IBUIHighlightedTitleColor" ref="593608067"/>
-								<object class="NSColor" key="IBUINormalTitleColor">
-									<int key="NSColorSpace">1</int>
-									<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
+								<reference key="IBUINormalTitleColor" ref="982713805"/>
+								<reference key="IBUINormalTitleShadowColor" ref="982713805"/>
+								<reference key="IBUINormalImage" ref="774954539"/>
+								<object class="NSCustomResource" key="IBUINormalBackgroundImage">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">bt-branco-quadrado.png</string>
 								</object>
-								<reference key="IBUINormalTitleShadowColor" ref="661881522"/>
 								<reference key="IBUIFontDescription" ref="473484965"/>
 								<reference key="IBUIFont" ref="795589226"/>
 							</object>
@@ -383,10 +387,7 @@
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="939828946"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<object class="NSColor" key="IBUIBackgroundColor" id="982713805">
-							<int key="NSColorSpace">3</int>
-							<bytes key="NSWhite">MCAwAA</bytes>
-						</object>
+						<reference key="IBUIBackgroundColor" ref="982713805"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -622,7 +623,6 @@
 						<array class="NSMutableArray" key="children">
 							<reference ref="939828946"/>
 							<reference ref="765680142"/>
-							<reference ref="105734237"/>
 							<reference ref="840950072"/>
 							<reference ref="130858867"/>
 							<reference ref="655641510"/>
@@ -632,6 +632,7 @@
 							<reference ref="570682037"/>
 							<reference ref="784002574"/>
 							<reference ref="703291534"/>
+							<reference ref="105734237"/>
 						</array>
 						<reference key="parent" ref="191373211"/>
 					</object>
@@ -883,6 +884,7 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="bt-branco-quadrado.png">{32, 30}</string>
 			<string key="bt-checkin.png">{300, 45}</string>
 			<string key="seta-laranja.png">{8, 12}</string>
 		</dictionary>
