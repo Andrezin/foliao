@@ -24,6 +24,7 @@
 @property (strong, nonatomic) NSMutableArray *folioes;
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) IBOutlet UIView *viewParadeInfo;
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong, nonatomic) IBOutlet UIButton *buttonExpandMap;
 @property (strong, nonatomic) IBOutlet UILabel *labelName;
@@ -41,6 +42,7 @@
 
 - (void)sizeScrollViewToFit;
 - (void)fillParadeInfo;
+- (void)customizeUI;
 - (BOOL)foliaoIsAlreadyGoing:(PFUser *)foliao;
 - (void)showWhoIsGoing;
 - (void)showFolioesPictures;
@@ -61,13 +63,11 @@
     [super viewDidLoad];
     [self sizeScrollViewToFit];
     [self fillParadeInfo];
+    [self customizeUI];
     
     self.mapView.accessibilityLabel = @"Mapa do bloco";
     self.labelName.accessibilityLabel = @"Nome do bloco";
     self.labelInfo.accessibilityLabel = @"Informações do bloco";
-    
-    self.buttonExpandMap.imageView.contentMode = UIViewContentModeCenter;
-    self.buttonExpandMap.imageView.transform = CGAffineTransformRotate(self.buttonExpandMap.imageView.transform, M_PI_2);
 }
 
 - (void)sizeScrollViewToFit
@@ -121,6 +121,17 @@
     
     // default and the default option
     return [NSString stringWithFormat:@"na %@", self.parade[@"address"]];
+}
+
+- (void)customizeUI
+{
+    self.viewParadeInfo.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.viewParadeInfo.layer.shadowOpacity = 0.2;
+    self.viewParadeInfo.layer.shadowRadius = 3;
+    self.viewParadeInfo.layer.shadowOffset = CGSizeMake(0.0f, 3.0f);
+    
+    self.buttonExpandMap.imageView.contentMode = UIViewContentModeCenter;
+    self.buttonExpandMap.imageView.transform = CGAffineTransformRotate(self.buttonExpandMap.imageView.transform, M_PI_2);
 }
 
 - (void)showWhoIsGoing
@@ -322,7 +333,7 @@
     if (_mapIsOpen) {
         // closing ...
         [UIView animateWithDuration:0.2 animations:^{
-            self.mapView.frame = CGRectMake(0, 0, 320, 110);
+            self.mapView.frame = CGRectMake(0, 0, 320, 160);
             self.buttonExpandMap.imageView.transform = CGAffineTransformMakeRotation(M_PI_2);
             self.buttonExpandMap.frame = CGRectMake(self.buttonExpandMap.frame.origin.x,
                                                     self.mapView.frame.size.height - self.buttonExpandMap.frame.size.height - 5,

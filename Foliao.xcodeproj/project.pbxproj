@@ -216,6 +216,8 @@
 		01BE627E164B3D450000679C /* bt-checkin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6270164B3D450000679C /* bt-checkin@2x.png */; };
 		01BE627F164B3D450000679C /* bt-base@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6271164B3D450000679C /* bt-base@2x.png */; };
 		01BE6283164B3D450000679C /* marca@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01BE6275164B3D450000679C /* marca@2x.png */; };
+		01CA25B4169BD492004E6441 /* bg-quem-vai.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CA25B3169BD492004E6441 /* bg-quem-vai.png */; };
+		01CA25B6169BD49A004E6441 /* bg-quem-vai@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CA25B5169BD49A004E6441 /* bg-quem-vai@2x.png */; };
 		01CC6358165B0FA4005F68BA /* FoliaoRankingTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CC6357165B0FA4005F68BA /* FoliaoRankingTitle.m */; };
 		01CC635B165B2FB1005F68BA /* bt-locate-me-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CC6359165B2FB1005F68BA /* bt-locate-me-bg.png */; };
 		01CC635C165B2FB1005F68BA /* bt-locate-me.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CC635A165B2FB1005F68BA /* bt-locate-me.png */; };
@@ -419,6 +421,8 @@
 		01BE6270164B3D450000679C /* bt-checkin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-checkin@2x.png"; sourceTree = "<group>"; };
 		01BE6271164B3D450000679C /* bt-base@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-base@2x.png"; sourceTree = "<group>"; };
 		01BE6275164B3D450000679C /* marca@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "marca@2x.png"; sourceTree = "<group>"; };
+		01CA25B3169BD492004E6441 /* bg-quem-vai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-quem-vai.png"; sourceTree = "<group>"; };
+		01CA25B5169BD49A004E6441 /* bg-quem-vai@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-quem-vai@2x.png"; sourceTree = "<group>"; };
 		01CC6356165B0FA4005F68BA /* FoliaoRankingTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoliaoRankingTitle.h; sourceTree = "<group>"; };
 		01CC6357165B0FA4005F68BA /* FoliaoRankingTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoliaoRankingTitle.m; sourceTree = "<group>"; };
 		01CC6359165B2FB1005F68BA /* bt-locate-me-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-locate-me-bg.png"; sourceTree = "<group>"; };
@@ -964,6 +968,7 @@
 		01BE6267164B3D450000679C /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				01CA25B3169BD492004E6441 /* bg-quem-vai.png */,
 				016B0D2F169A18BC002DF519 /* bt-branco-quadrado.png */,
 				016B0D29169A11A6002DF519 /* marca2.png */,
 				016B0D23169A1025002DF519 /* bg-shadow.png */,
@@ -988,6 +993,7 @@
 		01BE626F164B3D450000679C /* Retina */ = {
 			isa = PBXGroup;
 			children = (
+				01CA25B5169BD49A004E6441 /* bg-quem-vai@2x.png */,
 				016B0D31169A18C2002DF519 /* bt-branco-quadrado@2x.png */,
 				016B0D27169A119E002DF519 /* marca2@2x.png */,
 				016B0D25169A102A002DF519 /* bg-shadow@2x.png */,
@@ -1306,6 +1312,8 @@
 				016B0D2A169A11A6002DF519 /* marca2.png in Resources */,
 				016B0D30169A18BC002DF519 /* bt-branco-quadrado.png in Resources */,
 				016B0D32169A18C3002DF519 /* bt-branco-quadrado@2x.png in Resources */,
+				01CA25B4169BD492004E6441 /* bg-quem-vai.png in Resources */,
+				01CA25B6169BD49A004E6441 /* bg-quem-vai@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

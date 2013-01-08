@@ -25,14 +25,18 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [super viewWillAppear:animated];
-    
     [self addGestureRecognizerToNavigationBar];
+    
+    if (![self isRootViewController])
+        [self addBackButton];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
     
     if ([self isRootViewController])
         [self addMenuButton];
-    else
-        [self addBackButton];
 }
 
 - (void)addGestureRecognizerToNavigationBar

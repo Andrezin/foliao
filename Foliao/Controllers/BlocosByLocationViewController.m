@@ -139,7 +139,7 @@
         annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:pinIdentifier];
         annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
         annotationView.canShowCallout = YES;
-        [(MKPinAnnotationView *)annotationView setPinColor:MKPinAnnotationColorPurple];
+        [(MKPinAnnotationView *)annotationView setPinColor:MKPinAnnotationColorRed];
     }
     
     annotationView.annotation = annotation;
