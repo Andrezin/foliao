@@ -205,7 +205,11 @@
                                      self.imageViewPictureFoliao3,
                                      self.imageViewPictureFoliao4, nil];
         
-        for (int i=0; i < self.folioes.count; i++) {
+        int upTo = self.folioes.count;
+        if (upTo > 5)
+            upTo = 5;
+        
+        for (int i=0; i < upTo; i++) {
             NSString *picURL = [NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=normal", self.folioes[i][@"facebookId"]];
             UIImageView *profileImageView = (UIImageView *)pictureTemplates[i];
             
