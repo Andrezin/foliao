@@ -15,6 +15,11 @@
 #import "DateUtil.h"
 #import "ThemeManager.h"
 
+typedef enum {
+    CheckinButtonStateDisabled = 0,
+    CheckinButtonStateInProgress,
+    CheckinButtonStateEnabled
+} CheckinButtonState;
 
 @interface ParadeViewController () {
     BOOL _mapIsOpen;
@@ -44,6 +49,8 @@
 - (void)fillParadeInfo;
 - (void)customizeUI;
 - (BOOL)foliaoIsAlreadyGoing:(PFUser *)foliao;
+- (BOOL)iAmGoing;
+- (void)setCheckinButtonState:(CheckinButtonState)state;
 - (void)showWhoIsGoing;
 - (void)showFolioesPictures;
 - (void)confirmPresenceInParade:(PFObject *)parade;
@@ -68,6 +75,8 @@
     self.mapView.accessibilityLabel = @"Mapa do bloco";
     self.labelName.accessibilityLabel = @"Nome do bloco";
     self.labelInfo.accessibilityLabel = @"Informações do bloco";
+    
+    [self setCheckinButtonState:CheckinButtonStateInProgress];
 }
 
 - (void)sizeScrollViewToFit
@@ -95,7 +104,6 @@
     ParadeAnnotation *annotation = [[ParadeAnnotation alloc] initWithParade:self.parade];
     [self.mapView addAnnotation:annotation];
     
-    self.buttonCheckIn.enabled = YES;
     self.labelName.text = self.parade[@"bloco"][@"name"];
     
     self.labelInfo.text = [NSString stringWithFormat:@"Começa às %@ %@",
@@ -163,6 +171,13 @@
                     [self.folioes addObject:user];
             }
             
+            if ([self amIGoing]) {
+                [self setCheckinButtonState:CheckinButtonStateDisabled];
+                
+            } else {
+                [self setCheckinButtonState:CheckinButtonStateEnabled];
+            }
+            
             [self showFolioesPictures];
         }
     }];
@@ -182,6 +197,28 @@
     }
     
     return isAlreadyGoing;
+}
+
+- (BOOL)amIGoing
+{
+    if ([self.folioes indexOfObject:[PFUser currentUser]] == NSNotFound)
+        return NO;
+    
+    return YES;
+}
+
+- (void)setCheckinButtonState:(CheckinButtonState)state
+{
+    if (state == CheckinButtonStateDisabled) {
+        self.buttonCheckIn.enabled = NO;
+        [self.buttonCheckIn setTitle:@"já vou pular nesse bloco :)" forState:UIControlStateNormal];
+    } else if (state == CheckinButtonStateInProgress) {
+        self.buttonCheckIn.enabled = NO;
+        [self.buttonCheckIn setTitle:@"confirmando..." forState:UIControlStateNormal];
+    } else if (state == CheckinButtonStateEnabled) {
+        self.buttonCheckIn.enabled = YES;
+        [self.buttonCheckIn setTitle:@"estou mais certo que o bloco!" forState:UIControlStateNormal];
+    }
 }
 
 - (void)showFolioesPictures
@@ -251,6 +288,7 @@
 
 - (IBAction)checkInButtonTapped:(UIButton *)sender
 {
+    [self setCheckinButtonState:CheckinButtonStateInProgress];
     [self confirmPresenceInParade:self.parade];
 }
 
@@ -288,10 +326,15 @@
                     [PFQuery clearAllCachedResults];
                     
                     [self addFoliaoToPresencesBox];
+                    
+                    [self setCheckinButtonState:CheckinButtonStateDisabled];
+                    
                 } else {
                     NSLog(@"Error when confirming presence.");
                 }
             }];
+        } else {
+            [self setCheckinButtonState:CheckinButtonStateEnabled];
         }
     }];
 }
