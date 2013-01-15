@@ -66,7 +66,6 @@
 												<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 												<int key="IBUIContentHorizontalAlignment">0</int>
 												<int key="IBUIContentVerticalAlignment">0</int>
-												<int key="IBUIButtonType">1</int>
 												<string key="IBUITitleShadowOffset">{0, 1}</string>
 												<string key="IBUINormalTitle">estou mais certo que o bloco!</string>
 												<object class="NSColor" key="IBUIHighlightedTitleColor" id="593608067">
@@ -338,6 +337,7 @@
 										<string key="NSFrame">{{286, 371}, {8, 12}}</string>
 										<reference key="NSSuperview" ref="901473629"/>
 										<reference key="NSWindow"/>
+										<reference key="NSNextKeyView"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="IBUIUserInteractionEnabled">NO</bool>
 										<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
