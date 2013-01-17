@@ -10,6 +10,7 @@
 
 #import "WhereAreMoreViewController.h"
 #import "ParadeViewController.h"
+#import "SVProgressHUD.h"
 #import "AppConstants.h"
 #import "ThemeManager.h"
 
@@ -23,13 +24,18 @@
 
 @implementation WhereAreMoreViewController
 
-
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+    self.tableView.scrollsToTop = YES;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     
     PFQuery *query = [PFQuery queryWithClassName:@"Parade"];
-    
+    [query includeKey:@"bloco"];
+
     if (self.what == WhereAreMorePeople) {
         [query whereKey:@"totalPresencesCount" greaterThan:[NSNumber numberWithInt:0]];
         [query orderByDescending:@"totalPresencesCount"];
@@ -44,12 +50,15 @@
     query.cachePolicy = kPFCachePolicyCacheElseNetwork;
     query.maxCacheAge = 10 * 60; // ten minutes
     
-    [query includeKey:@"bloco"];
+    if (![query hasCachedResult])
+        [SVProgressHUD showWithStatus:@"carregando..." maskType:SVProgressHUDMaskTypeNone];
+    
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             self.parades = [NSMutableArray arrayWithArray:objects];
             [self.tableView reloadData];
         }
+        [SVProgressHUD dismiss];
     }];
 }
 

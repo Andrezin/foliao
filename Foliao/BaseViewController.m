@@ -9,6 +9,7 @@
 #import <Parse/Parse.h>
 
 #import "BaseViewController.h"
+#import "SVProgressHUD.h"
 #import "ThemeManager.h"
 
 @interface BaseViewController()
@@ -25,6 +26,9 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
+    
+    [SVProgressHUD dismiss];
     [self addGestureRecognizerToNavigationBar];
     
     if (![self isRootViewController])
@@ -83,6 +87,11 @@
 - (void)popViewControllerAnimated
 {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+    return NO;
 }
 
 @end

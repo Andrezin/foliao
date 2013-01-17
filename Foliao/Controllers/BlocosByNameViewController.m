@@ -10,6 +10,7 @@
 
 #import "BlocosByNameViewController.h"
 #import "ParadeViewController.h"
+#import "SVProgressHUD.h"
 #import "AppConstants.h"
 #import "DateUtil.h"
 
@@ -31,9 +32,10 @@
 
 @implementation BlocosByNameViewController
 
-- (void)viewDidLoad
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidLoad];
+    [super viewWillAppear:animated];
+    
     self.tableView.accessibilityLabel = @"Lista de blocos";
     
     PFQuery *query = [PFQuery queryWithClassName:@"Parade"];
@@ -43,12 +45,16 @@
     query.cachePolicy = kPFCachePolicyCacheElseNetwork;
     query.maxCacheAge = 0.5 * 60 * 60; // half hour
     
+    if (![query hasCachedResult])
+        [SVProgressHUD showWithStatus:@"carregando..." maskType:SVProgressHUDMaskTypeNone];
+    
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             NSLog(@"Successfully retrieved %d blocos.", objects.count);
             self.parades = objects;
             [self arrangeTableData];
             [self.tableView reloadData];
+            [SVProgressHUD dismiss];
         } else {
             // Log details of the failure
             NSLog(@"Error: %@ %@", error, [error userInfo]);

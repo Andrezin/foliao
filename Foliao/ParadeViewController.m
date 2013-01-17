@@ -75,6 +75,8 @@ typedef enum {
     self.mapView.accessibilityLabel = @"Mapa do bloco";
     self.labelName.accessibilityLabel = @"Nome do bloco";
     self.labelInfo.accessibilityLabel = @"Informações do bloco";
+    
+    self.buttonCheckIn.enabled = NO;
 }
 
 - (void)sizeScrollViewToFit

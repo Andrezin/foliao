@@ -11,6 +11,7 @@
 #import "WhereMyFriendsAreGoingViewController.h"
 #import "ProfileViewController.h"
 #import "FoliaoCell.h"
+#import "SVProgressHUD.h"
 #import "AppConstants.h"
 
 @interface WhereMyFriendsAreGoingViewController()
@@ -18,14 +19,25 @@
 @property (strong, nonatomic) NSArray *friends;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
+- (void)loadFriendList;
+
 @end
 
 
 @implementation WhereMyFriendsAreGoingViewController
 
-- (void)viewDidLoad
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self loadFriendList];
+}
+
+- (void)loadFriendList
 {
     PF_FBRequest *request = [PF_FBRequest requestForMyFriends];
+    
+    if (!self.friends.count)
+        [SVProgressHUD showWithStatus:@"carregando..." maskType:SVProgressHUDMaskTypeNone];
+    
     [request startWithCompletionHandler:^(PF_FBRequestConnection *connection, id result, NSError *error) {
         if (!error) {
             NSArray *friendObjects = [result objectForKey:@"data"];
@@ -41,9 +53,14 @@
             friendQuery.maxCacheAge = 10 * 60; // ten minutes
             
             [friendQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-                self.friends = objects;
-                [self.tableView reloadData];
+                if (!error) {
+                    self.friends = objects;
+                    [self.tableView reloadData];
+                }
+                [SVProgressHUD dismiss];
             }];
+        } else {
+            [SVProgressHUD dismiss];
         }
     }];
 }

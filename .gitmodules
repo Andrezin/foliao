@@ -10,3 +10,6 @@
 [submodule "Submodules/Xcode-formatter"]
 	path = Submodules/Xcode-formatter
 	url = https://github.com/octo-online/Xcode-formatter.git
+[submodule "Submodules/SVProgressHUD"]
+	path = Submodules/SVProgressHUD
+	url = https://github.com/samvermette/SVProgressHUD.git

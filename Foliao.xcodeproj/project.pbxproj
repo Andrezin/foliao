@@ -172,6 +172,8 @@
 		018B5E70164DA0DE00042B4E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018B5E6F164DA0DE00042B4E /* FacebookSDK.framework */; };
 		018B5E72164DA0F000042B4E /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 018B5E71164DA0F000042B4E /* FacebookSDKResources.bundle */; };
 		018B5E76164DB19B00042B4E /* ParadeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018B5E74164DB19B00042B4E /* ParadeViewController.m */; };
+		01940A5316A794AC00E258C3 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 01940A5016A794AC00E258C3 /* SVProgressHUD.bundle */; };
+		01940A5416A794AC00E258C3 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 01940A5216A794AC00E258C3 /* SVProgressHUD.m */; };
 		0197C4341664013F00BA532D /* MapSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0197C4331664013F00BA532D /* MapSettingsViewController.m */; };
 		0197C4361664016A00BA532D /* MapSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0197C4351664016A00BA532D /* MapSettingsViewController.xib */; };
 		019E6B3A1655DB790025786D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 019E6B381655DB790025786D /* Default.png */; };
@@ -367,6 +369,9 @@
 		018B5E71164DA0F000042B4E /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKResources.bundle; path = ../../../Frameworks/FacebookSDK/FacebookSDK.framework/Versions/A/Resources/FacebookSDKResources.bundle; sourceTree = "<group>"; };
 		018B5E73164DB19B00042B4E /* ParadeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParadeViewController.h; sourceTree = "<group>"; };
 		018B5E74164DB19B00042B4E /* ParadeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParadeViewController.m; sourceTree = "<group>"; };
+		01940A5016A794AC00E258C3 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		01940A5116A794AC00E258C3 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		01940A5216A794AC00E258C3 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		0197C4321664013F00BA532D /* MapSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapSettingsViewController.h; sourceTree = "<group>"; };
 		0197C4331664013F00BA532D /* MapSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapSettingsViewController.m; sourceTree = "<group>"; };
 		0197C4351664016A00BA532D /* MapSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapSettingsViewController.xib; sourceTree = "<group>"; };
@@ -700,6 +705,17 @@
 				0186D48D167293BF009F13E5 /* libKIF.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		01940A4F16A794AC00E258C3 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				01940A5016A794AC00E258C3 /* SVProgressHUD.bundle */,
+				01940A5116A794AC00E258C3 /* SVProgressHUD.h */,
+				01940A5216A794AC00E258C3 /* SVProgressHUD.m */,
+			);
+			name = SVProgressHUD;
+			path = SVProgressHUD/SVProgressHUD;
 			sourceTree = "<group>";
 		};
 		01AAF173166BE689002CA70D /* Themes */ = {
@@ -1036,6 +1052,7 @@
 		01ECEBB116710B5400336482 /* Submodules */ = {
 			isa = PBXGroup;
 			children = (
+				01940A4F16A794AC00E258C3 /* SVProgressHUD */,
 				0186D3E5167293BE009F13E5 /* KIF */,
 				01ECEBB216710B5400336482 /* Kal */,
 				01ECEC1116710B5400336482 /* ZUUIRevealController */,
@@ -1314,6 +1331,7 @@
 				016B0D32169A18C3002DF519 /* bt-branco-quadrado@2x.png in Resources */,
 				01CA25B4169BD492004E6441 /* bg-quem-vai.png in Resources */,
 				01CA25B6169BD49A004E6441 /* bg-quem-vai@2x.png in Resources */,
+				01940A5316A794AC00E258C3 /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1454,6 +1472,7 @@
 				01ECEC7716710B5500336482 /* NSDateAdditions.m in Sources */,
 				01ECEC7816710B5500336482 /* UIViewAdditions.m in Sources */,
 				01ECEC8A16710B5500336482 /* ZUUIRevealController.m in Sources */,
+				01940A5416A794AC00E258C3 /* SVProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

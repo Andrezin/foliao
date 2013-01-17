@@ -13,6 +13,7 @@
 #import "AppConstants.h"
 #import "DateUtil.h"
 #import "UIColor+Foliao.h"
+#import "SVProgressHUD.h"
 #import "ThemeManager.h"
 
 @interface ProfileViewController ()
@@ -51,7 +52,11 @@
     self.labelNumberOfPresences.text = @"";
     
     self.tableView.contentInset = UIEdgeInsetsMake(1, 0, 0, 0);
-    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     [self loadFoliaoPresences];
 }
 
@@ -106,10 +111,14 @@
     query.cachePolicy = kPFCachePolicyCacheElseNetwork;
     query.maxCacheAge = 0.5 * 60 * 60; // half hour
     
+    if (![query hasCachedResult])
+        [SVProgressHUD showWithStatus:@"carregando..." maskType:SVProgressHUDMaskTypeNone];
+    
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         self.presences = [NSMutableArray arrayWithArray:objects];
         [self showNumberOfPresences];
         [self.tableView reloadData];
+        [SVProgressHUD dismiss];
     }];
 }
 
