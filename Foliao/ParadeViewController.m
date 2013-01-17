@@ -43,7 +43,7 @@ typedef enum {
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewPictureFoliao3;
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewPictureFoliao4;
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewAccessoryWhoIsGoing;
-@property (strong, nonatomic) IBOutlet UILabel *labelEmptyParade;
+@property (strong, nonatomic) IBOutlet UILabel *labelAuxiliarForListOfPresences;
 
 - (void)sizeScrollViewToFit;
 - (void)fillParadeInfo;
@@ -75,8 +75,6 @@ typedef enum {
     self.mapView.accessibilityLabel = @"Mapa do bloco";
     self.labelName.accessibilityLabel = @"Nome do bloco";
     self.labelInfo.accessibilityLabel = @"Informações do bloco";
-    
-    [self setCheckinButtonState:CheckinButtonStateInProgress];
 }
 
 - (void)sizeScrollViewToFit
@@ -154,10 +152,12 @@ typedef enum {
     [query findObjectsInBackgroundWithBlock:^(NSArray *presences, NSError *error) {
         if (!error) {
             if (presences.count == 0) {
-                self.labelEmptyParade.hidden = NO;
+                self.labelAuxiliarForListOfPresences.text = @"Ih! O bloco ainda tá vazio. Seja o primeiro!";
                 self.buttonWhoIsGoing.enabled = NO;
                 return;
             }
+            
+            self.labelAuxiliarForListOfPresences.hidden = YES;
             
             self.folioes = [[NSMutableArray alloc] initWithCapacity:presences.count];
             for (PFObject *presence in presences) {
@@ -342,7 +342,7 @@ typedef enum {
 - (void)addFoliaoToPresencesBox
 {
     [self.folioes insertObject:[PFUser currentUser] atIndex:0];
-    self.labelEmptyParade.hidden = YES;
+    self.labelAuxiliarForListOfPresences.hidden = YES;
     
     __block CGRect firstImageFrame = self.imageViewPictureFoliao0.frame;
     
