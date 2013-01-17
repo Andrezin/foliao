@@ -80,10 +80,6 @@
 						<int key="IBUIContentMode">2</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<object class="NSCustomResource" key="IBUIImage">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">200x200.gif</string>
-						</object>
 					</object>
 					<object class="IBUILabel" id="30145404">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -160,6 +156,7 @@
 						<string key="NSFrame">{{0, 113}, {320, 391}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<reference key="IBUIBackgroundColor" ref="808325128"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -405,10 +402,6 @@
 		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
-		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="NS.key.0">200x200.gif</string>
-			<string key="NS.object.0">{200, 200}</string>
-		</object>
 		<string key="IBCocoaTouchPluginVersion">1930</string>
 	</data>
 </archive>
