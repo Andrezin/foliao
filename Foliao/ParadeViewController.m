@@ -214,6 +214,7 @@ typedef enum {
     if (state == CheckinButtonStateDisabled) {
         self.buttonCheckIn.enabled = NO;
         [self.buttonCheckIn setTitle:@"já vou pular nesse bloco :)" forState:UIControlStateNormal];
+        [self.buttonCheckIn setBackgroundImage:[UIImage imageNamed:@"bt-confirmado"] forState:UIControlStateDisabled];
     } else if (state == CheckinButtonStateInProgress) {
         self.buttonCheckIn.enabled = NO;
         [self.buttonCheckIn setTitle:@"confirmando..." forState:UIControlStateNormal];

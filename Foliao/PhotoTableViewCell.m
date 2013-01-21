@@ -9,10 +9,10 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <QuartzCore/QuartzCore.h>
 
-#import "FoliaoCell.h"
+#import "PhotoTableViewCell.h"
 #import "ThemeManager.h"
 
-@interface FoliaoCell()
+@interface PhotoTableViewCell()
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewProfile;
 @property (strong, nonatomic) IBOutlet UILabel *labelName;
@@ -20,7 +20,7 @@
 @end
 
 
-@implementation FoliaoCell
+@implementation PhotoTableViewCell
 
 - (void)setFoliao:(PFObject *)foliao
 {

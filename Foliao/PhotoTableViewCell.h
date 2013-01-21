@@ -8,7 +8,7 @@
 
 #import <Parse/Parse.h>
 
-@interface FoliaoCell : UITableViewCell
+@interface PhotoTableViewCell : UITableViewCell
 
 @property (strong, nonatomic) PFObject *foliao;
 

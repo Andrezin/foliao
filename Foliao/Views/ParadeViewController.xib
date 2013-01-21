@@ -342,7 +342,7 @@
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="IBUIUserInteractionEnabled">NO</bool>
 										<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-										<object class="NSCustomResource" key="IBUIImage" id="774954539">
+										<object class="NSCustomResource" key="IBUIImage">
 											<string key="NSClassName">NSImage</string>
 											<string key="NSResourceName">seta-laranja.png</string>
 										</object>
@@ -375,11 +375,6 @@
 										<reference key="IBUIHighlightedTitleColor" ref="593608067"/>
 										<reference key="IBUINormalTitleColor" ref="982713805"/>
 										<reference key="IBUINormalTitleShadowColor" ref="982713805"/>
-										<reference key="IBUINormalImage" ref="774954539"/>
-										<object class="NSCustomResource" key="IBUINormalBackgroundImage">
-											<string key="NSClassName">NSImage</string>
-											<string key="NSResourceName">bt-branco-quadrado.png</string>
-										</object>
 										<reference key="IBUIFontDescription" ref="473484965"/>
 										<reference key="IBUIFont" ref="795589226"/>
 									</object>
@@ -914,8 +909,7 @@
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="bg-quem-vai.png">{305, 67}</string>
-			<string key="bt-branco-quadrado.png">{35, 32}</string>
-			<string key="bt-checkin.png">{305, 47}</string>
+			<string key="bt-checkin.png">{300, 45}</string>
 			<string key="seta-laranja.png">{8, 12}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">1930</string>

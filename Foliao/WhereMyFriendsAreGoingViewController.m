@@ -10,7 +10,7 @@
 
 #import "WhereMyFriendsAreGoingViewController.h"
 #import "ProfileViewController.h"
-#import "FoliaoCell.h"
+#import "PhotoTableViewCell.h"
 #import "SVProgressHUD.h"
 #import "AppConstants.h"
 
@@ -80,12 +80,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"FoliaoCell";
-    FoliaoCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    PhotoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {
-        UINib *foliaoNib = [UINib nibWithNibName:@"FoliaoCell" bundle:[NSBundle mainBundle]];
+        UINib *foliaoNib = [UINib nibWithNibName:@"PhotoTableViewCell" bundle:[NSBundle mainBundle]];
         NSArray *viewsFound = [foliaoNib instantiateWithOwner:self options:nil];
-        cell = (FoliaoCell *)viewsFound[0];
+        cell = (PhotoTableViewCell *)viewsFound[0];
     }
     
     cell.foliao = self.friends[indexPath.row];
