@@ -19,6 +19,10 @@
 		010A199E16ADCFAC0050E1CA /* bt-voltar-laranja.png in Resources */ = {isa = PBXBuildFile; fileRef = 010A199C16ADCFAC0050E1CA /* bt-voltar-laranja.png */; };
 		010A19A116ADCFE60050E1CA /* bt-menu-laranja@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 010A199F16ADCFE60050E1CA /* bt-menu-laranja@2x.png */; };
 		010A19A216ADCFE60050E1CA /* bt-voltar-laranja@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 010A19A016ADCFE60050E1CA /* bt-voltar-laranja@2x.png */; };
+		010A19A916ADD6520050E1CA /* bt-encolher-mapa@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 010A19A716ADD6510050E1CA /* bt-encolher-mapa@2x.png */; };
+		010A19AA16ADD6520050E1CA /* bt-expandir-mapa@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 010A19A816ADD6520050E1CA /* bt-expandir-mapa@2x.png */; };
+		010A19AD16ADD74B0050E1CA /* botao_encolher_mapa@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 010A19AB16ADD7310050E1CA /* botao_encolher_mapa@1x.png */; };
+		010A19AE16ADD74B0050E1CA /* botao_expandir_mapa@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 010A19AC16ADD7380050E1CA /* botao_expandir_mapa@1x.png */; };
 		0117992A165B05A50095D425 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01179929165B05A50095D425 /* ImageIO.framework */; };
 		013341B8164B4C0700C2984B /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013341B6164B4C0700C2984B /* MenuViewController.m */; };
 		013341BD164B58C100C2984B /* BlocosByLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013341BB164B58C100C2984B /* BlocosByLocationViewController.m */; };
@@ -290,6 +294,10 @@
 		010A199C16ADCFAC0050E1CA /* bt-voltar-laranja.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-voltar-laranja.png"; sourceTree = "<group>"; };
 		010A199F16ADCFE60050E1CA /* bt-menu-laranja@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-menu-laranja@2x.png"; sourceTree = "<group>"; };
 		010A19A016ADCFE60050E1CA /* bt-voltar-laranja@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-voltar-laranja@2x.png"; sourceTree = "<group>"; };
+		010A19A716ADD6510050E1CA /* bt-encolher-mapa@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-encolher-mapa@2x.png"; sourceTree = "<group>"; };
+		010A19A816ADD6520050E1CA /* bt-expandir-mapa@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt-expandir-mapa@2x.png"; sourceTree = "<group>"; };
+		010A19AB16ADD7310050E1CA /* botao_encolher_mapa@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "botao_encolher_mapa@1x.png"; sourceTree = "<group>"; };
+		010A19AC16ADD7380050E1CA /* botao_expandir_mapa@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "botao_expandir_mapa@1x.png"; sourceTree = "<group>"; };
 		01179929165B05A50095D425 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		013341B5164B4C0700C2984B /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = Controllers/MenuViewController.h; sourceTree = "<group>"; };
 		013341B6164B4C0700C2984B /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = Controllers/MenuViewController.m; sourceTree = "<group>"; };
@@ -972,6 +980,8 @@
 		01BE6267164B3D450000679C /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				010A19AB16ADD7310050E1CA /* botao_encolher_mapa@1x.png */,
+				010A19AC16ADD7380050E1CA /* botao_expandir_mapa@1x.png */,
 				01CA25B3169BD492004E6441 /* bg-quem-vai.png */,
 				016B0D29169A11A6002DF519 /* marca2.png */,
 				016B0D23169A1025002DF519 /* bg-shadow.png */,
@@ -1015,6 +1025,8 @@
 				01BE6275164B3D450000679C /* marca@2x.png */,
 				010A198D16ADB8210050E1CA /* bt-checkin@2x.png */,
 				010A198F16ADB8380050E1CA /* bt-confirmado@2x.png */,
+				010A19A716ADD6510050E1CA /* bt-encolher-mapa@2x.png */,
+				010A19A816ADD6520050E1CA /* bt-expandir-mapa@2x.png */,
 			);
 			path = Retina;
 			sourceTree = "<group>";
@@ -1325,6 +1337,10 @@
 				010A199E16ADCFAC0050E1CA /* bt-voltar-laranja.png in Resources */,
 				010A19A116ADCFE60050E1CA /* bt-menu-laranja@2x.png in Resources */,
 				010A19A216ADCFE60050E1CA /* bt-voltar-laranja@2x.png in Resources */,
+				010A19A916ADD6520050E1CA /* bt-encolher-mapa@2x.png in Resources */,
+				010A19AA16ADD6520050E1CA /* bt-expandir-mapa@2x.png in Resources */,
+				010A19AD16ADD74B0050E1CA /* botao_encolher_mapa@1x.png in Resources */,
+				010A19AE16ADD74B0050E1CA /* botao_expandir_mapa@1x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -137,9 +137,6 @@ typedef enum {
     self.viewParadeInfo.layer.shadowOpacity = 0.2;
     self.viewParadeInfo.layer.shadowRadius = 3;
     self.viewParadeInfo.layer.shadowOffset = CGSizeMake(0.0f, 3.0f);
-    
-    self.buttonExpandMap.imageView.contentMode = UIViewContentModeCenter;
-    self.buttonExpandMap.imageView.transform = CGAffineTransformRotate(self.buttonExpandMap.imageView.transform, M_PI_2);
 }
 
 - (void)showWhoIsGoing
@@ -384,7 +381,6 @@ typedef enum {
         // closing ...
         [UIView animateWithDuration:0.2 animations:^{
             self.mapView.frame = CGRectMake(0, 0, 320, 160);
-            self.buttonExpandMap.imageView.transform = CGAffineTransformMakeRotation(M_PI_2);
             self.buttonExpandMap.frame = CGRectMake(self.buttonExpandMap.frame.origin.x,
                                                     self.mapView.frame.size.height - self.buttonExpandMap.frame.size.height - 5,
                                                     self.buttonExpandMap.frame.size.height,
@@ -396,7 +392,6 @@ typedef enum {
         // opening ...
         [UIView animateWithDuration:0.2 animations:^{
             self.mapView.frame = self.view.frame;
-            self.buttonExpandMap.imageView.transform = CGAffineTransformMakeRotation(3*M_PI_2);
             self.buttonExpandMap.frame = CGRectMake(self.buttonExpandMap.frame.origin.x,
                                                     self.mapView.frame.size.height - self.buttonExpandMap.frame.size.height - 5,
                                                     self.buttonExpandMap.frame.size.height,
