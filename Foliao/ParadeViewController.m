@@ -36,6 +36,7 @@ typedef enum {
 @property (strong, nonatomic) IBOutlet UILabel *labelInfo;
 @property (strong, nonatomic) IBOutlet UIButton *buttonCheckIn;
 
+@property (strong, nonatomic) IBOutlet UILabel *labelNumberOfPeopleGoing;
 @property (strong, nonatomic) IBOutlet UIButton *buttonWhoIsGoing;
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewPictureFoliao0;
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewPictureFoliao1;
@@ -177,6 +178,9 @@ typedef enum {
                 [self setCheckinButtonState:CheckinButtonStateEnabled];
             }
             
+            self.labelNumberOfPeopleGoing.text = [NSString stringWithFormat:@"(%u)", self.folioes.count];
+            self.labelNumberOfPeopleGoing.hidden = NO;
+            
             [self showFolioesPictures];
         }
     }];
@@ -184,7 +188,7 @@ typedef enum {
 
 - (BOOL)foliaoIsAlreadyGoing:(PFUser *)foliao
 {
-    if (!self.folioes.count)
+    if (!self.folioes.count)    
         return NO;
     
     BOOL isAlreadyGoing = NO;
