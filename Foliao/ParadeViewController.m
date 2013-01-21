@@ -387,6 +387,9 @@ typedef enum {
                                                     self.buttonExpandMap.frame.size.width);
         } completion:^(BOOL finished) {
             _mapIsOpen = !_mapIsOpen;
+            [UIView animateWithDuration:0.5 animations:^{
+               [self.buttonExpandMap setBackgroundImage:[UIImage imageNamed:@"prabaixo"] forState:UIControlStateNormal]; 
+            }];
         }];
     } else {
         // opening ...
@@ -398,6 +401,9 @@ typedef enum {
                                                     self.buttonExpandMap.frame.size.width);
         } completion:^(BOOL finished) {
             _mapIsOpen = !_mapIsOpen;
+            [UIView animateWithDuration:0.5 animations:^{
+               [self.buttonExpandMap setBackgroundImage:[UIImage imageNamed:@"pracima"] forState:UIControlStateNormal];
+            }];
         }];
     }
 }
